@@ -11,12 +11,12 @@ GroundFire,Class,Fire,IS-A,,,,"A fire that burns below the surface, consuming or
 CrownFire,Class,Fire,IS-A,,,,"A fire that spreads to the tops of trees or shrubs, often more intense and difficult to control.",http://www.theworldavatar.com/kg/ontowildfire/,Crown Fire
 VolcanicFire,Class,Fire,IS-A,,,,"A fire resulting from volcanic activity, typically involving lava and other volcanic material.",http://www.theworldavatar.com/kg/ontowildfire/,Volcanic Fire
 http://sweetontology.net/phen/Event,Class,,,,,,,http://sweetontology.net/phen,Event
-Hazard,Class,http://sweetontology.net/phen/Event,IS-A,,,,,http://www.theworldavatar.com/kg/ontowildfire/,Hazard
+Hazard,Class,http://sweetontology.net/phen/Event,IS-A,,,,"A potentially harmful event or phenomenon that may cause loss of life, injury, property damage, or environmental disruption.",http://www.theworldavatar.com/kg/ontowildfire/,Hazard
 http://www.w3.org/2006/time#Interval,Class,,,,,,,http://www.w3.org/2006/time#,Interval
 http://www.w3.org/2006/time#Instant,Class,,,,,,,http://www.w3.org/2006/time#,Instant
-hasTimeInterval,Object Property,,,Event,Interval,,Relates an event or phenomenon to a specific period or duration of time.,http://www.theworldavatar.com/kg/ontowildfire/,has Time Interval
-hasEnd,Object Property,,,Interval,Instant,,Describes the ending point of an event or time-based process.,http://www.theworldavatar.com/kg/ontowildfire/,has End
-hasBeginning,Object Property,,,Interval,Instant,,Describes the starting point of an event or time-based process.,http://www.theworldavatar.com/kg/ontowildfire/,has Beginning
+hasTimeInterval,Object Property,,,http://sweetontology.net/phen/Event,http://www.w3.org/2006/time#Interval,,Relates an event or phenomenon to a specific period or duration of time.,http://www.theworldavatar.com/kg/ontowildfire/,has Time Interval
+http://www.w3.org/2006/time#hasBeginning,Object Property,,,http://www.w3.org/2006/time#Interval,http://www.w3.org/2006/time#Instant,,,https://www.w3.org/2006/time,has Beginning
+http://www.w3.org/2006/time#hasEnd,Object Property,,,http://www.w3.org/2006/time#Interval,http://www.w3.org/2006/time#Instant,,,https://www.w3.org/2006/time,has End
 CausalFactor,Class,,,,,,The underlying reason or cause for a fire event.,http://www.theworldavatar.com/kg/ontowildfire/,Causal Factor
 ProductiveCause,Class,CausalFactor,IS-A,,,,"A fire cause linked to natural or essential processes, like controlled burns.",http://www.theworldavatar.com/kg/ontowildfire/,Productive Cause
 NonproductiveCause,Class,CausalFactor,IS-A,,,,A fire cause that results from unintended actions or accidents.,http://www.theworldavatar.com/kg/ontowildfire/,Nonproductive Cause
