@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.theworldavatar.com/kg/ontomatpassport/ontoautomatpassport/"
      xml:base="http://www.theworldavatar.com/kg/OntoAutoMatPassport"
+	 xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -11,6 +12,8 @@
      xmlns:ontomatpassport="http://www.theworldavatar.com/kg/ontomatpassport/"
      xmlns:OntoAutoMatPassport="http://www.theworldavatar.com/kg/ontomatpassport/ontoautomatpassport/">
     <owl:Ontology rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ontoautomatpassport/">
+	    <dc:date>06 March 2025</dc:date>
+        <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
         <rdfs:comment xml:lang="en">An ontology designed to represent data contained in material passports for automotive products and components.</rdfs:comment>
         <rdfs:label xml:lang="en">OntoAutoMatPassport</rdfs:label>
         <owl:versionInfo>1</owl:versionInfo>

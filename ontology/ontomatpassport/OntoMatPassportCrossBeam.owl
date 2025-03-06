@@ -13,7 +13,7 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:ontomatpassport="http://www.theworldavatar.com/kg/ontomatpassport/">
     <owl:Ontology rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/">
-        <dc:date>07 February 2025</dc:date>
+        <dc:date>06 March 2025</dc:date>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
         <rdfs:comment>OntoMatPassport is an ontology developed for representing material passport of products and components.</rdfs:comment>
         <owl:versionInfo>1</owl:versionInfo>
@@ -2659,9 +2659,9 @@
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclable&amp;ReusablePortion -->
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclable&amp;ReusablePortion">
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion">
         <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMass"/>
@@ -3482,7 +3482,7 @@
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
         <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMass"/>
-        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclable&amp;ReusablePortion"/>
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion"/>
         <rdf:type rdf:resource="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#Property"/>
         <rdf:type>
             <owl:Class>
@@ -4619,7 +4619,7 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclable&amp;ReusablePortion"/>
+                                                <swrl:classPredicate rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion"/>
                                                 <swrl:argument1 rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/w0mass"/>
                                             </rdf:Description>
                                         </rdf:first>
@@ -5175,7 +5175,7 @@
                                                                                                                                                                                 <rdf:first>
                                                                                                                                                                                     <rdf:Description>
                                                                                                                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                                                                                                                                                        <swrl:classPredicate rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclable&amp;ReusablePortion"/>
+                                                                                                                                                                                        <swrl:classPredicate rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion"/>
                                                                                                                                                                                         <swrl:argument1 rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/w0mass"/>
                                                                                                                                                                                     </rdf:Description>
                                                                                                                                                                                 </rdf:first>

@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontomatpassport="http://www.theworldavatar.com/kg/ontomatpassport/">
     <owl:Ontology rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/">
-        <dc:date>07 February 2025</dc:date>
+        <dc:date>06 March 2025</dc:date>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
         <rdfs:comment>OntoMatPassport is an ontology developed for representing material passport of products and components.</rdfs:comment>
         <owl:versionInfo>1</owl:versionInfo>
@@ -1339,17 +1339,6 @@
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionTransformedIntoFeedstock -->
-
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionTransformedIntoFeedstock">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
-        <rdfs:comment>The fraction of the collected product transformed into feedstock.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
-        <rdfs:label>TF</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/RecycledContent -->
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/RecycledContent">
@@ -1538,6 +1527,17 @@
     
 
 
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion -->
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMass"/>
+        <rdfs:comment>The mass of waste that remains after the recyclable and reusable materials have been separated and that cannot be turned into useful materials.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
+        <rdfs:label>W0</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecylcedFeedstock -->
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecylcedFeedstock">
@@ -1589,17 +1589,6 @@
         <rdfs:comment>The elastic rigidity of an object to stress.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
         <rdfs:label>YoungsModulus</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclable&amp;ReusablePortion -->
-
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclable&amp;ReusablePortion">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMass"/>
-        <rdfs:comment>The mass of waste that remains after the recyclable and reusable materials have been separated and that cannot be turned into useful materials.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
-        <rdfs:label>W0</rdfs:label>
     </owl:Class>
     
 
