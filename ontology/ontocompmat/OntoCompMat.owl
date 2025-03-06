@@ -1,18 +1,17 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.theworldavatar.com/kg/ontocompmat/"
-     xml:base="http://www.theworldavatar.com/kg/ontocompmat/"
+<rdf:RDF xmlns="http://www.theworldavatar.com/kg/ontocompmat#"
+     xml:base="http://www.theworldavatar.com/kg/ontocompmat"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:sto="https://w3id.org/i40/sto#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="http://www.theworldavatar.com/kg/ontocompmat/">
-        <owl:imports rdf:resource="http://emmo.info/emmo/1.0.0-beta/domain"/>
-        <dc:date>12 January 2024</dc:date>
-        <rdfs:comment xml:lang="en">An ontology that describes composite materials, their manufacturing processes, advantages of composite materials over bulk materials, structural damages that can occur at different manufacturing phases and the corresponding repair mechanisms.</rdfs:comment>
+     xmlns:ontocompmat="http://www.theworldavatar.com/kg/ontocompmat#">
+    <owl:Ontology rdf:about="http://www.theworldavatar.com/kg/ontocompmat">
+        <dc:date>06 March 2025</dc:date>
+        <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
+        <rdfs:comment>OntoCompMat is an ontology developed for representing composite composite materials.</rdfs:comment>
         <owl:versionInfo>1</owl:versionInfo>
     </owl:Ontology>
     
@@ -26,24 +25,21 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://purl.org/dc/elements/1.1/date -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
-    
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#gitCommitHash -->
 
 
-    <!-- https://w3id.org/i40/sto#abbreviation -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/i40/sto#abbreviation"/>
+    <owl:AnnotationProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#gitCommitHash"/>
     
 
 
@@ -55,151 +51,207 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/causes -->
-
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/causes"/>
-    
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#affectsProcessingAndManufacturingOf -->
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/exposesTo -->
-
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/exposesTo">
-        <rdfs:label xml:lang="en">exposes to</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#affectsProcessingAndManufacturingOf">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#Factor"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#PolymerCompositeMaterial"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>affectsProcessingAndManufacturingOf</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/hasAdvantageOverBulkMaterials -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#consistsOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/hasAdvantageOverBulkMaterials"/>
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#consistsOf">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeLaminate"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#Pile"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>consistsOf</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/hasConstituent -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver -->
 
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/hasConstituent">
-        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial"/>
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeMaterial"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#TraditionalMaterial"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasAdvantageOver</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasExcellentCorrosionResistanceOver -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasExcellentCorrosionResistanceOver">
+        <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasExcellentCorrosionResistanceOver</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasExcellentDimensionalStabilityOver -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasExcellentDimensionalStabilityOver">
+        <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasExcellentDimensionalStabilityOver</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasExcellentThermalPropertiesOver -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasExcellentThermalPropertiesOver">
+        <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasExcellentThermalPropertiesOver</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasFiller -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasFiller">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#PolymerCompositeMaterial"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Matrix"/>
-                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Reinforcement"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CalciumCarbonate"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CarbonFibre"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat#Talc"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat#Wollastonite"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:label xml:lang="en">has constituent</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasFiller</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/hasManufacturingProcessAffectingFactor -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasMoreFatigueResistanceThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/hasManufacturingProcessAffectingFactor">
-        <rdfs:label xml:lang="en">has manufacturing process affecting factor</rdfs:label>
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasMoreFatigueResistanceThan">
+        <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasMoreFatigueResistanceThan</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/hasOccurencePhase -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasMoreImpactResistanceThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/hasOccurencePhase">
-        <rdfs:label xml:lang="en">has occurence phase</rdfs:label>
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasMoreImpactResistanceThan">
+        <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasMoreImpactResistanceThan</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/hasProcessingTechnique -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasMoreResistanceToDynamicLoadThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/hasProcessingTechnique">
-        <rdfs:label xml:lang="en">has processing technique</rdfs:label>
-        <skos:altLabel xml:lang="en">has manufacturing process</skos:altLabel>
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasMoreResistanceToDynamicLoadThan">
+        <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasMoreResistanceToDynamicLoadThan</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/hasProperty -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasMoreResistanceToImpactThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/hasProperty">
-        <rdfs:label xml:lang="en">has Property</rdfs:label>
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasMoreResistanceToImpactThan">
+        <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasMoreResistanceToImpactThan</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/involvesBondingWith -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasMoreResistanceToStaticLoadThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/involvesBondingWith">
-        <rdfs:label xml:lang="en">involves bonding with</rdfs:label>
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasMoreResistanceToStaticLoadThan">
+        <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasMoreResistanceToStaticLoadThan</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/involvesRemoving -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasProcessingTechnique -->
 
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/involvesRemoving">
-        <rdfs:label xml:lang="en">involves removing</rdfs:label>
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasProcessingTechnique">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#PolymerCompositeMaterial"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat#GlassMatThermoplasticCompressionMoulding"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat#InjectionMoulding"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ReactionInjectionMoulding"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ResinTransferMoulding"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat#SheetMouldingCompound"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasProcessingTechnique</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/leadsTo -->
-
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/leadsTo"/>
-    
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasRelativelyHigherStrengthThan -->
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/occursDueTo -->
-
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/occursDueTo">
-        <rdfs:label xml:lang="en">occurs due to</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasRelativelyHigherStrengthThan">
+        <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasRelativelyHigherStrengthThan</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/offersBenefit -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#hasRelativelyLowerWeightThan -->
 
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/offersBenefit">
-        <rdfs:label xml:lang="en">offers benefit</rdfs:label>
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#hasRelativelyLowerWeightThan">
+        <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#hasAdvantageOver"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>hasRelativelyLowerWeightThan</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/susceptibleTo -->
-
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/susceptibleTo">
-        <rdfs:label xml:lang="en">susceptible to</rdfs:label>
-    </owl:ObjectProperty>
-    
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#isUsedToProduce -->
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/underCondition -->
-
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/underCondition"/>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/useDrivenBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/useDrivenBy">
-        <rdfs:label xml:lang="en">use driven by</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/usedInIndustry -->
-
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/usedInIndustry">
-        <rdfs:label xml:lang="en">used In Industry</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/usesFiller -->
-
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat/usesFiller">
-        <rdfs:label xml:lang="en">uses filler</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompmat#isUsedToProduce">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#Thermoforming"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FibreMatThermoplasticComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>isUsedToProduce</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -212,1361 +264,1616 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://emmo.info/emmo#EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356 -->
 
+
     <owl:Class rdf:about="http://emmo.info/emmo#EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356"/>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/AdvancedCompositeMaterial -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#AcrylonitrileButadieneStyrene -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/AdvancedCompositeMaterial">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/hasProperty"/>
-                        <owl:allValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/HighStrengthToWeightRatio"/>
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/TailorableStructuralConfiguration"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/usedInIndustry"/>
-                        <owl:allValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/AerospaceIndustry"/>
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/AutomotiveIndustry"/>
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/WindEnergyIndustry"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/susceptibleTo"/>
-                <owl:someValuesFrom rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/LowEnergyImpactDamage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/useDrivenBy"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CostReduction"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/EnvironmentalBenefit"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/WeightReduction"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Advanced Composite Material</rdfs:label>
-        <skos:altLabel xml:lang="en">Advanced Composite</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#AcrylonitrileButadieneStyrene">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Acrylonitrile Butadiene Styrene</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/AerospaceIndustry -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#AcrylonitrileButadieneStyreneBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/AerospaceIndustry">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Industry"/>
-        <rdfs:label xml:lang="en">Aerospace Industry</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#AcrylonitrileButadieneStyreneBasedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Acrylonitrile Butadiene Styrene Based Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/AramidFibreBasedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#AdhesivelyBondedNonWovenComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/AramidFibreBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/FibreBasedComposite"/>
-        <rdfs:label xml:lang="en">Aramid Fibre Based Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#AdhesivelyBondedNonWovenComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#NonWovenStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Adhesively Bonded Non Woven Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/AssemblyPhase -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#AluminaFibreReinforcedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/AssemblyPhase">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/LifeCyclePhase"/>
-        <rdfs:label xml:lang="en">Assembly Phase</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#AluminaFibreReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#InorganicFibreReinforcedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Alumina Fibre Reinforced Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/AutoclaveComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#AluminiumMatrixComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/AutoclaveComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingProcessBasedComposite"/>
-        <rdfs:label xml:lang="en">Autoclave Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#AluminiumMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#MetalMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Aluminium Matrix Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/AutomotiveIndustry -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#AluminosilicateFibreReinforcedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/AutomotiveIndustry">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Industry"/>
-        <rdfs:label xml:lang="en">Automotive Industry</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#AluminosilicateFibreReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#InorganicFibreReinforcedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Aluminosilicate Fibre Reinforced Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/BarelyVisibleImpactDamage -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#AramidFibreReinforcedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/BarelyVisibleImpactDamage">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/LowEnergyImpactDamage"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/causes"/>
-                <owl:someValuesFrom rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/StructuralDegradation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Barely Visible Impact Damage</rdfs:label>
-        <sto:abbreviation xml:lang="en">BVID</sto:abbreviation>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#AramidFibreReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FibreTypeBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Aramid Fibre Reinforced Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/BarrierComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#AutoclaveComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/BarrierComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/FunctionalRequirementBasedComposite"/>
-        <rdfs:label xml:lang="en">Barrier Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#AutoclaveComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ManufacturingProcessBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Autoclave Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Benefit -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#AutoclaveProcess -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Benefit">
-        <rdfs:label xml:lang="en">Benefit</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#AutoclaveProcess">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeManufacturingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Autoclave Process</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/BoronFibreComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#AxialFilamentWinding -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/BoronFibreComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/FibreBasedComposite"/>
-        <rdfs:label xml:lang="en">Boron Fibre Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#AxialFilamentWinding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FilamentWindingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Axial Filament Winding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/BraidedStructuredComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#BarrierComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/BraidedStructuredComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/StructureBasedComposite"/>
-        <rdfs:label xml:lang="en">Braided Structured Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#BarrierComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FunctionalRequirementBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Barrier Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/BrittleNatureOfFibre -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#BasketWeaveWovenComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/BrittleNatureOfFibre">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Vulnerability"/>
-        <rdfs:label xml:lang="en">Brittle Nature of Fibre</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#BasketWeaveWovenComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#WovenStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Basket Weave Woven Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/CalciumCarbonate -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#BiaxialBraidedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CalciumCarbonate">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Filler"/>
-        <rdfs:label xml:lang="en">Calcium Carbonate</rdfs:label>
-        <skos:altLabel xml:lang="en">CaCO3</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#BiaxialBraidedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#BraidedStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Biaxial Braided Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/CarbonFibre -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#BoronFibreReinforcedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CarbonFibre">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Filler"/>
-        <rdfs:label xml:lang="en">Carbon Fibre</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#BoronFibreReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FibreTypeBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Boron Fibre Reinforced Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/CarbonFibreBasedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#BraidedFabricComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CarbonFibreBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/FibreBasedComposite"/>
-        <rdfs:label xml:lang="en">Carbon Fibre Based Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#BraidedFabricComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#TextileComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Braided Fabric Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/CatastrophicFailure -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#BraidedStructureComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CatastrophicFailure">
-        <rdfs:label xml:lang="en">Catastrophic Failure</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#BraidedStructureComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#StructureBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Braided Structure Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/CeramicMatrixComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CalciumCarbonate -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CeramicMatrixComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/MatrixMaterialBasedCompositeMaterial"/>
-        <rdfs:label xml:lang="en">Ceramic Matrix Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CalciumCarbonate">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FillerMaterial"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>CaCO3</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/CompositeManufacturingProcess -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CarbonCarbonComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CompositeManufacturingProcess">
-        <owl:equivalentClass rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeProcessingTechnique"/>
-        <rdfs:label xml:lang="en">Composite Manufacturing Process</rdfs:label>
-        <skos:altLabel xml:lang="en">Composite Material Manufacturing Process</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CarbonCarbonComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CarbonMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Carbon–carbon composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CarbonFibre -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial">
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CarbonFibre">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FillerMaterial"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Carbon Fibre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CarbonFibreReinforcedComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CarbonFibreReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FibreTypeBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Carbon Fibre Reinforced Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CarbonMatrixComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CarbonMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#MatrixMaterialBasedComposite"/>
+        <rdfs:comment>A composite material in which the matrix is based on carbon or graphite.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Carbon matrix composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CartesianBraidedComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CartesianBraidedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#BraidedStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Cartesian Braided Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CeramicMatrixComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CeramicMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#MatrixMaterialBasedComposite"/>
+        <rdfs:comment>A composite material in which the matrix is based on ceramic.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Ceramic matrix composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ClosedMouldProcess -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ClosedMouldProcess">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ResinTransferMouldingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Closed Mould Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CompatibilitybetweenMatrixandFibre -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CompatibilitybetweenMatrixandFibre">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#Factor"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Compatibility between Matrix and Fibre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CompositeBasedonMatrixMaterial -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CompositeBasedonMatrixMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeMaterial"/>
+        <rdfs:comment>A composite material in which the type of matrix plays a key role in determining the mechanical, thermal, chemical, and electrical properties of the composite.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Composite Based on Matrix Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CompositeLaminate -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CompositeLaminate"/>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CompositeManufacturingProcess -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CompositeManufacturingProcess">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Composite Manufacturing Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CompositeMaterial -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CompositeMaterial">
         <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/exposesTo"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/BrittleNatureOfFibre"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/HeterogeneousBuiltUpNature"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/LowFractureToughnessOfMatrix"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>A material consisting of two or more distinct phases bonded together (Comprehensive Composite Materials, 2000). A composite material is composed from at least two materials, where one is the reinforcing material and other is the matrix material (Advanced Composite Materials for Automotive Applications, 2013).</rdfs:comment>
-        <rdfs:label xml:lang="en">Composite Material</rdfs:label>
-        <skos:altLabel xml:lang="en">Composite</skos:altLabel>
+        <rdfs:comment>A material consisting of two or more distinct phases bonded together (Comprehensive Composite Materials, 2000). A composite material is composed from at least two materials, where one is the reinforcing material and other is the matrix material (Advanced Composite Materials for Automotive Applications, 2013). </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Composite material</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/CompositeProcessingTechnique -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CompositeProcessingTechnique -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CompositeProcessingTechnique">
-        <rdfs:label xml:lang="en">Composite Processing Technique</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CompositeProcessingTechnique">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Composite Processing Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CompressionMoldingComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CompressionMoldingComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ManufacturingProcessBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Compression Molding Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#CompressionMouldingProcess -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#CompressionMouldingProcess">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeManufacturingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Compression Moulding Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ContinuousFibreReinforcedComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ContinuousFibreReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FiberReinforcedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Continuous Fibre Reinforced Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ContinuousPultrusion -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ContinuousPultrusion">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#PultrusionProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Continuous Pultrusion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ElectromagneticAbsorbingComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ElectromagneticAbsorbingComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ElectromagneticComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Electromagnetic Absorbing Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ElectromagneticComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ElectromagneticComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FunctionalRequirementBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Electromagnetic Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ElectromagneticShieldingComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ElectromagneticShieldingComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ElectromagneticComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Electromagnetic Shielding Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#EpoxyBasedComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#EpoxyBasedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermosetMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Epoxy Based Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#Factor -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#Factor">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#FiberReinforcedComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#FiberReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ReinforcementBasedCompositeMaterial"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Fiber Reinforced Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#FibreDistributioninMatrix -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#FibreDistributioninMatrix">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#Factor"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Fibre Distribution in Matrix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#FibreMatNonWovenComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#FibreMatNonWovenComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#NonWovenStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Fibre Mat Non Woven Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#FibreMatThermoplasticComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#FibreMatThermoplasticComposite">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Fibre Mat Thermoplastic Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#FibreOrientation -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#FibreOrientation">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#Factor"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Fibre Orientation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#FibreTypeBasedComposite -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#FibreTypeBasedComposite">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Fibre Type Based Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/CompressionMouldingComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#FilamentWindingComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CompressionMouldingComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingProcessBasedComposite"/>
-        <rdfs:label xml:lang="en">Compression Moulding Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#FilamentWindingComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ManufacturingProcessBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Filament Winding Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#FilamentWindingProcess -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/CostReduction -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CostReduction">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Benefit"/>
-        <rdfs:label xml:lang="en">Cost Reduction</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#FilamentWindingProcess">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeManufacturingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Filament Winding Process</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/DamageRepair -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#FillerMaterial -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamageRepair">
-        <rdfs:label xml:lang="en">Damage Repair</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#FillerMaterial">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Filler Material</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/DamagedFastenerHole -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#FunctionalRequirementBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedFastenerHole">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingDefect"/>
-        <rdfs:label xml:lang="en">Damaged Fastener Hole</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#FunctionalRequirementBasedComposite">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Functional Requirement Based Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#GasBarrierComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterial -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterial">
-        <rdfs:label xml:lang="en">Damaged Material</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#GasBarrierComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#BarrierComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Gas Barrier Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterialSurroundingArea -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#GlassFibre -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterialSurroundingArea">
-        <rdfs:label xml:lang="en">Damaged Material Surrounding Area</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#GlassFibre">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FillerMaterial"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Glass Fibre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/DelaminationCrack -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#GlassFibreReinforcedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DelaminationCrack">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/BarelyVisibleImpactDamage"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/occursDueTo"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedFastenerHole"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/InadvertentEdgeCut"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ProcessingDiscrepency"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/SurfaceGouge"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Delamination Crack</rdfs:label>
-        <skos:altLabel xml:lang="en">Delamination Damage</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#GlassFibreReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FibreTypeBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Glass Fibre Reinforced Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#GlassMatThermoplasticCompressionMoulding -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ElectromagneticComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ElectromagneticComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/FunctionalRequirementBasedComposite"/>
-        <rdfs:label xml:lang="en">Electromagnetic Composite</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#GlassMatThermoplasticCompressionMoulding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeProcessingTechnique"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Glass Mat Thermoplastic Compression Moulding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/EnvironmentalBenefit -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#HandLay-UpComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/EnvironmentalBenefit">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Benefit"/>
-        <rdfs:label xml:lang="en">Environmental Benefit</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#HandLay-UpComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ManufacturingProcessBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Hand Lay-Up Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#HandLayUpProcess -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Factor -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Factor">
-        <rdfs:label xml:lang="en">Factor</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#HandLayUpProcess">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#WetLayUpProcesses"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Hand Lay Up Process</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/FibreBasedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#HeatDissipatingComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/FibreBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial"/>
-        <rdfs:label xml:lang="en">Fibre Based Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#HeatDissipatingComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermalComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Heat Dissipating Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#HelicalFilamentWinding -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/FibreDistribution -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/FibreDistribution">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Factor"/>
-        <rdfs:label xml:lang="en">Fibre Distribution</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#HelicalFilamentWinding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FilamentWindingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Helical Filament Winding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/FibreOrientation -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#High-TemperatureAutoclaveMoulding -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/FibreOrientation">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Factor"/>
-        <rdfs:label xml:lang="en">Fibre Orientation</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#High-TemperatureAutoclaveMoulding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#AutoclaveProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>High-Temperature Autoclave Moulding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/FibreReinforcedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#HighPressureAutoclaveMoulding -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/FibreReinforcedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ReinforcementBasedCompositeMaterial"/>
-        <rdfs:label xml:lang="en">Fibre-reinforced Composite</rdfs:label>
-        <skos:altLabel xml:lang="en">Fibrous Composite</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#HighPressureAutoclaveMoulding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#AutoclaveProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>High Pressure Autoclave Moulding</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#HotPressCompressionMoulding -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/FibreThermalStability -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/FibreThermalStability">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Factor"/>
-        <rdfs:label xml:lang="en">Fibre Thermal Stability</rdfs:label>
-        <skos:altLabel xml:lang="en">Thermal stability of fibre</skos:altLabel>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#HotPressCompressionMoulding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompressionMouldingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Hot Press Compression Moulding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/FilamentWindingComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#HybridComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/FilamentWindingComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingProcessBasedComposite"/>
-        <rdfs:label xml:lang="en">Filament Winding Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#HybridComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeMaterial"/>
+        <rdfs:comment>Hybrids consist of several layers of composites and other types of materials, such as aluminium. The aluminium layer is reinforced by laminated or unidirectional (UD) composites composites.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Hybrid Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Filler -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ImpactResistantComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Filler">
-        <rdfs:label>Filler</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ImpactResistantComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#StructuralComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Impact Resistant Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#InjectionMoldingComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/FuelConsumptionReduction -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/FuelConsumptionReduction">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/EnvironmentalBenefit"/>
-        <rdfs:label xml:lang="en">Fuel Consumption Reduction</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#InjectionMoldingComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ManufacturingProcessBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Injection Molding Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/FunctionalRequirementBasedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#InjectionMoulding -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/FunctionalRequirementBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial"/>
-        <rdfs:label xml:lang="en">Functional Requirement Based Composite</rdfs:label>
-        <skos:altLabel xml:lang="en">Composite Based on Functional Requirement</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#InjectionMoulding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeProcessingTechnique"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Injection Moulding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Glass -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#InjectionMouldingProcess -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Glass">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Filler"/>
-        <rdfs:label xml:lang="en">Glass</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#InjectionMouldingProcess">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeManufacturingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Injection Moulding Process</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#InorganicFibreReinforcedComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Glass-matThermoplasticCompressionMoulding -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Glass-matThermoplasticCompressionMoulding">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeProcessingTechnique"/>
-        <rdfs:label xml:lang="en">Glass-mat Thermoplastic Compression Moulding</rdfs:label>
-        <skos:altLabel xml:lang="en">Glass-mat Thermoplastic (GMT) Compression Moulding</skos:altLabel>
-        <skos:altLabel xml:lang="en">Glass-mat Thermoplastic by using Compression Moulding</skos:altLabel>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#InorganicFibreReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FibreTypeBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Inorganic Fibre Reinforced Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/GlassFibreBasedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#KnittedFabricComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/GlassFibreBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/FibreBasedComposite"/>
-        <rdfs:label xml:lang="en">Glass Fibre Based Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#KnittedFabricComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#TextileComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Knitted Fabric Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/HandLayUpBasedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#KnittedStructureComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/HandLayUpBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingProcessBasedComposite"/>
-        <rdfs:label xml:lang="en">Hand Lay-up Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#KnittedStructureComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#StructureBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Knitted Structure Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#LaminatedComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/HeterogeneousBuiltUpNature -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/HeterogeneousBuiltUpNature">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Vulnerability"/>
-        <rdfs:label xml:lang="en">Heterogeneous Built-Up Nature</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#LaminatedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#StructuralComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Laminated Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/HighStiffness -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#LennoWeaveWovenComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/HighStiffness">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Property"/>
-        <rdfs:label xml:lang="en">High Stiffness</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#LennoWeaveWovenComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#WovenStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Lenno Weave Woven Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/HighStrength -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#LoadBearingComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/HighStrength">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Property"/>
-        <rdfs:label xml:lang="en">High Strength</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#LoadBearingComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#StructuralComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Load Bearing Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#LongitudinalOrientation -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/HighStrengthToWeightRatio -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/HighStrengthToWeightRatio">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Property"/>
-        <rdfs:label xml:lang="en">High Strength-to-Weight Ratio</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#LongitudinalOrientation">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#OrientationBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Longitudinal Orientation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/HybridResinComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#MagnesiumMatrixComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/HybridResinComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ResinBasedComposite"/>
-        <rdfs:label xml:lang="en">Hybrid Resin Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#MagnesiumMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#MetalMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Magnesium Matrix Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/InadvertentEdgeCut -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ManufacturingProcessBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/InadvertentEdgeCut">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingDefect"/>
-        <rdfs:label xml:lang="en">Inadvertent Edge Cut</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ManufacturingProcessBasedComposite">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Manufacturing Process Based Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#MatrixMaterialBasedComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Industry -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Industry"/>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#MatrixMaterialBasedComposite"/>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/InjectionMoulding -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#MelamineBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/InjectionMoulding">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeProcessingTechnique"/>
-        <rdfs:label xml:lang="en">Injection Moulding</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#MelamineBasedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermosetMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Melamine Based Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/InjectionMouldingComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#MetalMatrixComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/InjectionMouldingComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingProcessBasedComposite"/>
-        <rdfs:label xml:lang="en">Injection Moulding Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#MetalMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#MatrixMaterialBasedComposite"/>
+        <rdfs:comment>A composite material in which the matrix is based on metal.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Metal matrix composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#MockLenoWeaveWovenComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/InorganicFibreBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/InorganicFibreBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/FibreBasedComposite"/>
-        <rdfs:label xml:lang="en">Inorganic Fibre Based Composite</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#MockLenoWeaveWovenComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#WovenStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Mock Leno Weave Woven Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/InterlaminationCrack -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#NonWovenStructureComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/InterlaminationCrack">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/BarelyVisibleImpactDamage"/>
-        <rdfs:label xml:lang="en">Interlamination Crack</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#NonWovenStructureComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#StructureBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Non Woven Structure Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#OpenMouldProcess -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/KnittedStructuredComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/KnittedStructuredComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/StructureBasedComposite"/>
-        <rdfs:label xml:lang="en">Knitted Structured Composite</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#OpenMouldProcess">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ResinTransferMouldingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Open Mould Process</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/LaminatedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#OrientationBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/LaminatedComposite">
-        <rdfs:label xml:lang="en">Laminated Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#OrientationBasedComposite">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Orientation Based Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#OxideMatrixComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/LifeCyclePhase -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/LifeCyclePhase">
-        <rdfs:label xml:lang="en">Life-Cycle Phase</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#OxideMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CeramicMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Oxide Matrix Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Lightweight -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ParticleReinforcedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Lightweight">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Property"/>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ParticleReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ReinforcementBasedCompositeMaterial"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Particle Reinforced Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/LongitudinallyOrientedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ParticulateReinforcedMetalMatrixComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/LongitudinallyOrientedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ReinforcementOrientationBasedComposite"/>
-        <rdfs:label xml:lang="en">Longitudinally-Oriented Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ParticulateReinforcedMetalMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ParticleReinforcedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Particulate Reinforced Metal Matrix Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#PhenolicBasedComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/LowDensity -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/LowDensity">
-        <rdfs:label xml:lang="en">Low Density</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#PhenolicBasedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermosetMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Phenolic Based Composite</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#Pile -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#Pile"/>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#PlainWeaveWovenComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/LowEnergyImpactDamage -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/LowEnergyImpactDamage">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/hasOccurencePhase"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/AssemblyPhase"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingPhase"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ServicePhase"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/occursDueTo"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/BrittleNatureOfFibre"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/HeterogeneousBuiltUpNature"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/LowFractureToughnessOfMatrix"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Low-Energy Impact Damage</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#PlainWeaveWovenComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#WovenStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Plain Weave Woven Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/LowFractureToughnessOfMatrix -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#PolyesterBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/LowFractureToughnessOfMatrix">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Vulnerability"/>
-        <rdfs:label xml:lang="en">Low Fracture Toughness of Matrix</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#PolyesterBasedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermosetMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Polyester Based Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#Polyetheretherketone -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ManufacturingDefect -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingDefect">
-        <rdfs:label xml:lang="en">Manufacturing Defect</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#Polyetheretherketone">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Polyetheretherketone</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ManufacturingPhase -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#PolyetheretherketoneBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingPhase">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/LifeCyclePhase"/>
-        <rdfs:label xml:lang="en">Manufacturing Phase</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#PolyetheretherketoneBasedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Polyetheretherketone Based Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#Polyethylene -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ManufacturingProcessBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingProcessBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial"/>
-        <rdfs:label xml:lang="en">Manufacturing Process Based Composite</rdfs:label>
-        <skos:altLabel xml:lang="en">Composite Based on Manufacturing Process</skos:altLabel>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#Polyethylene">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Polyethylene</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Matrix -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#PolyethyleneBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Matrix">
-        <rdfs:label xml:lang="en">Matrix</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#PolyethyleneBasedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Polyethylene Based Composite</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#PolymerCompositeMaterial -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#PolymerCompositeMaterial"/>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/MatrixFibreCompatibility -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#PolymerMatrixComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/MatrixFibreCompatibility">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Factor"/>
-        <rdfs:label xml:lang="en">Matrix Fibre Compatibility</rdfs:label>
-        <skos:altLabel xml:lang="en">Compatibility between Matrix and Fibres</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#PolymerMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#MatrixMaterialBasedComposite"/>
+        <rdfs:comment>A composite material in which the matrix is based on polymer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Polymer matrix composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/MatrixMaterialBasedCompositeMaterial -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#Polypropylene -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/MatrixMaterialBasedCompositeMaterial">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial"/>
-        <rdfs:label xml:lang="en">Matrix Material Based Composite Material</rdfs:label>
-        <skos:altLabel xml:lang="en">Composite Based on Material Matrix</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#Polypropylene">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Polypropylene</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#PolypropyleneBasedComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/MetalMatrixComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/MetalMatrixComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/MatrixMaterialBasedCompositeMaterial"/>
-        <rdfs:label xml:lang="en">Metal Matrix Composite</rdfs:label>
-        <sto:abbreviation xml:lang="en">MMC</sto:abbreviation>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#PolypropyleneBasedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Polypropylene Based Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/NonwovenStructuredComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#PultrusionComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/NonwovenStructuredComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/StructureBasedComposite"/>
-        <rdfs:label xml:lang="en">Nonwoven Structured Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#PultrusionComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ManufacturingProcessBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Pultrusion Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#PultrusionProcess -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/OperationalStress -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/OperationalStress">
-        <rdfs:label xml:lang="en">Operational Stress</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#PultrusionProcess">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeManufacturingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Pultrusion Process</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ParticleReinforcedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#RadialFilamentWinding -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ParticleReinforcedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ReinforcementBasedCompositeMaterial"/>
-        <rdfs:label xml:lang="en">Particle-reinforced Composite</rdfs:label>
-        <skos:altLabel xml:lang="en">Particulate Composite</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#RadialFilamentWinding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FilamentWindingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Radial Filament Winding</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#RandomOrientation -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Patch -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Patch">
-        <rdfs:label xml:lang="en">Patch</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#RandomOrientation">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#OrientationBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Random Orientation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/PollutionReduction -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ReactionInjectionMoulding -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/PollutionReduction">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/EnvironmentalBenefit"/>
-        <rdfs:label xml:lang="en">Pollution Reduction</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ReactionInjectionMoulding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeProcessingTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#InjectionMouldingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Reaction Injection Moulding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/PolymerMatrixComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ReinforcementBasedCompositeMaterial -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/PolymerMatrixComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/MatrixMaterialBasedCompositeMaterial"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/hasManufacturingProcessAffectingFactor"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/FibreDistribution"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/FibreOrientation"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/FibreThermalStability"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/MatrixFibreCompatibility"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/usesFiller"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CalciumCarbonate"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/CarbonFibre"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Glass"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Talc"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Wollastonite"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:onClass>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/hasProcessingTechnique"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Glass-matThermoplasticCompressionMoulding"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/InjectionMoulding"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ReactionInjectionMoulding"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ResinTransferMoulding"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/SheetMouldingCompoundProcess"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Thermoforming"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:onClass>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Polymer Matrix Composite</rdfs:label>
-        <sto:abbreviation xml:lang="en">PMC</sto:abbreviation>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ReinforcementBasedCompositeMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeMaterial"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Reinforcement Based Composite Material</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ResinTransferInjectionMoulding -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ProcessingDiscrepency -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ProcessingDiscrepency">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingDefect"/>
-        <rdfs:label xml:lang="en">Processing Discrepency</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ResinTransferInjectionMoulding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#InjectionMouldingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Resin Transfer Injection Moulding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Property -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ResinTransferMoldingComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Property"/>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ResinTransferMoldingComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ManufacturingProcessBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Resin Transfer Molding Composite</rdfs:label>
+    </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ResinTransferMoulding -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/PultrusionComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/PultrusionComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingProcessBasedComposite"/>
-        <rdfs:label xml:lang="en">Pultrusion Composite</rdfs:label>
-        <skos:altLabel xml:lang="en">Pultruded Composite</skos:altLabel>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ResinTransferMoulding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeProcessingTechnique"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Resin Transfer Moulding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/RandomlyOrientedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ResinTransferMouldingProcess -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/RandomlyOrientedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ReinforcementOrientationBasedComposite"/>
-        <rdfs:label xml:lang="en">Randomly Oriented Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ResinTransferMouldingProcess">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeManufacturingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Resin Transfer Moulding Process</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ReactionInjectionMoulding -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#SandwichComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ReactionInjectionMoulding">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeProcessingTechnique"/>
-        <rdfs:label xml:lang="en">Reaction Injection Moulding</rdfs:label>
-        <skos:altLabel xml:lang="en">RIM</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#SandwichComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#StructuralComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Sandwich Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#SatinWeaveWovenComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/RecyclingIncrease -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/RecyclingIncrease">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/EnvironmentalBenefit"/>
-        <rdfs:label xml:lang="en">Recycling Increase</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#SatinWeaveWovenComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#WovenStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Satin Weave Woven Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Reinforcement -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#SheetMouldingCompound -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Reinforcement">
-        <rdfs:label xml:lang="en">Reinforcement</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#SheetMouldingCompound">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeProcessingTechnique"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Sheet Moulding Compound</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ShortFibreReinforcedComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ReinforcementBasedCompositeMaterial -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ReinforcementBasedCompositeMaterial">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial"/>
-        <rdfs:label xml:lang="en">Reinforcement Based Composite Material</rdfs:label>
-        <skos:altLabel xml:lang="en">Composite Based on Reinforcement Type</skos:altLabel>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ShortFibreReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FiberReinforcedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Short Fibre Reinforced Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ReinforcementOrientationBasedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#SiliconCarbideMatrixComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ReinforcementOrientationBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial"/>
-        <rdfs:label xml:lang="en">Reinforcement Orientation Based Composite</rdfs:label>
-        <skos:altLabel xml:lang="en">Composite Based on Reinforcement Orientation</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#SiliconCarbideMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CeramicMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Silicon Carbide Matrix Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#SiliconFibreReinforcedComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ResinBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ResinBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial"/>
-        <rdfs:label xml:lang="en">Resin-Based Composite</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#SiliconFibreReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FibreTypeBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Silicon Fibre Reinforced Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ResinInjectionRepair -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#SprayUp -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ResinInjectionRepair">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/DamageRepair"/>
-        <rdfs:label xml:lang="en">Resin Injection Repair</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#SprayUp">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#WetLayUpProcesses"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Spray Up</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ResinTransferMoulding -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#StitchBondedNonWovenComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ResinTransferMoulding">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeProcessingTechnique"/>
-        <rdfs:label xml:lang="en">RTM</rdfs:label>
-        <rdfs:label xml:lang="en">Resin Transfer Moulding</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#StitchBondedNonWovenComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#NonWovenStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Stitch Bonded Non Woven Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#StructuralComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/SandwitchComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/SandwitchComposite">
-        <rdfs:label xml:lang="en">Sandwitch Composite</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#StructuralComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FunctionalRequirementBasedComposite"/>
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ReinforcementBasedCompositeMaterial"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Structural Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ScarfDoubleBondedRepair -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#StructuralReactionInjectionMoulding -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ScarfDoubleBondedRepair">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ScarfRepair"/>
-        <rdfs:label xml:lang="en">Scarf Double Bonded Repair</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#StructuralReactionInjectionMoulding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#InjectionMouldingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Structural Reaction Injection Moulding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ScarfLapRepair -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#StructureBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ScarfLapRepair">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ScarfRepair"/>
-        <rdfs:label xml:lang="en">Scarf Lap Repair</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#StructureBasedComposite">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Structure Based Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#Talc -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ScarfRepair -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ScarfRepair">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/DamageRepair"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/involvesRemoving"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterial"/>
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterialSurroundingArea"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/involvesBondingWith"/>
-                                <owl:someValuesFrom rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Patch"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/involvesRemoving"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterial"/>
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterialSurroundingArea"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/involvesBondingWith"/>
-                                <owl:allValuesFrom rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Patch"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/involvesRemoving"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterial"/>
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterialSurroundingArea"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/involvesBondingWith"/>
-                                <owl:someValuesFrom rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Patch"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/involvesRemoving"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterial"/>
-                                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DamagedMaterialSurroundingArea"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/involvesBondingWith"/>
-                                <owl:allValuesFrom rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Patch"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Scarf Repair</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#Talc">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FillerMaterial"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Talc</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ServicePhase -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#TextileComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ServicePhase">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/LifeCyclePhase"/>
-        <rdfs:label xml:lang="en">Service Phase</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#TextileComposite">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Textile Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/SheetMouldingCompoundProcess -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ThermalComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/SheetMouldingCompoundProcess">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeProcessingTechnique"/>
-        <rdfs:label xml:lang="en">Sheet Moulding Compound Process</rdfs:label>
-        <skos:altLabel xml:lang="en">SMC</skos:altLabel>
-        <skos:altLabel xml:lang="en">SMP Process</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ThermalComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FunctionalRequirementBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Thermal Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ThermalInsulationComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/SignificantlyReducedLocalStiffness -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/SignificantlyReducedLocalStiffness">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/StructuralDegradation"/>
-        <rdfs:label xml:lang="en">Significantly Reduced Local Stiffness</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ThermalInsulationComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ThermalComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Thermal Insulation Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/SignificantlyReducedLocalStrength -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ThermalStabilityofFibre -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/SignificantlyReducedLocalStrength">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/StructuralDegradation"/>
-        <rdfs:label xml:lang="en">Significantly Reduced Local Strength</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ThermalStabilityofFibre">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#Factor"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Thermal Stability of Fibre</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#Thermoforming -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/SiliconCarbideBasedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/SiliconCarbideBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/FibreBasedComposite"/>
-        <rdfs:label xml:lang="en">Silicon Carbide Based Composite</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#Thermoforming">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeProcessingTechnique"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Thermoforming</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/StructuralComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/StructuralComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/FunctionalRequirementBasedComposite"/>
-        <rdfs:label xml:lang="en">Structural Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#PolymerMatrixComposite"/>
+        <rdfs:comment>A composite material in which the matrix material is a thermoplastic polymer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Thermoplastic matrix composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixReinforcedComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/StructuralDegradation -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/StructuralDegradation">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/DelaminationCrack"/>
-                            <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontocompmat/InterlaminationCrack"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/underCondition"/>
-                        <owl:someValuesFrom rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/OperationalStress"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/leadsTo"/>
-                <owl:someValuesFrom rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CatastrophicFailure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Structural Degradation</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ThermoplasticMatrixReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FiberReinforcedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Thermoplastic Matrix Reinforced Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/StructureBasedComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ThermosetMatrixComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/StructureBasedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeMaterial"/>
-        <rdfs:label xml:lang="en">Structure Based Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ThermosetMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#PolymerMatrixComposite"/>
+        <rdfs:comment>A composite material in which the matrix material is a thermosetting polymer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Thermoset matrix composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/SurfaceGouge -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#ThermosetMatrixReinforcedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/SurfaceGouge">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingDefect"/>
-        <rdfs:label xml:lang="en">Surface Gouge</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#ThermosetMatrixReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FiberReinforcedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Thermoset Matrix Reinforced Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#TitaniumMatrixComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/TailorableStructuralConfiguration -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/TailorableStructuralConfiguration">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Property"/>
-        <rdfs:label xml:lang="en">Tailorable Structural Configuration</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#TitaniumMatrixComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#MetalMatrixComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Titanium Matrix Composite</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#TraditionalMaterial -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#TraditionalMaterial"/>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#TransverseOrientation -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Talc -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Talc">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Filler"/>
-        <rdfs:label xml:lang="en">Talc</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#TransverseOrientation">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#OrientationBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Transverse Orientation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ThermalComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#TriaxialBraidedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ThermalComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/FunctionalRequirementBasedComposite"/>
-        <rdfs:label xml:lang="en">Thermal Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#TriaxialBraidedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#BraidedStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Triaxial Braided Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#TubularBraidedComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Thermoforming -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Thermoforming">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/CompositeProcessingTechnique"/>
-        <rdfs:label xml:lang="en">Thermoforming</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#TubularBraidedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#BraidedStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Tubular Braided Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ThermoplasticMatrixComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#TwillWeaveWovenComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ThermoplasticMatrixComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/PolymerMatrixComposite"/>
-        <rdfs:label xml:lang="en">Thermoplastic Matrix Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#TwillWeaveWovenComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#WovenStructureComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Twill Weave Woven Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#UniDirectionalOrientation -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ThermoplasticResinComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ThermoplasticResinComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ResinBasedComposite"/>
-        <rdfs:label xml:lang="en">Thermoplastic Resin Composite</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#UniDirectionalOrientation">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#OrientationBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Uni Directional Orientation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ThermosetMatrixComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#VacuumAssistedCompressionMoulding -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ThermosetMatrixComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/PolymerMatrixComposite"/>
-        <rdfs:label xml:lang="en">Thermoset Matrix Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#VacuumAssistedCompressionMoulding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompressionMouldingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Vacuum Assisted Compression Moulding</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/ThermosettingResinComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#VacuumAssistedResinTransferMoulding -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/ThermosettingResinComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ResinBasedComposite"/>
-        <rdfs:label xml:lang="en">Thermosetting Resin Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#VacuumAssistedResinTransferMoulding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#VacuumInfusionProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Vacuum Assisted Resin Transfer Moulding</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#VacuumBaggingInfusion -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/TransverselyOrientedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/TransverselyOrientedComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ReinforcementOrientationBasedComposite"/>
-        <rdfs:label xml:lang="en">Transversely Oriented Composite</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#VacuumBaggingInfusion">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#VacuumInfusionProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Vacuum Bagging Infusion</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Uni-DirectionallyOrientedCompositeAtNinetyDegreeOrientation -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#VacuumInfusionComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Uni-DirectionallyOrientedCompositeAtNinetyDegreeOrientation">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ReinforcementOrientationBasedComposite"/>
-        <rdfs:label xml:lang="en">Uni-Directionally Oriented Composite at 90° Orientation</rdfs:label>
-        <skos:altLabel xml:lang="en">Uni-Directionally Oriented Composite at Ninety Degree Orientation</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#VacuumInfusionComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ManufacturingProcessBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Vacuum Infusion Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/UniDirectionallyOrientedCompositeAtZeroDegreeOrientation -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#VacuumInfusionProcess -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/UniDirectionallyOrientedCompositeAtZeroDegreeOrientation">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ReinforcementOrientationBasedComposite"/>
-        <rdfs:label xml:lang="en">Uni-Directionally Oriented Composite at 0° Orientation</rdfs:label>
-        <skos:altLabel xml:lang="en">Uni-Directionally Oriented Composite at Zero Degree Orientation</skos:altLabel>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#VacuumInfusionProcess">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeManufacturingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Vacuum Infusion Process</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#VaporBarrierComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/VacuumBaggingComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/VacuumBaggingComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingProcessBasedComposite"/>
-        <rdfs:label xml:lang="en">Vacuum Bagging Composite</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#VaporBarrierComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#BarrierComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Vapor Barrier Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/VacuumBaggingInfusionComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#WetLayUpProcesses -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/VacuumBaggingInfusionComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingProcessBasedComposite"/>
-        <rdfs:label xml:lang="en">Vacuum Bagging Infusion Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#WetLayUpProcesses">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#CompositeManufacturingProcess"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Wet Lay Up Processes</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/VacuumInfusionComposite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#WhiskerReinforcedComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/VacuumInfusionComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/ManufacturingProcessBasedComposite"/>
-        <rdfs:label xml:lang="en">Vacuum Infusion Composite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#WhiskerReinforcedComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#ParticleReinforcedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Whisker Reinforced Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#Wollastonite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Vulnerability -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Vulnerability">
-        <rdfs:label xml:lang="en">Vulnerability</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#Wollastonite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#FillerMaterial"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Wollastonite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/WeightReduction -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#WovenFabricComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/WeightReduction">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Benefit"/>
-        <rdfs:label xml:lang="en">Weight Reduction</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#WovenFabricComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#TextileComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Woven Fabric Composite</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#WovenStructureComposite -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/WindEnergyIndustry -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/WindEnergyIndustry">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Industry"/>
-        <rdfs:label xml:lang="en">Wind Energy Industry</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#WovenStructureComposite">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#StructureBasedComposite"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>Woven Structure Composite</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/Wollastonite -->
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#0DegreeOrientation -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/Wollastonite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/Filler"/>
-        <rdfs:label xml:lang="en">Wollastonite</rdfs:label>
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#0DegreeOrientation">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#UniDirectionalOrientation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>0 Degree Orientation</rdfs:label>
     </owl:Class>
     
+
 
+    <!-- http://www.theworldavatar.com/kg/ontocompmat#90DegreeOrientation -->
 
-    <!-- http://www.theworldavatar.com/kg/ontocompmat/WovenStructuredComposite -->
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat/WovenStructuredComposite">
-        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat/StructureBasedComposite"/>
-        <rdfs:label xml:lang="en">Woven Structured Composite</rdfs:label>
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompmat#90DegreeOrientation">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontocompmat#UniDirectionalOrientation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompmat"/>
+        <rdfs:label>90 Degree Orientation</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
 

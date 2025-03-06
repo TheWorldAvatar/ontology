@@ -82,7 +82,7 @@ Magnesium Matrix Composite,Class,Metal Matrix Composite,IS-A,,,,,http://www.thew
 Titanium Matrix Composite,Class,Metal Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Titanium Matrix Composite
 Silicon Carbide Matrix Composite,Class,Ceramic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Silicon Carbide Matrix Composite
 Oxide Matrix Composite,Class,Ceramic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Oxide Matrix Composite
-Polyetheretherketone,Class,Thermoplastic Matrix Composite,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polyetheretherketone
+Polyetheretherketone,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polyetheretherketone
 Polypropylene,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polypropylene
 Polyethylene,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polyethylene
 Acrylonitrile Butadiene Styrene,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Acrylonitrile Butadiene Styrene
@@ -108,8 +108,8 @@ Compression Moulding Process,Class,Composite Manufacturing Process,IS-A,,,,,http
 Injection Moulding Process,Class,Composite Manufacturing Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Injection Moulding Process
 Vacuum Infusion Process,Class,Composite Manufacturing Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Vacuum Infusion Process
 Autoclave Process,Class,Composite Manufacturing Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Autoclave Process
-Hand Lay Up Process,Class,Wet Lay Up Processes,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Hand Lay Up Process
-Spray Up,Class,Wet Lay Up Processes,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Spray Up
+Hand Lay Up Process,Class,Wet Lay Up Processes,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Hand Lay Up Process
+Spray Up,Class,Wet Lay Up Processes,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Spray Up
 Closed Mould Process,Class,Resin Transfer Moulding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Closed Mould Process
 Open Mould Process,Class,Resin Transfer Moulding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Open Mould Process
 Continuous Pultrusion,Class,Pultrusion Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Continuous Pultrusion
