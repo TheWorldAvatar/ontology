@@ -3,98 +3,164 @@ OntoCompMat,TBox,http://www.theworldavatar.com/kg/ontocompmat,https://www.w3.org
 OntoCompMat,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
 OntoCompMat,TBox,OntoCompMat is an ontology developed for representing composite composite materials.,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 OntoCompMat,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
-Composite Material,Class,http://emmo.info/emmo#EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356,IS-A,,,,"A material consisting of two or more distinct phases bonded together (Comprehensive Composite Materials, 2000). A composite material is composed from at least two materials, where one is the reinforcing material and other is the matrix material (Advanced Composite Materials for Automotive Applications, 2013). ",,"Composite material, Composite"
-Matrix Material Based Composite,Class,Composite Material,,,,,,,
-Polymer Matrix Composite,Class,Matrix Material Based Composite,IS-A,,,,,,"Polymer matrix composite, PMC"
-Metal Matrix Composite,Class,Matrix Material Based Composite,IS-A,,,,,,"Metal matrix composite, MMC"
-Ceramic Matrix Composite,Class,Matrix Material Based Composite,IS-A,,,,,,"Ceramic matrix composite, CMC"
-Carbon Matrix Composite,Class,Matrix Material Based Composite,IS-A,,,,,,"Carbon matrix composite, CAMC"
-Thermoplastic Matrix Composite,Class,Polymer Matrix Composite,IS-A,,,,"Thermoplastics are high molecular weight materials that soften or melt on the application of heat (Advanced Composite Materials for Automotive Applications, 2013)",,Thermoplastic matrix composite
-Thermoset Matrix Composite,Class,Polymer Matrix Composite,IS-A,,,,"Thermoset processing requires the non-reversible conversion of a low molecular weight base resin to a polymerised structure. The resultant material cannot be re-melted or re-formed (Advanced Composite Materials for Automotive Applications, 2013)",,Thermoset matrix composite
-Carbon-carbon Composite,Class,Carbon Matrix Composite,IS-A,,,,,,"Carbon–carbon composite, CCC"
-,,,,,,,,,
-Filler Material,Class,http://emmo.info/emmo#EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356,IS-A,,,,,,
-Calcium Carbonate,Class,Filler Material,IS-A,,,,,,CaCO3
-Talc,Class,Filler Material,IS-A,,,,,,
-Wollastonite,Class,Filler Material,IS-A,,,,,,
-Glass Fibre,Class,Filler Material,IS-A,,,,,,
-Carbon Fibre,Class,Filler Material,IS-A,,,,,,
-,,,,,,,,,
-Processing Technique,Class,,,,,,,,
-Injection Moulding,Class,Processing Technique,IS-A,,,,,,
-Sheet Moulding Compound,Class,Processing Technique,IS-A,,,,,,"Sheet Moulding Compound, SMC"
-Glass Mat Thermoplastic Compression Moulding,Class,Processing Technique,IS-A,,,,,,"Glass Mat Thermoplastic Compression Moulding, GMT"
-Resin Transfer Moulding,Class,Processing Technique,IS-A,,,,,,"Resin Transfer Moulding, RTM"
-Reaction Injection Moulding,Class,Processing Technique,IS-A,,,,,,"Reaction Injection Moulding, RIM"
-Thermoforming,Class,Processing Technique,IS-A,,,,,,
-,,,,,,,,,
-Reinforcement Based Composite Material,Class,Composite Material,IS-A,,,,,,
-Particle Reinforced Composite,Class,Reinforcement Based Composite Material,IS-A,,,,,,
-Fiber Reinforced Composite,Class,Reinforcement Based Composite Material,IS-A,,,,,,
-Structural Composite,Class,Reinforcement Based Composite Material,IS-A,,,,,,
-Sandwich Composite,Class,Structural Composite,IS-A,,,,,,
-Laminated Composite,Class,Structural Composite,IS-A,,,,,,
-Thermoplastic Matrix Reinforced Composite,Class,Fiber Reinforced Composite,IS-A,,,,,,
-Thermoset Matrix Reinforced Composite,Class,Fiber Reinforced Composite,IS-A,,,,,,
-Structural Composite,Class,,,,,,,,
-Fibre Reinforced Composite,Class,Structural Composite,IS-A,,,,,,
-Particulate Reinforced Composite,Class,Structural Composite,IS-A,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-Unidirectional Composite,,,,,,,,,
-Composite Laminate,,,,,,,,,
-Glass Fibre,,,,,,,,,
-Carbon Reinforced Polymer,,,,,,,,,
-Carbon Fibre Reinforced Polymer,,,,,,,,,"Carbon fibre reinforced polymer, CFRP"
-Carbon Ceramic Composite,,,,,,,,,
-Nanocomposite,,,,,,,,,
-Natural Fibre Reinforced Polymer,,,,,,,,,
-Green Composite,,,,,,,,,
-Glass Fibre Reinforced Polymer,,,,,,,,,"Glass fibre reinforced polymer, GFRP"
-Carbon Fibre Composite,,,,,,,,,
-Reinforced plastic,,,,,,,,,
-Polymer Composite Material,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
-Polymer Composite Material,Class,Polymer Composite Material,IS-A,,,,,,
-Non-structural Composite,Class,Polymer Composite Material,IS-A,,,,,,
-Semi-structural Composite,Class,Polymer Composite Material,IS-A,,,,,,
-Structural Composite,Class,Polymer Composite Material,IS-A,,,,,,
-,,,,,,,,,
-hasAdvantageOver,Object Property,,,Composite Material,Traditional Material,,,,
-hasRelativelyHigherStrengthThan,Object Property,hasAdvantageOver,IS-A,,,,,,
-hasRelativelyLowerWeightThan,Object Property,hasAdvantageOver,IS-A,,,,,,
-hasExcellentCorrosionResistanceOver,Object Property,hasAdvantageOver,IS-A,,,,,,
-hasExcellentThermalPropertiesOver,Object Property,hasAdvantageOver,IS-A,,,,,,
-hasExcellentDimensionalStabilityOver,Object Property,hasAdvantageOver,IS-A,,,,,,
-hasMoreResistanceToImpactThan,Object Property,hasAdvantageOver,IS-A,,,,,,
-hasMoreImpactResistanceThan,Object Property,hasAdvantageOver,IS-A,,,,,,
-hasMoreFatigueResistanceThan,Object Property,hasAdvantageOver,IS-A,,,,,,
-hasMoreResistanceToStaticLoadThan,Object Property,hasAdvantageOver,IS-A,,,,,,
-hasMoreResistanceToDynamicLoadThan,Object Property,hasAdvantageOver,IS-A,,,,,,
-consistsOf,Object Property,,,Composite Laminate,Pile,,,,
-,,,,,,,,,
-hasFiller,Object Property,,,Polymer Composite Material,Calcium Carbonate UNION Talc UNION Wollastonite UNION Carbon Fibre,,,,
-hasProcessingTechnique,Object Property,,,Polymer Composite Material,Injection Moulding UNION Sheet Moulding Compound UNION Glass Mat Thermoplastic Compression Moulding UNION Resin Transfer Moulding UNION Reaction Injection Moulding,,,,
-,,,,,,,,,
-Textile Composite,Class,,,,,,,,
-Woven Fabric Composite,Class,Textile Composite,IS-A,,,,,,
-Braided Fabric Composite,Class,Textile Composite,IS-A,,,,,,
-Knitted Fabric Composite,Class,Textile Composite,IS-A,,,,,,
-Hybrid Composite,Class,Composite Material,IS-A,,,,"Hybrids consist of several layers of composites and other types of materials, such as aluminium. The aluminium layer is reinforced by laminated or unidirectional (UD) composites composites.",,
-,,,,,,,,,
-Factor,Class,,,,,,,,
-Fibre Distribution in Matrix,Class,Factor,IS-A,,,,,,
-Compatibility between Matrix and Fibre,Class,Factor,IS-A,,,,,,
-Fibre Orientation,Class,Factor,IS-A,,,,,,
-Thermal Stability of Fibre,Class,Factor,IS-A,,,,,,
-,,,,,,,,,
-affectsProcessingAndManufacturingOf,Object Property,,,Factor,Polymer Composite Material,,,,
-,,,,,,,,,
-Fibre Mat Thermoplastic Composite,Class,,,,,,,,
-isUsedToProduce,Object Property,,,Thermoforming,Fibre Mat Thermoplastic Composite,,,,
-,,,,,,,,,
-Polymer Composite Material,Class,,,,,,,,
-Non-structural Composite,Class,Polymer Composite Material,IS-A,,,,,,
-Semi-structural Composite,Class,Polymer Composite Material,IS-A,,,,,,
-Structural Composite,Class,Polymer Composite Material,IS-A,,,,,,
+Composite Material,Class,http://emmo.info/emmo#EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356,IS-A,,,,"A material consisting of two or more distinct phases bonded together (Comprehensive Composite Materials, 2000). A composite material is composed from at least two materials, where one is the reinforcing material and other is the matrix material (Advanced Composite Materials for Automotive Applications, 2013). ",http://www.theworldavatar.com/kg/ontocompmat,Composite material
+Composite Based on Matrix Material,Class,Composite Material,IS-A,,,,"A composite material in which the type of matrix plays a key role in determining the mechanical, thermal, chemical, and electrical properties of the composite.",http://www.theworldavatar.com/kg/ontocompmat,Composite Based on Matrix Material
+Polymer Matrix Composite,Class,Matrix Material Based Composite,IS-A,,,,A composite material in which the matrix is based on polymer.,http://www.theworldavatar.com/kg/ontocompmat,Polymer matrix composite
+Metal Matrix Composite,Class,Matrix Material Based Composite,IS-A,,,,A composite material in which the matrix is based on metal.,http://www.theworldavatar.com/kg/ontocompmat,Metal matrix composite
+Ceramic Matrix Composite,Class,Matrix Material Based Composite,IS-A,,,,A composite material in which the matrix is based on ceramic.,http://www.theworldavatar.com/kg/ontocompmat,Ceramic matrix composite
+Carbon Matrix Composite,Class,Matrix Material Based Composite,IS-A,,,,A composite material in which the matrix is based on carbon or graphite.,http://www.theworldavatar.com/kg/ontocompmat,Carbon matrix composite
+Thermoplastic Matrix Composite,Class,Polymer Matrix Composite,IS-A,,,,A composite material in which the matrix material is a thermoplastic polymer.,http://www.theworldavatar.com/kg/ontocompmat,Thermoplastic matrix composite
+Thermoset Matrix Composite,Class,Polymer Matrix Composite,IS-A,,,,A composite material in which the matrix material is a thermosetting polymer.,http://www.theworldavatar.com/kg/ontocompmat,Thermoset matrix composite
+Carbon Carbon Composite,Class,Carbon Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Carbon–carbon composite
+Epoxy Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Epoxy Based Composite
+Phenolic Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Phenolic Based Composite
+Melamine Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Melamine Based Composite
+Polyester Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polyester Based Composite
+Polyetheretherketone Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polyetheretherketone Based Composite
+Polypropylene Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polypropylene Based Composite
+Polyethylene Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polyethylene Based Composite
+Acrylonitrile Butadiene Styrene Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Acrylonitrile Butadiene Styrene Based Composite
+Manufacturing Process Based Composite,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Manufacturing Process Based Composite
+Hand Lay-Up Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Hand Lay-Up Composite
+Pultrusion Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Pultrusion Composite
+Filament Winding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Filament Winding Composite
+Injection Molding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Injection Molding Composite
+Resin Transfer Molding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Resin Transfer Molding Composite
+Compression Molding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Compression Molding Composite
+Vacuum Infusion Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Vacuum Infusion Composite
+Autoclave Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Autoclave Composite
+Orientation Based Composite,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Orientation Based Composite
+Longitudinal Orientation,Class,Orientation Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Longitudinal Orientation
+Transverse Orientation,Class,Orientation Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Transverse Orientation
+Random Orientation,Class,Orientation Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Random Orientation
+Uni Directional Orientation,Class,Orientation Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Uni Directional Orientation
+0 Degree Orientation,Class,Uni Directional Orientation,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,0 Degree Orientation
+90 Degree Orientation,Class,Uni Directional Orientation,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,90 Degree Orientation
+Functional Requirement Based Composite,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Functional Requirement Based Composite
+Structural Composite,Class,Functional Requirement Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Structural Composite
+Barrier Composite,Class,Functional Requirement Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Barrier Composite
+Thermal Composite,Class,Functional Requirement Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Thermal Composite
+Electromagnetic Composite,Class,Functional Requirement Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Electromagnetic Composite
+Load Bearing Composite,Class,Structural Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Load Bearing Composite
+Impact Resistant Composite,Class,Structural Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Impact Resistant Composite
+Vapor Barrier Composite,Class,Barrier Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Vapor Barrier Composite
+Gas Barrier Composite,Class,Barrier Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Gas Barrier Composite
+Thermal Insulation Composite,Class,Thermal Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Thermal Insulation Composite
+Heat Dissipating Composite,Class,Thermal Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Heat Dissipating Composite
+Electromagnetic Composite,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Electromagnetic Composite
+Electromagnetic Shielding Composite,Class,Electromagnetic Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Electromagnetic Shielding Composite
+Electromagnetic Absorbing Composite,Class,Electromagnetic Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Electromagnetic Absorbing Composite
+Fibre Type Based Composite,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Fibre Type Based Composite
+Glass Fibre Reinforced Composite,Class,Fibre Type Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Glass Fibre Reinforced Composite
+Carbon Fibre Reinforced Composite,Class,Fibre Type Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Carbon Fibre Reinforced Composite
+Aramid Fibre Reinforced Composite,Class,Fibre Type Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Aramid Fibre Reinforced Composite
+Silicon Fibre Reinforced Composite,Class,Fibre Type Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Silicon Fibre Reinforced Composite
+Boron Fibre Reinforced Composite,Class,Fibre Type Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Boron Fibre Reinforced Composite
+Inorganic Fibre Reinforced Composite,Class,Fibre Type Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Inorganic Fibre Reinforced Composite
+Alumina Fibre Reinforced Composite,Class,Inorganic Fibre Reinforced Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Alumina Fibre Reinforced Composite
+Aluminosilicate Fibre Reinforced Composite,Class,Inorganic Fibre Reinforced Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Aluminosilicate Fibre Reinforced Composite
+Structure Based Composite,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Structure Based Composite
+Woven Structure Composite,Class,Structure Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Woven Structure Composite
+Non Woven Structure Composite,Class,Structure Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Non Woven Structure Composite
+Knitted Structure Composite,Class,Structure Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Knitted Structure Composite
+Braided Structure Composite,Class,Structure Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Braided Structure Composite
+Plain Weave Woven Composite,Class,Woven Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Plain Weave Woven Composite
+Twill Weave Woven Composite,Class,Woven Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Twill Weave Woven Composite
+Satin Weave Woven Composite,Class,Woven Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Satin Weave Woven Composite
+Basket Weave Woven Composite,Class,Woven Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Basket Weave Woven Composite
+Lenno Weave Woven Composite,Class,Woven Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Lenno Weave Woven Composite
+Mock Leno Weave Woven Composite,Class,Woven Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Mock Leno Weave Woven Composite
+Fibre Mat Non Woven Composite,Class,Non Woven Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Fibre Mat Non Woven Composite
+Stitch Bonded Non Woven Composite,Class,Non Woven Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Stitch Bonded Non Woven Composite
+Adhesively Bonded Non Woven Composite,Class,Non Woven Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Adhesively Bonded Non Woven Composite
+Biaxial Braided Composite,Class,Braided Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Biaxial Braided Composite
+Triaxial Braided Composite,Class,Braided Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Triaxial Braided Composite
+Tubular Braided Composite,Class,Braided Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Tubular Braided Composite
+Cartesian Braided Composite,Class,Braided Structure Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Cartesian Braided Composite
+Aluminium Matrix Composite,Class,Metal Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Aluminium Matrix Composite
+Magnesium Matrix Composite,Class,Metal Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Magnesium Matrix Composite
+Titanium Matrix Composite,Class,Metal Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Titanium Matrix Composite
+Silicon Carbide Matrix Composite,Class,Ceramic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Silicon Carbide Matrix Composite
+Oxide Matrix Composite,Class,Ceramic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Oxide Matrix Composite
+Polyetheretherketone,Class,Thermoplastic Matrix Composite,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polyetheretherketone
+Polypropylene,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polypropylene
+Polyethylene,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polyethylene
+Acrylonitrile Butadiene Styrene,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Acrylonitrile Butadiene Styrene
+Filler Material,Class,http://emmo.info/emmo#EMMO_ec7464a9_d99d_45f8_965b_4e9230ea8356,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Filler Material
+Calcium Carbonate,Class,Filler Material,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,CaCO3
+Talc,Class,Filler Material,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Talc
+Wollastonite,Class,Filler Material,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Wollastonite
+Glass Fibre,Class,Filler Material,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Glass Fibre
+Carbon Fibre,Class,Filler Material,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Carbon Fibre
+Composite Processing Technique,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Composite Processing Technique
+Injection Moulding,Class,Composite Processing Technique,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Injection Moulding
+Sheet Moulding Compound,Class,Composite Processing Technique,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Sheet Moulding Compound
+Glass Mat Thermoplastic Compression Moulding,Class,Composite Processing Technique,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Glass Mat Thermoplastic Compression Moulding
+Resin Transfer Moulding,Class,Composite Processing Technique,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Resin Transfer Moulding
+Reaction Injection Moulding,Class,Composite Processing Technique,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Reaction Injection Moulding
+Thermoforming,Class,Composite Processing Technique,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Thermoforming
+Composite Manufacturing Process,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Composite Manufacturing Process
+Wet Lay Up Processes,Class,Composite Manufacturing Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Wet Lay Up Processes
+Resin Transfer Moulding Process,Class,Composite Manufacturing Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Resin Transfer Moulding Process
+Pultrusion Process,Class,Composite Manufacturing Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Pultrusion Process
+Filament Winding Process,Class,Composite Manufacturing Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Filament Winding Process
+Compression Moulding Process,Class,Composite Manufacturing Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Compression Moulding Process
+Injection Moulding Process,Class,Composite Manufacturing Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Injection Moulding Process
+Vacuum Infusion Process,Class,Composite Manufacturing Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Vacuum Infusion Process
+Autoclave Process,Class,Composite Manufacturing Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Autoclave Process
+Hand Lay Up Process,Class,Wet Lay Up Processes,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Hand Lay Up Process
+Spray Up,Class,Wet Lay Up Processes,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Spray Up
+Closed Mould Process,Class,Resin Transfer Moulding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Closed Mould Process
+Open Mould Process,Class,Resin Transfer Moulding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Open Mould Process
+Continuous Pultrusion,Class,Pultrusion Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Continuous Pultrusion
+Axial Filament Winding,Class,Filament Winding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Axial Filament Winding
+Helical Filament Winding,Class,Filament Winding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Helical Filament Winding
+Radial Filament Winding,Class,Filament Winding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Radial Filament Winding
+Hot Press Compression Moulding,Class,Compression Moulding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Hot Press Compression Moulding
+Vacuum Assisted Compression Moulding,Class,Compression Moulding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Vacuum Assisted Compression Moulding
+Reaction Injection Moulding,Class,Injection Moulding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Reaction Injection Moulding
+Structural Reaction Injection Moulding,Class,Injection Moulding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Structural Reaction Injection Moulding
+Resin Transfer Injection Moulding,Class,Injection Moulding Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Resin Transfer Injection Moulding
+Vacuum Bagging Infusion,Class,Vacuum Infusion Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Vacuum Bagging Infusion
+Vacuum Assisted Resin Transfer Moulding,Class,Vacuum Infusion Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Vacuum Assisted Resin Transfer Moulding
+High Pressure Autoclave Moulding,Class,Autoclave Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,High Pressure Autoclave Moulding
+High-Temperature Autoclave Moulding,Class,Autoclave Process,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,High-Temperature Autoclave Moulding
+Reinforcement Based Composite Material,Class,Composite Material,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Reinforcement Based Composite Material
+Particle Reinforced Composite,Class,Reinforcement Based Composite Material,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Particle Reinforced Composite
+Fiber Reinforced Composite,Class,Reinforcement Based Composite Material,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Fiber Reinforced Composite
+Structural Composite,Class,Reinforcement Based Composite Material,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Structural Composite
+Continuous Fibre Reinforced Composite,Class,Fiber Reinforced Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Continuous Fibre Reinforced Composite
+Short Fibre Reinforced Composite,Class,Fiber Reinforced Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Short Fibre Reinforced Composite
+Whisker Reinforced Composite,Class,Particle Reinforced Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Whisker Reinforced Composite
+Particulate Reinforced Metal Matrix Composite,Class,Particle Reinforced Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Particulate Reinforced Metal Matrix Composite
+Sandwich Composite,Class,Structural Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Sandwich Composite
+Laminated Composite,Class,Structural Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Laminated Composite
+Thermoplastic Matrix Reinforced Composite,Class,Fiber Reinforced Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Thermoplastic Matrix Reinforced Composite
+Thermoset Matrix Reinforced Composite,Class,Fiber Reinforced Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Thermoset Matrix Reinforced Composite
+hasAdvantageOver,Object Property,,,Composite Material,Traditional Material,,,http://www.theworldavatar.com/kg/ontocompmat,hasAdvantageOver
+hasRelativelyHigherStrengthThan,Object Property,hasAdvantageOver,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,hasRelativelyHigherStrengthThan
+hasRelativelyLowerWeightThan,Object Property,hasAdvantageOver,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,hasRelativelyLowerWeightThan
+hasExcellentCorrosionResistanceOver,Object Property,hasAdvantageOver,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,hasExcellentCorrosionResistanceOver
+hasExcellentThermalPropertiesOver,Object Property,hasAdvantageOver,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,hasExcellentThermalPropertiesOver
+hasExcellentDimensionalStabilityOver,Object Property,hasAdvantageOver,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,hasExcellentDimensionalStabilityOver
+hasMoreResistanceToImpactThan,Object Property,hasAdvantageOver,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,hasMoreResistanceToImpactThan
+hasMoreImpactResistanceThan,Object Property,hasAdvantageOver,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,hasMoreImpactResistanceThan
+hasMoreFatigueResistanceThan,Object Property,hasAdvantageOver,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,hasMoreFatigueResistanceThan
+hasMoreResistanceToStaticLoadThan,Object Property,hasAdvantageOver,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,hasMoreResistanceToStaticLoadThan
+hasMoreResistanceToDynamicLoadThan,Object Property,hasAdvantageOver,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,hasMoreResistanceToDynamicLoadThan
+consistsOf,Object Property,,,Composite Laminate,Pile,,,http://www.theworldavatar.com/kg/ontocompmat,consistsOf
+hasFiller,Object Property,,,Polymer Composite Material,Calcium Carbonate UNION Talc UNION Wollastonite UNION Carbon Fibre,,,http://www.theworldavatar.com/kg/ontocompmat,hasFiller
+hasProcessingTechnique,Object Property,,,Polymer Composite Material,Injection Moulding UNION Sheet Moulding Compound UNION Glass Mat Thermoplastic Compression Moulding UNION Resin Transfer Moulding UNION Reaction Injection Moulding,,,http://www.theworldavatar.com/kg/ontocompmat,hasProcessingTechnique
+Textile Composite,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Textile Composite
+Woven Fabric Composite,Class,Textile Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Woven Fabric Composite
+Braided Fabric Composite,Class,Textile Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Braided Fabric Composite
+Knitted Fabric Composite,Class,Textile Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Knitted Fabric Composite
+Hybrid Composite,Class,Composite Material,IS-A,,,,"Hybrids consist of several layers of composites and other types of materials, such as aluminium. The aluminium layer is reinforced by laminated or unidirectional (UD) composites composites.",http://www.theworldavatar.com/kg/ontocompmat,Hybrid Composite
+Factor,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Factor
+Fibre Distribution in Matrix,Class,Factor,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Fibre Distribution in Matrix
+Compatibility between Matrix and Fibre,Class,Factor,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Compatibility between Matrix and Fibre
+Fibre Orientation,Class,Factor,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Fibre Orientation
+Thermal Stability of Fibre,Class,Factor,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Thermal Stability of Fibre
+affectsProcessingAndManufacturingOf,Object Property,,,Factor,Polymer Composite Material,,,http://www.theworldavatar.com/kg/ontocompmat,affectsProcessingAndManufacturingOf
+Fibre Mat Thermoplastic Composite,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Fibre Mat Thermoplastic Composite
+isUsedToProduce,Object Property,,,Thermoforming,Fibre Mat Thermoplastic Composite,,,http://www.theworldavatar.com/kg/ontocompmat,isUsedToProduce
