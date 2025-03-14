@@ -1,53 +1,57 @@
 Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
 OntoEarthquake,TBox,http://www.theworldavatar.com/kg/ontoearthquake,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
 OntoEarthquake,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
-OntoEarthquake,TBox,OntoEarthquake is an ontology developed to represent earthquake hazard,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
+OntoEarthquake,TBox,OntoEarthquake is an ontology developed to represent earthquake hazards,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 OntoEarthquake,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
-Hazard,Class,http://sweetontology.net/phen/Event,IS-A,,,,,http://www.theworldavatar.com/kg/ontoearthquake,Hazard
 http://sweetontology.net/phen/Event,Class,,,,,,,http://sweetontology.net/phen,Event
-Stage,Class,,,,,,"A phase in the progression of a hazard event that represents a specific period in the hazard’s lifecycle, from its initiation to its dissipation.",http://www.theworldavatar.com/kg/ontoearthquake,Stage
-EmbryonicStage,Class,,,,,,"The initial phase of hazard formation, where the necessary conditions for the event begin to develop.",http://www.theworldavatar.com/kg/ontoearthquake,Embryonic Stage
-GrowthStage,Class,,,,,,The phase where the hazard starts gaining intensity and spreading.,http://www.theworldavatar.com/kg/ontoearthquake,Growth Stage
-MatureStage,Class,,,,,,"The peak or most intense phase of the hazard, causing the most damage and destruction.",http://www.theworldavatar.com/kg/ontoearthquake,Mature Stage
-DecayingStage,Class,,,,,,"The phase where the hazard starts to weaken, dissipate, or recede, though residual impacts may persist.",http://www.theworldavatar.com/kg/ontoearthquake,Decaying Stage
-http://www.w3.org/2006/time#Interval,Class,,,,,,,http://www.w3.org/2006/time#,Interval
+Hazard,Class,http://sweetontology.net/phen/Event,IS-A,,,,Any natural calamity that causes human and animal suffering and damage to environment.,http://www.theworldavatar.com/kg/ontoearthquake,Hazard
+Stage,Class,,,,,,A phase in the progression of a hazard event.,http://www.theworldavatar.com/kg/ontoearthquake,Stage
+EmbryonicStage,Class,Stage,IS-A,,,,"The initial phase of hazard formation, where the necessary conditions for the event begin to develop.",http://www.theworldavatar.com/kg/ontoearthquake,Embryonic Stage
+GrowthStage,Class,Stage,IS-A,,,,The phase where the hazard starts gaining intensity and spreading.,http://www.theworldavatar.com/kg/ontoearthquake,Growth Stage
+MatureStage,Class,Stage,IS-A,,,,"The peak or most intense phase of the hazard, causing the most damage and destruction.",http://www.theworldavatar.com/kg/ontoearthquake,Mature Stage
+DecayingStage,Class,Stage,IS-A,,,,"The phase where the hazard starts to weaken, dissipate, or recede, though residual impacts may persist.",http://www.theworldavatar.com/kg/ontoearthquake,Decaying Stage
+http://www.w3.org/2006/time#Interval,Class,,,,,,,http://www.w3.org/2006/time,Interval
 hasStage,Object Property,,,http://sweetontology.net/phen/Event,Stage,,This property describes the different phases or stages that a hazard event undergoes.,http://www.theworldavatar.com/kg/ontoearthquake,has Stage
 precededBy,Object Property,,,Stage,Stage,,This property indicates a temporal relationship where one event or stage occurs before another.,http://www.theworldavatar.com/kg/ontoearthquake,preceded By
 http://www.w3.org/2006/time#Instant,Class,,,,,,,http://www.w3.org/2006/time#,Instant
-hasTimeInterval,Object Property,,,http://sweetontology.net/phen/Event,http://www.w3.org/2006/time#Interval,exactly 1,A relationship between an event and the time interval associated with the duration of the event.,http://www.theworldavatar.com/kg/ontoearthquake,has TimeInterval
-http://www.w3.org/2006/time#hasBeginning,Object Property,,,http://www.w3.org/2006/time#Interval,http://www.w3.org/2006/time#Instant,,,https://www.w3.org/2006/time,has Beginning
-http://www.w3.org/2006/time#hasEnd,Object Property,,,http://www.w3.org/2006/time#Interval,http://www.w3.org/2006/time#Instant,,,https://www.w3.org/2006/time,has End
-http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity,Class,,,,,,,http://www.ontology-of-units-of-measure.org/resource/om-2/,Quantity
-EnvironmentalComponent,Class,,,,,,"Natural components of the environment (e.g. biodiversity, natural habitats, animal species, etc.).",https://www.theworldavatar.com/kg/ontoearthquake/,Environmental component
-LivingBeing,Class,,,,,,"including humans and animals, that may be impacted by earthquakes.",https://www.theworldavatar.com/kg/ontoearthquake/,Living Being
-Population,Class,LivingBeing,IS-A,,,,People who inhabit a territory or state.,https://www.theworldavatar.com/kg/ontoearthquake/,Population
+hasTimeInterval,Object Property,,,http://sweetontology.net/phen/Event UNION Stage,http://www.w3.org/2006/time#Interval,exactly 1,A relationship between an event or stage and the time interval associated with the duration of the event.,http://www.theworldavatar.com/kg/ontoearthquake,has Time Interval
+http://www.w3.org/2006/time#hasBeginning,Object Property,,,http://www.w3.org/2006/time#Interval,http://www.w3.org/2006/time#Instant,exactly 1,,https://www.w3.org/2006/time,has Beginning
+http://www.w3.org/2006/time#hasEnd,Object Property,,,http://www.w3.org/2006/time#Interval,http://www.w3.org/2006/time#Instant,exactly 1,,https://www.w3.org/2006/time,has End
+EnvironmentalComponent,Class,,,,,,"Natural components of the environment (e.g. biodiversity, natural habitats, animal species, etc.).",https://www.theworldavatar.com/kg/ontoearthquake/,Environmental Component
+LivingBeing,Class,,,,,,"An organism, such as a person or an animal, that can be affected by hazards.",https://www.theworldavatar.com/kg/ontoearthquake/,Living Being
+http://xmlns.com/foaf/0.1/Person,Class,LivingBeing,IS-A,,,,People who inhabit a territory or state.,http://xmlns.com/foaf,Person
 Animal,Class,LivingBeing,IS-A,,,,Non-human living organisms potentially affected by a hazard,http://www.theworldavatar.com/kg/ontoearthquake,Animal
-InfrastructureComponent,Class,,,,,,Manmade basic structures or features needed for the functioning of a system or organization.,https://www.theworldavatar.com/kg/ontoearthquake/,Infrastructure component
-affects,Object Property,,,http://purl.obolibrary.org/obo/ENVO_01000710,EnvironmentalComponent UNION Population UNION InfrastructureComponent,,A relationship between a earthquake and affected entities.,https://www.theworldavatar.com/kg/ontoearthquake/,affects
+InfrastructureComponent,Class,,,,,,Manmade basic structures or features needed for the functioning of a system or organization.,https://www.theworldavatar.com/kg/ontoearthquake/,Infrastructure Component
+affects,Object Property,,,http://purl.obolibrary.org/obo/ENVO_01000677,EnvironmentalComponent UNION LivingBeing UNION InfrastructureComponent,,A relationship between an earthquake and affected entities.,https://www.theworldavatar.com/kg/ontoearthquake/,affects
 Water,Class,,,,,,"Hazards can contaminate water bodies, leading to pollution, reduced water quality, and harm to aquatic life.",https://www.theworldavatar.com/kg/ontoearthquake/,Water
 Air,Class,,,,,,Hazards can pollute air affecting air quality and leading to health issues in humans and ecosystem.,https://www.theworldavatar.com/kg/ontoearthquake/,Air
 Soil,Class,,,,,,"Hazards can contaminate soil, reducing soil fertility, harming plant growth, and posing risks to human and animal health through food chains.",https://www.theworldavatar.com/kg/ontoearthquake/,Soil
 Vegetation,Class,,,,,,"Hazards can damage or destroy plant life, reducing biodiversity, and disrupting ecosystem.",https://www.theworldavatar.com/kg/ontoearthquake/,Vegetation
 Ecosystem,Class,,,,,,Hazards can disrupt ecosystem balance to long-term environmental degradation.,https://www.theworldavatar.com/kg/ontoearthquake/,Ecosystem
-NetworkInfrastructure,Class,InfrastructureComponent,IS-A,,,,"Network systems, i.e. installations and facilities spreading across land.",https://www.theworldavatar.com/kg/ontoearthquake/,Network infrastructure
-ArealInfrastructure,Class,InfrastructureComponent,IS-A,,,,Areal installations and land-uses.,https://www.theworldavatar.com/kg/ontoearthquake/,Areal infrastructure
-MobilityNetwork,Class,NetworkInfrastructure,IS-A,,,,"Network-shaped infrastructure to enable transport of people and goods (e.g. roads, railroads).",https://www.theworldavatar.com/kg/ontoearthquake/,Mobility network
-ProvisioningNetwork,Class,NetworkInfrastructure,IS-A,,,,"Network-shaped infrastructure for provisioning goods (e.g. electricity, gas, water).",https://www.theworldavatar.com/kg/ontoearthquake/,Provisioning network
-ResidentialInfrastructure,Class,ArealInfrastructure,IS-A,,,,Material infrastructure in form of residential buildings.,https://www.theworldavatar.com/kg/ontoearthquake/,ResidentialArea
-CommercialInfrastructure,Class,ArealInfrastructure,IS-A,,,,Material infrastructure in form of commercial buildings.,https://www.theworldavatar.com/kg/ontoearthquake/,CommercialArea
-IndustrialInfrastructure,Class,ArealInfrastructure,IS-A,,,,Material infrastructure in form of industrial buildings.,https://www.theworldavatar.com/kg/ontoearthquake/,IndustrialArea
-CriticalInfrastructure,Class,ArealInfrastructure,IS-A,,,,Material infrastructure in form of critical buildings.,https://www.theworldavatar.com/kg/ontoearthquake/,IndustrialArea
+NetworkInfrastructure,Class,InfrastructureComponent,IS-A,,,,"Network systems, i.e. installations and facilities spreading across land.",https://www.theworldavatar.com/kg/ontoearthquake/,Network Infrastructure
+ArealInfrastructure,Class,InfrastructureComponent,IS-A,,,,Areal installations and land-uses.,https://www.theworldavatar.com/kg/ontoearthquake/,Areal Infrastructure
+MobilityNetwork,Class,NetworkInfrastructure,IS-A,,,,"Network-shaped infrastructure to enable transport of people and goods (e.g. roads, railroads).",https://www.theworldavatar.com/kg/ontoearthquake/,Mobility Network
+ProvisioningNetwork,Class,NetworkInfrastructure,IS-A,,,,"Network-shaped infrastructure for provisioning goods (e.g. electricity, gas, water).",https://www.theworldavatar.com/kg/ontoearthquake/,Provisioning Network
+ResidentialInfrastructure,Class,ArealInfrastructure,IS-A,,,,Material infrastructure in form of residential buildings.,https://www.theworldavatar.com/kg/ontoearthquake/,Residential Infrastructure
+CommercialInfrastructure,Class,ArealInfrastructure,IS-A,,,,Material infrastructure in form of commercial buildings.,https://www.theworldavatar.com/kg/ontoearthquake/,Commercial Infrastructure
+IndustrialInfrastructure,Class,ArealInfrastructure,IS-A,,,,Material infrastructure in form of industrial buildings.,https://www.theworldavatar.com/kg/ontoearthquake/,Industrial Infrastructure
+CriticalInfrastructure,Class,ArealInfrastructure,IS-A,,,,Material infrastructure in form of critical buildings.,https://www.theworldavatar.com/kg/ontoearthquake/,Critical Infrastructure
 Impact,Class,,,,,,Consequences of an event taking place.,https://www.theworldavatar.com/kg/ontoearthquake/,Impact
-resultsIn,Object Property,,,Hazard,Impact,,A relationship between an Event and its effects.,https://www.theworldavatar.com/kg/ontoearthquake/,results in
-hasMonetaryValue,Object Property,,,Impact,http://www.ontology-of-units-of-measure.org/resource/om-2/AmountOfMoney,exactly 1,A relationship between an Impact and the quantification of its cumulative effects in monetary terms.,https://www.theworldavatar.com/kg/ontoearthquake/,has monetary value
+resultsIn,Object Property,,,Hazard,Impact,,A relationship between an Event and its effects.,https://www.theworldavatar.com/kg/ontoearthquake/,results In
 http://www.ontology-of-units-of-measure.org/resource/om-2/AmountOfMoney,Class,,,,,,,http://www.ontology-of-units-of-measure.org/resource/om-2/,Amount Of Money
-causesLossOfLifeOf,Object Property,,,Hazard,http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity,,This property links a hazard to the quantity representing the loss of life it causes.,http://www.theworldavatar.com/kg/ontoearthquake,causes Loss Of Life Of
-causesEvacuationOf,Object Property,,,Hazard,http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity,,This property associates a hazard with the quantity representing the number of evacuations it causes.,http://www.theworldavatar.com/kg/ontoearthquake,causes Evacuation Of
-endangersOf,Object Property,,,Hazard,http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity,,This property connects a hazard to the quantity representing the entities it endangers.,http://www.theworldavatar.com/kg/ontoearthquake,endangers Of
-causesDamageOf,Object Property,,,Hazard,http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity,,This property links a hazard to the quantity representing the damage it causes.,http://www.theworldavatar.com/kg/ontoearthquake,
-indicatesQuantityOf,Object Property,,,http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity,EnvironmentalComponent UNION Population UNION InfrastructureComponent,,"This property associates a quantity with the environmental component, population, or infrastructure component it indicates.",http://www.theworldavatar.com/kg/ontoearthquake,indicates Quantity Of
-hasAffectedArea,Object Property,,,InfrastructureComponent,http://www.ontology-of-units-of-measure.org/resource/om-2/Area,,A relationship between an affected Infrastructure Component and the corresponding area affected.,https://www.theworldavatar.com/kg/ontoearthquake/,has affected area
-Earthquake,Class,Event,IS-A,,,,"A sudden and violent shaking of the ground, caused by movements within the earth’s crust.",http://www.theworldavatar.com/kg/ontoearthquake,Earthquake
+http://www.ontology-of-units-of-measure.org/resource/om-2/hasValue,Object Property,,,http://www.ontology-of-units-of-measure.org/resource/om-2/AmountOfMoney UNION http://www.ontology-of-units-of-measure.org/resource/om-2/Area UNION http://www.ontology-of-units-of-measure.org/resource/om-2/Number,http://www.ontology-of-units-of-measure.org/resource/om-2/Measure,,,http://www.ontology-of-units-of-measure.org/resource/om-2/,
+http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue,Data Property,,,http://www.ontology-of-units-of-measure.org/resource/om-2/Measure,float,,,http://www.ontology-of-units-of-measure.org/resource/om-2/,has Numerical Value
+http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit,Object Property,,,http://www.ontology-of-units-of-measure.org/resource/om-2/Measure,http://www.ontology-of-units-of-measure.org/resource/om-2/Unit,,,http://www.ontology-of-units-of-measure.org/resource/om-2/,
+http://www.ontology-of-units-of-measure.org/resource/om-2/symbol,Data Property,,,http://www.ontology-of-units-of-measure.org/resource/om-2/Unit,string,,,http://www.ontology-of-units-of-measure.org/resource/om-2/,
+hasMonetaryValue,Object Property,,,Impact,http://www.ontology-of-units-of-measure.org/resource/om-2/AmountOfMoney,exactly 1,A relationship between an Impact and the quantification of its cumulative effects in monetary terms.,https://www.theworldavatar.com/kg/ontoearthquake/,has Monetary Value
+,,,,,,,,,
+causesLossOfLifeOf,Object Property,,,Hazard,http://www.ontology-of-units-of-measure.org/resource/om-2/Number,,This property links a hazard to the quantity representing the loss of life it causes.,http://www.theworldavatar.com/kg/ontoearthquake,causes Loss Of Life Of
+causesEvacuationOf,Object Property,,,Hazard,http://www.ontology-of-units-of-measure.org/resource/om-2/Number,,This property associates a hazard with the quantity representing the number of evacuations it causes.,http://www.theworldavatar.com/kg/ontoearthquake,causes Evacuation Of
+endangersOf,Object Property,,,Hazard,http://www.ontology-of-units-of-measure.org/resource/om-2/Number,,This property connects a hazard to the quantity representing the entities it endangers.,http://www.theworldavatar.com/kg/ontoearthquake,endangers Of
+causesDamageOf,Object Property,,,Hazard,http://www.ontology-of-units-of-measure.org/resource/om-2/Number,,This property links a hazard to the quantity representing the damage it causes.,http://www.theworldavatar.com/kg/ontoearthquake,causes Damage Of
+indicatesQuantityOf,Object Property,,,http://www.ontology-of-units-of-measure.org/resource/om-2/Number,LivingBeing UNION InfrastructureComponent,,"This property associates a quantity with the environmental component, population, or infrastructure component it indicates.",http://www.theworldavatar.com/kg/ontoearthquake,indicates Quantity Of
+hasAffectedArea,Object Property,,,InfrastructureComponent,http://www.ontology-of-units-of-measure.org/resource/om-2/Area,,A relationship between an affected Infrastructure Component and the corresponding area affected.,https://www.theworldavatar.com/kg/ontoearthquake/,has Affected Area
+Earthquake,Class,Event,IS-A,,,,"A sudden and violent shaking of the ground, caused by movements within the earth crust.",http://www.theworldavatar.com/kg/ontoearthquake,Earthquake
 ForeShock,Class,Earthquake,IS-A,,,,"A smaller earthquake that precedes the main seismic event, indicating potential upcoming seismic activity.",http://www.theworldavatar.com/kg/ontoearthquake,Fore Shock
 MainShock,Class,Earthquake,IS-A,,,,The largest and most significant earthquake in a sequence of seismic events.,http://www.theworldavatar.com/kg/ontoearthquake,Main Shock
 AfterShock,Class,Earthquake,IS-A,http://www.theworldavatar.com/kg/ontoearthquake,,,"A smaller earthquake that follows the main seismic event, occurring in the same area.",http://www.theworldavatar.com/kg/ontoearthquake,After Shock
@@ -61,43 +65,42 @@ Hypocenter,Class,,,,,,The point beneath the earth's surface where an earthquake 
 Epicenter,Class,,,,,,The point on the earth's surface directly above the hypocenter of an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Epicenter
 http://purl.obolibrary.org/obo/ENVO_01000710,Class,http://sweetontology.net/phenHydro/Flood,EQUIVALENT-TO,,,,,http://purl.obolibrary.org/obo/,Flood
 http://www.theworldavatar.com/kg/ontolandslide#Landslide,Class,Event,IS-A,,,,,http://www.theworldavatar.com/kg/ontolandslide,Landslide
-triggers,Object Property,,,Earthquake,Flood/Landslide,,Indicates that one event initiates or causes another,http://www.theworldavatar.com/kg/ontoearthquake,triggers
-includes,Object Property,,,EarthquakeRiskManagement,Recovery/Response/Preparedness/HazardAssessment,,"Earthquake risk management includes reovery, response, preparedness or hazard assessment",http://www.theworldavatar.com/kg/ontoearthquake,includes
-https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave,Object Property,,,Earthquake ,Wave,,,https://seismic.balog.jp/ontology/jp-earthquake.ttl#,observedWave
+triggers,Object Property,,,Earthquake,Flood UNION Landslide,,Indicates that one event initiates or causes another,http://www.theworldavatar.com/kg/ontoearthquake,triggers
+includes,Object Property,,,EarthquakeRiskManagement,Recovery UNION Response UNION Preparedness UNION HazardAssessment,,"Earthquake risk management includes reovery, response, preparedness or hazard assessment",http://www.theworldavatar.com/kg/ontoearthquake,includes
+https://seismic.balog.jp/ontology/jp-earthquake.ttl#observedWave,Object Property,,,Earthquake ,Wave,,,https://seismic.balog.jp/ontology/jp-earthquake.ttl#,observed Wave
 hasType,Object Property,,,Wave,WaveType,,Specifies the type or category of a given object.,http://www.theworldavatar.com/kg/ontoearthquake,has Type
 hasVelocity,Object Property,,,Wave,Speed,,Relates a wave to its velocity or speed.,http://www.theworldavatar.com/kg/ontoearthquake,has Velocity
 hasFrequency,Object Property,,,Wave,Oscillations,,Defines the frequency of a wave.,http://www.theworldavatar.com/kg/ontoearthquake,has Frequency
 hasWaveLength,Object Property,,,Wave,WaveLength,,Relates a wave to its wavelength.,http://www.theworldavatar.com/kg/ontoearthquake,has Wave Length
-affects,Object Property,,,Wildfire,EnvironmentComponent/InfrastructureComponent/LivingBeing,,"Indicates the components (environment, infrastructure, population) affected by an event like a wildfire or earthquake.",http://www.theworldavatar.com/kg/ontoearthquake,affects
+affects,Object Property,,,Wildfire,EnvironmentalComponent UNION InfrastructureComponent UNION LivingBeing,,"Indicates the components (environment, infrastructure, population) affected by an event like a wildfire or earthquake.",http://www.theworldavatar.com/kg/ontoearthquake,affects
 hasSeismicStation,Object Property,,,SeismicStation,Location,,Associates an earthquake or observation with the seismic station that recorded it.,http://www.theworldavatar.com/kg/ontoearthquake,has Seismic Station
 hasHypocenter,Object Property,,,Earthquake,Hypocenter,,"Links an earthquake to its hypocenter, the point where the rupture starts.",http://www.theworldavatar.com/kg/ontoearthquake,has Hypocenter
 hasEpicenter,Object Property,,,Earthquake,Epicenter,,"Relates an earthquake to its epicenter, the point on the Earth's surface above the hypocenter.",http://www.theworldavatar.com/kg/ontoearthquake,has Epicenter
-occurredIn,Object Property,,,Earthquake,Location,,Links an earthquake occurrence to the location where it took place,http://www.theworldavatar.com/kg/ontoearthquake,
-detectedBy,Object Property,,,Hypocenter/Epicenter,SeismicStation,,Hypocenter or edicenter is detected by the seismic station,http://www.theworldavatar.com/kg/ontoearthquake,detected By
+occurredIn,Object Property,,,Earthquake,Location,,Links an earthquake occurrence to the location where it took place,http://www.theworldavatar.com/kg/ontoearthquake,occurred In
+detectedBy,Object Property,,,Hypocenter UNION Epicenter,SeismicStation,,Hypocenter or edicenter is detected by the seismic station,http://www.theworldavatar.com/kg/ontoearthquake,detected By
 hasLocation,Object Property,,,SeismicStation OR Hypocenter OR Epicenter,Location,,Links an event to the geographic location where it occurred.,http://www.theworldavatar.com/kg/ontoearthquake,has Location
 hasDepth,Data Property,,,Earthquake,integer,,Specifies the depth at which the earthquake originates beneath the Earth's surface.,http://www.theworldavatar.com/kg/ontoearthquake,has Depth
 hasRichterScale,Data Property,,,Earthquake,float,,Represents the magnitude of the earthquake as measured by the Richter scale.,http://www.theworldavatar.com/kg/ontoearthquake,has Richter Scale
 hasMomentMagnitude,Data Property,,,Earthquake,float,,Indicates the earthquake's magnitude based on the seismic moment (energy released).,http://www.theworldavatar.com/kg/ontoearthquake,has Moment Magnitude
-hasMercalliIntensity,Data Property,,,Earthquake,float,,"Denotes the earthquake's intensity as perceived by people, using the Mercalli Intensity Scale.",http://www.theworldavatar.com/kg/ontoearthquake,hasMercalliIntensity
+hasMercalliIntensity,Data Property,,,Earthquake,float,,"Denotes the earthquake's intensity as perceived by people, using the Mercalli Intensity Scale.",http://www.theworldavatar.com/kg/ontoearthquake,has Mercalli Intensity
 hasFeltRadius,Data Property,,,Earthquake,integer,,Defines the radius around the epicenter where the earthquake is perceptible.,http://www.theworldavatar.com/kg/ontoearthquake,has Felt Radius
 hasDamagedRadius,Data Property,,,Earthquake,integer,,hasDamagedRadius: Specifies the radius within which structural damage occurred due to the earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,has Damaged Radius 
 Location,Class,,,,,,"A spatial entity representing a specific place or position, often defined by geographic coordinates or an address.",http://www.theworldavatar.com/kg/ontoearthquake,Location
 ShapeFile,Class,,,,,,"A widely used geospatial vector data format for geographic information system (GIS) software, storing location, shape, and attribute data.",http://www.theworldavatar.com/kg/ontoearthquake,Shape File
 http://www.opengis.net/ont/geosparql#Geometry,Class,,,,,,"A representation of the spatial properties and shape of geographic features, including points, lines, and polygons.",http://www.opengis.net/ont/geosparql#,Geometry
-Organization,Class,,,,,,"An entity that manages or provides geographic data, services, or infrastructure related to spatial information systems.",http://www.theworldavatar.com/kg/ontoearthquake,Organization
+http://xmlns.com/foaf/0.1/Organization,Class,,,,,,"An entity that manages or provides geographic data, services, or infrastructure related to spatial information systems.",http://xmlns.com/foaf,Organization
 FileUrl,Class,,,,,,"A reference link to a remotely stored geographic file, enabling access to spatial data over a network or system.",http://www.theworldavatar.com/kg/ontoearthquake,File URL
-hasShapeFile,Object Property,,,Location,ShapeFile,,Associates a location with its corresponding ShapeFile representation.,http://www.theworldavatar.com/kg/ontoearthquake,
-http://www.opengis.net/ont/geosparql#hasGeometry,Object Property,,,Location,http://www.opengis.net/ont/geosparql#Geometry,,"Connects a location to its geometric representation, as defined by GeoSPARQL",http://www.opengis.net/ont/geosparql#,
-isProducedBy,Object Property,,,ShapeFile,Organization,,Specifies the organization responsible for generating or providing a ShapeFile.,http://www.theworldavatar.com/kg/ontoearthquake,
-hasFileUrl,Object Property,,,ShapeFile,FileUrl,,Links a ShapeFile to its corresponding file URL for access.,http://www.theworldavatar.com/kg/ontoearthquake,
-lastUpdateOn,Data Property,,,ShapeFile,dateTime,,Records the date and time when a ShapeFile was last updated.,http://www.theworldavatar.com/kg/ontoearthquake,
+hasShapeFile,Object Property,,,Location,ShapeFile,,Associates a location with its corresponding ShapeFile representation.,http://www.theworldavatar.com/kg/ontoearthquake,has Shape File
+http://www.opengis.net/ont/geosparql#hasGeometry,Object Property,,,Location,http://www.opengis.net/ont/geosparql#Geometry,,"Connects a location to its geometric representation, as defined by GeoSPARQL",http://www.opengis.net/ont/geosparql#,has Geometry
+isProducedBy,Object Property,,,ShapeFile,http://xmlns.com/foaf/0.1/Organization,,Specifies the organization responsible for generating or providing a ShapeFile.,http://www.theworldavatar.com/kg/ontoearthquake,is Produced By
+hasFileUrl,Object Property,,,ShapeFile,FileUrl,,Links a ShapeFile to its corresponding file URL for access.,http://www.theworldavatar.com/kg/ontoearthquake,has File Url
+lastUpdatedOn,Data Property,,,ShapeFile,dateTime,,Records the date and time when a ShapeFile describing the earthquake information was last updated.,http://www.theworldavatar.com/kg/ontoearthquake,last Updated On
 EarthquakeHistory,Class,,,,,,"A record of past earthquake events, including their properties and impacts.",http://www.theworldavatar.com/kg/ontoearthquake,Earthquake History
 TimeSeries,Class,,,,,,"A sequence of data points indexed in time order, often used to track changes in seismic activity.",http://www.theworldavatar.com/kg/ontoearthquake,Time Series
 hasEarthquakeHistory,Object Property,,,Location,EarthquakeHistory,,Describes the historical data of earthquakes associated with a location.,http://www.theworldavatar.com/kg/ontoearthquake,has Earthquake History
 hasTimeSeries,Object Property,,,EarthquakeHistory,TimeSeries,,"hasTimeSeries: Links data to its time series, providing sequential time-based information",http://www.theworldavatar.com/kg/ontoearthquake,has Time Series
-hasLat,Data Property,,,Location,double,,"This property represents the latitude coordinate of a specific earthquake location, expressed as a floating-point number.",http://www.theworldavatar.com/kg/ontoearthquake,has Lat
-hasLon,Data Property,,,Location,double,,"This property represents the longitude coordinate of a specific earthquake location, expressed as a floating-point number.",http://www.theworldavatar.com/kg/ontoearthquake,has Lon
-lastUpdateOn,Data Property,,,ShapeFile,date time,,This property represents the timestamp of the most recent update related to the earthquake situation.,http://www.theworldavatar.com/kg/ontoearthquake,last Update On
+hasLatitude,Data Property,,,Location,double,,"This property represents the latitude coordinate of a specific earthquake location, expressed as a floating-point number.",http://www.theworldavatar.com/kg/ontoearthquake,has Latitude
+hasLongitude,Data Property,,,Location,double,,"This property represents the longitude coordinate of a specific earthquake location, expressed as a floating-point number.",http://www.theworldavatar.com/kg/ontoearthquake,has Longitude
 EarthquakeRiskManagement,Class,,,,,,"The process of planning, mitigating, responding to, and recovering from the impacts of earthquakes.",http://www.theworldavatar.com/kg/ontoearthquake,Earthquake Risk Management
 Response,Class,,,,,,Actions taken immediately after an earthquake to manage its consequences.,http://www.theworldavatar.com/kg/ontoearthquake,Response
 DamageAssessment,Class,,,,,,"Evaluation of the damage caused by an earthquake to infrastructure, environment, and population.",http://www.theworldavatar.com/kg/ontoearthquake,Damage Assessment
@@ -111,15 +114,15 @@ Settlement,Class,ResponseDepartment,IS-A,,,,A populated area affected or potenti
 Government,Class,ResponseDepartment,IS-A,,,,"Official entities involved in earthquake preparedness, response, and recovery efforts.",http://www.theworldavatar.com/kg/ontoearthquake,Government
 Community,Class,ResponseDepartment,IS-A,,,,A group of people living in an area impacted or potentially impacted by an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Community
 MedicalCentre,Class,ResponseDepartment,IS-A,,,,Facilities providing medical services to treat casualties after an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Medical Centre
-Preparedness,Class,,IS-A,,,,Planning and readiness activities aimed at minimizing the impacts of future earthquakes.,http://www.theworldavatar.com/kg/ontoearthquake,Causal Factor
-HazardAssessment,Class,,,,,,The process of evaluating potential earthquake hazards and their possible impacts.,http://www.theworldavatar.com/kg/ontoearthquake,Human Factor
-MitigationStrategy,Class,,,,,,Plans and actions designed to reduce the long-term risks associated with earthquakes.,http://www.theworldavatar.com/kg/ontoearthquake,Natural Factor
-WarningSystem,Class,,,,,,A system designed to alert populations of an imminent earthquake threat.,http://www.theworldavatar.com/kg/ontoearthquake,Slope Excavation
+Preparedness,Class,,,,,,Planning and readiness activities aimed at minimizing the impacts of future earthquakes.,http://www.theworldavatar.com/kg/ontoearthquake,Preparedness
+HazardAssessment,Class,,,,,,The process of evaluating potential earthquake hazards and their possible impacts.,http://www.theworldavatar.com/kg/ontoearthquake,Hazard Assessment
+MitigationStrategy,Class,,,,,,Plans and actions designed to reduce the long-term risks associated with earthquakes.,http://www.theworldavatar.com/kg/ontoearthquake,Mitigation Strategy
+WarningSystem,Class,,,,,,A system designed to alert populations of an imminent earthquake threat.,http://www.theworldavatar.com/kg/ontoearthquake,Warning System
 Severity,Class,,,,,,The magnitude and intensity of the earthquake and its potential impact.,http://www.theworldavatar.com/kg/ontoearthquake,Severity
-earthquakeAlert,Class,,,,,,An early notification of an impending earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,earthquake Alert
-earthquakeWarning,Class,,,,,,A more detailed notification indicating a high probability of an earthquake occurring soon.,http://www.theworldavatar.com/kg/ontoearthquake,earthquake Warning
-SevereearthquakeWarning,Class,,,,,,A warning issued for highly destructive earthquakes with serious potential damage.,http://www.theworldavatar.com/kg/ontoearthquake,Severe earthquake Warning
-InactiveearthquakeWarning,Class,,,,,,A status indicating that no active earthquake threat is currently present.,http://www.theworldavatar.com/kg/ontoearthquake,Inactive earthquake Warning
+EarthquakeAlert,Class,,,,,,An early notification of an impending earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Earthquake Alert
+EarthquakeWarning,Class,,,,,,A more detailed notification indicating a high probability of an earthquake occurring soon.,http://www.theworldavatar.com/kg/ontoearthquake,Earthquake Warning
+SevereEarthquakeWarning,Class,,,,,,A warning issued for highly destructive earthquakes with serious potential damage.,http://www.theworldavatar.com/kg/ontoearthquake,Severe Earthquake Warning
+InactiveEarthquakeWarning,Class,,,,,,A status indicating that no active earthquake threat is currently present.,http://www.theworldavatar.com/kg/ontoearthquake,Inactive Earthquake Warning
 SeismicHazardForecast,Class,,,,,,Predictions of potential seismic activities in a region based on historical and current data.,http://www.theworldavatar.com/kg/ontoearthquake,Seismic Hazard Forecast
 EarthObservationData,Class,,,,,,Data collected from satellites and sensors that monitor seismic and geophysical changes.,http://www.theworldavatar.com/kg/ontoearthquake,Earth Observation Data
 Sensor,Class,,,,,,Devices used to detect and record seismic activities and environmental changes related to earthquakes.,http://www.theworldavatar.com/kg/ontoearthquake,Sensor
@@ -127,26 +130,21 @@ BuildingRetrofitting,Class,,,,,,The process of strengthening existing buildings 
 LandUsePlanning,Class,,,,,, Strategic planning for land development and management to minimize earthquake risks.,http://www.theworldavatar.com/kg/ontoearthquake,Land Use Planning
 Warning,Class,,,,,,A notification alerting people to potential earthquake hazards.,http://www.theworldavatar.com/kg/ontoearthquake,Warning
 GNSS,Class,,,,,,"Global Navigation Satellite Systems used to measure ground movement before, during, and after earthquakes.",http://www.theworldavatar.com/kg/ontoearthquake,GNSS
-InSAR,Class,,,,,,Interferometric Synthetic Aperture Radar technology for mapping ground deformation from space.,http://www.theworldavatar.com/kg/ontoearthquake,In SAR
-Accelerometer,Class,Sensor,IS-A,,,,A device that measures the acceleration of ground motion during an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Warning Sign
-GPSSensors,Class,Sensor,IS-A,,,,Sensors using GPS technology to monitor tectonic movements and seismic activities.,http://www.theworldavatar.com/kg/ontoearthquake,Person
-Tsunami BuoysSensor,Class,Sensor,IS-A,,,,Sensors deployed in the ocean to detect tsunami waves caused by underwater earthquakes.,http://www.theworldavatar.com/kg/ontoearthquake,Expert
-SeismicSensor,Class,Sensor,IS-A,,,,A device that detects vibrations and seismic waves generated by earthquakes.,http://www.theworldavatar.com/kg/ontoearthquake,Social Media Worker
-HydroacousticSensor,Class,Sensor,IS-A,,,,Underwater sensors used to detect seismic waves or changes in the water column during seismic events.,http://www.theworldavatar.com/kg/ontoearthquake,Resident
-Strainmeter,Class,Sensor,IS-A,,,,A device that measures deformation in the Earth's crust due to tectonic forces.,http://www.theworldavatar.com/kg/ontoearthquake,Broken Underground Utility
-Tiltmeter,Class,Sensor,IS-A,,,,"A sensor that measures the tilting of the ground, often associated with tectonic movements.",http://www.theworldavatar.com/kg/ontoearthquake,Leaning Electric Pole
-LIDARSensor ,Class,Sensor,IS-A,,,,A sensor that uses laser technology to map and detect changes in Earth's surface.,http://www.theworldavatar.com/kg/ontoearthquake,Crack On Wall
-LivingBeing,Class,,,,,,"including humans and animals, that may be impacted by earthquakes.",http://www.theworldavatar.com/kg/ontoearthquake,Population
-Population,Class,LivingBeing,IS-A,,,,A group of humans living in a region affected by an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Population
-Animal,Class,LivingBeing,IS-A,,,,Non-human living organisms potentially affected by seismic activities.,http://www.theworldavatar.com/kg/ontoearthquake,
-EnvironmentComponent,Class,,,,,,"The natural elements such as air, water, and soil that may be impacted by earthquakes.",http://www.theworldavatar.com/kg/ontoearthquake,Environment Component
-Water,Class,EnvironmentComponent,IS-A,,,,Aquatic bodies that may be influenced by seismic activity or resulting tsunamis.,http://www.theworldavatar.com/kg/ontoearthquake,Water
-Air,Class,EnvironmentComponent,IS-A,,,,The atmosphere and its quality as influenced by seismic activities.,http://www.theworldavatar.com/kg/ontoearthquake,Air
-Soil,Class,EnvironmentComponent,IS-A,,,,"The Earth's upper layer, potentially disrupted by earthquakes.",http://www.theworldavatar.com/kg/ontoearthquake,Soil
-VegetationDestruction,Class,EnvironmentComponent,IS-A,,,,The damage caused to plant life due to seismic activities.,http://www.theworldavatar.com/kg/ontoearthquake,VegetationDestruction
-Ecosystem,Class,EnvironmentComponent,IS-A,,,,The community of living organisms and their environment potentially impacted by an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Crop
-InfrastructureComponent,Class,,,,,,Physical structures and systems such as buildings and networks affected by an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Infrastructure Component
-AreaInfrastructure,Class,InfrastructureComponent,IS-A,,,,Regional infrastructure components potentially vulnerable to earthquake damage.,http://www.theworldavatar.com/kg/ontoearthquake,Area Infrastructure
+InSAR,Class,,,,,,Interferometric Synthetic Aperture Radar technology for mapping ground deformation from space.,http://www.theworldavatar.com/kg/ontoearthquake,InSAR
+Accelerometer,Class,Sensor,IS-A,,,,A device that measures the acceleration of ground motion during an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Accelerometer
+GPSSensors,Class,Sensor,IS-A,,,,Sensors using GPS technology to monitor tectonic movements and seismic activities.,http://www.theworldavatar.com/kg/ontoearthquake,GPS Sensors
+TsunamiBuoysSensor,Class,Sensor,IS-A,,,,Sensors deployed in the ocean to detect tsunami waves caused by underwater earthquakes.,http://www.theworldavatar.com/kg/ontoearthquake,Tsunami Buoys Sensor
+SeismicSensor,Class,Sensor,IS-A,,,,A device that detects vibrations and seismic waves generated by earthquakes.,http://www.theworldavatar.com/kg/ontoearthquake,Seismic Sensor
+HydroacousticSensor,Class,Sensor,IS-A,,,,Underwater sensors used to detect seismic waves or changes in the water column during seismic events.,http://www.theworldavatar.com/kg/ontoearthquake,Hydroacoustic Sensor
+Strainmeter,Class,Sensor,IS-A,,,,A device that measures deformation in the Earth's crust due to tectonic forces.,http://www.theworldavatar.com/kg/ontoearthquake,Strainmeter
+Tiltmeter,Class,Sensor,IS-A,,,,"A sensor that measures the tilting of the ground, often associated with tectonic movements.",http://www.theworldavatar.com/kg/ontoearthquake,Tiltmeter
+LIDARSensor ,Class,Sensor,IS-A,,,,A sensor that uses laser technology to map and detect changes in Earth's surface.,http://www.theworldavatar.com/kg/ontoearthquake,LIDAR Sensor 
+Water,Class,EnvironmentalComponent,IS-A,,,,Aquatic bodies that may be influenced by seismic activity or resulting tsunamis.,http://www.theworldavatar.com/kg/ontoearthquake,Water
+Air,Class,EnvironmentalComponent,IS-A,,,,The atmosphere and its quality as influenced by seismic activities.,http://www.theworldavatar.com/kg/ontoearthquake,Air
+Soil,Class,EnvironmentalComponent,IS-A,,,,"The Earth's upper layer, potentially disrupted by earthquakes.",http://www.theworldavatar.com/kg/ontoearthquake,Soil
+VegetationDestruction,Class,EnvironmentalComponent,IS-A,,,,The damage caused to plant life due to seismic activities.,http://www.theworldavatar.com/kg/ontoearthquake,VegetationDestruction
+Ecosystem,Class,EnvironmentalComponent,IS-A,,,,The community of living organisms and their environment potentially impacted by an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Ecosystem
+ArealInfrastructure,Class,InfrastructureComponent,IS-A,,,,Regional infrastructure components potentially vulnerable to earthquake damage.,http://www.theworldavatar.com/kg/ontoearthquake,Areal Infrastructure
 CriticalInfrastructure,Class,AreaInfrastructure,IS-A,,,,"Essential infrastructure systems like hospitals, energy, and communication systems crucial for earthquake response.",http://www.theworldavatar.com/kg/ontoearthquake,Critical Infrastructure
 IndustrialInfrastructure,Class,AreaInfrastructure,IS-A,,,,Factories and other industrial facilities that may be affected by an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Industrial Infrastructure
 CommercialInfrastructure,Class,AreaInfrastructure,IS-A,,,,Business-related infrastructure such as shops and offices that may be impacted by an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Commercial Infrastructure
@@ -154,29 +152,28 @@ ResidentialInfrastructure,Class,AreaInfrastructure,IS-A,,,,Housing and living sp
 NetworkInfrastructure,Class,InfrastructureComponent,IS-A,,,,Communication and transportation networks necessary for response and recovery during an earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,Network Infrastructure
 MobilityNetwork,Class,NetworkInfrastructure,IS-A,,,,Transportation systems crucial for evacuating and responding to earthquakes.,http://www.theworldavatar.com/kg/ontoearthquake,Mobility Network
 ProvisioningNetwork,Class,NetworkInfrastructure,IS-A,,,,"Systems that deliver essential services such as food, water, and electricity, critical during earthquake recovery.",http://www.theworldavatar.com/kg/ontoearthquake,Provisioning Network
-affects,Object Property,,,Wildfire,EnvironmentComponent/InfrastructureComponent/LivingBeing,,"Indicates the components (environment, infrastructure, population) affected by an event like a wildfire or earthquake.",http://www.theworldavatar.com/kg/ontoearthquake,affects
+affects,Object Property,,,Wildfire,EnvironmentalComponent UNION InfrastructureComponent UNION LivingBeing,,"Indicates the components (environment, infrastructure, population) affected by an event like a wildfire or earthquake.",http://www.theworldavatar.com/kg/ontoearthquake,affects
 requires,Object Property,,,Earthquake,EarthquakeRiskManagement,,Specifies a requirement to manage risk of earthquake,http://www.theworldavatar.com/kg/ontoearthquake,requires
-includes,Object Property,,,EarthquakeRiskManagement,Recovery/Response/Preparedness/HazardAssessment,,Links a geological layer to its water content.,http://www.theworldavatar.com/kg/ontoearthquake,includes
 increasesResilience,Object Property,,,Recovery,LongtermResilience,,Identifies the causal factor responsible for an event.,http://www.theworldavatar.com/kg/ontoearthquake,increases Resilience
-resultIn,Object Property,,,Recovery,Reconstruction,,Associates a earthquake event with the response taken.,http://www.theworldavatar.com/kg/ontoearthquake,resultIn
-triggersResponse,Object Property,,,WarningSystem,Response,,Specifies that an event triggers a response action.,http://www.theworldavatar.com/kg/ontoearthquake,triggersResponse
-usesPreparedness,Object Property,,,HazardAssessment,Preparedness,,Links an entity to preparedness actions or plans utilized during an event.,http://www.theworldavatar.com/kg/ontoearthquake,usesPreparedness
-assessesFor,Object Property,,,HazardAssessment,Location,,Relates an assessment process to the object or aspect being evaluated.,http://www.theworldavatar.com/kg/ontoearthquake,assessesFor
-collectImpactData,Object Property,,,Response,DamageAssessment,,Refers to the collection of data related to the impact of an event.,http://www.theworldavatar.com/kg/ontoearthquake,collectImpactData
+resultIn,Object Property,,,Recovery,Reconstruction,,Associates a earthquake event with the response taken.,http://www.theworldavatar.com/kg/ontoearthquake,result In
+triggersResponse,Object Property,,,WarningSystem,Response,,Specifies that an event triggers a response action.,http://www.theworldavatar.com/kg/ontoearthquake,triggers Response
+usesPreparedness,Object Property,,,HazardAssessment,Preparedness,,Links an entity to preparedness actions or plans utilized during an event.,http://www.theworldavatar.com/kg/ontoearthquake,uses Preparedness
+assessesFor,Object Property,,,HazardAssessment,Location,,Relates an assessment process to the object or aspect being evaluated.,http://www.theworldavatar.com/kg/ontoearthquake,assesses For
+collectImpactData,Object Property,,,Response,DamageAssessment,,Refers to the collection of data related to the impact of an event.,http://www.theworldavatar.com/kg/ontoearthquake,collect Impact Data
 actionTaken,Object Property,,,Response,ResponseAction,,Specifies the actions taken in response to a earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,action Taken
 responseBy,Object Property,,,Response,ResponseDepartment,,Refers to the department responsible for the response.,http://www.theworldavatar.com/kg/ontoearthquake,response By
 usedLogistics,Object Property,,,Response,ResponseLogistics,,Denotes the logistics used during the response to a earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,used Logistics
-hasMitigationStrategy,Object Property,,,Preparedness,MitigationStrategy,,Links a earthquake forecast to the earthquake it manages or predicts.,http://www.theworldavatar.com/kg/ontoearthquake,manages Forecast Of
-hasWarningSystem,Object Property,,,Preparedness,WarningSystem,,Specifies the location for which a earthquake forecast is made.,http://www.theworldavatar.com/kg/ontoearthquake,has Forecast Location
-generates,Object Property,,,HazardAssessment,SeismicHazardForecast,,Identifies the input parameters used for earthquake forecasting.,http://www.theworldavatar.com/kg/ontoearthquake,has Input Parameter
-usesDataFrom,Object Property,,,HazardAssessment,EarthObservationData,,Connects an input parameter to its data source.,http://www.theworldavatar.com/kg/ontoearthquake,has Data Source
-producesWarning,Object Property,,,WarningSystem,Warning ,,Links a data source to its metadata.,http://www.theworldavatar.com/kg/ontoearthquake,has Data Source Metadata
+hasMitigationStrategy,Object Property,,,Preparedness,MitigationStrategy,,Links a earthquake forecast to the earthquake it manages or predicts.,http://www.theworldavatar.com/kg/ontoearthquake,has Mitigation Strategy
+hasWarningSystem,Object Property,,,Preparedness,WarningSystem,,Specifies the location for which a earthquake forecast is made.,http://www.theworldavatar.com/kg/ontoearthquake,has Warning System
+generates,Object Property,,,HazardAssessment,SeismicHazardForecast,,Identifies the input parameters used for earthquake forecasting.,http://www.theworldavatar.com/kg/ontoearthquake,generates
+usesDataFrom,Object Property,,,HazardAssessment,EarthObservationData,,Connects an input parameter to its data source.,http://www.theworldavatar.com/kg/ontoearthquake,uses Data From
+producesWarning,Object Property,,,WarningSystem,Warning ,,Links a data source to its metadata.,http://www.theworldavatar.com/kg/ontoearthquake,produces Warning
 informs,Object Property,,,SeismicHazardForecast,WarningSystem,,warning system informs warnings,http://www.theworldavatar.com/kg/ontoearthquake,informs
-hasRiskLevel,Object Property,,,SeismicHazardForecast,RiskLevel,,Refers to the person who reported a warning sign.,http://www.theworldavatar.com/kg/ontoearthquake,reported By
-usesGNSS,Object Property,,,EarthObservationData,GNSS,,Indicates the earthquake that the warning sign is about.,http://www.theworldavatar.com/kg/ontoearthquake,warns About
-usesInSAR,Object Property,,,EarthObservationData,InSAR,,Links a warning sign to its severity level.,http://www.theworldavatar.com/kg/ontoearthquake,has Severity
-usesSensor,Object Property,,,EarthObservationData,Sensor,,Associates a earthquake spot with its current warning sign.,http://www.theworldavatar.com/kg/ontoearthquake,current Warning Sign
-inDanger,Data Property,,,EnvironmentComponent Union InfrastructureComponent Union Population,integer,,This property indicates the number of people or assets currently at risk due to the earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,in Danger
+hasRiskLevel,Object Property,,,SeismicHazardForecast,RiskLevel,,Refers to the person who reported a warning sign.,http://www.theworldavatar.com/kg/ontoearthquake,has Risk Level
+usesGNSS,Object Property,,,EarthObservationData,GNSS,,Indicates the earthquake that the warning sign is about.,http://www.theworldavatar.com/kg/ontoearthquake,uses GNSS
+usesInSAR,Object Property,,,EarthObservationData,InSAR,,Links a warning sign to its severity level.,http://www.theworldavatar.com/kg/ontoearthquake,uses InSAR
+usesSensor,Object Property,,,EarthObservationData,Sensor,,Associates a earthquake spot with its current warning sign.,http://www.theworldavatar.com/kg/ontoearthquake,uses Sensor
+inDanger,Data Property,,,EnvironmentalComponent Union InfrastructureComponent Union Population,integer,,This property indicates the number of people or assets currently at risk due to the earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,in Danger
 hasCollapsed,Data Property,,,InfrastructureComponent,integer,,"This property represents the number of infrastructure (e.g., buildings, bridges) has collapsed due to the earthquake.",http://www.theworldavatar.com/kg/ontoearthquake,has Collapsed
 hasPartialDamage,Data Property,,,InfrastructureComponent,integer,,This property represents the number of infrastructure or assets have sustained partial damage from the earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,has Partial Damage
 hasLossOfLife,Data Property,,,Population,integer,,This property represents the total number of human lives lost due to the earthquake.,http://www.theworldavatar.com/kg/ontoearthquake,has Loss Of Life
