@@ -15,7 +15,7 @@
     <owl:Ontology rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/">
         <dc:date>06 March 2025</dc:date>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
-        <rdfs:comment>OntoMatPassport is an ontology developed for representing material passport of products and components.</rdfs:comment>
+        <rdfs:comment>OntoMatPassport is an ontology developed for representing material passports of products and components.</rdfs:comment>
         <owl:versionInfo>1</owl:versionInfo>
     </owl:Ontology>
     
