@@ -1746,6 +1746,209 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mdo/core"/>
         <rdfs:label>PhysicalProperty</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/centimetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/centimetre">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetre">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/day -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/day">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/gallon-Imperial -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/gallon-Imperial">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/gallon-US -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/gallon-US">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/gram -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/gram">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerCubicCentimetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerCubicCentimetre">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramOfCarbonDioxideEquivalent -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramOfCarbonDioxideEquivalent">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/litre -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/litre">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/megapascal -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/megapascal">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/metre -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/metre">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/milligram -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/milligram">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/millipascal -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/millipascal">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/month -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/month">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/pascal -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/pascal">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/percent -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/percent">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/tonnePerCubicmetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/tonnePerCubicmetre">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerSquareMetreKelvin -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerSquareMetreKelvin">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/year -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/year">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
