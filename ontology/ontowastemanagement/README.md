@@ -226,7 +226,8 @@ flowchart LR
     ServiceProvider[[fibo-fnd-pas-pas:ServiceProvider]] -. cmns-rlcmp:isPlayedBy .-> Person[[fibo-fnd-aap-ppl:Person]]
     ServiceProvider -. fibo-fnd-rel-rel:provides .-> ContactService[[ontoservice:ContactService]]
     ContactService -. ontoservice:servesAsContactFor .-> Service
-    
+    ContactService -. vcard:hasTelephone .-> Cell[["<h4>vcard:Cell</h4><p style='font-size:0.75rem;'>vcard:hasValue &quot;string&quot;</p>"]]:::literal
+
     Service -. fibo-fnd-rel-rel:provides .-> Capability[[fibo-fnd-plc-fac:Capability]]
     Capability -. fibo-fnd-rel-rel:involves .-> Facility[[ontobim:Facility]]
     Org -. fibo-fnd-rel-rel:controls .-> Facility
