@@ -7,7 +7,6 @@ Product,Class,,,,,,An artefact manufactured in an industrial setting to meet the
 Component,Class,,,,,,Part of a bigger whole that can be a system or a product of composite nature.,http://www.theworldavatar.com/kg/ontomatpassport,Component
 http://emmo.info/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94,Class,,,,,,,http://emmo.info/emmo,Material
 MaterialPassport,Class,,,,,,"A passport or document providing identification, physical, temporal, sustainability and other properties of a product or component.",http://www.theworldavatar.com/kg/ontomatpassport,MaterialPassport
-http://xmlns.com/foaf/0.1/Agent,Class,,,,,,,http://xmlns.com/foaf/0.1,Agent
 https://dbpedia.org/ontology/Country,Class,,,,,,A political entity associated with a territory considered a motherland to a nation ruled by a government.,https://dbpedia.org/ontology,Country
 http://purl.org/dc/dcmitype/Image,Class,,,,,,A visual representation of an inanimate or animate object captured through technological means or drawn by humans.,http://purl.org/dc/dcmitype,Image
 IndustrialStakeholder,Class,,,,,,"An entity involved in economic activities, services, or processes related to the production, transformation, distribution, collection, or recycling of goods at an industrial scale.",http://www.theworldavatar.com/kg/ontomatpassport,IndustrialStakeholder
@@ -38,7 +37,9 @@ CompressiveStrength,Class,Resistance,IS-A,,,,The resistance of an object to comp
 ShearStrength,Class,Resistance,IS-A,,,,The resistance of an object to shearing forces.,http://www.theworldavatar.com/kg/ontomatpassport,ShearStrength
 TensileStrength,Class,Resistance,IS-A,,,,The resistance of an object to tensile forces.,http://www.theworldavatar.com/kg/ontomatpassport,TensileStrength
 ExpectedLifetime,Class,TemporalProperty,IS-A,,,,A temporary property expressing the duration an object may serve its intended purpose.,http://www.theworldavatar.com/kg/ontomatpassport,ExpectedLifetime
+ExpectedLifetime,Class,CircularityProperty,IS-A,,,,,http://www.theworldavatar.com/kg/ontomatpassport,ExpectedLifetime
 ServiceLife,Class,TemporalProperty,IS-A,,,,A temporary property expressing the duration an object may serve its intended purpose.,http://www.theworldavatar.com/kg/ontomatpassport,ServiceLife
+ServiceLife,Class,CircularityProperty,IS-A,,,,,http://www.theworldavatar.com/kg/ontomatpassport,ServiceLife
 http://www.ontology-of-units-of-measure.org/resource/om-2/HeatTransferCoefficient,Class,ThermalProperty,IS-A,,,,A thermal property that describes the heat transfer coefficient of an object.,http://www.ontology-of-units-of-measure.org/resource/om-2,HeatTransferCoefficient
 http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity,Class,ThermalProperty,IS-A,,,,A thermal property that describes the capacity of an object to conduct heat.,http://www.ontology-of-units-of-measure.org/resource/om-2,ThermalConductivity
 Flammability,Class,ChemicalProperty,IS-A,,,,A property that determines the ease and intensity with which an object can ignite and burn.,http://www.theworldavatar.com/kg/ontomatpassport,Flammability

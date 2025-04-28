@@ -1276,6 +1276,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ExpectedLifetime">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/TemporalProperty"/>
         <rdfs:comment>A temporary property expressing the duration an object may serve its intended purpose.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1514,6 +1515,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ServiceLife">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/TemporalProperty"/>
         <rdfs:comment>A temporary property expressing the duration an object may serve its intended purpose.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
