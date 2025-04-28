@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontomatpassport="http://www.theworldavatar.com/kg/ontomatpassport/">
     <owl:Ontology rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/">
-        <dc:date>22 April 2025</dc:date>
+        <dc:date>28 April 2025</dc:date>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
         <rdfs:comment>The Material Passport Ontology (MPO) is an ontology developed for representing material passports of products and components. It is also known as OntoMatPassport.</rdfs:comment>
         <owl:versionInfo>1</owl:versionInfo>
@@ -1713,16 +1713,6 @@
         <rdfs:comment>A characteristic of an object that can be applied in determining its use in applications.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl"/>
         <rdfs:label>Property</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/Agent -->
-
-
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
-        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1"/>
-        <rdfs:label>Agent</rdfs:label>
     </owl:Class>
     
 
