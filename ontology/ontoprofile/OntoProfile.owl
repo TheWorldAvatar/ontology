@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontoprofile="https://www.theworldavatar.com/kg/ontoprofile/">
     <owl:Ontology rdf:about="https://www.theworldavatar.com/kg/ontoprofile/">
-        <dc:date>10 December 2024</dc:date>
+        <dc:date>10 March 2025</dc:date>
         <rdfs:comment>OntoProfile is designed to represent the profiles of organizations and people, inclusive of their names, roles, and responsibilities.</rdfs:comment>
         <owl:versionInfo>1.1</owl:versionInfo>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
@@ -214,6 +214,18 @@
         <rdfs:comment>A person who is employed to communicate with clients about the company&apos;s products and/or services. The person is primarily based at the front-desk.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoprofile/"/>
         <rdfs:label>Sales admin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoprofile/ServiceOperative -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoprofile/ServiceOperative">
+        <rdfs:subClassOf rdf:resource="https://www.omg.org/spec/Commons/RolesAndCompositions/FunctionalRole"/>
+        <rdfs:comment>A person who is expected to be assigned to execute various service operations including maintenance, delivery, and collection.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoprofile/"/>
+        <rdfs:label>Service Operative</rdfs:label>
     </owl:Class>
     
 

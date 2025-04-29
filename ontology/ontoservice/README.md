@@ -17,6 +17,7 @@ The namespace for the ontology is:
     - [2.2.2 Service Execution Stage](#222-service-execution-stage)
   - [2.3 Reporting](#23-reporting)
     - [2.3.1 Billing](#231-billing)
+    - [2.3.2 Delivery Report](#232-delivery-report)
 
 # 2. Data Model
 
@@ -139,6 +140,7 @@ flowchart LR
 | ontoderivation    | `https://www.theworldavatar.com/kg/ontoderivation/`                                              |
 | ontoprofile       | `https://www.theworldavatar.com/kg/ontoprofile/`                                                 |
 | ontoservice       | `https://www.theworldavatar.com/kg/ontoservice/`                                                 |
+| vcard             | `https://www.w3.org/2006/vcard/ns#`                                                              |
 | vc                | `https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/`                                      |
 
 ## 2.1. Service Agreement
@@ -223,6 +225,12 @@ flowchart LR
     ServiceProvider[[fibo-fnd-pas-pas:ServiceProvider]] -. cmns-rlcmp:isPlayedBy .-> Person[[fibo-fnd-aap-ppl:Person]]
     ServiceProvider -. fibo-fnd-rel-rel:provides .-> ContactService[[ontoservice:ContactService]]
     ContactService -. ontoservice:servesAsContactFor .-> Service
+    ContactService -. vcard:hasTelephone .-> Cell[["<h4>vcard:Cell</h4><p style='font-size:0.75rem;'>vcard:hasValue &quot;string&quot;</p>"]]:::literal
+
+    Service -. fibo-fnd-rel-rel:provides .-> Capability[[fibo-fnd-plc-fac:Capability]]
+    Capability -. fibo-fnd-rel-rel:involves .-> Facility[[ontobim:Facility]]
+    Org -. fibo-fnd-rel-rel:controls .-> Facility
+    Facility[[ontobim:Facility]] -. fibo-fnd-rel-rel:provides .-> ContactService[[ontoservice:ContactService]]
 ```
 
 ## 2.2. Service Agreement Lifecycle
@@ -394,7 +402,9 @@ flowchart LR
 
 #### Successful Service Delivery
 
-The typical sequence of events for a successful service delivery is depicted in the figure below. Each event's occurrence can be instantiated with the `ContractLifecycleEventOccurrence` concept, which must be assigned a specific date, time, and location (if required). The process begins with the `OrderReceivedEvent`, which kickstarts the workflow. The next event is the `ServiceDispatchEvent`, where users can assign resources, personnel, and locations to specific orders. Personnel can be assigned using the `fibo-fnd-rel-rel:designates` relation and `fibo-fnd-org-fm:Employee` subclasses, while resources can be assigned using the `fibo-fnd-rel-rel:involves` relation. For example, a driver can be designated for the delivery, and their assigned transport and other details can be tracked as described in [`OntoProfile`](https://www.theworldavatar.com/kg/ontoprofile/). Following this, the `ServiceDeliveryEvent` occurs when the services are executed. Users can supplement information on any exchange of assets or equipment using the `fibo-fnd-rel-rel:exchanges` relation. Once the service is delivered, users can log any relevant information with the subsequent `CalculationEvent`, such as price, weight, distance, etc. These occurrences will serve as a record to be analysed for quality, efficiency, and compliance with service agreements.
+The typical sequence of events for a successful service delivery is depicted in the figure below. Each event's occurrence can be instantiated with the `ContractLifecycleEventOccurrence` concept, which must be assigned a specific date, time, and location (if required). The process begins with the `OrderReceivedEvent`, which kickstarts the workflow. The next event is the `ServiceDispatchEvent`, where users can assign resources, personnel, and locations to specific orders. Personnel can be assigned using the `fibo-fnd-rel-rel:designates` relation and `fibo-fnd-org-fm:Employee` subclasses, while resources (such as equipment `saref:Device` or facility `ontobim:Facility`) can be assigned using the `fibo-fnd-rel-rel:involves` relation. For example, a driver can be designated for the delivery, and their assigned transport and other details can be tracked as described in [`OntoProfile`](https://www.theworldavatar.com/kg/ontoprofile/). Please do note that while the delivery typically occurs at the service site, some deliveries required an additional destination at a separate facility.
+
+Following this, the `ServiceDeliveryEvent` occurs when the services are executed. Users can supplement information on any exchange of assets or equipment using the `fibo-fnd-rel-rel:exchanges` relation. Once the service is delivered, users can log any relevant information with the subsequent `CalculationEvent`, such as price, weight, distance, etc. These occurrences will serve as a record to be analysed for quality, efficiency, and compliance with service agreements.
 
 It is recommended that the `EventStatus` concept is only used to describe the status of each event occurrence for both a `ServiceDispatchEvent` and `ServiceDeliveryEvent`. A dispatch event may have either pending or completed statuses, whereas a delivery event may be in the pending, in progress, or completed states.
 
@@ -465,7 +475,7 @@ flowchart TD
 
 ## 2.3 Reporting
 
-In reporting the services delivered as per the service agreement, a `Report` reports on the individual service occurrence via the `Record` concept. Given that an agreement may have multiple service delivery dates, multiple records can be instantiated per report. These records record a value, that may be directly or indirectly computed from the measures logged upon the successful completion of the service. In the example below, the record directly records the output of the calculation event.
+In reporting the services delivered as per the service agreement, a `Report` reports on the individual service occurrence via the `Record` concept. These records record one or more values, that may be directly or indirectly computed from the measures logged upon the successful completion of the service. Each occurrence can also have one or more records that records different information about the same occurrence. For instance, there can be two records to record the weight of a delivered good and its calculated price from the weight.
 
 Figure 8: TBox representation of a report for a service agreement
 
@@ -491,13 +501,9 @@ flowchart LR
     LifecycleOccurrence -. fibo-fnd-arr-lif:hasStage .-> StageOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleStageOccurrence]]
     StageOccurrence -. cmns-col:comprises .-> DeliveryOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]]
     DeliveryOccurrence -. fibo-fnd-rel-rel:exemplifies .-> ServiceDeliveryEvent[[ontoservice:ServiceDeliveryEvent]]
-    StageOccurrence -. cmns-col:comprises .-> Calculation[["<h4>fibo-fnd-dt-oc:Calculation</h4><p style='font-size:0.75rem;'>rdfs:comment &quot;string&quot;<br>fibo-fnd-dt-oc:hasEventDate &quot;xsd:dateTime&quot;</p>"]]:::literal
-    Calculation -. cmns-qtu:hasQuantityValue .-> OutputValue[[cmns-qtu:ScalarQuantityValue]]
-    CalculationEvent[[fibo-fnd-dt-oc:CalculationEvent]] -- cmns-cls:classifies --> Calculation
 
     Report -. fibo-fnd-arr-rep:reportsOn .-> Record[[cmns-doc:Record]]
-    Record -. cmns-doc:isAbout .-> DeliveryOccurrence
-    Record -. cmns-doc:records .-> OutputValue
+    Record -. cmns-doc:refersTo .-> DeliveryOccurrence
 ```
 
 ### 2.3.1 Billing
@@ -518,7 +524,8 @@ flowchart LR
     PaymentObligation -. fibo-fnd-rel-rel:mandates .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
 
     DeliveryOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]] -. fibo-fnd-rel-rel:exemplifies .-> ServiceDeliveryEvent[[ontoservice:ServiceDeliveryEvent]]
-    Record[[cmns-doc:Record]] -. cmns-doc:isAbout .-> DeliveryOccurrence
+    Record[[cmns-doc:Record]] -. cmns-doc:refersTo .-> DeliveryOccurrence
+    Record[[cmns-doc:Record]] -. cmns-doc:refersTo .-> Calculation
     Record -. cmns-doc:records .-> ServiceFee[[fibo-fnd-acc-cur:CalculatedPrice]]
 
     ServiceFee -. cmns-cxtdsg:uses .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
@@ -582,4 +589,37 @@ flowchart LR
     VariableExcessWeightFee -.-> VariableFee
     VariableFee -. cmns-qtu:hasMeasurementUnit .-> pricepertonne[[ontoservice:pricePerTonne]]
     VariableFee -.-> MonetaryPrice
+```
+
+### 2.3.2 Delivery report
+
+When managing delivery operations, it's often necessary to track the time spent on various tasks as well as record details about specific events. Delivery reports within this ontology are designed to facilitate this. They enable you to record the duration of situations, such as employee work shifts or machine run times, using the `cmns-dt:Duration` property. Furthermore, the `cmns-doc:specifies` property can be utilised to add context to these situations, such as the type of work performed or any other relevant details. This allows for a comprehensive recording of delivery activities. The following example is one application of this ontology but users can modify the triples along the same lines for their specific applications.
+
+Figure 11: TBox representation of a delivery report on an employee's work shift
+
+```mermaid
+flowchart LR
+    %% Styling
+    classDef literal fill:none
+    classDef node overflow-wrap:break-word,text-wrap:pretty
+    linkStyle default overflow-wrap:break-word,text-wrap:pretty;
+
+    %% Contents
+    DeliveryOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]] -. fibo-fnd-rel-rel:exemplifies .-> ServiceDeliveryEvent[[ontoservice:ServiceDeliveryEvent]]
+    Record["<h4>cmns-doc:Record</h4><p style='font-size:0.75rem;'>cmns-doc:specifies &quot;xsd:string&quot;</p>"] -. cmns-doc:refersTo .-> DeliveryOccurrence
+    Record -. cmns-doc:isAbout .-> Situation[[cmns-pts:Situation]]
+
+    Situation[[cmns-pts:Situation]] -. cmns-pts:hasSubjectRole .-> Employee[[fibo-fnd-org-fm:Employee]]
+    Situation -. cmns-pts:hasObjectRole .-> SO[[ontoprofile:ServiceOperative]]
+    Employee -. cmns-rlcmp:isPlayedBy .-> Person[[fibo-fnd-aap-ppl:Person]]
+    SO --> cmns-rlcmp:FunctionalRole
+    SO -. cmns-pts:playsActiveRoleThatDirectlyAffects .-> DeliveryOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]]
+
+    Situation -. cmns-pts:holdsDuring .-> DatePeriod[[cmns-dt:DatePeriod]]
+    DatePeriod -. cmns-dt:hasStartDate .-> StartDate[[Start Date]]
+    DatePeriod -. cmns-dt:hasEndDate .-> EndDate[[End Date]]
+    DatePeriod -. cmns-dt:hasDuration .-> Duration["<h4>cmns-dt:Duration</h4><p style='font-size:0.75rem;'>cmns-dt:hasDurationValue &quot;xsd:string&quot;</p>"]
+    StartDate -.-> Date["<h4>cmns-dt:Date</h4><p style='font-size:0.75rem;'>cmns-dt:hasDateValue &quot;xsd:date&quot;</p>"]:::literal
+    EndDate -.-> Date
+    Record -. cmns-doc:records .-> Duration
 ```
