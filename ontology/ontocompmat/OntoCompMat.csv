@@ -11,35 +11,35 @@ Ceramic Matrix Composite,Class,Matrix Material Based Composite,IS-A,,,,A composi
 Carbon Matrix Composite,Class,Matrix Material Based Composite,IS-A,,,,A composite material in which the matrix is based on carbon or graphite.,http://www.theworldavatar.com/kg/ontocompmat,Carbon matrix composite
 Thermoplastic Matrix Composite,Class,Polymer Matrix Composite,IS-A,,,,A composite material in which the matrix material is a thermoplastic polymer.,http://www.theworldavatar.com/kg/ontocompmat,Thermoplastic matrix composite
 Thermoset Matrix Composite,Class,Polymer Matrix Composite,IS-A,,,,A composite material in which the matrix material is a thermosetting polymer.,http://www.theworldavatar.com/kg/ontocompmat,Thermoset matrix composite
-Carbon Carbon Composite,Class,Carbon Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Carbon–carbon composite
-Epoxy Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Epoxy Based Composite
-Phenolic Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Phenolic Based Composite
-Melamine Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Melamine Based Composite
-Polyester Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polyester Based Composite
-Polyetheretherketone Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polyetheretherketone Based Composite
-Polypropylene Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polypropylene Based Composite
-Polyethylene Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Polyethylene Based Composite
-Acrylonitrile Butadiene Styrene Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Acrylonitrile Butadiene Styrene Based Composite
-Manufacturing Process Based Composite,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Manufacturing Process Based Composite
-Hand Lay-Up Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Hand Lay-Up Composite
-Pultrusion Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Pultrusion Composite
-Filament Winding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Filament Winding Composite
-Injection Molding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Injection Molding Composite
-Resin Transfer Molding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Resin Transfer Molding Composite
-Compression Molding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Compression Molding Composite
-Vacuum Infusion Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Vacuum Infusion Composite
-Autoclave Composite,Class,Manufacturing Process Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Autoclave Composite
-Orientation Based Composite,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Orientation Based Composite
-Longitudinal Orientation,Class,Orientation Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Longitudinal Orientation
-Transverse Orientation,Class,Orientation Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Transverse Orientation
-Random Orientation,Class,Orientation Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Random Orientation
-Uni Directional Orientation,Class,Orientation Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Uni Directional Orientation
-0 Degree Orientation,Class,Uni Directional Orientation,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,0 Degree Orientation
-90 Degree Orientation,Class,Uni Directional Orientation,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,90 Degree Orientation
-Functional Requirement Based Composite,Class,,,,,,,http://www.theworldavatar.com/kg/ontocompmat,Functional Requirement Based Composite
-Structural Composite,Class,Functional Requirement Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Structural Composite
-Barrier Composite,Class,Functional Requirement Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Barrier Composite
-Thermal Composite,Class,Functional Requirement Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Thermal Composite
+Carbon Carbon Composite,Class,Carbon Matrix Composite,IS-A,,,,A carbon matrix composite in which carbon fibers are embedded in the matrix.,http://www.theworldavatar.com/kg/ontocompmat,Carbon–carbon composite
+Epoxy Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,A thermoset matrix composite where the matrix is built with epoxy.,http://www.theworldavatar.com/kg/ontocompmat,Epoxy Based Composite
+Phenolic Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,A thermoset matrix composite where the matrix is built with phenolic resin.,http://www.theworldavatar.com/kg/ontocompmat,Phenolic Based Composite
+Melamine Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,A thermoset matrix composite where the matrix is built with melamine resin.,http://www.theworldavatar.com/kg/ontocompmat,Melamine Based Composite
+Polyester Based Composite,Class,Thermoset Matrix Composite,IS-A,,,,A thermoset matrix composite where the matrix is built with polyester resin.,http://www.theworldavatar.com/kg/ontocompmat,Polyester Based Composite
+Polyetheretherketone Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,A thermoplastic matrix composite where the matrix is built with polyetheretherketone resin.,http://www.theworldavatar.com/kg/ontocompmat,Polyetheretherketone Based Composite
+Polypropylene Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,A thermoplastic matrix composite where the matrix is built with polypropylene resin.,http://www.theworldavatar.com/kg/ontocompmat,Polypropylene Based Composite
+Polyethylene Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,A thermoplastic matrix composite where the matrix is built with polyethylene resin.,http://www.theworldavatar.com/kg/ontocompmat,Polyethylene Based Composite
+Acrylonitrile Butadiene Styrene Based Composite,Class,Thermoplastic Matrix Composite,IS-A,,,,A thermoplastic matrix composite where the matrix is built with acrylonitrile butadiene styrene resin.,http://www.theworldavatar.com/kg/ontocompmat,Acrylonitrile Butadiene Styrene Based Composite
+Manufacturing Process Based Composite,Class,,,,,,A composite known by the manufacturing technique applied in its production.,http://www.theworldavatar.com/kg/ontocompmat,Manufacturing Process Based Composite
+Hand Lay-Up Composite,Class,Manufacturing Process Based Composite,IS-A,,,,A composite produced with the hand lay-up process.,http://www.theworldavatar.com/kg/ontocompmat,Hand Lay-Up Composite
+Pultrusion Composite,Class,Manufacturing Process Based Composite,IS-A,,,,A composite produced with the pultrusion process.,http://www.theworldavatar.com/kg/ontocompmat,Pultrusion Composite
+Filament Winding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,A composite produced with the filament winding process.,http://www.theworldavatar.com/kg/ontocompmat,Filament Winding Composite
+Injection Molding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,A composite produced with the injection molding process.,http://www.theworldavatar.com/kg/ontocompmat,Injection Molding Composite
+Resin Transfer Molding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,A composite produced with the resin transfer molding process.,http://www.theworldavatar.com/kg/ontocompmat,Resin Transfer Molding Composite
+Compression Molding Composite,Class,Manufacturing Process Based Composite,IS-A,,,,A composite produced with the compression molding process.,http://www.theworldavatar.com/kg/ontocompmat,Compression Molding Composite
+Vacuum Infusion Composite,Class,Manufacturing Process Based Composite,IS-A,,,,A composite produced with the vacuum infusion process.,http://www.theworldavatar.com/kg/ontocompmat,Vacuum Infusion Composite
+Autoclave Composite,Class,Manufacturing Process Based Composite,IS-A,,,,A composite produced with the autoclave process.,http://www.theworldavatar.com/kg/ontocompmat,Autoclave Composite
+Orientation Based Composite,Class,,,,,,A composite known by the orientation of its reinforcement fibers.,http://www.theworldavatar.com/kg/ontocompmat,Orientation Based Composite
+Longitudinal Orientation,Class,Orientation Based Composite,IS-A,,,,A composite that has reinforcement fibers aligned parallel to the primary load path.,http://www.theworldavatar.com/kg/ontocompmat,Longitudinal Orientation
+Transverse Orientation,Class,Orientation Based Composite,IS-A,,,,A composite that has reinforcement fibers arranged perpendicular to the primary load path.,http://www.theworldavatar.com/kg/ontocompmat,Transverse Orientation
+Random Orientation,Class,Orientation Based Composite,IS-A,,,,A composite that has reinforcement fibers arranged in multiple directions.,http://www.theworldavatar.com/kg/ontocompmat,Random Orientation
+Unidirectional Orientation,Class,Orientation Based Composite,IS-A,,,,"A composite that has reinforcement fibers arranged in a single, uniform direction.",http://www.theworldavatar.com/kg/ontocompmat,Unidirectional Orientation
+0 Degree Orientation,Class,Unidirectional Orientation,IS-A,,,,A composite that has reinforcement fibers aligned exactly parallel to the primary load path.,http://www.theworldavatar.com/kg/ontocompmat,0 Degree Orientation
+90 Degree Orientation,Class,Unidirectional Orientation,IS-A,,,,A composite that has reinforcement fibers aligned perpendicular to the primary load path.,http://www.theworldavatar.com/kg/ontocompmat,90 Degree Orientation
+Functional Requirement Based Composite,Class,,,,,,A composite known by the function it serves in applications.,http://www.theworldavatar.com/kg/ontocompmat,Functional Requirement Based Composite
+Structural Composite,Class,Functional Requirement Based Composite,IS-A,,,,"A composite that provides structural support for load bearing, strength, stiffness, etc. in applications.",http://www.theworldavatar.com/kg/ontocompmat,Structural Composite
+Barrier Composite,Class,Functional Requirement Based Composite,IS-A,,,,"A composite that is designed to function as a barrier, halting the passage of chemicals, liquids, and gases, in applications.",http://www.theworldavatar.com/kg/ontocompmat,Barrier Composite
+Thermal Composite,Class,Functional Requirement Based Composite,IS-A,,,,"A composite that is designed to function as a barrier, halting the passage of chemicals, liquids, and gases, in applications.",http://www.theworldavatar.com/kg/ontocompmat,Thermal Composite
 Electromagnetic Composite,Class,Functional Requirement Based Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Electromagnetic Composite
 Load Bearing Composite,Class,Structural Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Load Bearing Composite
 Impact Resistant Composite,Class,Structural Composite,IS-A,,,,,http://www.theworldavatar.com/kg/ontocompmat,Impact Resistant Composite
