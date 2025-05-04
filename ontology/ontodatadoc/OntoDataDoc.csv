@@ -3,7 +3,7 @@ OntoDataDoc,TBox,http://www.theworldavatar.com/kg/ontodatadoc,https://www.w3.org
 OntoDataDoc,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
 OntoDataDoc,TBox,OntoDataDoc is an ontology developed for representing data documentation.,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 OntoDataDoc,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
-Dataset,Class,,,,,,"The fundamental unit of data, encapsulating a collection of related information for organizing and referencing specific sets of data.",http://www.theworldavatar.com/kg/ontodatadoc/,Dataset
+Dataset,Class,,,,,,"A collection of related information describing quantitative, qualitative, and/or descriptive values",http://www.theworldavatar.com/kg/ontodatadoc/,Dataset
 http://www.w3.org/ns/prov#Agent,Class,,,,,,"Agent can be a person, an organisation, and/or a software",http://www.w3.org/ns/prov,Agent
 http://www.w3.org/ns/dcat#Distribution,Class,,,,,,,http://www.w3.org/ns/dcat,Distribution
 DataCategory,Class,,,,,,A data category categorizes the dataset into broader thematic groups or domains,http://www.theworldavatar.com/kg/ontodatadoc/,Data Category
@@ -53,6 +53,7 @@ hasRelation,Object Property,,,Dataset,Dataset,,Specifies related datasets or dat
 hasContent,Object Property,,,Dataset,DataContent,,A relation between a dataset and its content or variable,http://www.theworldavatar.com/kg/ontodatadoc/,has Content
 hasElement,Object Property,,,DataContent,Element,,A relation between a data content and its basic building blocks or components,http://www.theworldavatar.com/kg/ontodatadoc/,has Element
 hasCharacteristic,Object Property,,,DataContent,Characteristic,,A relation between a data content and its distinctive qualitative or quantitative characteristic,http://www.theworldavatar.com/kg/ontodatadoc/,has Characteristic
+hasDataRange,Object Property,,,QuantitativeCharacteristic,DataRange,,A relation between a quantity and its data range,http://www.theworldavatar.com/kg/ontodatadoc/,has Data Range
 http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit,Object Property,,,QuantitativeCharacteristic,Unit,,A relation between a data content and its measurement units for quantitative data,http://www.ontology-of-units-of-measure.org/resource/om-2/,has Unit
 dependsOn,Object Property,,,DependentContent,DataContent,,Specifies dependency on a data content,http://www.theworldavatar.com/kg/ontodatadoc/,depends On
 http://purl.org/dc/terms/accessRights,Object Property,,,UsageGuideline,http://purl.org/dc/terms/RightsStatement,some,Establishes the access restrictions to indicate permissions and limitations on who can access the data,http://purl.org/dc/terms/,has Access Rights
