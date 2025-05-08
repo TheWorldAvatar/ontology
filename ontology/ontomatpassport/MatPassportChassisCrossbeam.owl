@@ -1852,10 +1852,20 @@
     
 
 
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/Almas -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Almas">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Manufacturer"/>
+        <hasCountry rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Italy"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeam -->
 
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeam">
         <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Product"/>
+        <hasManufacturer rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Almas"/>
         <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCR"/>
         <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCU"/>
         <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamEC"/>
@@ -1870,6 +1880,9 @@
         <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamW0"/>
         <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWC"/>
         <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWF"/>
+        <hasGTIN>01234567890123</hasGTIN>
+        <id>d03ffeb9-f71b-4a2e-91ba-ecbaefa1e9e9</id>
+        <isHazardous rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHazardous>
     </owl:NamedIndividual>
     
 
@@ -2138,6 +2151,14 @@
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
         <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
         <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9009</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/Italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Italy">
+        <rdf:type rdf:resource="https://dbpedia.org/ontology/Country"/>
     </owl:NamedIndividual>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
