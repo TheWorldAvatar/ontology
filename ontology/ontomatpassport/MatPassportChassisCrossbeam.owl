@@ -2060,8 +2060,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamVMeasure">
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/gram"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">693.0</om-2:hasNumericalValue>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.693</om-2:hasNumericalValue>
     </owl:NamedIndividual>
     
 
@@ -2088,8 +2088,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamW0Measure">
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/gram"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">415.8</om-2:hasNumericalValue>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4158</om-2:hasNumericalValue>
     </owl:NamedIndividual>
     
 
@@ -2107,8 +2107,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWCMeasure">
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/gram"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">277.2</om-2:hasNumericalValue>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2772</om-2:hasNumericalValue>
     </owl:NamedIndividual>
     
 
@@ -2126,8 +2126,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWFMeasure">
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/gram"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">693.0</om-2:hasNumericalValue>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.693</om-2:hasNumericalValue>
     </owl:NamedIndividual>
     
 
@@ -2136,8 +2136,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWMeasure">
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/gram"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">900.9</om-2:hasNumericalValue>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9009</om-2:hasNumericalValue>
     </owl:NamedIndividual>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
