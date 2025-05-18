@@ -2080,10 +2080,10 @@
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecylcedFeedstock -->
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecycledFeedstock -->
 
 
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecylcedFeedstock">
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecycledFeedstock">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMass"/>
         <rdfs:comment>The mass of waste generated while producing recycled feedstock.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>

@@ -59,7 +59,7 @@ RecyclingEfficiencyForPortionCollectedForRecycling,Class,CircularityProperty,IS-
 RecyclingEfficiencyForProducingFeedstock,Class,CircularityProperty,IS-A,,,,The recycling efficiency in producing recycled feedstock.,http://www.theworldavatar.com/kg/ontomatpassport,EF
 VirginContentMass,Class,CircularityProperty,IS-A,,,,The mass of virgin content in a product.,http://www.theworldavatar.com/kg/ontomatpassport,VirginContentMass
 WasteMassAfterTakingRecyclableReusablePortion,Class,CircularityProperty,IS-A,,,,The mass of waste that remains after the recyclable and reusable materials have been separated and that cannot be turned into useful materials.,http://www.theworldavatar.com/kg/ontomatpassport,W0
-WasteMassGeneratedInProducingRecylcedFeedstock,Class,CircularityProperty,IS-A,,,,The mass of waste generated while producing recycled feedstock.,http://www.theworldavatar.com/kg/ontomatpassport,WF
+WasteMassGeneratedInProducingRecycledFeedstock,Class,CircularityProperty,IS-A,,,,The mass of waste generated while producing recycled feedstock.,http://www.theworldavatar.com/kg/ontomatpassport,WF
 WasteMassGeneratedInRecyclingCollectedPortion,Class,CircularityProperty,IS-A,,,,The mass of waste generated while recycling the collected portion of a product.,http://www.theworldavatar.com/kg/ontomatpassport,WC
 TotalWasteMass,Class,CircularityProperty,IS-A,,,,The total mass of waste generated from both the recycling and reuse processes.,http://www.theworldavatar.com/kg/ontomatpassport,W
 Mass,Class,CircularityProperty,IS-A,,,,,http://www.theworldavatar.com/kg/ontomatpassport,Mass
