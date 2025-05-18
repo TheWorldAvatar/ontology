@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://www.theworldavatar.com/kg/ontomatpassport/"
      xml:base="http://www.theworldavatar.com/kg/ontomatpassport/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:v1="http://purl.org/goodrelations/v1#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -29,19 +30,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
     
 
 
     <!-- http://purl.org/dc/elements/1.1/date -->
-
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/gitCommitHash -->
-
 
     <owl:AnnotationProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/gitCommitHash"/>
     
@@ -55,12 +53,10 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
     
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
-
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
         <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/MaterialPassport"/>
@@ -74,7 +70,6 @@
 
     <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit -->
 
-
     <owl:ObjectProperty rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit">
         <rdfs:domain rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
         <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
@@ -87,7 +82,6 @@
 
     <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/hasValue -->
 
-
     <owl:ObjectProperty rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasValue">
         <rdfs:domain rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
         <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
@@ -99,7 +93,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/describes -->
-
 
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/describes">
         <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/MaterialPassport"/>
@@ -121,7 +114,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasChemicalComposition -->
 
-
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasChemicalComposition">
         <rdfs:domain rdf:resource="http://emmo.info/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94"/>
         <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ChemicalComposition"/>
@@ -133,7 +125,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasCollector -->
-
 
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasCollector">
         <rdfs:domain>
@@ -155,7 +146,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasCountry -->
 
-
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasCountry">
         <rdfs:domain>
             <owl:Class>
@@ -175,7 +165,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasImage -->
 
-
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasImage">
         <rdfs:domain>
             <owl:Class>
@@ -194,7 +183,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasManufacturer -->
-
 
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasManufacturer">
         <rdfs:domain>
@@ -216,7 +204,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasProperty -->
 
-
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasProperty">
         <rdfs:domain>
             <owl:Class>
@@ -236,7 +223,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasRecycler -->
-
 
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasRecycler">
         <rdfs:domain>
@@ -258,7 +244,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasRegistrationCountry -->
 
-
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasRegistrationCountry">
         <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/hasCountry"/>
         <rdfs:domain>
@@ -279,7 +264,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasSpecificHeatCapacity -->
 
-
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasSpecificHeatCapacity">
         <rdfs:domain rdf:resource="http://emmo.info/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94"/>
         <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/SpecificHeatCapacity"/>
@@ -291,7 +275,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasSupplier -->
-
 
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasSupplier">
         <rdfs:domain>
@@ -319,12 +302,10 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
     
 
 
     <!-- http://purl.org/dc/terms/URI -->
-
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/URI">
         <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Image"/>
@@ -338,7 +319,6 @@
 
     <!-- http://purl.org/dc/terms/created -->
 
-
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created">
         <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/MaterialPassport"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -350,7 +330,6 @@
 
 
     <!-- http://purl.org/goodrelations/v1#name -->
-
 
     <owl:DatatypeProperty rdf:about="http://purl.org/goodrelations/v1#name">
         <rdfs:domain>
@@ -376,7 +355,6 @@
 
     <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue">
         <rdfs:domain rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
@@ -388,7 +366,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/description -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/description">
         <rdfs:domain>
@@ -410,7 +387,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasAutomaticTrackingOrScanning -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasAutomaticTrackingOrScanning">
         <rdfs:domain>
             <owl:Class>
@@ -429,7 +405,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasBrandName -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasBrandName">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#name"/>
@@ -451,7 +426,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasEAN -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasEAN">
         <rdfs:domain>
             <owl:Class>
@@ -470,7 +444,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasFeedstockFractionFromRecycledProduct -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasFeedstockFractionFromRecycledProduct">
         <rdfs:domain>
@@ -493,7 +466,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasFeedstockFractionFromReusedProduct -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasFeedstockFractionFromReusedProduct">
         <rdfs:domain>
             <owl:Class>
@@ -515,7 +487,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasFunctionalUnit -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasFunctionalUnit">
         <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/EnvironmentalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -527,7 +498,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasFunctionality -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasFunctionality">
         <rdfs:domain>
@@ -548,7 +518,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasGTIN -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasGTIN">
         <rdfs:domain>
             <owl:Class>
@@ -567,7 +536,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasHazardSummaryDocument -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasHazardSummaryDocument">
         <rdfs:domain>
@@ -590,7 +558,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasIndexValue -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasIndexValue">
         <rdfs:subPropertyOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue"/>
         <rdfs:domain>
@@ -610,7 +577,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasLFI -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasLFI">
         <rdfs:domain>
@@ -633,7 +599,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasMCI -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasMCI">
         <rdfs:domain>
             <owl:Class>
@@ -654,7 +619,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasMass -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasMass">
         <rdfs:domain>
@@ -677,7 +641,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasNumber -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasNumber">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>A string of numerals that expresses the identity of an object.</rdfs:comment>
@@ -688,7 +651,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasPercentageValue -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasPercentageValue">
         <rdfs:subPropertyOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue"/>
@@ -714,7 +676,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasProductFractionCollectedForRecycling -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasProductFractionCollectedForRecycling">
         <rdfs:domain>
             <owl:Class>
@@ -735,7 +696,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasProductFractionCollectedForReuse -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasProductFractionCollectedForReuse">
         <rdfs:domain>
@@ -758,7 +718,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasRecyclingEfficiencyForPortionCollectedForRecycling -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasRecyclingEfficiencyForPortionCollectedForRecycling">
         <rdfs:domain>
             <owl:Class>
@@ -779,7 +738,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasRecyclingEfficiencyForProducingFeedstock -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasRecyclingEfficiencyForProducingFeedstock">
         <rdfs:domain>
@@ -802,7 +760,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasRegistrationNumber -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasRegistrationNumber">
         <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/hasNumber"/>
         <rdfs:domain>
@@ -823,7 +780,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasSymbol -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasSymbol">
         <rdfs:domain rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -835,7 +791,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasTotalMass -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasTotalMass">
         <rdfs:subPropertyOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/hasMass"/>
@@ -859,7 +814,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasTradeName -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasTradeName">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#name"/>
         <rdfs:domain>
@@ -879,7 +833,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/id -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/id">
         <rdfs:domain>
@@ -904,7 +857,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/isBiodegradable -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/isBiodegradable">
         <rdfs:domain>
             <owl:Class>
@@ -925,7 +877,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/isDecomposable -->
-
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/isDecomposable">
         <rdfs:domain>
@@ -948,7 +899,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/isHazardous -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/isHazardous">
         <rdfs:domain>
             <owl:Class>
@@ -970,7 +920,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/version -->
 
-
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/version">
         <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/MaterialPassport"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -989,12 +938,10 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
     
 
 
     <!-- http://emmo.info/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94 -->
-
 
     <owl:Class rdf:about="http://emmo.info/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94">
         <owl:equivalentClass rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentMaterial"/>
@@ -1006,7 +953,6 @@
 
     <!-- http://purl.org/dc/dcmitype/Image -->
 
-
     <owl:Class rdf:about="http://purl.org/dc/dcmitype/Image">
         <rdfs:comment>A visual representation of an inanimate or animate object captured through technological means or drawn by humans.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype"/>
@@ -1016,7 +962,6 @@
 
 
     <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/HeatTransferCoefficient -->
-
 
     <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/HeatTransferCoefficient">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ThermalProperty"/>
@@ -1029,7 +974,6 @@
 
     <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/Measure -->
 
-
     <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure">
         <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
         <rdfs:label>Measure</rdfs:label>
@@ -1038,7 +982,6 @@
 
 
     <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity -->
-
 
     <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity">
         <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
@@ -1049,7 +992,6 @@
 
     <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/SpecificHeatCapacity -->
 
-
     <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/SpecificHeatCapacity">
         <rdfs:comment>The quantity of heat needed to increase the temperature of a material&apos;s unit mass by one unit.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
@@ -1059,7 +1001,6 @@
 
 
     <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity -->
-
 
     <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ThermalProperty"/>
@@ -1072,7 +1013,6 @@
 
     <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/Unit -->
 
-
     <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit">
         <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
         <rdfs:label>Unit</rdfs:label>
@@ -1081,7 +1021,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Biodegradability -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Biodegradability">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/BiologicalProperty"/>
@@ -1094,7 +1033,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/BiologicalProperty -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/BiologicalProperty">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#Property"/>
         <rdfs:comment>A property to express the biological feature of an object.</rdfs:comment>
@@ -1105,7 +1043,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/CarbonFootprint -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CarbonFootprint">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/EnvironmentalProperty"/>
@@ -1118,7 +1055,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/ChemicalComposition -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ChemicalComposition">
         <rdfs:comment>Chemical composition refers to the arrangement, type, and ratio of atoms in molecules of chemical substances [Chemistry LibreTexts].</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1128,7 +1064,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/ChemicalProperty -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ChemicalProperty">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#Property"/>
@@ -1140,7 +1075,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty">
         <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
@@ -1154,7 +1088,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Collector -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Collector">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/IndustrialStakeholder"/>
         <rdfs:comment>A business, company or entity gathering end-of-life products from another business, company or entity for reuse, recycling, or disposal.</rdfs:comment>
@@ -1165,7 +1098,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Component -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Component">
         <owl:equivalentClass rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentPart"/>
@@ -1178,7 +1110,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/CompositionProperty -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CompositionProperty">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#Property"/>
         <rdfs:comment>A property to describe the composition aspect of an object.</rdfs:comment>
@@ -1189,7 +1120,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/CompressiveStrength -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CompressiveStrength">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Resistance"/>
@@ -1202,7 +1132,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/ConstituentMaterial -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentMaterial">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CompositionProperty"/>
         <rdfs:comment>A property to describe the type and amount of constituent materials belonging to an object.</rdfs:comment>
@@ -1213,7 +1142,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/ConstituentPart -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentPart">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CompositionProperty"/>
@@ -1226,7 +1154,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Density -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Density">
         <rdfs:subClassOf rdf:resource="https://w3id.org/mdo/core/PhysicalProperty"/>
         <rdfs:comment>A physical property that describes the density of an object.</rdfs:comment>
@@ -1237,7 +1164,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Dimension -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Dimension">
         <rdfs:subClassOf rdf:resource="https://w3id.org/mdo/core/PhysicalProperty"/>
@@ -1250,7 +1176,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/DimensionlessQuantity -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/DimensionlessQuantity">
         <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
         <rdfs:comment>A quantity that cannot be associated with a unit of measure.</rdfs:comment>
@@ -1261,7 +1186,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/EnvironmentalProperty -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/EnvironmentalProperty">
         <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
@@ -1275,7 +1199,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/ExpectedLifetime -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ExpectedLifetime">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/TemporalProperty"/>
@@ -1288,7 +1211,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromRecycledProduct -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromRecycledProduct">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:comment>The fraction of feedstock from recycled products.</rdfs:comment>
@@ -1299,7 +1221,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromReusedProduct -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromReusedProduct">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
@@ -1312,7 +1233,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Flammability -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Flammability">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ChemicalProperty"/>
         <rdfs:comment>A property that determines the ease and intensity with which an object can ignite and burn.</rdfs:comment>
@@ -1323,7 +1243,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Height -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Height">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Dimension"/>
@@ -1336,7 +1255,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/IndustrialStakeholder -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/IndustrialStakeholder">
         <rdfs:comment>An entity involved in economic activities, services, or processes related to the production, transformation, distribution, collection, or recycling of goods at an industrial scale.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1346,7 +1264,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Length -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Length">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Dimension"/>
@@ -1359,7 +1276,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/LinearFlowIndex -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/LinearFlowIndex">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:comment>The proportion of material that moves from its origin as virgin materials to its final state as non-recyclable waste [Ellen MacArthur Foundation, 2015]</rdfs:comment>
@@ -1371,7 +1287,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Manufacturer -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Manufacturer">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/IndustrialStakeholder"/>
         <rdfs:comment>A business, company or entity manufacturing products for the consumer market.</rdfs:comment>
@@ -1382,7 +1297,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Mass -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Mass">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
@@ -1396,7 +1310,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/MaterialCircularityIndicator -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/MaterialCircularityIndicator">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:comment>A measure of how circular the materials of a product are.</rdfs:comment>
@@ -1408,7 +1321,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/MaterialPassport -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/MaterialPassport">
         <rdfs:comment>A passport or document providing identification, physical, temporal, sustainability and other properties of a product or component.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1419,7 +1331,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Product -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Product">
         <rdfs:comment>An artefact manufactured in an industrial setting to meet the demands of consumers and usually consists of multiple parts.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1429,7 +1340,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForRecycling -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForRecycling">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
@@ -1442,7 +1352,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForReuse -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForReuse">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:comment>The fraction of a product collected for reuse.</rdfs:comment>
@@ -1453,7 +1362,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Recycler -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Recycler">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/IndustrialStakeholder"/>
@@ -1466,7 +1374,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForPortionCollectedForRecycling -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForPortionCollectedForRecycling">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:comment>The recycling efficiency of a portion collected from a product for recycling.</rdfs:comment>
@@ -1477,7 +1384,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForProducingFeedstock -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForProducingFeedstock">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
@@ -1490,7 +1396,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Resistance -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Resistance">
         <rdfs:subClassOf rdf:resource="https://w3id.org/mdo/core/PhysicalProperty"/>
         <rdfs:comment>Any mechanical force that tends to retard or oppose motion [WordNet 3.1]</rdfs:comment>
@@ -1502,7 +1407,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Rigidity -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Rigidity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/mdo/core/PhysicalProperty"/>
         <rdfs:comment>The physical property of being stiff and resisting bending [WordNet 3.1]</rdfs:comment>
@@ -1513,7 +1417,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/ServiceLife -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ServiceLife">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
@@ -1527,7 +1430,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/ShearModulus -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ShearModulus">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Rigidity"/>
         <rdfs:comment>The rigidity of an object to shearing forces.</rdfs:comment>
@@ -1538,7 +1440,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/ShearStrength -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ShearStrength">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Resistance"/>
@@ -1551,7 +1452,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Supplier -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Supplier">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/IndustrialStakeholder"/>
         <rdfs:comment>A business, company or entity supplying products to another business, company or entity.</rdfs:comment>
@@ -1562,7 +1462,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/TemporalProperty -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/TemporalProperty">
         <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
@@ -1576,7 +1475,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/TensileStrength -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/TensileStrength">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Resistance"/>
         <rdfs:comment>The resistance of an object to tensile forces.</rdfs:comment>
@@ -1587,7 +1485,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/ThermalProperty -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ThermalProperty">
         <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
@@ -1601,7 +1498,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/TotalWasteMass -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/TotalWasteMass">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:comment>The total mass of waste generated from both the recycling and reuse processes.</rdfs:comment>
@@ -1612,7 +1508,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Toxicity -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Toxicity">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ChemicalProperty"/>
@@ -1625,7 +1520,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/VirginContentMass -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/VirginContentMass">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:comment>The mass of virgin content in a product.</rdfs:comment>
@@ -1637,7 +1531,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:comment>The mass of waste that remains after the recyclable and reusable materials have been separated and that cannot be turned into useful materials.</rdfs:comment>
@@ -1647,10 +1540,9 @@
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecylcedFeedstock -->
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecycledFeedstock -->
 
-
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecylcedFeedstock">
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecycledFeedstock">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:comment>The mass of waste generated while producing recycled feedstock.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1660,7 +1552,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInRecyclingCollectedPortion -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInRecyclingCollectedPortion">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
@@ -1673,7 +1564,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/WaterUsage -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/WaterUsage">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/EnvironmentalProperty"/>
         <rdfs:comment>The total amount of water consumed during the raw material extraction and production processes.</rdfs:comment>
@@ -1684,7 +1574,6 @@
 
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/Width -->
-
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Width">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Dimension"/>
@@ -1697,7 +1586,6 @@
 
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/YoungsModulus -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/YoungsModulus">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Rigidity"/>
         <rdfs:comment>The elastic rigidity of an object to stress.</rdfs:comment>
@@ -1709,7 +1597,6 @@
 
     <!-- http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#Property -->
 
-
     <owl:Class rdf:about="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#Property">
         <rdfs:comment>A characteristic of an object that can be applied in determining its use in applications.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl"/>
@@ -1719,7 +1606,6 @@
 
 
     <!-- https://dbpedia.org/ontology/Country -->
-
 
     <owl:Class rdf:about="https://dbpedia.org/ontology/Country">
         <rdfs:comment>A political entity associated with a territory considered a motherland to a nation ruled by a government.</rdfs:comment>
@@ -1731,7 +1617,6 @@
 
     <!-- https://w3id.org/mdo/core/PhysicalProperty -->
 
-
     <owl:Class rdf:about="https://w3id.org/mdo/core/PhysicalProperty">
         <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#Property"/>
@@ -1740,6 +1625,7 @@
         <rdfs:label>PhysicalProperty</rdfs:label>
     </owl:Class>
     
+
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -1966,132 +1852,21 @@
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeam">
         <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Product"/>
         <hasManufacturer rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Almas"/>
-        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCR"/>
-        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCU"/>
-        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamEC"/>
-        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamEF"/>
-        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFR"/>
-        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFU"/>
         <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamLFI"/>
         <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamMCI"/>
         <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamMass"/>
         <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamV"/>
         <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamW"/>
-        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamW0"/>
-        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWC"/>
-        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWF"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6"/>
         <hasGTIN>01234567890123</hasGTIN>
         <id>d03ffeb9-f71b-4a2e-91ba-ecbaefa1e9e9</id>
-		<isBiodegradable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBiodegradable>
+        <isBiodegradable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBiodegradable>
         <isHazardous rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isHazardous>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCR -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCR">
-        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForRecycling"/>
-        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCRMeasure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCRMeasure -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCRMeasure">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4</om-2:hasNumericalValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCU -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCU">
-        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForReuse"/>
-        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCUMeasure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCUMeasure -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamCUMeasure">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</om-2:hasNumericalValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamEC -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamEC">
-        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForPortionCollectedForRecycling"/>
-        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamECMeasure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamECMeasure -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamECMeasure">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</om-2:hasNumericalValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamEF -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamEF">
-        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForProducingFeedstock"/>
-        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamEFMeasure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamEFMeasure -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamEFMeasure">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</om-2:hasNumericalValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFR -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFR">
-        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromRecycledProduct"/>
-        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFRMeasure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFRMeasure -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFRMeasure">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</om-2:hasNumericalValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFU -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFU">
-        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromReusedProduct"/>
-        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFUMeasure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFUMeasure -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamFUMeasure">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2</om-2:hasNumericalValue>
     </owl:NamedIndividual>
     
 
@@ -2109,7 +1884,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamLFIMeasure">
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</om-2:hasNumericalValue>
     </owl:NamedIndividual>
     
 
@@ -2127,7 +1901,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamMCIMeasure">
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.55</om-2:hasNumericalValue>
     </owl:NamedIndividual>
     
 
@@ -2146,7 +1919,7 @@
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamMassMeasure">
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
         <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1386</om-2:hasNumericalValue>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.385</om-2:hasNumericalValue>
     </owl:NamedIndividual>
     
 
@@ -2175,7 +1948,6 @@
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamVMeasure">
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
         <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.693</om-2:hasNumericalValue>
     </owl:NamedIndividual>
     
 
@@ -2189,69 +1961,11 @@
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamW0 -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamW0">
-        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion"/>
-        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamW0Measure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamW0Measure -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamW0Measure">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4158</om-2:hasNumericalValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWC -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWC">
-        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInRecyclingCollectedPortion"/>
-        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWCMeasure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWCMeasure -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWCMeasure">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2772</om-2:hasNumericalValue>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWF -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWF">
-        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecylcedFeedstock"/>
-        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWFMeasure"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWFMeasure -->
-
-    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWFMeasure">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
-        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.693</om-2:hasNumericalValue>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWMeasure -->
 
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CrossBeamWMeasure">
         <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
         <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
-        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9009</om-2:hasNumericalValue>
     </owl:NamedIndividual>
     
 
@@ -2260,6 +1974,1686 @@
 
     <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Italy">
         <rdf:type rdf:resource="https://dbpedia.org/ontology/Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentMaterial"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1CR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1CU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1EC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1EF"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1FR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1FU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1LFI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1MCI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1Mass"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1V"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1W"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1W0"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1WC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1WF"/>
+        <v1:name>Polyurethane rigid foam</v1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1CR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1CR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1CRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1CRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1CRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1CU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1CU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForReuse"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1CUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1CUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1CUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1EC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1EC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForPortionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1ECMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1ECMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1ECMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1EF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1EF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForProducingFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1EFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1EFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1EFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1FR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1FR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromRecycledProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1FRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1FRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1FRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">34.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1FU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1FU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromReusedProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1FUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1FUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1FUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1LFI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1LFI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/LinearFlowIndex"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1LFIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1LFIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1LFIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1MCI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1MCI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/MaterialCircularityIndicator"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1MCIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1MCIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1MCIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1Mass -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1Mass">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Mass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1MassMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1MassMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1MassMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.34</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1V -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1V">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/VirginContentMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1VMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1VMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1VMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1W -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1W">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/TotalWasteMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1WMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1W0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1W0">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1W0Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1W0Measure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1W0Measure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1WC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1WC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInRecyclingCollectedPortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1WCMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1WCMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1WCMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1WF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1WF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecycledFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S1WFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1WFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1WFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S1WMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S1WMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentMaterial"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2CR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2CU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2EC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2EF"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2FR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2FU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2LFI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2MCI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2Mass"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2V"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2W"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2W0"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2WC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2WF"/>
+        <v1:name>Aluminum 7075</v1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2CR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2CR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2CRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2CRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2CRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2CU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2CU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForReuse"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2CUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2CUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2CUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2EC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2EC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForPortionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2ECMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2ECMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2ECMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2EF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2EF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForProducingFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2EFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2EFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2EFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2FR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2FR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromRecycledProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2FRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2FRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2FRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">43.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2FU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2FU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromReusedProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2FUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2FUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2FUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2LFI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2LFI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/LinearFlowIndex"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2LFIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2LFIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2LFIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2MCI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2MCI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/MaterialCircularityIndicator"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2MCIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2MCIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2MCIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2Mass -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2Mass">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Mass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2MassMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2MassMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2MassMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.216</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2V -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2V">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/VirginContentMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2VMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2VMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2VMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2W -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2W">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/TotalWasteMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2WMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2W0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2W0">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2W0Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2W0Measure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2W0Measure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2WC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2WC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInRecyclingCollectedPortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2WCMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2WCMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2WCMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2WF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2WF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecycledFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S2WFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2WFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2WFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S2WMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S2WMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentMaterial"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3CR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3CU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3EC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3EF"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3FR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3FU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3LFI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3MCI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3Mass"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3V"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3W"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3W0"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3WC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3WF"/>
+        <v1:name>E Glass Fiber</v1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3CR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3CR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3CRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3CRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3CRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3CU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3CU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForReuse"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3CUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3CUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3CUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3EC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3EC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForPortionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3ECMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3ECMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3ECMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3EF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3EF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForProducingFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3EFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3EFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3EFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3FR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3FR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromRecycledProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3FRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3FRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3FRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">34.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3FU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3FU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromReusedProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3FUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3FUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3FUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3LFI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3LFI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/LinearFlowIndex"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3LFIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3LFIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3LFIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3MCI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3MCI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/MaterialCircularityIndicator"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3MCIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3MCIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3MCIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3Mass -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3Mass">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Mass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3MassMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3MassMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3MassMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.009</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3V -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3V">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/VirginContentMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3VMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3VMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3VMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3W -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3W">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/TotalWasteMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3WMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3W0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3W0">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3W0Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3W0Measure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3W0Measure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3WC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3WC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInRecyclingCollectedPortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3WCMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3WCMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3WCMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3WF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3WF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecycledFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S3WFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3WFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3WFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S3WMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S3WMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentMaterial"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4CR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4CU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4EC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4EF"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4FR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4FU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4LFI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4MCI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4Mass"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4V"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4W"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4W0"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4WC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4WF"/>
+        <v1:name>Carbon Fiber</v1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4CR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4CR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4CRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4CRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4CRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4CU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4CU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForReuse"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4CUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4CUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4CUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4EC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4EC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForPortionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4ECMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4ECMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4ECMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4EF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4EF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForProducingFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4EFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4EFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4EFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4FR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4FR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromRecycledProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4FRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4FRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4FRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">75.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4FU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4FU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromReusedProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4FUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4FUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4FUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4LFI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4LFI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/LinearFlowIndex"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4LFIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4LFIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4LFIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4MCI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4MCI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/MaterialCircularityIndicator"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4MCIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4MCIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4MCIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4Mass -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4Mass">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Mass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4MassMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4MassMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4MassMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.498</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4V -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4V">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/VirginContentMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4VMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4VMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4VMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4W -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4W">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/TotalWasteMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4WMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4W0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4W0">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4W0Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4W0Measure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4W0Measure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4WC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4WC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInRecyclingCollectedPortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4WCMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4WCMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4WCMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4WF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4WF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecycledFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S4WFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4WFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4WFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S4WMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S4WMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentMaterial"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5CR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5CU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5EC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5EF"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5FR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5FU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5LFI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5MCI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5Mass"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5V"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5W"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5W0"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5WC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5WF"/>
+        <v1:name>Epoxy adhesive</v1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5CR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5CR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5CRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5CRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5CRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5CU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5CU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForReuse"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5CUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5CUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5CUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5EC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5EC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForPortionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5ECMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5ECMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5ECMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5EF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5EF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForProducingFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5EFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5EFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5EFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5FR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5FR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromRecycledProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5FRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5FRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5FRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5FU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5FU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromReusedProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5FUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5FUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5FUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5LFI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5LFI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/LinearFlowIndex"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5LFIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5LFIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5LFIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5MCI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5MCI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/MaterialCircularityIndicator"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5MCIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5MCIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5MCIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5Mass -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5Mass">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Mass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5MassMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5MassMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5MassMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.025</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5V -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5V">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/VirginContentMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5VMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5VMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5VMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5W -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5W">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/TotalWasteMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5WMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5W0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5W0">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5W0Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5W0Measure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5W0Measure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5WC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5WC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInRecyclingCollectedPortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5WCMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5WCMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5WCMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5WF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5WF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecycledFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S5WFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5WFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5WFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S5WMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S5WMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentMaterial"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6CR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6CU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6EC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6EF"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6FR"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6FU"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6LFI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6MCI"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6Mass"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6V"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6W"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6W0"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6WC"/>
+        <hasProperty rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6WF"/>
+        <v1:name>Epoxy adhesive</v1:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6CR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6CR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6CRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6CRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6CRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6CU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6CU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ProductFractionCollectedForReuse"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6CUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6CUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6CUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6EC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6EC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForPortionCollectedForRecycling"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6ECMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6ECMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6ECMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">53.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6EF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6EF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/RecyclingEfficiencyForProducingFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6EFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6EFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6EFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">53.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6FR -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6FR">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromRecycledProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6FRMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6FRMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6FRMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6FU -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6FU">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/FeedstockFractionFromReusedProduct"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6FUMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6FUMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6FUMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/percent"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6LFI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6LFI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/LinearFlowIndex"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6LFIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6LFIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6LFIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6MCI -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6MCI">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/MaterialCircularityIndicator"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6MCIMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6MCIMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6MCIMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6Mass -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6Mass">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Mass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6MassMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6MassMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6MassMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+        <om-2:hasNumericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.297</om-2:hasNumericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6V -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6V">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/VirginContentMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6VMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6VMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6VMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6W -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6W">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/TotalWasteMass"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6WMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6W0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6W0">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassAfterTakingRecyclableReusablePortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6W0Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6W0Measure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6W0Measure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6WC -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6WC">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInRecyclingCollectedPortion"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6WCMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6WCMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6WCMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6WF -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6WF">
+        <rdf:type rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/WasteMassGeneratedInProducingRecycledFeedstock"/>
+        <om-2:hasValue rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/L1S6WFMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6WFMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6WFMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/L1S6WMeasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/L1S6WMeasure">
+        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <om-2:hasUnit rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
