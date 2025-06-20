@@ -1,0 +1,13 @@
+Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
+OntoExposure,TBox,https://www.theworldavatar.com/kg/ontoexposure/,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
+OntoExposure,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+OntoExposure,TBox,Ontology used to calculate exposures to the environment,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
+OntoExposure,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
+Trip,Class,,,,,,,https://www.theworldavatar.com/kg/ontoexposure/,
+CalculationMethod,Class,,,,,,,https://www.theworldavatar.com/kg/ontoexposure/,
+TrajectoryCount,Class,CalculationMethod,IS-A,,,,,https://www.theworldavatar.com/kg/ontoexposure/,
+ExposureResult,Class,,,,,,,https://www.theworldavatar.com/kg/ontoexposure/,
+hasDistance,Data Property,,,CalculationMethod,http://www.w3.org/2001/XMLSchema#decimal,,,https://www.theworldavatar.com/kg/ontoexposure/,
+hasUpperbound,Data Property,,,TrajectoryCount,http://www.w3.org/2001/XMLSchema#long,,,https://www.theworldavatar.com/kg/ontoexposure/,
+hasLowerbound,Data Property,,,TrajectoryCount,http://www.w3.org/2001/XMLSchema#long,,,https://www.theworldavatar.com/kg/ontoexposure/,
+hasValue,Data Property,,,ExposureResult,http://www.w3.org/2001/XMLSchema#decimal,,,https://www.theworldavatar.com/kg/ontoexposure/,

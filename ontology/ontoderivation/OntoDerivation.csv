@@ -13,6 +13,7 @@ Finished,Class,Status,IS-A,,,,,https://www.theworldavatar.com/kg/ontoderivation/
 Error,Class,Status,IS-A,,,,,https://www.theworldavatar.com/kg/ontoderivation/,Error
 isDerivedFrom,Object Property,,,Derivation UNION DerivationWithTimeSeries UNION DerivationAsyn,http://www.w3.org/2002/07/owl#Thing,,,https://www.theworldavatar.com/kg/ontoderivation/,is derived from
 isDerivedUsing,Object Property,,,Derivation UNION DerivationWithTimeSeries UNION DerivationAsyn,http://www.theworldavatar.com/ontology/ontoagent/MSM.owl#Service,,,https://www.theworldavatar.com/kg/ontoderivation/,is derived using
+isDerivedUsing,Object Property,,,Derivation,http://www.theworldavatar.com/ontology/ontoexposure/CalculationMethod,,,https://www.theworldavatar.com/kg/ontoderivation/,Used in exposure calculations
 belongsTo,Object Property,,,http://www.w3.org/2002/07/owl#Thing,Derivation UNION DerivationWithTimeSeries UNION DerivationAsyn,,,https://www.theworldavatar.com/kg/ontoderivation/,belongs to
 hasStatus,Object Property,,,DerivationAsyn,Status,,,https://www.theworldavatar.com/kg/ontoderivation/,has status
 hasNewDerivedIRI,Object Property,,,Finished,http://www.w3.org/2002/07/owl#Thing,,,https://www.theworldavatar.com/kg/ontoderivation/,has new derived IRI
