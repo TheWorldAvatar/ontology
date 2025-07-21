@@ -5,7 +5,10 @@ OntoExposure,TBox,Ontology used to calculate exposures to the environment,http:/
 OntoExposure,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
 Trip,Class,,,,,,,https://www.theworldavatar.com/kg/ontoexposure/,
 CalculationMethod,Class,,,,,,,https://www.theworldavatar.com/kg/ontoexposure/,
-TrajectoryCount,Class,CalculationMethod,IS-A,,,,,https://www.theworldavatar.com/kg/ontoexposure/,
+TrajectoryCount,Class,CalculationMethod,IS-A,,,,,https://www.theworldavatar.com/kg/ontoexposure/,Count
+TrajectoryArea,Class,CalculationMethod,IS-A,,,,,https://www.theworldavatar.com/kg/ontoexposure/,Area
+Count,Class,CalculationMethod,IS-A,,,,,https://www.theworldavatar.com/kg/ontoexposure/,Count
+Area,Class,CalculationMethod,IS-A,,,,,https://www.theworldavatar.com/kg/ontoexposure/,Area
 ExposureResult,Class,,,,,,,https://www.theworldavatar.com/kg/ontoexposure/,
 hasDistance,Data Property,,,CalculationMethod,http://www.w3.org/2001/XMLSchema#decimal,,,https://www.theworldavatar.com/kg/ontoexposure/,
 hasUpperbound,Data Property,,,TrajectoryCount,http://www.w3.org/2001/XMLSchema#long,,,https://www.theworldavatar.com/kg/ontoexposure/,
