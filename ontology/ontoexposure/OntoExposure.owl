@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontoexposure="https://www.theworldavatar.com/kg/ontoexposure/">
     <owl:Ontology rdf:about="https://www.theworldavatar.com/kg/ontoexposure/">
-        <dc:date>31 July 2025</dc:date>
+        <dc:date>08 August 2025</dc:date>
         <rdfs:comment>Ontology used to calculate exposures to the environment</rdfs:comment>
         <owl:versionInfo>1</owl:versionInfo>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
@@ -40,6 +40,29 @@
 
 
     <owl:AnnotationProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/gitCommitHash"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasCalculationMethod -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasCalculationMethod">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ExposureResult"/>
+        <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/CalculationMethod"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:ObjectProperty>
     
 
 
@@ -148,6 +171,7 @@
 
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/ExposureResult">
+        <rdfs:comment>Result of a calculation</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:Class>
     

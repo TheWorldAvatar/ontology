@@ -9,8 +9,9 @@ TrajectoryCount,Class,CalculationMethod,IS-A,,,,Number of features within the bu
 TrajectoryArea,Class,CalculationMethod,IS-A,,,,Total intersected area between the trajectory buffer and exposure elements (polygons),https://www.theworldavatar.com/kg/ontoexposure/,Area
 Count,Class,CalculationMethod,IS-A,,,,Number of features within the buffer of a fixed vector element,https://www.theworldavatar.com/kg/ontoexposure/,Count
 Area,Class,CalculationMethod,IS-A,,,,Total intersected area between the buffer of a fixed vector element and the exposure elements (polygons),https://www.theworldavatar.com/kg/ontoexposure/,Area
-ExposureResult,Class,,,,,,,https://www.theworldavatar.com/kg/ontoexposure/,
+ExposureResult,Class,,,,,,Result of a calculation,https://www.theworldavatar.com/kg/ontoexposure/,
 hasDistance,Data Property,,,CalculationMethod,http://www.w3.org/2001/XMLSchema#decimal,,,https://www.theworldavatar.com/kg/ontoexposure/,
 hasUpperbound,Data Property,,,TrajectoryCount,http://www.w3.org/2001/XMLSchema#long,,,https://www.theworldavatar.com/kg/ontoexposure/,
 hasLowerbound,Data Property,,,TrajectoryCount,http://www.w3.org/2001/XMLSchema#long,,,https://www.theworldavatar.com/kg/ontoexposure/,
 hasValue,Data Property,,,ExposureResult,http://www.w3.org/2001/XMLSchema#decimal,,,https://www.theworldavatar.com/kg/ontoexposure/,
+hasCalculationMethod,Object Property,,,ExposureResult,CalculationMethod,,,https://www.theworldavatar.com/kg/ontoexposure/,
