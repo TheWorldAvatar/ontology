@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:OntoSpecies="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#">
     <owl:Ontology rdf:about="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl">
-        <dc:date>01 September 2025</dc:date>
+        <dc:date>10 September 2025</dc:date>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
         <rdfs:comment>OntoSpecies is an ontology developed for representing chemical species.</rdfs:comment>
         <owl:versionInfo>2</owl:versionInfo>
@@ -4008,6 +4008,39 @@
     <owl:Class rdf:about="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#ZCoordinate">
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#Coordinate"/>
         <rdfs:comment>Atom Z coordinate in space.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#pKa -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#pKa">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#DissociationConstant"/>
+        <rdfs:comment>The equilibrium constant for the dissociation of an acidic species into its conjugate base and a proton.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#pKaH -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#pKaH">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#DissociationConstant"/>
+        <rdfs:comment>The acid dissociation constant of the conjugate acid of a base, i.e., the proton affinity of a basic site.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#pKb -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#pKb">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#DissociationConstant"/>
+        <rdfs:comment>The base dissociation constant, i.e., the equilibrium constant for a base reacting with water to form its conjugate acid and hydroxide.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl"/>
     </owl:Class>
     
