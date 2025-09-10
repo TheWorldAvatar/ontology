@@ -99,10 +99,15 @@ os:ContractTermination a os:ServiceAgreementLifecycleEvent ;
   rdfs:comment "An event ending the contract before all contractual obligations have been performed. Typically the contract may have been concluded earlier with the agreement of all parties involved.".
 
 os:EventStatus owl:oneOf (
+  os:AmendedStatus
   os:PendingStatus
   os:InProgressStatus
   os:CompletedStatus
 ) .
+
+os:AmendedStatus a os:EventStatus ;
+  rdfs:label "Amended";
+  rdfs:comment "Indicates that the event has been amended and awaiting changes.".
 
 os:PendingStatus a os:EventStatus ;
   rdfs:label "Pending";
