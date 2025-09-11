@@ -88,37 +88,39 @@ flowchart LR
 
 > Namespace Prefix
 
-| Prefix            | Namespace                                                                                 |
-| ----------------- | ----------------------------------------------------------------------------------------- |
-| bot               | `https://w3id.org/bot#`                                                                   |
-| cmns-col          | `https://www.omg.org/spec/Commons/Collections/`                                           |
-| cmns-dt           | `https://www.omg.org/spec/Commons/DatesAndTimes/`                                         |
-| cmns-dsg          | `https://www.omg.org/spec/Commons/Designators/`                                           |
-| cmns-pts          | `https://www.omg.org/spec/Commons/PartiesAndSituations/`                                  |
-| cmns-rlcmp        | `https://www.omg.org/spec/Commons/RolesAndCompositions/`                                  |
-| fibo-be-le-lei    | `https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/`                 |
-| fibo-fnd-agr-ctr  | `https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/`                     |
-| fibo-fnd-arr-rep  | `https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/`                   |
-| fibo-fnd-aap-ppl  | `https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/`                   |
-| fibo-fnd-org-org  | `https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/`              |
-| fibo-fnd-pas-pas  | `https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/`  |
-| fibo-fnd-pas-psch | `https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/` |
-| fibo-fnd-plc-adr  | `https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/`                         |
-| fibo-fnd-plc-fac  | `https://spec.edmcouncil.org/fibo/ontology/FND/Places/Facilities/`                        |
-| fibo-fnd-plc-loc  | `https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/`                         |
-| fibo-fnd-pty-pty  | `https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/`                          |
-| fibo-fnd-rel-rel  | `https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations`                       |
-| fibo-fnd-org-fm   | `https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/`        |
-| lcc-cr            | `https://www.omg.org/spec/LCC/Countries/CountryRepresentation/`                           |
-| om                | `http://www.ontology-of-units-of-measure.org/resource/om-2/`                              |
-| sf                | `http://www.opengis.net/ont/sf#`                                                          |
-| geo               | `http://opengis.net/ont/geosparql#`                                                       |
-| time              | `http://www.w3.org/2006/time#`                                                            |
-| vcard             | `https://www.w3.org/2006/vcard/ns#`                                                       |
-| vc                | `https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/`                               |
-| rdfs              | `http://www.w3.org/2000/01/rdf-schema#`                                                   |
-| ontobim           | `https://www.theworldavatar.com/kg/ontobim/`                                              |
-| ontoprofile       | `https://www.theworldavatar.com/kg/ontoprofile/`                                          |
+| Prefix            | Namespace                                                                                        |
+| ----------------- | ------------------------------------------------------------------------------------------------ |
+| bot               | `https://w3id.org/bot#`                                                                          |
+| cmns-col          | `https://www.omg.org/spec/Commons/Collections/`                                                  |
+| cmns-dt           | `https://www.omg.org/spec/Commons/DatesAndTimes/`                                                |
+| cmns-dsg          | `https://www.omg.org/spec/Commons/Designators/`                                                  |
+| cmns-pts          | `https://www.omg.org/spec/Commons/PartiesAndSituations/`                                         |
+| cmns-rlcmp        | `https://www.omg.org/spec/Commons/RolesAndCompositions/`                                         |
+| fibo-be-le-lei    | `https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/`                        |
+| fibo-fnd-agr-ctr  | `https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/`                            |
+| fibo-fnd-arr-rep  | `https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/`                          |
+| fibo-fnd-aap-ppl  | `https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/`                          |
+| fibo-fnd-org-org  | `https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/`                     |
+| fibo-fbc-pas-fpas | `https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices` |
+| fibo-fnd-pas-pas  | `https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/`         |
+| fibo-fnd-pas-psch | `https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/`        |
+| fibo-fnd-plc-adr  | `https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/`                                |
+| fibo-fnd-plc-fac  | `https://spec.edmcouncil.org/fibo/ontology/FND/Places/Facilities/`                               |
+| fibo-fnd-plc-loc  | `https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/`                                |
+| fibo-fnd-pty-pty  | `https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/`                                 |
+| fibo-fnd-rel-rel  | `https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations`                              |
+| fibo-fnd-org-fm   | `https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/`               |
+| lcc-cr            | `https://www.omg.org/spec/LCC/Countries/CountryRepresentation/`                                  |
+| om                | `http://www.ontology-of-units-of-measure.org/resource/om-2/`                                     |
+| sf                | `http://www.opengis.net/ont/sf#`                                                                 |
+| geo               | `http://opengis.net/ont/geosparql#`                                                              |
+| time              | `http://www.w3.org/2006/time#`                                                                   |
+| vcard             | `https://www.w3.org/2006/vcard/ns#`                                                              |
+| vc                | `https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/`                                      |
+| rdfs              | `http://www.w3.org/2000/01/rdf-schema#`                                                          |
+| ontobim           | `https://www.theworldavatar.com/kg/ontobim/`                                                     |
+| ontoprofile       | `https://www.theworldavatar.com/kg/ontoprofile/`                                                 |
+| ontoservice       | `https://www.theworldavatar.com/kg/ontoservice/`                                                 |
 
 ## 2.1 Profiles
 
@@ -144,6 +146,8 @@ flowchart LR
     %% Contents
     PartyRole[[cmns-pts:PartyRole]] -. cmns-rlcmp:isPlayedBy .-> Organisation[[fibo-fnd-org-fm:FormalOrganization]]
     Organisation -. cmns-dsg:hasName .-> OrganizationName[["<h4>fibo-fnd-org-org:OrganizationName</h4><p style='font-size:0.75rem;'>fibo-be-le-lei:hasTransliteratedName &quot;string&quot;</p>"]]:::literal
+    Organisation -. cmns-col:hasPart .-> OrganizationalSubUnit[[<h4>fibo-fnd-org-org:OrganizationalSubUnit]]
+    OrganizationalSubUnit --> Organisation
 
     Organisation -. fibo-fnd-pty-pty:hasMailingAddress .-> ConventionalStreetAddress[["<h4>fibo-fnd-plc-adr:ConventionalStreetAddress</h4><p style='font-size:0.75rem;'>fibo-fnd-plc-loc:hasCityName &quot;string&quot;<br>fibo-fnd-plc-adr:hasPostalCode &quot;string&quot;</p>"]]:::literal
 
@@ -189,7 +193,7 @@ This section describes the various situations that organisations or people are i
 
 ### 2.2.1 Employment
 
-In this situation, a person can be employed by an organisation, who plays an employer role. It is pertinent to realise that both the employee and employer concepts are established as party roles that is played either by a person or an organisation. Employees also have their associated work responsibilities that they must fulfil, such as their working hours specified by `cmns-dt:hasTimePeriod`.
+In this situation, a person can be employed by an organisation, who plays an employer role. It is pertinent to realise that both the employee and employer concepts are established as party roles that is played either by a person or an organisation. Employees also have their associated work responsibilities that they must fulfil, such as their working hours specified by `cmns-dt:hasTimePeriod`. Employees can also be assigned to specific branches or departments under the organisation by using the `fibo-fnd-org-org:OrganizationalSubUnit` concept.
 
 Figure 3: TBox representation for an employment situation
 
@@ -214,6 +218,8 @@ flowchart LR
     Employer -. cmns-rlcmp:isPlayedBy .-> Org[[fibo-fnd-org-fm:FormalOrganization]]
     Employee -. cmns-rlcmp:isPlayedBy .-> Person[[fibo-fnd-aap-ppl:Person]]
     Org -. cmns-col:hasMember .-> Person
+    Org -. cmns-col:hasPart .-> OrganizationalSubUnit[[<h4>fibo-fnd-org-org:OrganizationalSubUnit]]
+    OrganizationalSubUnit -. cmns-col:hasMember .-> Person
 
     Employee -. cmns-dt:hasTimePeriod .-> TimePeriod[[cmns-dt:TimePeriod]]
     TimePeriod -. cmns-dt:hasStart .-> StartTime[[Start Time]]
@@ -258,11 +264,43 @@ flowchart TD
     Employer[[fibo-fnd-org-fm:Employer]] -. cmns-rlcmp:isPlayedBy .-> Org
 ```
 
+> Service operative
+
+When a person is employed by an organisation, they may be assigned to perform a specific service task through the representation of a functional role for a period stipulated in the situation.
+
+Figure 5: TBox representation of service operative situation
+
+```mermaid
+flowchart TD
+    %% Styling
+    classDef literal fill:none
+    classDef node overflow-wrap:break-word,text-wrap:pretty
+    linkStyle default overflow-wrap:break-word,text-wrap:pretty;
+
+    %% Contents
+    Situation[[cmns-pts:Situation]] -. cmns-pts:hasSubjectRole .-> Employee[[fibo-fnd-org-fm:Employee]]
+    Situation -. cmns-pts:hasObjectRole .-> SO[[ontoprofile:ServiceOperative]]
+    Situation -. cmns-pts:holdsDuring .-> DatePeriod[[cmns-dt:DatePeriod]]
+    DatePeriod -. cmns-dt:hasStartDate .-> StartDate[[Start Date]]
+    DatePeriod -. cmns-dt:hasEndDate .-> EndDate[[End Date]]
+    StartDate -.-> Date["<h4>cmns-dt:Date</h4><p style='font-size:0.75rem;'>cmns-dt:hasDateValue &quot;xsd:date&quot;</p>"]:::literal
+    EndDate -.-> Date
+
+    Employee -. cmns-rlcmp:isPlayedBy .-> Person[[fibo-fnd-aap-ppl:Person]]
+    SO --> cmns-rlcmp:FunctionalRole
+    SO -. cmns-pts:playsActiveRoleThatDirectlyAffects .-> DeliveryOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]]
+    DeliveryOccurrence -. fibo-fnd-rel-rel:exemplifies .-> ServiceDeliveryEvent[[ontoservice:ServiceDeliveryEvent]]
+    Employee -. fibo-fnd-org-fm:isEmployeeOf .-> Employer
+    Employer[[fibo-fnd-org-fm:Employer]] -. cmns-rlcmp:isPlayedBy .-> Org[[fibo-fnd-org-fm:FormalOrganization]]
+    ServiceProvider[[fibo-fnd-pas-pas:ServiceProvider]] -. cmns-rlcmp:isPlayedBy .-> Org
+    DeliveryOccurrence -."see OntoService for full list...".-> ServiceProvider
+```
+
 ### 2.2.2 Facility usage
 
 This section depicts the usage of facility by organisations and employees. These facilities may operate in a building which is associated with a corresponding address and geolocation. The ontology also enables the inclusion of employees from external organisations.
 
-Figure 5: TBox representation for facility usage
+Figure 6: TBox representation for facility usage
 
 ```mermaid
 flowchart LR
