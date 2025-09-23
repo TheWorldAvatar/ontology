@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontomatpassport="http://www.theworldavatar.com/kg/ontomatpassport/">
     <owl:Ontology rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/">
-        <dc:date>08 May 2025</dc:date>
+        <dc:date>23 September 2025</dc:date>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
         <rdfs:comment>The Material Passport Ontology (MPO) is an ontology developed for representing material passports of products and components. It is also known as OntoMatPassport.</rdfs:comment>
         <owl:versionInfo>1</owl:versionInfo>
@@ -59,6 +59,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <owl:equivalentProperty rdf:resource="http://www.wikidata.org/prop/direct/P170"/>
         <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/MaterialPassport"/>
         <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Manufacturer"/>
         <rdfs:comment>The organisation responsible for creating the material passport.</rdfs:comment>
@@ -153,6 +154,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasCountry">
+        <owl:equivalentProperty rdf:resource="http://www.wikidata.org/prop/direct/P17"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -173,6 +175,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasImage">
+        <owl:equivalentProperty rdf:resource="http://www.wikidata.org/prop/direct/P18"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -193,6 +196,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasManufacturer">
+        <owl:equivalentProperty rdf:resource="http://www.wikidata.org/prop/direct/P176"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -206,6 +210,27 @@
         <rdfs:comment>An object property referring to the manufacturer of a component, product or material.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
         <rdfs:label>hasManufacturer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontomatpassport/hasMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasMaterial">
+        <owl:equivalentProperty rdf:resource="http://www.wikidata.org/prop/direct/P186"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Component"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://emmo.info/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94"/>
+        <rdfs:comment>An object property referring to the material of a component or product.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
+        <rdfs:label>hasMaterial</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -307,6 +332,41 @@
     
 
 
+    <!-- http://www.wikidata.org/prop/direct/P17 -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.wikidata.org/prop/direct/P17"/>
+    
+
+
+    <!-- http://www.wikidata.org/prop/direct/P170 -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.wikidata.org/prop/direct/P170"/>
+    
+
+
+    <!-- http://www.wikidata.org/prop/direct/P176 -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.wikidata.org/prop/direct/P176"/>
+    
+
+
+    <!-- http://www.wikidata.org/prop/direct/P18 -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.wikidata.org/prop/direct/P18"/>
+    
+
+
+    <!-- http://www.wikidata.org/prop/direct/P186 -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.wikidata.org/prop/direct/P186"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -349,6 +409,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/goodrelations/v1#name">
+        <owl:equivalentProperty rdf:resource="http://www.wikidata.org/prop/direct/P2561"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -374,6 +435,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue">
+        <owl:equivalentProperty rdf:resource="http://www.wikidata.org/prop/direct/P1181"/>
         <rdfs:domain rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment>The numerical value of a measured quantity.</rdfs:comment>
@@ -546,6 +608,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasGTIN">
+        <owl:equivalentProperty rdf:resource="http://www.wikidata.org/prop/direct/P3962"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -653,6 +716,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasMass">
+        <owl:equivalentProperty rdf:resource="http://www.wikidata.org/prop/direct/P2067"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -857,6 +921,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/hasTradeName">
+        <owl:equivalentProperty rdf:resource="http://www.wikidata.org/prop/direct/P6427"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#name"/>
         <rdfs:domain>
             <owl:Class>
@@ -977,6 +1042,41 @@
     
 
 
+    <!-- http://www.wikidata.org/prop/direct/P1181 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.wikidata.org/prop/direct/P1181"/>
+    
+
+
+    <!-- http://www.wikidata.org/prop/direct/P2067 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.wikidata.org/prop/direct/P2067"/>
+    
+
+
+    <!-- http://www.wikidata.org/prop/direct/P2561 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.wikidata.org/prop/direct/P2561"/>
+    
+
+
+    <!-- http://www.wikidata.org/prop/direct/P3962 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.wikidata.org/prop/direct/P3962"/>
+    
+
+
+    <!-- http://www.wikidata.org/prop/direct/P6427 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.wikidata.org/prop/direct/P6427"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -994,6 +1094,7 @@
 
     <owl:Class rdf:about="http://emmo.info/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94">
         <owl:equivalentClass rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentMaterial"/>
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q214609"/>
         <rdfs:isDefinedBy rdf:resource="http://emmo.info/emmo"/>
         <rdfs:label>Material</rdfs:label>
     </owl:Class>
@@ -1015,6 +1116,7 @@
 
 
     <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/HeatTransferCoefficient">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q634340"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ThermalProperty"/>
         <rdfs:comment>A thermal property that describes the heat transfer coefficient of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
@@ -1047,6 +1149,7 @@
 
 
     <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/SpecificHeatCapacity">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q487756"/>
         <rdfs:comment>The quantity of heat needed to increase the temperature of a material&apos;s unit mass by one unit.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
         <rdfs:label>SpecificHeatCapacity</rdfs:label>
@@ -1058,6 +1161,7 @@
 
 
     <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q487005"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ThermalProperty"/>
         <rdfs:comment>A thermal property that describes the capacity of an object to conduct heat.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
@@ -1070,6 +1174,7 @@
 
 
     <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q47574"/>
         <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2"/>
         <rdfs:label>Unit</rdfs:label>
     </owl:Class>
@@ -1080,6 +1185,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Biodegradability">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q125660141"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/BiologicalProperty"/>
         <rdfs:comment>A property expressing whether an object is entirely, partially or not biodegradable.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1104,6 +1210,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CarbonFootprint">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q310667"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/EnvironmentalProperty"/>
         <rdfs:comment>The total amount of carbon dioxide (CO2) emitted during the raw material extraction and production process.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1127,6 +1234,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ChemicalProperty">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q764285"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#Property"/>
         <rdfs:comment>A property to express the chemical aspect of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1165,6 +1273,7 @@
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Component">
         <owl:equivalentClass rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ConstituentPart"/>
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q1310239"/>
         <rdfs:comment>Part of a bigger whole that can be a system or a product of composite nature.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
         <rdfs:label>Component</rdfs:label>
@@ -1188,6 +1297,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/CompressiveStrength">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q186191"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Resistance"/>
         <rdfs:comment>The resistance of an object to compressive forces.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1224,6 +1334,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Density">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q29539"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/mdo/core/PhysicalProperty"/>
         <rdfs:comment>A physical property that describes the density of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1248,6 +1359,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/DimensionlessQuantity">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q126818"/>
         <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
         <rdfs:comment>A quantity that cannot be associated with a unit of measure.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1310,6 +1422,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Flammability">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q910035"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ChemicalProperty"/>
         <rdfs:comment>A property that determines the ease and intensity with which an object can ignite and burn.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1322,6 +1435,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Height">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q208826"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Dimension"/>
         <rdfs:comment>A dimensional property expressing the height of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1345,6 +1459,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Length">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q36253"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Dimension"/>
         <rdfs:comment>A dimensional property expressing the length of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1369,6 +1484,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Manufacturer">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q13235160"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/IndustrialStakeholder"/>
         <rdfs:comment>A business, company or entity manufacturing products for the consumer market.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1381,6 +1497,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Mass">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q11423"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/mdo/core/PhysicalProperty"/>
         <rdfs:comment>A physical property to describe the mass of an object.</rdfs:comment>
@@ -1417,6 +1534,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Product">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q2424752"/>
         <rdfs:comment>An artefact manufactured in an industrial setting to meet the demands of consumers and usually consists of multiple parts.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
         <rdfs:label>Product</rdfs:label>
@@ -1500,6 +1618,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Rigidity">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q569057"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/mdo/core/PhysicalProperty"/>
         <rdfs:comment>The physical property of being stiff and resisting bending [WordNet 3.1]</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1512,6 +1631,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ServiceLife">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q1675349"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/CircularityProperty"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/TemporalProperty"/>
         <rdfs:comment>A temporary property expressing the duration an object may serve its intended purpose.</rdfs:comment>
@@ -1525,6 +1645,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ShearModulus">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q461466"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Rigidity"/>
         <rdfs:comment>The rigidity of an object to shearing forces.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1537,6 +1658,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ShearStrength">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q901396"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Resistance"/>
         <rdfs:comment>The resistance of an object to shearing forces.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1549,6 +1671,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Supplier">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q1762621"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/IndustrialStakeholder"/>
         <rdfs:comment>A business, company or entity supplying products to another business, company or entity.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1574,6 +1697,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/TensileStrength">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q76005"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Resistance"/>
         <rdfs:comment>The resistance of an object to tensile forces.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1586,6 +1710,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/ThermalProperty">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q65939908"/>
         <rdfs:subClassOf rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#Property"/>
         <rdfs:comment>A property to express the thermal aspect of an object.</rdfs:comment>
@@ -1611,6 +1736,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Toxicity">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q274160"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/ChemicalProperty"/>
         <rdfs:comment>A property that indicates the degree to which a substance can be harmful or poisonous.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1683,6 +1809,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/Width">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q35059"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Dimension"/>
         <rdfs:comment>A dimensional property expressing the width of an object.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1695,6 +1822,7 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontomatpassport/YoungsModulus">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q2091584"/>
         <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport/Rigidity"/>
         <rdfs:comment>The elastic rigidity of an object to stress.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontomatpassport"/>
@@ -1707,10 +1835,223 @@
 
 
     <owl:Class rdf:about="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#Property">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q937228"/>
         <rdfs:comment>A characteristic of an object that can be applied in determining its use in applications.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl"/>
         <rdfs:label>Property</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q11423 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q11423"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q125660141 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q125660141"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q126818 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q126818"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q1310239 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q1310239"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q13235160 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q13235160"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q1675349 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q1675349"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q1762621 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q1762621"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q186191 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q186191"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q208826 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q208826"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q2091584 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q2091584"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q214609 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q214609"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q2424752 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q2424752"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q274160 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q274160"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q29539 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q29539"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q310667 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q310667"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q35059 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q35059"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q36253 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q36253"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q4373292 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q4373292">
+        <owl:equivalentClass rdf:resource="https://w3id.org/mdo/core/PhysicalProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q461466 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q461466"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q47574 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q47574"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q487005 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q487005"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q487756 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q487756"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q569057 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q569057"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q634340 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q634340"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q65939908 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q65939908"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q76005 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q76005"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q764285 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q764285"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q901396 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q901396"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q910035 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q910035"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q937228 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q937228"/>
     
 
 
@@ -1735,209 +2076,6 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mdo/core"/>
         <rdfs:label>PhysicalProperty</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/centimetre -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/centimetre">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetre -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetre">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/day -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/day">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/gallon-Imperial -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/gallon-Imperial">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/gallon-US -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/gallon-US">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/gram -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/gram">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerCubicCentimetre -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerCubicCentimetre">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvinKilogram">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramOfCarbonDioxideEquivalent -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramOfCarbonDioxideEquivalent">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/litre -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/litre">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/megapascal -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/megapascal">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/metre -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/metre">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/milligram -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/milligram">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/millipascal -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/millipascal">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/month -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/month">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/pascal -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/pascal">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/percent -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/percent">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/tonnePerCubicmetre -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/tonnePerCubicmetre">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerSquareMetreKelvin -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerSquareMetreKelvin">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/year -->
-
-    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/year">
-        <rdf:type rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
-    </owl:NamedIndividual>
 </rdf:RDF>
 
 
