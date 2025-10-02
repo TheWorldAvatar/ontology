@@ -15,6 +15,7 @@ ExposureDataset,Class, http://www.w3.org/ns/dcat#Dataset,IS-A,,,,Super class of 
 AreaWeightedDataset,Class,ExposureDataset,IS-A,,,,"Exposure dataset used for the area weighted calculation, needs to be polygons and each polygon needs to have a value associated with it",https://www.theworldavatar.com/kg/ontoexposure/,
 hasGeometryColumn,DataProperty,,,ExposureDataset,http://www.w3.org/2001/XMLSchema#string,,Name of the geometry column of the dataset,https://www.theworldavatar.com/kg/ontoexposure/,
 hasValueColumn,DataProperty,,,AreaWeightedDataset,http://www.w3.org/2001/XMLSchema#string,,Name of the value column associated with a vector element,https://www.theworldavatar.com/kg/ontoexposure/,
+hasAreaColumn,DataProperty,,,AreaWeightedDataset,http://www.w3.org/2001/XMLSchema#string,,Name of the column holding area values,https://www.theworldavatar.com/kg/ontoexposure/,
 hasDistance,Data Property,,,CalculationMethod,http://www.w3.org/2001/XMLSchema#decimal,,,https://www.theworldavatar.com/kg/ontoexposure/,
 hasUpperbound,Data Property,,,TrajectoryCount,http://www.w3.org/2001/XMLSchema#long,,,https://www.theworldavatar.com/kg/ontoexposure/,
 hasLowerbound,Data Property,,,TrajectoryCount,http://www.w3.org/2001/XMLSchema#long,,,https://www.theworldavatar.com/kg/ontoexposure/,
