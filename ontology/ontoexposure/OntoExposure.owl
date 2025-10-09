@@ -11,7 +11,7 @@
     <owl:Ontology rdf:about="https://www.theworldavatar.com/kg/ontoexposure/">
         <dc:date>09 October 2025</dc:date>
         <rdfs:comment>Ontology used to calculate exposures to the environment</rdfs:comment>
-        <owl:versionInfo>1.1</owl:versionInfo>
+        <owl:versionInfo>1.2</owl:versionInfo>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
     </owl:Ontology>
     
@@ -79,6 +79,18 @@
     
 
 
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasAreaColumn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasAreaColumn">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/AreaWeightedDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of the column holding area values</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.theworldavatar.com/kg/ontoexposure/hasDistance -->
 
 
@@ -90,12 +102,36 @@
     
 
 
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasGeometryColumn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasGeometryColumn">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ExposureDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of the geometry column of the dataset</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.theworldavatar.com/kg/ontoexposure/hasLowerbound -->
 
 
     <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasLowerbound">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/TrajectoryCount"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasUnit -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasUnit">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ExposureResult"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unit of exposure result</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:DatatypeProperty>
     
@@ -119,6 +155,18 @@
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ExposureResult"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment>Numerical value of exposure result</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasValueColumn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasValueColumn">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/AreaWeightedDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of the value column associated with a vector element</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:DatatypeProperty>
     
