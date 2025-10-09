@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontoexposure="https://www.theworldavatar.com/kg/ontoexposure/">
     <owl:Ontology rdf:about="https://www.theworldavatar.com/kg/ontoexposure/">
-        <dc:date>19 August 2025</dc:date>
+        <dc:date>09 October 2025</dc:date>
         <rdfs:comment>Ontology used to calculate exposures to the environment</rdfs:comment>
         <owl:versionInfo>1.1</owl:versionInfo>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
@@ -136,6 +136,13 @@
     
 
 
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+    
+
+
     <!-- https://www.theworldavatar.com/kg/ontoexposure/Area -->
 
 
@@ -144,6 +151,29 @@
         <rdfs:comment>Total intersected area between the buffer of a fixed vector element and the exposure elements (polygons)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
         <rdfs:label>Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/AreaWeightedDataset -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/AreaWeightedDataset">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ExposureDataset"/>
+        <rdfs:comment>Exposure dataset used for the area weighted calculation, needs to be polygons and each polygon needs to have a value associated with it</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/AreaWeightedSum -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/AreaWeightedSum">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/CalculationMethod"/>
+        <rdfs:comment>The sum of the product between the value and area associated with the intersected vector elements</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+        <rdfs:label>Area weighted sum</rdfs:label>
     </owl:Class>
     
 
@@ -165,6 +195,17 @@
         <rdfs:comment>Number of features within the buffer of a fixed vector element</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
         <rdfs:label>Count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/ExposureDataset -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/ExposureDataset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:comment>Super class of exposure datasets</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:Class>
     
 

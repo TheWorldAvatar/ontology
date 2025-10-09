@@ -1,6 +1,6 @@
 Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
 OntoExposure,TBox,https://www.theworldavatar.com/kg/ontoexposure/,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
-OntoExposure,TBox,1.1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+OntoExposure,TBox,1.2,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
 OntoExposure,TBox,Ontology used to calculate exposures to the environment,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 OntoExposure,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
 Trip,Class,,,,,,,https://www.theworldavatar.com/kg/ontoexposure/,
