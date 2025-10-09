@@ -9,7 +9,7 @@ TrajectoryCount,Class,CalculationMethod,IS-A,,,,Number of features within the bu
 TrajectoryArea,Class,CalculationMethod,IS-A,,,,Total intersected area between the trajectory buffer and exposure elements (polygons),https://www.theworldavatar.com/kg/ontoexposure/,Area
 Count,Class,CalculationMethod,IS-A,,,,Number of features within the buffer of a fixed vector element,https://www.theworldavatar.com/kg/ontoexposure/,Count
 Area,Class,CalculationMethod,IS-A,,,,Total intersected area between the buffer of a fixed vector element and the exposure elements (polygons),https://www.theworldavatar.com/kg/ontoexposure/,Area
-AreaWeightedSum,Class,CalculationMethod,IS-A,,,,Total intersected area multiplied with the sum of total value associated with the vector elements,https://www.theworldavatar.com/kg/ontoexposure/,Area weighted sum
+AreaWeightedSum,Class,CalculationMethod,IS-A,,,,The sum of the product between the value and area associated with the intersected vector elements,https://www.theworldavatar.com/kg/ontoexposure/,Area weighted sum
 ExposureResult,Class,,,,,,Result of a calculation,https://www.theworldavatar.com/kg/ontoexposure/,
 ExposureDataset,Class, http://www.w3.org/ns/dcat#Dataset,IS-A,,,,Super class of exposure datasets,https://www.theworldavatar.com/kg/ontoexposure/,
 AreaWeightedDataset,Class,ExposureDataset,IS-A,,,,"Exposure dataset used for the area weighted calculation, needs to be polygons and each polygon needs to have a value associated with it",https://www.theworldavatar.com/kg/ontoexposure/,
