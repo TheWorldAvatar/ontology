@@ -67,7 +67,6 @@
 \seqsplit{http://semanticscience.org/resource/CHEMINF\_000440~{$\equiv$}~OntoSpecies:VaporDensity} \\
 \seqsplit{http://semanticscience.org/resource/CHEMINF\_000444~{$\equiv$}~OntoSpecies:AutoignitionTemperature} \\
 \seqsplit{OntoCAPE\_Substance:ChemicalSpecies~{$\equiv$}~OntoSpecies:Species} \\
-\seqsplit{OntoSpecies:DissociationConstant~{$\equiv$}~OntoSpecies:DissociationConstants} \\
 \seqsplit{http://purl.org/gc/Atom~{$\sqsubseteq$}~{$\forall$}~http://purl.org/gc/isElement.http://www.daml.org/2003/01/periodictable/PeriodicTable#Element} \\
 \seqsplit{http://purl.org/gc/Atom~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasXCoordinate.OntoSpecies:XCoordinate} \\
 \seqsplit{http://purl.org/gc/Atom~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasYCoordinate.OntoSpecies:YCoordinate} \\
@@ -105,8 +104,8 @@
 \seqsplit{OntoSpecies:CompoundComplexity~{$\sqsubseteq$}~OntoSpecies:Property} \\
 \seqsplit{OntoSpecies:CovalentUnitCount~{$\sqsubseteq$}~OntoSpecies:Property} \\
 \seqsplit{OntoSpecies:Density~{$\sqsubseteq$}~OntoSpecies:ThermoProperty} \\
+\seqsplit{OntoSpecies:DissociationConstant~{$\sqsubseteq$}~OntoSpecies:ThermoProperty} \\
 \seqsplit{OntoSpecies:DissociationConstant~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasIndex.OntoSpecies:Index} \\
-\seqsplit{OntoSpecies:DissociationConstants~{$\sqsubseteq$}~OntoSpecies:ThermoProperty} \\
 \seqsplit{OntoSpecies:ElectronAffinity~{$\sqsubseteq$}~OntoSpecies:Property} \\
 \seqsplit{OntoSpecies:ElectronConfiguration~{$\sqsubseteq$}~OntoSpecies:Property} \\
 \seqsplit{OntoSpecies:Electronegativity~{$\sqsubseteq$}~OntoSpecies:Property} \\
@@ -190,7 +189,6 @@
 \seqsplit{OntoSpecies:Species~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasCompoundComplexity.OntoSpecies:CompoundComplexity} \\
 \seqsplit{OntoSpecies:Species~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasCovalentUnitCount.OntoSpecies:CovalentUnitCount} \\
 \seqsplit{OntoSpecies:Species~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasDissociationConstant.OntoSpecies:DissociationConstant} \\
-\seqsplit{OntoSpecies:Species~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasDissociationConstants.OntoSpecies:DissociationConstants} \\
 \seqsplit{OntoSpecies:Species~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasEmpiricalFormula.OntoSpecies:EmpiricalFormula} \\
 \seqsplit{OntoSpecies:Species~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasEnthalpyOfSublimation.OntoSpecies:EnthalpyOfSublimation} \\
 \seqsplit{OntoSpecies:Species~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasExactMass.OntoSpecies:ExactMass} \\
@@ -267,7 +265,6 @@
 \seqsplit{OntoSpecies:2DNMRSpectra~{$\sqsubseteq$}~OntoSpecies:NMRSpectra} \\
 \seqsplit{OntoSpecies:29SiNMRSpectra~{$\sqsubseteq$}~OntoSpecies:1DNMRSpectra} \\
 \seqsplit{OntoSpecies:31PNMRSpectra~{$\sqsubseteq$}~OntoSpecies:1DNMRSpectra} \\
-\seqsplit{OntoSpecies:hasDissociationConstant~{$\equiv$}~OntoSpecies:hasDissociationConstants} \\
 \seqsplit{{$\exists$}~http://purl.org/gc/hasAtom.{$\top$}~{$\sqsubseteq$}~OntoSpecies:Species} \\
 \seqsplit{{$\exists$}~http://purl.org/gc/isElement.{$\top$}~{$\sqsubseteq$}~http://purl.org/gc/Atom} \\
 \seqsplit{{$\exists$}~OntoSpecies:definedBy.{$\top$}~{$\sqsubseteq$}~OntoSpecies:AtomicBond} \\
@@ -304,7 +301,6 @@
 \seqsplit{{$\exists$}~OntoSpecies:hasCovalentUnitCount.{$\top$}~{$\sqsubseteq$}~OntoSpecies:Species} \\
 \seqsplit{{$\exists$}~OntoSpecies:hasDensity.{$\top$}~{$\sqsubseteq$}~OntoSpecies:Species} \\
 \seqsplit{{$\exists$}~OntoSpecies:hasDissociationConstant.{$\top$}~{$\sqsubseteq$}~OntoSpecies:Species} \\
-\seqsplit{{$\exists$}~OntoSpecies:hasDissociationConstants.{$\top$}~{$\sqsubseteq$}~OntoSpecies:Species} \\
 \seqsplit{{$\exists$}~OntoSpecies:hasElectronAffinity.{$\top$}~{$\sqsubseteq$}~http://www.daml.org/2003/01/periodictable/PeriodicTable#Element} \\
 \seqsplit{{$\exists$}~OntoSpecies:hasElectronConfiguration.{$\top$}~{$\sqsubseteq$}~http://www.daml.org/2003/01/periodictable/PeriodicTable#Element} \\
 \seqsplit{{$\exists$}~OntoSpecies:hasElectronegativity.{$\top$}~{$\sqsubseteq$}~http://www.daml.org/2003/01/periodictable/PeriodicTable#Element} \\
@@ -412,7 +408,6 @@
 \seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasCovalentUnitCount.OntoSpecies:CovalentUnitCount} \\
 \seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasDensity.OntoSpecies:Density} \\
 \seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasDissociationConstant.OntoSpecies:DissociationConstant} \\
-\seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasDissociationConstants.OntoSpecies:DissociationConstants} \\
 \seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasElectronAffinity.OntoSpecies:ElectronAffinity} \\
 \seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasElectronConfiguration.OntoSpecies:ElectronConfiguration} \\
 \seqsplit{{$\top$}~{$\sqsubseteq$}~{$\forall$}~OntoSpecies:hasElectronegativity.OntoSpecies:Electronegativity} \\
