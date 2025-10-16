@@ -182,6 +182,17 @@
     
 
 
+    <!-- https://www.theworldavatar.com/kg/ontoservice/BillingContactService -->
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoservice/BillingContactService">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoservice/ContactService"/>
+        <rdfs:comment>A contact service specifically for billing-related communications, including email addresses and phone numbers. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoservice/"/>
+        <rdfs:label>Billing contact service</rdfs:label>
+    </owl:Class>
+
+
+
     <!-- https://www.theworldavatar.com/kg/ontoservice/EventStatus -->
 
 
