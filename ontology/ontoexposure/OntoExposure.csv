@@ -1,6 +1,6 @@
 Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
 OntoExposure,TBox,https://www.theworldavatar.com/kg/ontoexposure/,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
-OntoExposure,TBox,1.1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+OntoExposure,TBox,1.2,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
 OntoExposure,TBox,Ontology used to calculate exposures to the environment,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 OntoExposure,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
 Trip,Class,,,,,,,https://www.theworldavatar.com/kg/ontoexposure/,
@@ -9,10 +9,16 @@ TrajectoryCount,Class,CalculationMethod,IS-A,,,,Number of features within the bu
 TrajectoryArea,Class,CalculationMethod,IS-A,,,,Total intersected area between the trajectory buffer and exposure elements (polygons),https://www.theworldavatar.com/kg/ontoexposure/,Area
 Count,Class,CalculationMethod,IS-A,,,,Number of features within the buffer of a fixed vector element,https://www.theworldavatar.com/kg/ontoexposure/,Count
 Area,Class,CalculationMethod,IS-A,,,,Total intersected area between the buffer of a fixed vector element and the exposure elements (polygons),https://www.theworldavatar.com/kg/ontoexposure/,Area
+AreaWeightedSum,Class,CalculationMethod,IS-A,,,,The sum of the product between the value and area associated with the intersected vector elements,https://www.theworldavatar.com/kg/ontoexposure/,Area weighted sum
 ExposureResult,Class,,,,,,Result of a calculation,https://www.theworldavatar.com/kg/ontoexposure/,
+ExposureDataset,Class, http://www.w3.org/ns/dcat#Dataset,IS-A,,,,Super class of exposure datasets,https://www.theworldavatar.com/kg/ontoexposure/,
+AreaWeightedDataset,Class,ExposureDataset,IS-A,,,,"Exposure dataset used for the area weighted calculation, needs to be polygons and each polygon needs to have a value associated with it",https://www.theworldavatar.com/kg/ontoexposure/,
+hasGeometryColumn,Data Property,,,ExposureDataset,http://www.w3.org/2001/XMLSchema#string,,Name of the geometry column of the dataset,https://www.theworldavatar.com/kg/ontoexposure/,
+hasValueColumn,Data Property,,,AreaWeightedDataset,http://www.w3.org/2001/XMLSchema#string,,Name of the value column associated with a vector element,https://www.theworldavatar.com/kg/ontoexposure/,
+hasAreaColumn,Data Property,,,AreaWeightedDataset,http://www.w3.org/2001/XMLSchema#string,,Name of the column holding area values,https://www.theworldavatar.com/kg/ontoexposure/,
 hasDistance,Data Property,,,CalculationMethod,http://www.w3.org/2001/XMLSchema#decimal,,,https://www.theworldavatar.com/kg/ontoexposure/,
 hasUpperbound,Data Property,,,TrajectoryCount,http://www.w3.org/2001/XMLSchema#long,,,https://www.theworldavatar.com/kg/ontoexposure/,
 hasLowerbound,Data Property,,,TrajectoryCount,http://www.w3.org/2001/XMLSchema#long,,,https://www.theworldavatar.com/kg/ontoexposure/,
 hasValue,Data Property,,,ExposureResult,http://www.w3.org/2001/XMLSchema#decimal,,Numerical value of exposure result,https://www.theworldavatar.com/kg/ontoexposure/,
 hasCalculationMethod,Object Property,,,ExposureResult,CalculationMethod,,Calculation method used to derive exposure result,https://www.theworldavatar.com/kg/ontoexposure/,
-hasUnit,DataProperty,,,ExposureResult,http://www.w3.org/2001/XMLSchema#string,,Unit of exposure result,https://www.theworldavatar.com/kg/ontoexposure/,
+hasUnit,Data Property,,,ExposureResult,http://www.w3.org/2001/XMLSchema#string,,Unit of exposure result,https://www.theworldavatar.com/kg/ontoexposure/,
