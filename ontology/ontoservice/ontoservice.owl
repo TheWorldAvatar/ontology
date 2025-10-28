@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontoservice="https://www.theworldavatar.com/kg/ontoservice/">
     <owl:Ontology rdf:about="https://www.theworldavatar.com/kg/ontoservice/">
-        <dc:date>10 December 2024</dc:date>
+        <dc:date>28 October 2025</dc:date>
         <rdfs:comment>OntoService is designed to represent the terms, conditions, and obligations associated with service delivery as well as the execution details.</rdfs:comment>
         <owl:versionInfo>1.2</owl:versionInfo>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
@@ -167,6 +167,18 @@
 
 
     <owl:Class rdf:about="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Location"/>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoservice/BillingContactService -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoservice/BillingContactService">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoservice/ContactService"/>
+        <rdfs:comment>A contact service specifically for billing-related communications, including email addresses and phone numbers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoservice/"/>
+        <rdfs:label>Billing contact service</rdfs:label>
+    </owl:Class>
     
 
 
