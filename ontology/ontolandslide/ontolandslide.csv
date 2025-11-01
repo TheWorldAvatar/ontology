@@ -93,7 +93,7 @@ containsProperty,Object Property,,,Dataset,Property,,An object property that ind
 hasValue,Object Property,,,Measurement,http://www.ontology-of-units-of-measure.org/resource/om-2/Measure,,,http://www.theworldavatar.com/kg/ontolandslide,has value
 measurementStarttime,Data Property,,,Property,dateTime,,A data property that defines the starting time of a measurement event.,http://www.theworldavatar.com/kg/ontolandslide,measurement Starttime
 measurementEndtime,Data Property,,,Property,dateTime,,A data property that defines the ending time of a measurement event.,http://www.theworldavatar.com/kg/ontolandslide,measurement Endtime
-CausalFactor,Class,,IS-A,,,,"A factor that contributes to the occurrence of a landslide, either human or natural.",http://www.theworldavatar.com/kg/ontolandslide,Causal Factor
+CausalFactor,Class,,,,,,"A factor that contributes to the occurrence of a landslide, either human or natural.",http://www.theworldavatar.com/kg/ontolandslide,Causal Factor
 HumanFactor,Class,CausalFactor,IS-A,,,,Human activities or actions that can trigger or influence landslides.,http://www.theworldavatar.com/kg/ontolandslide,Human Factor
 NaturalFactor,Class,CausalFactor,IS-A,,,,Natural occurrences like earthquakes or rainfall that contribute to landslide events.,http://www.theworldavatar.com/kg/ontolandslide,Natural Factor
 SlopeExcavation,Class,HumanFactor,IS-A,,,,Human-induced slope modification that can increase landslide risk.,http://www.theworldavatar.com/kg/ontolandslide,Slope Excavation
