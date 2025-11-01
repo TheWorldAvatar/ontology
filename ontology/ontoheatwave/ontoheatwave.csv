@@ -146,7 +146,7 @@ hasShapeFile,Object Property,,,Location,ShapeFile,,Refers to the shapefile assoc
 hasGeometry,Object Property,,,Location,http://www.opengis.net/ont/geosparql#Geometry,,Indicates the geometric representation of a location.,http://www.theworldavatar.com/kg/ontoHeatwave,has Geometry
 isProducedBy,Object Property,,,ShapeFile,Organization,,Identifies the organization that produced a shapefile.,http://www.theworldavatar.com/kg/ontoHeatwave,is Produced By
 hasFileUrl,Object Property,,,ShapeFile,FileUrl,,Points to the URL of the shapefile.,http://www.theworldavatar.com/kg/ontoHeatwave,has File Url
-hasAltitude,,,,Location,double,,"This property represents the altitude of a specific location, expressed as a floating-point number.",http://www.theworldavatar.com/kg/ontoHeatwave,has Altitude
+hasAltitude,Data Property,,,Location,double,,"This property represents the altitude of a specific location, expressed as a floating-point number.",http://www.theworldavatar.com/kg/ontoHeatwave,has Altitude
 hasLat,Data Property,,,Location,double,,"This property represents the latitude coordinate of a specific Heatwave location, expressed as a floating-point number.",http://www.theworldavatar.com/kg/ontoHeatwave,has Lat
 hasLon,Data Property,,,Location,double,,"This property represents the longitude coordinate of a specific Heatwave location, expressed as a floating-point number.",http://www.theworldavatar.com/kg/ontoHeatwave,has Lon
 lastUpdateOn,Data Property,,,ShapeFile,date time,,This property represents the timestamp of the most recent update related to the Heatwave situation.,http://www.theworldavatar.com/kg/ontoHeatwave,last Update On
