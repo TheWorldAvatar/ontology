@@ -70,10 +70,10 @@ endangersOf,Object Property,,,Hazard,http://www.ontology-of-units-of-measure.org
 causesDamageOf,Object Property,,,Hazard,http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity,,This property links a hazard to the quantity representing the damage it causes.,http://www.theworldavatar.com/kg/ontowildfire/,
 indicatesQuantityOf,Object Property,,,http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity,EnvironmentalComponent UNION Population UNION InfrastructureComponent,,"This property associates a quantity with the environmental component, population, or infrastructure component it indicates.",http://www.theworldavatar.com/kg/ontowildfire/,indicates Quantity Of
 hasAffectedArea,Object Property,,,InfrastructureComponent,http://www.ontology-of-units-of-measure.org/resource/om-2/Area,,A relationship between an affected Infrastructure Component and the corresponding area affected.,http://www.theworldavatar.com/kg/ontowildfire/,has affected area
-Response,Class,Wildfire,,,,,"Actions taken to manage, mitigate, or extinguish a fire.",http://www.theworldavatar.com/kg/ontowildfire/,Response
-ResponseAction,Class,Response,IS-A,,,,Specific tasks or strategies employed in fire management or firefighting efforts.,http://www.theworldavatar.com/kg/ontowildfire/,Response Action
-ResponseDepartment,Class,Response,IS-A,,,,An organization or team responsible for handling fire emergencies.,http://www.theworldavatar.com/kg/ontowildfire/,Response Department
-ResponseLogistics,Class,Response,IS-A,,,,The planning and coordination of resources for effective fire response.,http://www.theworldavatar.com/kg/ontowildfire/,Response Logistics
+Response,Class,,,,,,"Actions taken to manage, mitigate, or extinguish a fire.",http://www.theworldavatar.com/kg/ontowildfire/,Response
+ResponseAction,Class,,,,,,Specific tasks or strategies employed in fire management or firefighting efforts.,http://www.theworldavatar.com/kg/ontowildfire/,Response Action
+ResponseDepartment,Class,,,,,,An organization or team responsible for handling fire emergencies.,http://www.theworldavatar.com/kg/ontowildfire/,Response Department
+ResponseLogistics,Class,,,,,,The planning and coordination of resources for effective fire response.,http://www.theworldavatar.com/kg/ontowildfire/,Response Logistics
 Tactics,Class,ResponseLogistics,IS-A,,,,The methods or techniques used to combat or control a fire.,http://www.theworldavatar.com/kg/ontowildfire/,Tactics
 WaterResource,Class,ResponseLogistics,IS-A,,,,"A source of water used for firefighting, such as hydrants, lakes, or reservoirs.",http://www.theworldavatar.com/kg/ontowildfire/,Water Resource
 Equipment,Class,ResponseLogistics,IS-A,,,,Tools and machinery used in fire suppression or prevention.,http://www.theworldavatar.com/kg/ontowildfire/,Equipment
