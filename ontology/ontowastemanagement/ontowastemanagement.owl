@@ -92,6 +92,27 @@
         <rdfs:label>has waste type</rdfs:label>
     </owl:ObjectProperty>
     
+    <!-- https://www.theworldavatar.com/kg/ontowastemanagement/deliver -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontowastemanagement/deliver">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/ContractLifecycleEventOccurrence"/>
+        <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontowastemanagement/Bin"/>
+        <rdfs:comment>A relationship describing the bin that has been delivered during this event occurrence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontowastemanagement/"/>
+        <rdfs:label>deliver</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- https://www.theworldavatar.com/kg/ontowastemanagement/towAway -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontowastemanagement/towAway">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/ContractLifecycleEventOccurrence"/>
+        <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontowastemanagement/Bin"/>
+        <rdfs:comment>A relationship describing the bin that has been towed away during this event occurrence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontowastemanagement/"/>
+        <rdfs:label>tow away</rdfs:label>
+    </owl:ObjectProperty>
 
 
     <!-- 
