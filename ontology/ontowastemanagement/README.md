@@ -573,3 +573,21 @@ Bin statuses are also represented as enums in the corresponding ABox. The availa
 - Available
 - Unavailable
 - Decomissioned
+
+Two object properties are defined to track physical logistics within a waste management system: `deliver` and `towAway`. They links bin instances to `fibo:ContractLifecycleEventOccurrence` (often completed events).
+
+```mermaid
+flowchart LR
+    %% Styling
+    classDef literal fill:none
+    classDef node overflow-wrap:break-word,text-wrap:pretty
+    linkStyle default overflow-wrap:break-word,text-wrap:pretty;
+
+    %% Define the Classes (Nodes)
+    FIBOEvent[("<h4>fibo:ContractLifecycleEventOccurrence</h4><p style='font-size:0.75rem;'>Domain Class (Source)</p>")]:::node
+    Bin[("<h4>ontowm:Bin</h4><p style='font-size:0.75rem;'>Range Class (Target)</p>")]:::node
+
+    %% Define the Relationships (Edges)
+    FIBOEvent -- ontowm:deliver --> Bin
+    FIBOEvent -- ontowm:towAway --> Bin
+```
