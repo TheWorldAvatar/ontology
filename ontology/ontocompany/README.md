@@ -34,6 +34,14 @@ The ontology can be divided into these respective domains:
         hasUENStatus string
         hasCompanyType string
     }
+    "Company" ||--o{ "UniqueEntityNumber" : hasUniqueEntityNumber
+    "UniqueEntityNumber" ||--o{ "Literals" : fibo:hasIdentifierValue
+    "UniqueEntityNumber" ||--o{ "fibo:GovernmentOrganization" : fibo:hasIssuer
+    "UniqueEntityNumber" ||--o{ "^^xsd:date" : hasIssueDate
+    "Company" ||--o{ "UniqueEntityNumberRegisteredAddress" : hasUniqueEntityNumberRegisteredAddress
+    "UniqueEntityNumberRegisteredAddress" ||--o{ "Location" : HasLocation
+    "Location" ||--o{ "Feature [geo:Feature]" : PhysicalLocation [fibo-fnd-plc-loc:PhysicalLocation]
+    "Feature" ||--o{ "Geom[["<h4>cmns-dt:geo:Geometry</h4><p style='font-size:0.75rem;'>geo:asWKT &quot;geo:wktLiteral&quot;</p>"]]:::literal" : geo:hasGeometry
     "infrastructure:Building" ||--o{ "IndustrialFacility" : "ontobim:hasFacility"
     "IndustrialFacility" ||--o{ "ontobim:Facility" : "rdfs:subClassOf"
     "IndustrialFacility" ||--o{ "IndustrialFacilityProperty" : hasIndustrialFacilityProperty
