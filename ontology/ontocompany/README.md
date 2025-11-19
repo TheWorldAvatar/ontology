@@ -33,6 +33,7 @@ erDiagram
         hasNumberOfManufacturingFacilities integer
         hasUENStatus string
         hasCompanyType string
+        hasLegalName string
     }
     "Company" ||--o{ "UniqueEntityNumber" : hasUniqueEntityNumber
     "UniqueEntityNumber" ||--o{ "Literals" : "fibo:hasIdentifierValue"
