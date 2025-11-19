@@ -20,7 +20,7 @@ The ontology can be divided into these respective domains:
 ### 3.1. Top-level Classes
 
 ```mermaid
-    erDiagram
+erDiagram
     "Company" ||--o{ "IndustrialFacility" : isOwnerOf
     "Company" ||--o{ "EnergyConsumptionPerUnitRevenue" : hasEnergyConsumptionPerUnitRevenue
     "Company" ||--o{ "Revenue" : "ontocape_economic_performance:hasRevenue"
@@ -35,13 +35,12 @@ The ontology can be divided into these respective domains:
         hasCompanyType string
     }
     "Company" ||--o{ "UniqueEntityNumber" : hasUniqueEntityNumber
-    "UniqueEntityNumber" ||--o{ "Literals" : fibo:hasIdentifierValue
-    "UniqueEntityNumber" ||--o{ "fibo:GovernmentOrganization" : fibo:hasIssuer
+    "UniqueEntityNumber" ||--o{ "Literals" : "fibo:hasIdentifierValue"
+    "UniqueEntityNumber" ||--o{ "fibo:GovernmentOrganization" : "fibo:hasIssuer"
     "UniqueEntityNumber" ||--o{ "^^xsd:date" : hasIssueDate
     "Company" ||--o{ "UniqueEntityNumberRegisteredAddress" : hasUniqueEntityNumberRegisteredAddress
-    "UniqueEntityNumberRegisteredAddress" ||--o{ "Location" : HasLocation
-    "Location" ||--o{ "Feature [geo:Feature]" : PhysicalLocation [fibo-fnd-plc-loc:PhysicalLocation]
-    "Feature" ||--o{ "Geom:literal" : geo:hasGeometry
+    "UniqueEntityNumberRegisteredAddress" ||--o{ PhysicalLocation : "rdf:type fibo-fnd-plc-loc:PhysicalLocation"
+    "PhysicalLocation" ||--o{ "Geom:literal" : "geo:hasGeometry"
     "infrastructure:Building" ||--o{ "IndustrialFacility" : "ontobim:hasFacility"
     "IndustrialFacility" ||--o{ "ontobim:Facility" : "rdfs:subClassOf"
     "IndustrialFacility" ||--o{ "IndustrialFacilityProperty" : hasIndustrialFacilityProperty
