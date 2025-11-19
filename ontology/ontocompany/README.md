@@ -31,6 +31,8 @@ The ontology can be divided into these respective domains:
         hasYearOfEstablishment gYear
         hasNumberOfEmployees integer
         hasNumberOfManufacturingFacilities integer
+        hasUENStatus string
+        hasCompanyType string
     }
     "infrastructure:Building" ||--o{ "IndustrialFacility" : "ontobim:hasFacility"
     "IndustrialFacility" ||--o{ "ontobim:Facility" : "rdfs:subClassOf"
