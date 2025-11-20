@@ -31,17 +31,17 @@ erDiagram
         hasYearOfEstablishment gYear
         hasNumberOfEmployees integer
         hasNumberOfManufacturingFacilities integer
-        hasUENStatus string
+        hasUniqueEntityNumberStatus string
         hasCompanyType string
         hasLegalName string
     }
     "Company" ||--o{ "UniqueEntityNumber" : hasUniqueEntityNumber
-    "UniqueEntityNumber" ||--o{ "Literals" : "fibo:hasIdentifierValue"
-    "UniqueEntityNumber" ||--o{ "fibo:GovernmentOrganization" : "fibo:hasIssuer"
-    "UniqueEntityNumber" ||--o{ "^^xsd:date" : hasIssueDate
+    "UniqueEntityNumber" ||--o{ "Literals" : "hasIdentifierValue"
+    "UniqueEntityNumber" ||--o{ "fibo:FormalOrganization" : "fibo:isIssuedBy"
+    "UniqueEntityNumber" ||--o{ "^^xsd:date" : "fibo:hasDateOfIssuance"
     "Company" ||--o{ "UniqueEntityNumberRegisteredAddress" : hasUniqueEntityNumberRegisteredAddress
-    "UniqueEntityNumberRegisteredAddress" ||--o{ PhysicalLocation : "rdf:type fibo-fnd-plc-loc:PhysicalLocation"
-    "PhysicalLocation" ||--o{ "Geom:literal" : "geo:hasGeometry"
+    "UniqueEntityNumberRegisteredAddress" ||--o{ "fibo:PhysicalLocation" : "fibo:isIndexTo"
+    "fibo:PhysicalLocation" ||--o{ "geo:Geometry" : "geo:hasGeometry"
     "infrastructure:Building" ||--o{ "IndustrialFacility" : "ontobim:hasFacility"
     "IndustrialFacility" ||--o{ "ontobim:Facility" : "rdfs:subClassOf"
     "IndustrialFacility" ||--o{ "IndustrialFacilityProperty" : hasIndustrialFacilityProperty
