@@ -36,6 +36,7 @@ erDiagram
         hasLegalName string
     }
     "Company" ||--o{ "UniqueEntityNumber" : hasUniqueEntityNumber
+    "Company" ||--o{ "infrastructure:Building" : isLocatedIn
     "UniqueEntityNumber" ||--o{ "Literals" : "hasIdentifierValue"
     "UniqueEntityNumber" ||--o{ "fibo:FormalOrganization" : "fibo:isIssuedBy"
     "UniqueEntityNumber" ||--o{ "time:Instant" : "fibo:hasDateOfIssuance"
