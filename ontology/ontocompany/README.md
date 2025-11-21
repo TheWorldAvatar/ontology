@@ -38,7 +38,8 @@ erDiagram
     "Company" ||--o{ "UniqueEntityNumber" : hasUniqueEntityNumber
     "UniqueEntityNumber" ||--o{ "Literals" : "hasIdentifierValue"
     "UniqueEntityNumber" ||--o{ "fibo:FormalOrganization" : "fibo:isIssuedBy"
-    "UniqueEntityNumber" ||--o{ "^^xsd:date" : "fibo:hasDateOfIssuance"
+    "UniqueEntityNumber" ||--o{ "time:Instant" : "fibo:hasDateOfIssuance"
+    "time:Instant" ||--o{ "^^xsd:date" : "time:inXSDDateTime"
     "Company" ||--o{ "UniqueEntityNumberRegisteredAddress" : hasUniqueEntityNumberRegisteredAddress
     "UniqueEntityNumberRegisteredAddress" ||--o{ "fibo:PhysicalLocation" : "fibo:isIndexTo"
     "fibo:PhysicalLocation" ||--o{ "geo:Geometry" : "geo:hasGeometry"
