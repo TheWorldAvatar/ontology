@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontocompany="http://www.theworldavatar.com/kg/ontocompany/">
     <owl:Ontology rdf:about="http://www.theworldavatar.com/kg/ontocompany/">
-        <dc:date>24 November 2025</dc:date>
+        <dc:date>25 November 2025</dc:date>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
         <rdfs:comment>An ontology for representing geospatial information and design characteristics of manufacturing facilities and data centres operated by a company.</rdfs:comment>
         <owl:versionInfo>1.1.0</owl:versionInfo>
@@ -249,6 +249,19 @@
     
 
 
+    <!-- http://www.theworldavatar.com/kg/ontocompany/hasIssueDate -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompany/hasIssueDate">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompany/UniqueEntityNumber"/>
+        <rdfs:range rdf:resource="https://www.w3.org/TR/owl-time/#Instant"/>
+        <rdfs:comment>A relationship between a Unique Entity Number and its date of issue.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompany/"/>
+        <rdfs:label>has Issue Date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.theworldavatar.com/kg/ontocompany/hasLandLotDetails -->
 
 
@@ -367,20 +380,6 @@
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompany/hasUniqueEntityNumberRegisteredAddress -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompany/hasUniqueEntityNumberRegisteredAddress">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/hasRegisteredAddress"/>
-        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompany/Company"/>
-        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontocompany/UniqueEntityNumberRegisteredAddress"/>
-        <rdfs:comment>A relationship between a company and its Unique Entity Number Registered Address.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompany/"/>
-        <rdfs:label>has Unique Entity Number Registered Address</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.theworldavatar.com/kg/ontocompany/hasUtilizationRate -->
 
 
@@ -390,6 +389,19 @@
         <rdfs:comment>A relation between a data centre and its typical utilization rate.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompany/"/>
         <rdfs:label>Utilization Rate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompany/isIssuedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontocompany/isIssuedBy">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompany/UniqueEntityNumber"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontocompany/FormalOrganization"/>
+        <rdfs:comment>A relationship between a Unique Entity Number and its issuing organisation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompany/"/>
+        <rdfs:label>is Issued By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -424,13 +436,6 @@
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompany/"/>
         <rdfs:label>Owner</rdfs:label>
     </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/hasRegisteredAddress -->
-
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/hasRegisteredAddress"/>
     
 
 
@@ -556,7 +561,6 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontocompany/hasIdentifierValue">
-        <rdfs:subPropertyOf rdf:resource="https://www.omg.org/spec/Commons/TextDatatype/hasTextValue"/>
         <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompany/UniqueEntityNumber"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>A relationship between a Unique Entity Number and its literals.</rdfs:comment>
@@ -600,6 +604,19 @@
         <rdfs:comment>A relationship between an entity and its longitude in EPSG24500.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompany/"/>
         <rdfs:label>longitude in EPSG24500</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompany/hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontocompany/hasName">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontocompany/Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A relationship between a company and its registered name.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompany/"/>
+        <rdfs:label>has Name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -700,13 +717,6 @@
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompany/"/>
         <rdfs:label>Year of Establishment</rdfs:label>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- https://www.omg.org/spec/Commons/TextDatatype/hasTextValue -->
-
-
-    <owl:DatatypeProperty rdf:about="https://www.omg.org/spec/Commons/TextDatatype/hasTextValue"/>
     
 
 
@@ -980,6 +990,17 @@
         <rdfs:comment>A factory established to produce food.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompany/"/>
         <rdfs:label>Food Plant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontocompany/FormalOrganization -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompany/FormalOrganization">
+        <rdfs:comment>An organization that is recognized in some legal jurisdiction with associated rights and responsibilities</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompany/"/>
+        <rdfs:label>Formal Organization</rdfs:label>
     </owl:Class>
     
 
@@ -1304,18 +1325,6 @@
     
 
 
-    <!-- http://www.theworldavatar.com/kg/ontocompany/UniqueEntityNumberRegisteredAddress -->
-
-
-    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontocompany/UniqueEntityNumberRegisteredAddress">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/ConventionalStreetAddress"/>
-        <rdfs:comment>The address registered with the Unique Entity Number (UEN) in Singapore.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontocompany/"/>
-        <rdfs:label>Unique Entity Number Registered Address</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.theworldavatar.com/kg/ontocompany/UtilizationRate -->
 
 
@@ -1342,13 +1351,6 @@
     
 
 
-    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/ConventionalStreetAddress -->
-
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/ConventionalStreetAddress"/>
-    
-
-
     <!-- https://www.omg.org/spec/Commons/Identifiers/Identifier -->
 
 
@@ -1360,6 +1362,13 @@
 
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontobim/Facility"/>
+    
+
+
+    <!-- https://www.w3.org/TR/owl-time/#Instant -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/TR/owl-time/#Instant"/>
     
 
 

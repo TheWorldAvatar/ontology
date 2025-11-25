@@ -33,17 +33,14 @@ erDiagram
         hasNumberOfManufacturingFacilities integer
         hasUniqueEntityNumberStatus string
         hasCompanyType string
-        hasLegalName string
+        hasName string
     }
     "Company" ||--o{ "UniqueEntityNumber" : hasUniqueEntityNumber
     "Company" ||--o{ "infrastructure:Building" : isLocatedIn
     "UniqueEntityNumber" ||--o{ "Literals" : "hasIdentifierValue"
-    "UniqueEntityNumber" ||--o{ "fibo:FormalOrganization" : "fibo:isIssuedBy"
-    "UniqueEntityNumber" ||--o{ "time:Instant" : "fibo:hasDateOfIssuance"
+    "UniqueEntityNumber" ||--o{ "FormalOrganization" : "isIssuedBy"
+    "UniqueEntityNumber" ||--o{ "time:Instant" : "hasIssueDate"
     "time:Instant" ||--o{ "^^xsd:date" : "time:inXSDDateTime"
-    "Company" ||--o{ "UniqueEntityNumberRegisteredAddress" : hasUniqueEntityNumberRegisteredAddress
-    "UniqueEntityNumberRegisteredAddress" ||--o{ "fibo:PhysicalLocation" : "fibo:isIndexTo"
-    "fibo:PhysicalLocation" ||--o{ "geo:Geometry" : "geo:hasGeometry"
     "infrastructure:Building" ||--o{ "IndustrialFacility" : "ontobim:hasFacility"
     "IndustrialFacility" ||--o{ "ontobim:Facility" : "rdfs:subClassOf"
     "IndustrialFacility" ||--o{ "IndustrialFacilityProperty" : hasIndustrialFacilityProperty
