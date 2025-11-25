@@ -9,9 +9,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontowastemanagement="https://www.theworldavatar.com/kg/ontowastemanagement/">
     <owl:Ontology rdf:about="https://www.theworldavatar.com/kg/ontowastemanagement/">
-        <dc:date>5 November 2025</dc:date>
+        <dc:date>25 November 2025</dc:date>
         <rdfs:comment>OntoWasteManagement is designed to represent and support the day-to-day waste management operations, ranging from handling collection requests and billing reports, meeting reporting requirements, to fleet and bin management.</rdfs:comment>
-        <owl:versionInfo>1.3</owl:versionInfo>
+        <owl:versionInfo>1.4</owl:versionInfo>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
     </owl:Ontology>
     
@@ -833,6 +833,15 @@
         <rdfs:label>Waste service</rdfs:label>
     </owl:Class>
     
+    <!-- https://www.theworldavatar.com/kg/ontowastemanagement/WasteServiceFacility -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontowastemanagement/WasteServiceFacility">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontobim/Facility"/>
+        <rdfs:comment>A facility where waste service is requested..</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontowastemanagement/"/>
+        <rdfs:label>Waste service facility</rdfs:label>
+    </owl:Class>
 
 
     <!-- https://www.theworldavatar.com/kg/ontowastemanagement/WoodWaste -->

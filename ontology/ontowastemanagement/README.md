@@ -184,11 +184,12 @@ flowchart TD
     ClientOrg -.-> Org[fibo-fnd-org-fm:FormalOrganization]
 
     Service -. fibo-fnd-rel-rel:provides .-> Capability[[fibo-fnd-plc-fac:Capability]]
-    Capability -. fibo-fnd-rel-rel:involves .-> Facility[[ontobim:Facility]]
-    Org -. fibo-fnd-rel-rel:controls .-> Facility
+    Capability -. fibo-fnd-rel-rel:involves .-> WasteServiceFacility[[ontowm:WasteServiceFacility]]
+    Org -. fibo-fnd-rel-rel:controls .-> WasteServiceFacility
+    WasteServiceFacility --> ontobim:Facility
 
-    Facility -. ontoservice:hasServiceLocation .-> Location[Service Location]
-    Building[[bot:Building]] -. ontobim:hasFacility .-> Facility
+    WasteServiceFacility -. ontoservice:hasServiceLocation .-> Location[Service Location]
+    Building[[bot:Building]] -. ontobim:hasFacility .-> WasteServiceFacility
     Building -. ontoservice:hasServiceLocation .-> Location
     Location --> Feature[geo:Feature]
     Location --> PhysicalLocation[fibo-fnd-plc-loc:PhysicalLocation]
@@ -229,9 +230,9 @@ flowchart LR
     ContactService -. vcard:hasTelephone .-> Cell[["<h4>vcard:Cell</h4><p style='font-size:0.75rem;'>vcard:hasValue &quot;string&quot;</p>"]]:::literal
 
     Service -. fibo-fnd-rel-rel:provides .-> Capability[[fibo-fnd-plc-fac:Capability]]
-    Capability -. fibo-fnd-rel-rel:involves .-> Facility[[ontobim:Facility]]
-    Org -. fibo-fnd-rel-rel:controls .-> Facility
-    Facility[[ontobim:Facility]] -. fibo-fnd-rel-rel:provides .-> ContactService[[ontoservice:ContactService]]
+    Capability -. fibo-fnd-rel-rel:involves .-> WasteServiceFacility[[ontowm:WasteServiceFacility]]
+    Org -. fibo-fnd-rel-rel:controls .-> WasteServiceFacility
+    WasteServiceFacility -. fibo-fnd-rel-rel:provides .-> ContactService[[ontoservice:ContactService]]
 ```
 
 ## 2.2. Waste services
