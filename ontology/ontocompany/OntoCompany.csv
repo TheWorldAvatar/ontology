@@ -48,8 +48,9 @@ UniqueEntityNumber,Class,,,,,,"The Unique Entity Number (UEN) is a standard iden
 FormalOrganization,Class,,,,,,"An organization that is recognized in some legal jurisdiction with associated rights and responsibilities",http://www.theworldavatar.com/kg/ontocompany/,Formal Organization
 hasIdentifierValue,Data Property,,,UniqueEntityNumber,String,,A relationship between a Unique Entity Number and its literals.,http://www.theworldavatar.com/kg/ontocompany/,has Identifier Value
 isIssuedBy,Object Property,,,UniqueEntityNumber,FormalOrganization,,A relationship between a Unique Entity Number and its issuing organisation.,http://www.theworldavatar.com/kg/ontocompany/,is Issued By
-hasIssueDate,Object Property,http://www.w3.org/2006/time#hasTime,IS-A,UniqueEntityNumber,https://www.w3.org/TR/owl-time/#Instant,,A relationship between a Unique Entity Number and its date of issue.,http://www.theworldavatar.com/kg/ontocompany/,has Issue Date
-hasName,Data Property,,,Company,String,,A relationship between a company and its registered name.,http://www.theworldavatar.com/kg/ontocompany/,has Name
+hasIssueDate,Object Property,http://www.w3.org/2006/time#hasTime,IS-A,,,,A relationship between a Unique Entity Number and its date of issue.,http://www.theworldavatar.com/kg/ontocompany/,has Issue Date
+hasName,Data Property,,,Company,String,,A relationship between a company or an organisation and its registered name.,http://www.theworldavatar.com/kg/ontocompany/,has Name
+hasName,Data Property,,,FormalOrganization,String,,A relationship between a company or an organisation and its registered name.,http://www.theworldavatar.com/kg/ontocompany/,has Name
 hasNumberofEmployees,Data Property,hasCompanyProperty,IS-A,Company,Integer,,A relationship between a company and its number of employees.,http://www.theworldavatar.com/kg/ontocompany/,Number of Employees
 hasBusinessActivity,Data Property,hasCompanyProperty,IS-A,Company,String,,A relationship between a company and its main business activity.,http://www.theworldavatar.com/kg/ontocompany/,Business Activity
 hasProductionTechnology,Data Property,hasCompanyProperty,IS-A,Company,String,,A relationship between a company and the production technology/process it uses.,http://www.theworldavatar.com/kg/ontocompany/,Production Technology
