@@ -20,7 +20,7 @@ The ontology can be divided into these respective domains:
 ### 3.1. Top-level Classes
 
 ```mermaid
-    erDiagram
+erDiagram
     "Company" ||--o{ "IndustrialFacility" : isOwnerOf
     "Company" ||--o{ "EnergyConsumptionPerUnitRevenue" : hasEnergyConsumptionPerUnitRevenue
     "Company" ||--o{ "Revenue" : "ontocape_economic_performance:hasRevenue"
@@ -31,7 +31,16 @@ The ontology can be divided into these respective domains:
         hasYearOfEstablishment gYear
         hasNumberOfEmployees integer
         hasNumberOfManufacturingFacilities integer
+        hasUniqueEntityNumberStatus string
+        hasCompanyType string
+        hasName string
     }
+    "Company" ||--o{ "UniqueEntityNumber" : hasUniqueEntityNumber
+    "Company" ||--o{ "infrastructure:Building" : isLocatedIn
+    "UniqueEntityNumber" ||--o{ "Literals" : "hasIdentifierValue"
+    "UniqueEntityNumber" ||--o{ "FormalOrganization" : "isIssuedBy"
+    "UniqueEntityNumber" ||--o{ "time:Instant" : "hasIssueDate"
+    "time:Instant" ||--o{ "^^xsd:date" : "time:inXSDDateTime"
     "infrastructure:Building" ||--o{ "IndustrialFacility" : "ontobim:hasFacility"
     "IndustrialFacility" ||--o{ "ontobim:Facility" : "rdfs:subClassOf"
     "IndustrialFacility" ||--o{ "IndustrialFacilityProperty" : hasIndustrialFacilityProperty

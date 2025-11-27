@@ -1,6 +1,6 @@
 Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
 OntoCompany,TBox,http://www.theworldavatar.com/kg/ontocompany/,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
-OntoCompany,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+OntoCompany,TBox,1.1.0,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
 OntoCompany,TBox,An ontology for representing geospatial information and design characteristics of manufacturing facilities and data centres operated by a company.,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 OntoCompany,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
 Company,Class,,,,,,An institution created to conduct business [WordNet].,http://www.theworldavatar.com/kg/ontocompany/,Company
@@ -40,6 +40,17 @@ hasNumberofManufacturingFacilities,Data Property,hasCompanyProperty,IS-A,Company
 hasYearOfEstablishment,"Data Property, Functional Property",hasCompanyProperty,IS-A,Company,https://www.w3.org/TR/xmlschema11-2/#gYear,,A relationship between a company and its year of formation.,http://www.theworldavatar.com/kg/ontocompany/,Year of Establishment
 hasSectoralDescription,Data Property,hasCompanyProperty,IS-A,Company,String,,A relationship between a company and its sectoral description.,http://www.theworldavatar.com/kg/ontocompany/,Sectoral Description
 hasSSICCode,Data Property,hasCompanyProperty,IS-A,Company,Integer,,A relationship between a company and its SSIC code corresponding to sectoral description (Singapore specific).,http://www.theworldavatar.com/kg/ontocompany/,SSIC Code
+isLocatedIn,Object Property,,,Company,http://www.opengis.net/citygml/building/2.0/Building,,Links a company to the building where it is located.,http://www.theworldavatar.com/kg/ontocompany/,is Located In
+hasUniqueEntityNumberStatus,Data Property,hasCompanyProperty,IS-A,Company,String,exactly 1,A relationship between a company and its Unique Entity Number status.,http://www.theworldavatar.com/kg/ontocompany/,has Unique Entity Number Status
+hasCompanyType,Data Property,hasCompanyProperty,IS-A,Company,String,,A relationship between a company and its Company type.,http://www.theworldavatar.com/kg/ontocompany/,has Company Type
+hasUniqueEntityNumber,Object Property,hasCompanyProperty,IS-A,Company,UniqueEntityNumber,exactly 1,A relationship between a company and its Unique Entity Number.,http://www.theworldavatar.com/kg/ontocompany/,has Unique Entity Number
+UniqueEntityNumber,Class,,,,,,"The Unique Entity Number (UEN) is a standard identification number for entities, ranging from businesses and partnerships to charities and societies, to interact with government agencies in Singapore.",http://www.theworldavatar.com/kg/ontocompany/,Unique Entity Number
+FormalOrganization,Class,,,,,,"An organization that is recognized in some legal jurisdiction with associated rights and responsibilities",http://www.theworldavatar.com/kg/ontocompany/,Formal Organization
+hasIdentifierValue,Data Property,,,UniqueEntityNumber,String,,A relationship between a Unique Entity Number and its literals.,http://www.theworldavatar.com/kg/ontocompany/,has Identifier Value
+isIssuedBy,Object Property,,,UniqueEntityNumber,FormalOrganization,,A relationship between a Unique Entity Number and its issuing organisation.,http://www.theworldavatar.com/kg/ontocompany/,is Issued By
+hasIssueDate,Object Property,http://www.w3.org/2006/time#hasTime,IS-A,,,,A relationship between a Unique Entity Number and its date of issue.,http://www.theworldavatar.com/kg/ontocompany/,has Issue Date
+hasName,Data Property,,,Company,String,,A relationship between a company or an organisation and its registered name.,http://www.theworldavatar.com/kg/ontocompany/,has Name
+hasName,Data Property,,,FormalOrganization,String,,A relationship between a company or an organisation and its registered name.,http://www.theworldavatar.com/kg/ontocompany/,has Name
 hasNumberofEmployees,Data Property,hasCompanyProperty,IS-A,Company,Integer,,A relationship between a company and its number of employees.,http://www.theworldavatar.com/kg/ontocompany/,Number of Employees
 hasBusinessActivity,Data Property,hasCompanyProperty,IS-A,Company,String,,A relationship between a company and its main business activity.,http://www.theworldavatar.com/kg/ontocompany/,Business Activity
 hasProductionTechnology,Data Property,hasCompanyProperty,IS-A,Company,String,,A relationship between a company and the production technology/process it uses.,http://www.theworldavatar.com/kg/ontocompany/,Production Technology
