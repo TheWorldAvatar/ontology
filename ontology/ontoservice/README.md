@@ -535,19 +535,14 @@ Figure 9: TBox representation of a customer account and their billable services
    Client -. fibo-fnd-rel-rel:holds .-> CustomerAccount
    ServiceProvider -. cmns-org:provides .-> CustomerAccount
    
-   CustomerAccount -. fibo-fnd-arr-doc:hasRecord .-> TransactionRecord[[fibo-fbc-pas-caa:TransactionRecord]]
+   CustomerAccount -. fibo-fnd-arr-doc:hasRecord .-> TransactionRecord[["<h4>fibo-fbc-pas-caa:TransactionRecord</h4><p style='font-size:0.75rem;'>fibo-fbc-pas-caa:hasOpenDate &quot;xsd:dateTime&quot;<br>fibo-fbc-pas-caa:hasCloseDate &quot;xsd:dateTime&quot;</p>"]]:::literal
    TransactionRecord -. cmns-doc:isAbout .-> ServiceAgreement[[fibo-fnd-pas-pas:ServiceAgreement]]
    ServiceAgreement -. fibo-fnd-rel-rel:confers .-> PaymentObligation[[fibo-fnd-pas-psch:PaymentObligation]]
    PaymentObligation -. fibo-fnd-rel-rel:mandates .-> PricingModel
 
-   TransactionRecord -. cmns-col:comprises .-> IndividualTransaction[[fibo-fbc-pas-caa:IndividualTransaction]]
-   IndividualTransaction -. fibo-fbc-pas-caa:hasPostingDate .-> DateTime2["xsd:dateTime literal</p>"]
-   IndividualTransaction -. fibo-fbc-pas-caa:hasTransactionDate .-> DateTime2
+   TransactionRecord -. cmns-col:comprises .-> IndividualTransaction[["<h4>fibo-fbc-pas-caa:IndividualTransaction</h4><p style='font-size:0.75rem;'>fibo-fbc-pas-caa:hasPostingDate &quot;xsd:dateTime&quot;<br>fibo-fbc-pas-caa:hasTransactionDate &quot;xsd:dateTime&quot;</p>"]]:::literal
    IndividualTransaction -. fibo-fnd-acc-cur:hasMonetaryAmount .-> CalculatedPrice
    CalculatedPrice -. cmns-qtu:hasExpression .-> CalculationExpression[[cmns-qtu:Expression]]
-
-   TransactionRecord -. fibo-fbc-pas-caa:hasOpenDate .-> DateTime["xsd:dateTime literal</p>"]
-   TransactionRecord -. fibo-fbc-pas-caa:hasCloseDate .-> DateTime
 
    IndividualTransaction -. fibo-fnd-rel-rel:involves .-> ClosedTask
    ClosedTask -.->  fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence
