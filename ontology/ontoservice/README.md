@@ -501,9 +501,58 @@ flowchart LR
 
 ### 2.3.1 Billing
 
+In supporting the billing process, a customer account must be first set up. Each customer account defines an account-specific agreement that stipulates a catalog of approved pricing models. However, the binding payment terms are specified by the individual service-specific agreements.
+
+Each customer account is associated with multiple transaction records, with one record per contract. This record remains open for the duration of the contract and comprises multiple transactions, where each transaction records a final bill. The final price is computed based on several arguments derived from the relevant pricing model, specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges.
+
+Figure 9: TBox representation of a customer account and their billable services
+
+```mermaid
+   flowchart TD
+   %% Styling
+   classDef literal fill:none
+   classDef node overflow-wrap:break-word,text-wrap:pretty
+   linkStyle default overflow-wrap:break-word,text-wrap:pretty;
+
+   %% Contents
+   CustomerAccount[[fibo-fbc-pas-caa:CustomerAccount]] -. cmns-dsg:isDefinedIn .-> Agreement[[fibo-fbc-pas-caa:AccountSpecificServiceAgreement]]
+   Agreement -. fibo-fnd-agr-ctr:hasContractParty .-> ServiceProvider[[fibo-fnd-pas-pas:ServiceProvider]] 
+   Agreement -. fibo-fnd-agr-agr:isObligationOf .-> Client[[fibo-fnd-pas-pas:Client]]
+
+   Agreement -. fibo-fnd-rel-rel:confers .-> EconomicCommitment[[fibo-fnd-txn-rea:EconomicCommitment]]
+   EconomicCommitment -. cmns-pts:holdsDuring .-> DatePeriod[[cmns-dt:DatePeriod]]
+   DatePeriod -. cmns-dt:hasStartDate .-> StartDate[[Start Date]]
+   DatePeriod -. cmns-dt:hasEndDate .-> EndDate[[End Date]]
+   StartDate -.-> Date["<h4>cmns-dt:Date</h4><p style='font-size:0.75rem;'>cmns-dt:hasDateValue &quot;xsd:date&quot;</p>"]:::literal
+   EndDate -.-> Date
+
+   EconomicCommitment -. fibo-fnd-rel-rel:mandates .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
+   CalculatedPrice[[fibo-fnd-acc-cur:CalculatedPrice]] -. cmns-cxtdsg:uses .-> PricingModel
+
+   Client -. fibo-fnd-rel-rel:holds .-> CustomerAccount
+   ServiceProvider -. cmns-org:provides .-> CustomerAccount
+   
+   CustomerAccount -. fibo-fnd-arr-doc:hasRecord .-> TransactionRecord[[fibo-fbc-pas-caa:TransactionRecord]]
+   TransactionRecord -. cmns-doc:isAbout .-> ServiceAgreement[[fibo-fnd-pas-pas:ServiceAgreement]]
+   ServiceAgreement -. fibo-fnd-rel-rel:confers .-> PaymentObligation[[fibo-fnd-pas-psch:PaymentObligation]]
+   PaymentObligation -. fibo-fnd-rel-rel:mandates .-> PricingModel
+
+   TransactionRecord -. cmns-col:comprises .-> IndividualTransaction[[fibo-fbc-pas-caa:IndividualTransaction]]
+   IndividualTransaction -. fibo-fbc-pas-caa:hasPostingDate .-> DateTime2["xsd:dateTime literal</p>"]
+   IndividualTransaction -. fibo-fbc-pas-caa:hasTransactionDate .-> DateTime2
+   IndividualTransaction -. fibo-fnd-acc-cur:hasMonetaryAmount .-> CalculatedPrice
+   CalculatedPrice -. cmns-qtu:hasExpression .-> CalculationExpression[[cmns-qtu:Expression]]
+
+   TransactionRecord -. fibo-fbc-pas-caa:hasOpenDate .-> DateTime["xsd:dateTime literal</p>"]
+   TransactionRecord -. fibo-fbc-pas-caa:hasCloseDate .-> DateTime
+
+   IndividualTransaction -. fibo-fnd-rel-rel:involves .-> ClosedTask
+   ClosedTask -.->  fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence
+```
+
 The billable amount for each service delivery is recorded as a new `CalculatedPrice` instance, derived from a pricing model and its inputs, along with any additional inputs. These additional inputs may come from a calculation event or other sources. The pricing model should be stipulated as part of the service agreement. Note that the variable fee must use **price per quantity** as a measurement unit. In the example below, price per tonne is used, and these extensions can be made in the `abox.ttl`.
 
-Figure 9: TBox representation of a billing record for a service agreement
+Figure 10: TBox representation of a billing record for a service agreement
 
 ```mermaid
 flowchart LR
@@ -548,7 +597,7 @@ The representation of the pricing model is intended to be highly flexible to acc
 2. **Fixed trip variable weight pricing model**: A fixed delivery charge and a variable fee depending on the weight collected/delivered - Instantiate _ONE_ flat fee argument along with _ONE_ variable fee argument with no bounds
 3. **Variable excess weight pricing model**: A fixed fee up to a weight cap and a variable fee depending on the excess weight above the cap - Instantiate _ONE_ flat fee argument for the fixed fee; _ONE_ variable fee argument of `0` rate from lower and upper bounds of `0` and `weight cap` respectively; _ONE_ variable fee argument with ONLY lower bounds of the `weight cap`
 
-Figure 10: TBox representation of potential pricing models
+Figure 11: TBox representation of potential pricing models
 
 ```mermaid
 flowchart LR
@@ -588,7 +637,7 @@ flowchart LR
 
 When managing delivery operations, it's often necessary to track the time spent on various tasks as well as record details about specific events. Delivery reports within this ontology are designed to facilitate this. They enable you to record the duration of situations, such as employee work shifts or machine run times, using the `cmns-dt:Duration` property. Furthermore, the `cmns-doc:specifies` property can be utilised to add context to these situations, such as the type of work performed or any other relevant details. This allows for a comprehensive recording of delivery activities. The following example is one application of this ontology but users can modify the triples along the same lines for their specific applications.
 
-Figure 11: TBox representation of a delivery report on an employee's work shift
+Figure 12: TBox representation of a delivery report on an employee's work shift
 
 ```mermaid
 flowchart LR
