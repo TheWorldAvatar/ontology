@@ -504,7 +504,7 @@ flowchart LR
 
 ### 2.3.1 Billing
 
-In supporting the billing process, a customer account must be first set up. Each customer account defines an account-specific agreement that stipulates a catalog of approved pricing models. However, the binding payment terms are specified by the individual service-specific agreements.
+In supporting the billing process, a customer account must be first set up with a new `AccountHolder` concept. Each customer account defines an account-specific agreement that stipulates a catalog of approved pricing models. However, the binding payment terms are specified by the individual service-specific agreements.
 
 Each customer account is associated with multiple transaction records, with one record per contract. This record remains open for the duration of the contract and comprises multiple transactions, where each transaction records a final bill. The final price is computed based on several arguments derived from the relevant pricing model, specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges.
 
@@ -520,7 +520,7 @@ Figure 9: TBox representation of a customer account and their billable services
    %% Contents
    CustomerAccount[[fibo-fbc-pas-caa:CustomerAccount]] -. cmns-dsg:isDefinedIn .-> Agreement[[fibo-fbc-pas-caa:AccountSpecificServiceAgreement]]
    Agreement -. fibo-fnd-agr-ctr:hasContractParty .-> ServiceProvider[[fibo-fnd-pas-pas:ServiceProvider]] 
-   Agreement -. fibo-fnd-agr-agr:isObligationOf .-> Client[[fibo-fnd-pas-pas:Client]]
+   Agreement -. fibo-fnd-agr-agr:isObligationOf .-> AccountHolder[[fibo-fbc-pas-caa:AccountHolder]]
 
    Agreement -. fibo-fnd-rel-rel:confers .-> EconomicCommitment[[fibo-fnd-txn-rea:EconomicCommitment]]
    EconomicCommitment -. cmns-pts:holdsDuring .-> DatePeriod[[cmns-dt:DatePeriod]]
@@ -532,7 +532,7 @@ Figure 9: TBox representation of a customer account and their billable services
    EconomicCommitment -. fibo-fnd-rel-rel:mandates .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
    CalculatedPrice[[fibo-fnd-acc-cur:CalculatedPrice]] -. cmns-cxtdsg:uses .-> PricingModel
 
-   Client -. fibo-fnd-rel-rel:holds .-> CustomerAccount
+   AccountHolder -. fibo-fnd-rel-rel:holds .-> CustomerAccount
    ServiceProvider -. cmns-org:provides .-> CustomerAccount
    
    CustomerAccount -. fibo-fnd-arr-doc:hasRecord .-> TransactionRecord[["<h4>fibo-fbc-pas-caa:TransactionRecord</h4><p style='font-size:0.75rem;'>fibo-fbc-pas-caa:hasOpenDate &quot;xsd:dateTime&quot;<br>fibo-fbc-pas-caa:hasCloseDate &quot;xsd:dateTime&quot;</p>"]]:::literal
