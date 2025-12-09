@@ -119,6 +119,7 @@ flowchart LR
 | fibo-fbc-pas-caa | `https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/`           |
 | fibo-fbc-pas-fpas | `https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/`|
 | fibo-fnd-acc-cur  | `https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/`                       |
+| fibo-fnd-arr-doc  | `https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/`                       |
 | fibo-fnd-agr-agr  | `https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/`                           |
 | fibo-fnd-agr-ctr  | `https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/`                            |
 | fibo-fnd-arr-lif  | `https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/`                         |
