@@ -137,9 +137,9 @@ flowchart LR
 | fibo-fnd-txn-rea  | `https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/REATransactions/`                 |
 | lcc-cr            | `https://www.omg.org/spec/LCC/Countries/CountryRepresentation/`                                  |
 | om                | `http://www.ontology-of-units-of-measure.org/resource/om-2/`                                     |
-| p2p-o-doc         | `https://purl.org/p2p-o/document`                                                                |
-| p2p-o-doc-line    | `https://purl.org/p2p-o/documentline`                                                            |
-| p2p-o-inv         | `https://purl.org/p2p-o/invoice`                                                            |
+| p2p-o-doc         | `https://purl.org/p2p-o/document#`                                                               |
+| p2p-o-doc-line    | `https://purl.org/p2p-o/documentline#`                                                           |
+| p2p-o-inv         | `https://purl.org/p2p-o/invoice#`                                                                |
 | sf                | `http://www.opengis.net/ont/sf#`                                                                 |
 | geo               | `http://opengis.net/ont/geosparql#`                                                              |
 | rdfs              | `http://www.w3.org/2000/01/rdf-schema#`                                                          |
