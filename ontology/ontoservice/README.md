@@ -137,6 +137,9 @@ flowchart LR
 | fibo-fnd-txn-rea  | `https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/REATransactions/`                 |
 | lcc-cr            | `https://www.omg.org/spec/LCC/Countries/CountryRepresentation/`                                  |
 | om                | `http://www.ontology-of-units-of-measure.org/resource/om-2/`                                     |
+| p2p-o-doc         | `https://purl.org/p2p-o/document`                                                                |
+| p2p-o-doc-line    | `https://purl.org/p2p-o/documentline`                                                            |
+| p2p-o-inv         | `https://purl.org/p2p-o/invoice`                                                            |
 | sf                | `http://www.opengis.net/ont/sf#`                                                                 |
 | geo               | `http://opengis.net/ont/geosparql#`                                                              |
 | rdfs              | `http://www.w3.org/2000/01/rdf-schema#`                                                          |
@@ -549,12 +552,12 @@ Figure 9: TBox representation of a customer account and their billable services
    ClosedTask -.->  fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence
 ```
 
-The billable amount for each service delivery is recorded as a new `CalculatedPrice` instance, derived from a pricing model and its inputs, along with any additional inputs. These additional inputs may come from a calculation event or other sources. The pricing model should be stipulated as part of the service agreement. Note that the variable fee must use **price per quantity** as a measurement unit. In the example below, price per tonne is used, and these extensions can be made in the `abox.ttl`.
+The billable amount for each service delivery is recorded as a new `IndividualTransaction` instance with a corresponding `CalculatedPrice`, derived from a pricing model and specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges. An invoice is instantiated to reference the target transaction event, which details the discounts and additional charges on top of service charges for each task. Descriptions for each invoice line can be added via the `lineNote` property. Note that the variable fee must use **price per quantity** as a measurement unit. In the example below, price per tonne is used, and these extensions can be made in the `abox.ttl`.
 
-Figure 10: TBox representation of a billing record for a service agreement
+Figure 10: TBox representation of an invoice for each task within a service agreement
 
 ```mermaid
-flowchart LR
+flowchart TD
     %% Styling
     classDef literal fill:none
     classDef node overflow-wrap:break-word,text-wrap:pretty
@@ -565,12 +568,11 @@ flowchart LR
     PaymentObligation -. fibo-fnd-rel-rel:mandates .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
 
     DeliveryOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]] -. fibo-fnd-rel-rel:exemplifies .-> ServiceDeliveryEvent[[ontoservice:ServiceDeliveryEvent]]
-    Record[[cmns-doc:Record]] -. cmns-doc:refersTo .-> DeliveryOccurrence
-    Record[[cmns-doc:Record]] -. cmns-doc:refersTo .-> Calculation
-    Record -. cmns-doc:records .-> ServiceFee[[fibo-fnd-acc-cur:CalculatedPrice]]
+    IndividualTransaction[["<h4>fibo-fbc-pas-caa:IndividualTransaction</h4><p style='font-size:0.75rem;'>fibo-fbc-pas-caa:hasPostingDate &quot;xsd:dateTime&quot;<br>fibo-fbc-pas-caa:hasTransactionDate &quot;xsd:dateTime&quot;</p>"]]:::literal -. fibo-fnd-rel-rel:involves .-> DeliveryOccurrence
+    IndividualTransaction -. fibo-fnd-acc-cur:hasMonetaryAmount .-> CalculatedPrice
 
-    ServiceFee -. cmns-cxtdsg:uses .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
-    ServiceFee -. cmns-qtu:hasExpression .-> CalculationExpression[[cmns-qtu:Expression]]
+    CalculatedPrice[[fibo-fnd-acc-cur:CalculatedPrice]] -. cmns-qtu:hasExpression .-> CalculationExpression[[cmns-qtu:Expression]]
+    CalculatedPrice -. cmns-cxtdsg:uses .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
 
     PricingModel -. cmns-qtu:hasArgument .-> FlatFee[[Flat Fee]]
     FlatFee -.-> MonetaryPrice["<h4>fibo-fnd-acc-cur:MonetaryPrice</h4><p style='font-size:0.75rem;'>fibo-fnd-acc-cur:hasAmount &quot;xsd:decimal&quot;</p>"]:::literal
@@ -585,12 +587,24 @@ flowchart LR
     CalculationExpression -. cmns-qtu:hasArgument .-> FlatFee
     CalculationExpression -. cmns-qtu:hasArgument .-> Output[[cmns-qtu:ScalarQuantityValue]]
     CalculationExpression -. cmns-qtu:hasArgument .-> VariableFee
+    CalculationExpression -. cmns-qtu:hasArgument .-> MoneyAmount[[fibo-fnd-acc-cur:AmountOfMoney]]
 
-    Calculation[["<h4>fibo-fnd-dt-oc:Calculation</h4><p style='font-size:0.75rem;'>rdfs:comment &quot;string&quot;<br>fibo-fnd-dt-oc:hasEventDate &quot;xsd:dateTime&quot;</p>"]]:::literal -. cmns-qtu:hasQuantityValue .-> Output
-    CalculationEvent[[fibo-fnd-dt-oc:CalculationEvent]] -. cmns-cls:classifies .-> Calculation
+    Invoice[[p2p-o-doc:E-Invoice]]  -. cmns-doc:isAbout .-> IndividualTransaction
+    Invoice  -. p2p-o-inv:hasTotalChargesAmount .-> CalculatedPrice
+    Invoice  -. p2p-o-inv:hasInvoiceLine .-> AddChargeInvoiceLine
+    Invoice  -. p2p-o-inv:hasInvoiceLine .-> DiscountInvoiceLine
+    Invoice  -. p2p-o-inv:hasInvoiceLine .-> ServiceChargeInvoiceLine["<h4>ServiceChargeInvoiceLine</h4><p style='font-size:0.75rem;'>p2p-o-doc-line:lineIdentifier &quot;xsd:string&quot;</p>"]:::literal
+
+    DiscountInvoiceLine -.-> InvoiceLine["<h4>p2p-o-doc-line:InvoiceLine</h4><p style='font-size:0.75rem;'>p2p-o-doc-line:lineNote &quot;xsd:string&quot;</p>"]:::literal
+    AddChargeInvoiceLine -.-> InvoiceLine
+    DiscountInvoiceLine  -. p2p-o-doc-line:hasPriceDiscountOfItem .-> MoneyAmount
+    ServiceChargeInvoiceLine -.-> InvoiceLine
+
+    InvoiceLine  -. p2p-o-doc-line:hasGrosspriceOfItem .-> MoneyAmount
+    InvoiceLine  -. p2p-o-doc-line:hasLineNetAmount .-> MoneyAmount
 ```
 
-The representation of the pricing model is intended to be highly flexible to accommadate different types of pricing models such as:
+The representation of the pricing model is intended to be highly flexible to accommodate different types of pricing models such as:
 
 1. **Flat fee pricing model**: A fixed fee regardless of the service details - Instantiate a flat fee argument with ONLY _ONE_ monetary price instance
 2. **Fixed trip variable weight pricing model**: A fixed delivery charge and a variable fee depending on the weight collected/delivered - Instantiate _ONE_ flat fee argument along with _ONE_ variable fee argument with no bounds
