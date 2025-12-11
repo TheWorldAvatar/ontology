@@ -1,6 +1,7 @@
 Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
 TBoxExample,TBox,http://www.theworldavatar.com/ontology/tboxexample/TBoxExample.owl,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
 TBoxExample,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+TBoxExample,TBox,https://github.com/TheWorldAvatar/ontology/blob/main/LICENSE.txt,http://purl.org/dc/terms/license,,,,,,
 TBoxExample,TBox,The definition of ontology goes here.,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 TBoxExample,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
 Reaction Mechanism,Class,,,,,,,,
