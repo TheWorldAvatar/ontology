@@ -115,9 +115,12 @@ flowchart LR
 | cmns-pts          | `https://www.omg.org/spec/Commons/PartiesAndSituations/`                                         |
 | cmns-qtu          | `https://www.omg.org/spec/Commons/QuantitiesAndUnits/`                                           |
 | cmns-rlcmp        | `https://www.omg.org/spec/Commons/RolesAndCompositions/`                                         |
-| fibo-fbc-fi-ip    | `https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/InstrumentPricing`           |
-| fibo-fbc-pas-fpas | `https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices` |
+| fibo-fbc-fi-ip    | `https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/InstrumentPricing/`          |
+| fibo-fbc-pas-caa | `https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/`           |
+| fibo-fbc-pas-fpas | `https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/`|
 | fibo-fnd-acc-cur  | `https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/`                       |
+| fibo-fnd-arr-doc  | `https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/`                       |
+| fibo-fnd-agr-agr  | `https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/`                           |
 | fibo-fnd-agr-ctr  | `https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/`                            |
 | fibo-fnd-arr-lif  | `https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/`                         |
 | fibo-fnd-arr-rep  | `https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/`                          |
@@ -129,10 +132,14 @@ flowchart LR
 | fibo-fnd-plc-adr  | `https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/`                                |
 | fibo-fnd-plc-fac  | `https://spec.edmcouncil.org/fibo/ontology/FND/Places/Facilities/`                               |
 | fibo-fnd-plc-loc  | `https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/`                                |
-| fibo-fnd-rel-rel  | `https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations`                              |
+| fibo-fnd-rel-rel  | `https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/`                             |
 | fibo-fnd-org-fm   | `https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/`               |
+| fibo-fnd-txn-rea  | `https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/REATransactions/`                 |
 | lcc-cr            | `https://www.omg.org/spec/LCC/Countries/CountryRepresentation/`                                  |
 | om                | `http://www.ontology-of-units-of-measure.org/resource/om-2/`                                     |
+| p2p-o-doc         | `https://purl.org/p2p-o/document#`                                                               |
+| p2p-o-doc-line    | `https://purl.org/p2p-o/documentline#`                                                           |
+| p2p-o-inv         | `https://purl.org/p2p-o/invoice#`                                                                |
 | sf                | `http://www.opengis.net/ont/sf#`                                                                 |
 | geo               | `http://opengis.net/ont/geosparql#`                                                              |
 | rdfs              | `http://www.w3.org/2000/01/rdf-schema#`                                                          |
@@ -475,7 +482,7 @@ flowchart TD
 
 ## 2.3 Reporting
 
-In reporting the services delivered as per the service agreement, a `Report` reports on the individual service occurrence via the `Record` concept. These records record one or more values, that may be directly or indirectly computed from the measures logged upon the successful completion of the service. Each occurrence can also have one or more records that records different information about the same occurrence. For instance, there can be two records to record the weight of a delivered good and its calculated price from the weight.
+In reporting the services delivered as per the service agreement, the `Record` concept can be used to record on the individual service occurrence. These records record one or more values, that may be directly or indirectly computed from the measures logged upon the successful completion of the service. Each occurrence can also have one or more records that records different information about the same occurrence. For instance, there can be two records to record the weight of a delivered good and its calculated price from the weight.
 
 Figure 8: TBox representation of a report for a service agreement
 
@@ -487,33 +494,70 @@ flowchart LR
     linkStyle default overflow-wrap:break-word,text-wrap:pretty;
 
     %% Contents
-    Report[[fibo-fnd-arr-rep:Report]] -. fibo-fnd-arr-rep:hasReportDate .-> Date[["<h4>cmns-dt:Date</h4><p style='font-size:0.75rem;'>cmns-dt:hasDateValue &quot;xsd:date&quot;</p>"]]:::literal
-    Report -. fibo-fnd-rel-rel:isProvidedBy .-> ReportingParty[[fibo-fnd-arr-rep:ReportingParty]]
-    Report -. cmns-doc:isAbout .-> Agreement[[fibo-fnd-pas-pas:ServiceAgreement]]
-    Report -. fibo-fnd-arr-rep:isReportedTo .-> Client
-
-    Agreement -. fibo-fnd-arr-rep:isRequestedBy .-> Client[[fibo-fnd-pas-pas:Client]]
+    Agreement[[fibo-fnd-pas-pas:ServiceAgreement]] -. fibo-fnd-arr-rep:isRequestedBy .-> Client[[fibo-fnd-pas-pas:Client]]
     Agreement -. fibo-fnd-agr-ctr:hasContractParty .-> ServiceProvider[[fibo-fnd-pas-pas:ServiceProvider]]
     ServiceProvider -. cmns-rlcmp:isPlayedBy .-> Org[[fibo-fnd-org-fm:FormalOrganization]]
-    ReportingParty -. cmns-rlcmp:isPlayedBy .-> Org
 
     Agreement -. fibo-fnd-arr-lif:hasLifecycle .-> LifecycleOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleOccurrence]]
     LifecycleOccurrence -. fibo-fnd-arr-lif:hasStage .-> StageOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleStageOccurrence]]
     StageOccurrence -. cmns-col:comprises .-> DeliveryOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]]
     DeliveryOccurrence -. fibo-fnd-rel-rel:exemplifies .-> ServiceDeliveryEvent[[ontoservice:ServiceDeliveryEvent]]
 
-    Report -. fibo-fnd-arr-rep:reportsOn .-> Record[[cmns-doc:Record]]
-    Record -. cmns-doc:refersTo .-> DeliveryOccurrence
+    Record[[cmns-doc:Record]] -. cmns-doc:refersTo .-> DeliveryOccurrence
 ```
 
 ### 2.3.1 Billing
 
-The billable amount for each service delivery is recorded as a new `CalculatedPrice` instance, derived from a pricing model and its inputs, along with any additional inputs. These additional inputs may come from a calculation event or other sources. The pricing model should be stipulated as part of the service agreement. Note that the variable fee must use **price per quantity** as a measurement unit. In the example below, price per tonne is used, and these extensions can be made in the `abox.ttl`.
+In supporting the billing process, a customer account must be first set up with a new `AccountHolder` concept. Each customer account defines an account-specific agreement that stipulates a catalog of approved pricing models. However, the binding payment terms are specified by the individual service-specific agreements.
 
-Figure 9: TBox representation of a billing record for a service agreement
+Each customer account is associated with multiple transaction records, with one record per contract. This record remains open for the duration of the contract and comprises multiple transactions, where each transaction records a final bill. The final price is computed based on several arguments derived from the relevant pricing model, specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges.
+
+Figure 9: TBox representation of a customer account and their billable services
 
 ```mermaid
-flowchart LR
+   flowchart TD
+   %% Styling
+   classDef literal fill:none
+   classDef node overflow-wrap:break-word,text-wrap:pretty
+   linkStyle default overflow-wrap:break-word,text-wrap:pretty;
+
+   %% Contents
+   CustomerAccount[[fibo-fbc-pas-caa:CustomerAccount]] -. cmns-dsg:isDefinedIn .-> Agreement[[fibo-fbc-pas-caa:AccountSpecificServiceAgreement]]
+   Agreement -. fibo-fnd-agr-ctr:hasContractParty .-> ServiceProvider[[fibo-fnd-pas-pas:ServiceProvider]] 
+   Agreement -. fibo-fnd-agr-agr:isObligationOf .-> AccountHolder[[fibo-fbc-pas-caa:AccountHolder]]
+
+   Agreement -. fibo-fnd-rel-rel:confers .-> EconomicCommitment[[fibo-fnd-txn-rea:EconomicCommitment]]
+   EconomicCommitment -. cmns-pts:holdsDuring .-> DatePeriod[[cmns-dt:DatePeriod]]
+   DatePeriod -. cmns-dt:hasStartDate .-> StartDate[[Start Date]]
+   DatePeriod -. cmns-dt:hasEndDate .-> EndDate[[End Date]]
+   StartDate -.-> Date["<h4>cmns-dt:Date</h4><p style='font-size:0.75rem;'>cmns-dt:hasDateValue &quot;xsd:date&quot;</p>"]:::literal
+   EndDate -.-> Date
+
+   EconomicCommitment -. fibo-fnd-rel-rel:mandates .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
+   CalculatedPrice[[fibo-fnd-acc-cur:CalculatedPrice]] -. cmns-cxtdsg:uses .-> PricingModel
+
+   AccountHolder -. fibo-fnd-rel-rel:holds .-> CustomerAccount
+   ServiceProvider -. cmns-org:provides .-> CustomerAccount
+   
+   CustomerAccount -. fibo-fnd-arr-doc:hasRecord .-> TransactionRecord[["<h4>fibo-fbc-pas-caa:TransactionRecord</h4><p style='font-size:0.75rem;'>fibo-fbc-pas-caa:hasOpenDate &quot;xsd:dateTime&quot;<br>fibo-fbc-pas-caa:hasCloseDate &quot;xsd:dateTime&quot;</p>"]]:::literal
+   TransactionRecord -. cmns-doc:isAbout .-> ServiceAgreement[[fibo-fnd-pas-pas:ServiceAgreement]]
+   ServiceAgreement -. fibo-fnd-rel-rel:confers .-> PaymentObligation[[fibo-fnd-pas-psch:PaymentObligation]]
+   PaymentObligation -. fibo-fnd-rel-rel:mandates .-> PricingModel
+
+   TransactionRecord -. cmns-col:comprises .-> IndividualTransaction[["<h4>fibo-fbc-pas-caa:IndividualTransaction</h4><p style='font-size:0.75rem;'>fibo-fbc-pas-caa:hasPostingDate &quot;xsd:dateTime&quot;<br>fibo-fbc-pas-caa:hasTransactionDate &quot;xsd:dateTime&quot;</p>"]]:::literal
+   IndividualTransaction -. fibo-fnd-acc-cur:hasMonetaryAmount .-> CalculatedPrice
+   CalculatedPrice -. cmns-qtu:hasExpression .-> CalculationExpression[[cmns-qtu:Expression]]
+
+   IndividualTransaction -. fibo-fnd-rel-rel:involves .-> ClosedTask
+   ClosedTask -.->  fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence
+```
+
+The billable amount for each service delivery is recorded as a new `IndividualTransaction` instance with a corresponding `CalculatedPrice`, derived from a pricing model and specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges. An invoice is instantiated to reference the target transaction event, which details the discounts and additional charges on top of service charges for each task. Descriptions for each invoice line can be added via the `lineNote` property. Note that the variable fee must use **price per quantity** as a measurement unit. In the example below, price per tonne is used, and these extensions can be made in the `abox.ttl`.
+
+Figure 10: TBox representation of an invoice for each task within a service agreement
+
+```mermaid
+flowchart TD
     %% Styling
     classDef literal fill:none
     classDef node overflow-wrap:break-word,text-wrap:pretty
@@ -524,12 +568,11 @@ flowchart LR
     PaymentObligation -. fibo-fnd-rel-rel:mandates .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
 
     DeliveryOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]] -. fibo-fnd-rel-rel:exemplifies .-> ServiceDeliveryEvent[[ontoservice:ServiceDeliveryEvent]]
-    Record[[cmns-doc:Record]] -. cmns-doc:refersTo .-> DeliveryOccurrence
-    Record[[cmns-doc:Record]] -. cmns-doc:refersTo .-> Calculation
-    Record -. cmns-doc:records .-> ServiceFee[[fibo-fnd-acc-cur:CalculatedPrice]]
+    IndividualTransaction[["<h4>fibo-fbc-pas-caa:IndividualTransaction</h4><p style='font-size:0.75rem;'>fibo-fbc-pas-caa:hasPostingDate &quot;xsd:dateTime&quot;<br>fibo-fbc-pas-caa:hasTransactionDate &quot;xsd:dateTime&quot;</p>"]]:::literal -. fibo-fnd-rel-rel:involves .-> DeliveryOccurrence
+    IndividualTransaction -. fibo-fnd-acc-cur:hasMonetaryAmount .-> CalculatedPrice
 
-    ServiceFee -. cmns-cxtdsg:uses .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
-    ServiceFee -. cmns-qtu:hasExpression .-> CalculationExpression[[cmns-qtu:Expression]]
+    CalculatedPrice[[fibo-fnd-acc-cur:CalculatedPrice]] -. cmns-qtu:hasExpression .-> CalculationExpression[[cmns-qtu:Expression]]
+    CalculatedPrice -. cmns-cxtdsg:uses .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
 
     PricingModel -. cmns-qtu:hasArgument .-> FlatFee[[Flat Fee]]
     FlatFee -.-> MonetaryPrice["<h4>fibo-fnd-acc-cur:MonetaryPrice</h4><p style='font-size:0.75rem;'>fibo-fnd-acc-cur:hasAmount &quot;xsd:decimal&quot;</p>"]:::literal
@@ -544,18 +587,30 @@ flowchart LR
     CalculationExpression -. cmns-qtu:hasArgument .-> FlatFee
     CalculationExpression -. cmns-qtu:hasArgument .-> Output[[cmns-qtu:ScalarQuantityValue]]
     CalculationExpression -. cmns-qtu:hasArgument .-> VariableFee
+    CalculationExpression -. cmns-qtu:hasArgument .-> MoneyAmount[[fibo-fnd-acc-cur:AmountOfMoney]]
 
-    Calculation[["<h4>fibo-fnd-dt-oc:Calculation</h4><p style='font-size:0.75rem;'>rdfs:comment &quot;string&quot;<br>fibo-fnd-dt-oc:hasEventDate &quot;xsd:dateTime&quot;</p>"]]:::literal -. cmns-qtu:hasQuantityValue .-> Output
-    CalculationEvent[[fibo-fnd-dt-oc:CalculationEvent]] -. cmns-cls:classifies .-> Calculation
+    Invoice[[p2p-o-doc:E-Invoice]]  -. cmns-doc:isAbout .-> IndividualTransaction
+    Invoice  -. p2p-o-inv:hasTotalChargesAmount .-> CalculatedPrice
+    Invoice  -. p2p-o-inv:hasInvoiceLine .-> AddChargeInvoiceLine
+    Invoice  -. p2p-o-inv:hasInvoiceLine .-> DiscountInvoiceLine
+    Invoice  -. p2p-o-inv:hasInvoiceLine .-> ServiceChargeInvoiceLine["<h4>ServiceChargeInvoiceLine</h4><p style='font-size:0.75rem;'>p2p-o-doc-line:lineIdentifier &quot;xsd:string&quot;</p>"]:::literal
+
+    DiscountInvoiceLine -.-> InvoiceLine["<h4>p2p-o-doc-line:InvoiceLine</h4><p style='font-size:0.75rem;'>p2p-o-doc-line:lineNote &quot;xsd:string&quot;</p>"]:::literal
+    AddChargeInvoiceLine -.-> InvoiceLine
+    DiscountInvoiceLine  -. p2p-o-doc-line:hasPriceDiscountOfItem .-> MoneyAmount
+    ServiceChargeInvoiceLine -.-> InvoiceLine
+
+    InvoiceLine  -. p2p-o-doc-line:hasGrosspriceOfItem .-> MoneyAmount
+    InvoiceLine  -. p2p-o-doc-line:hasLineNetAmount .-> MoneyAmount
 ```
 
-The representation of the pricing model is intended to be highly flexible to accommadate different types of pricing models such as:
+The representation of the pricing model is intended to be highly flexible to accommodate different types of pricing models such as:
 
 1. **Flat fee pricing model**: A fixed fee regardless of the service details - Instantiate a flat fee argument with ONLY _ONE_ monetary price instance
 2. **Fixed trip variable weight pricing model**: A fixed delivery charge and a variable fee depending on the weight collected/delivered - Instantiate _ONE_ flat fee argument along with _ONE_ variable fee argument with no bounds
 3. **Variable excess weight pricing model**: A fixed fee up to a weight cap and a variable fee depending on the excess weight above the cap - Instantiate _ONE_ flat fee argument for the fixed fee; _ONE_ variable fee argument of `0` rate from lower and upper bounds of `0` and `weight cap` respectively; _ONE_ variable fee argument with ONLY lower bounds of the `weight cap`
 
-Figure 10: TBox representation of potential pricing models
+Figure 11: TBox representation of potential pricing models
 
 ```mermaid
 flowchart LR
@@ -595,7 +650,7 @@ flowchart LR
 
 When managing delivery operations, it's often necessary to track the time spent on various tasks as well as record details about specific events. Delivery reports within this ontology are designed to facilitate this. They enable you to record the duration of situations, such as employee work shifts or machine run times, using the `cmns-dt:Duration` property. Furthermore, the `cmns-doc:specifies` property can be utilised to add context to these situations, such as the type of work performed or any other relevant details. This allows for a comprehensive recording of delivery activities. The following example is one application of this ontology but users can modify the triples along the same lines for their specific applications.
 
-Figure 11: TBox representation of a delivery report on an employee's work shift
+Figure 12: TBox representation of a delivery report on an employee's work shift
 
 ```mermaid
 flowchart LR
