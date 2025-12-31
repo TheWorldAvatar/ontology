@@ -11,8 +11,10 @@ Count,Class,CalculationMethod,IS-A,,,,Number of features within the buffer of a 
 Area,Class,CalculationMethod,IS-A,,,,Total intersected area between the buffer of a fixed vector element and the exposure elements (polygons),https://www.theworldavatar.com/kg/ontoexposure/,Area
 AreaWeightedSum,Class,CalculationMethod,IS-A,,,,The sum of the product between the value and area associated with the intersected vector elements,https://www.theworldavatar.com/kg/ontoexposure/,Area weighted sum
 ExposureResult,Class,,,,,,Result of a calculation,https://www.theworldavatar.com/kg/ontoexposure/,
-ExposureDataset,Class, http://www.w3.org/ns/dcat#Dataset,IS-A,,,,Super class of exposure datasets,https://www.theworldavatar.com/kg/ontoexposure/,
+ExposureDataset,Class,http://www.w3.org/ns/dcat#Dataset,IS-A,,,,Super class of exposure datasets,https://www.theworldavatar.com/kg/ontoexposure/,
 AreaWeightedDataset,Class,ExposureDataset,IS-A,,,,"Exposure dataset used for the area weighted calculation, needs to be polygons and each polygon needs to have a value associated with it",https://www.theworldavatar.com/kg/ontoexposure/,
+TimeZone,Class,http://www.opengis.net/ont/geosparql#Geometry,IS-A,,,,An instance with a representative WKT literal (polygon) and an associated time zone ID,https://www.theworldavatar.com/kg/ontoexposure/,
+hasIriColumn,Data Property,,,ExposureDataset,http://www.w3.org/2001/XMLSchema#string,,Name of the column containing the IRI of the feature,https://www.theworldavatar.com/kg/ontoexposure/,
 hasGeometryColumn,Data Property,,,ExposureDataset,http://www.w3.org/2001/XMLSchema#string,,Name of the geometry column of the dataset,https://www.theworldavatar.com/kg/ontoexposure/,
 hasValueColumn,Data Property,,,AreaWeightedDataset,http://www.w3.org/2001/XMLSchema#string,,Name of the value column associated with a vector element,https://www.theworldavatar.com/kg/ontoexposure/,
 hasAreaColumn,Data Property,,,AreaWeightedDataset,http://www.w3.org/2001/XMLSchema#string,,Name of the column holding area values,https://www.theworldavatar.com/kg/ontoexposure/,
@@ -22,3 +24,4 @@ hasLowerbound,Data Property,,,TrajectoryCount,http://www.w3.org/2001/XMLSchema#l
 hasValue,Data Property,,,ExposureResult,http://www.w3.org/2001/XMLSchema#decimal,,Numerical value of exposure result,https://www.theworldavatar.com/kg/ontoexposure/,
 hasCalculationMethod,Object Property,,,ExposureResult,CalculationMethod,,Calculation method used to derive exposure result,https://www.theworldavatar.com/kg/ontoexposure/,
 hasUnit,Data Property,,,ExposureResult,http://www.w3.org/2001/XMLSchema#string,,Unit of exposure result,https://www.theworldavatar.com/kg/ontoexposure/,
+tzid,DataProperty,,,TimeZone,http://www.w3.org/2001/XMLSchema#string,,Time zone ID as string,https://www.theworldavatar.com/kg/ontoexposure/,
