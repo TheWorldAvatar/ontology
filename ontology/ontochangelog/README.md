@@ -102,7 +102,7 @@ flowchart LR
 | dc-term           | `http://purl.org/dc/terms/`                                                                      |
 | foaf              | `http://xmlns.com/foaf/0.1/`                                                                     |
 | rdfs              | `http://www.w3.org/2000/01/rdf-schema#`                                                          |
-| ontochangelog     | `https://www.theworldavatar.com/kg/ontochangelog/`                                               |
+| ontochangelog     | `https://theworldavatar.io/kg/ontochangelog/`                                                    |
 
 ## 2.1. Activity
 
