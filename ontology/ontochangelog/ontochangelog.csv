@@ -1,0 +1,9 @@
+Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
+OntoChangelog,TBox,https://theworldavatar.io/kg/ontochangelog/,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
+OntoChangelog,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+OntoChangelog,TBox,"The OntoChangelog ontology provides a clear history of every change, acting as a digital paper trail that records who made a change, when it occurred, and a description of the action.",http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
+OntoChangelog,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
+Activity,Class,,,,,,A specific event or process where a change occurs.,https://theworldavatar.io/kg/ontochangelog/,Activity
+affected,Object Property,,,Activity,,,"A relationship that defines the specific object, record, or piece of data that was changed during the activity.",https://theworldavatar.io/kg/ontochangelog/,affected
+wasPerformedBy,Object Property,,,Activity,http://xmlns.com/foaf/0.1/Agent,,A relationship that defines the individual or automated system responsible for triggering the activity.,https://theworldavatar.io/kg/ontochangelog/,was performed by
+timestamp,Data Property,,,Activity,dateTime,,A property to store the precise date and time when the activity was completed.,https://theworldavatar.io/kg/ontochangelog/,timestamp
