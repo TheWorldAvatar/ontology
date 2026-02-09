@@ -18,6 +18,8 @@ os:CreationStage cmns-col:comprises os:ContractCreation ;
   cmns-col:comprises os:ContractApproval .
 
 os:ServiceExecutionStage cmns-dt:succeeds os:CreationStage ;
+  cmns-col:comprises os:OrderReceivedEvent ;
+  cmns-col:comprises os:ServiceDispatchEvent ;
   cmns-col:comprises os:ServiceDeliveryEvent ;
   cmns-col:comprises os:IncidentReport ;
   cmns-col:comprises os:TerminatedServiceEvent .
