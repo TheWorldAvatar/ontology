@@ -272,16 +272,20 @@ flowchart LR
     ServiceExecutionStage -. cmns-col:comprises .-> OrderReceivedEvent[[ontoservice:OrderReceivedEvent]]
     ServiceExecutionStage -. cmns-col:comprises .-> ServiceDispatchEvent[[ontoservice:ServiceDispatchEvent]]
     ServiceExecutionStage -. cmns-col:comprises .-> ServiceDeliveryEvent[[ontoservice:ServiceDeliveryEvent]]
+    ServiceExecutionStage -. cmns-col:comprises .-> ServiceAccrualEvent[[ontoservice:ServiceAccrualEvent]]
     ServiceExecutionStage -. cmns-col:comprises .-> IncidentReportEvent[[ontoservice:IncidentReportEvent]]
     ServiceExecutionStage -. cmns-col:comprises .-> TerminatedServiceEvent[[ontoservice:TerminatedServiceEvent]]
-    ServiceExecutionStage -. cmns-col:comprises .-> CalculationEvent[[fibo-fnd-dt-oc:CalculationEvent]]
     ServiceDispatchEvent -. cmns-dt:succeeds .-> OrderReceivedEvent
     ServiceDeliveryEvent -. cmns-dt:succeeds .-> ServiceDispatchEvent
-    CalculationEvent -. cmns-dt:succeeds .-> ServiceDeliveryEvent
-    IncidentReportEvent -. cmns-dt:succeeds .-> ServiceDeliveryEvent
+    TerminatedServiceEvent -. cmns-dt:succeeds .-> OrderReceivedEvent
+    IncidentReportEvent -. cmns-dt:succeeds .-> ServiceDispatchEvent
+    ServiceAccrualEvent -. cmns-dt:succeeds .-> ServiceDeliveryEvent
+    ServiceAccrualEvent -. cmns-dt:succeeds .-> IncidentReportEvent
+    ServiceAccrualEvent -. cmns-dt:succeeds .-> TerminatedServiceEvent
     OrderReceivedEvent --> Event
     ServiceDispatchEvent --> Event
     ServiceDeliveryEvent --> Event
+    ServiceAccrualEvent --> Event
     IncidentReportEvent --> Event
     TerminatedServiceEvent --> Event
 
@@ -295,13 +299,15 @@ flowchart LR
 
 In the creation stage, the service agreement will need to be created before it is approved, as represented by the `ContractCreation` and `ContractApproval` events.
 
-During the service execution stage, the sequence of events should occur in the following manner during a successful delivery. It should be noted that the event may be completed with either a `CalculationEvent`, `IncidentReportEvent`, or `TerminatedServiceEvent`. The `Terminated Service Event` represents the termination of an upcoming service either by the service provider or the client, which may occur at any time after the first event.
+During the service execution stage, the sequence of events should occur in the following manner during a successful delivery. It should be noted that the event may be completed with either a `ServiceDeliveryEvent`, `IncidentReportEvent`, or `TerminatedServiceEvent`.
 
 1. `Order Received Event`: When a new service order is received and acknowledged by the system after the approval
 2. `Service Dispatch Event`: Assignment of service personnel, resources, and/or location(s) to perform the requested service
 3. `Service Delivery Event`: Delivery of the requested service
-4. `Calculation Event`: Records a summary of the service trip, tailored to the specific domain; multiple calculation events can be instantiated if multiple calculations/quantities are reported
+4. Events that may occur either after (1) or (2)
    - `Incident Report Event`: An alternate possible event in which an incident occurred during the service delivery, resulting in the failure to complete
+   - `Terminated Service Event`: An alternate possible event in which an upcoming service has been terminated either by the service provider or the client, which may occur at any time after the first event
+5. `Service Accrual Event`: A financial milestone that captures additional charges and purchase order details to calculate the final billable value of a service before it is aggregated for invoicing.
 
 During the expiration stage, the service agreement can end in four situations:
 
@@ -411,7 +417,7 @@ flowchart LR
 
 The typical sequence of events for a successful service delivery is depicted in the figure below. Each event's occurrence can be instantiated with the `ContractLifecycleEventOccurrence` concept, which must be assigned a specific date, time, and location (if required). The process begins with the `OrderReceivedEvent`, which kickstarts the workflow. The next event is the `ServiceDispatchEvent`, where users can assign resources, personnel, and locations to specific orders. Personnel can be assigned using the `fibo-fnd-rel-rel:designates` relation and `fibo-fnd-org-fm:Employee` subclasses, while resources (such as equipment `saref:Device` or facility `ontobim:Facility`) can be assigned using the `fibo-fnd-rel-rel:involves` relation. For example, a driver can be designated for the delivery, and their assigned transport and other details can be tracked as described in [`OntoProfile`](https://www.theworldavatar.com/kg/ontoprofile/). Please do note that while the delivery typically occurs at the service site, some deliveries required an additional destination at a separate facility.
 
-Following this, the `ServiceDeliveryEvent` occurs when the services are executed. Users can supplement information on any exchange of assets or equipment using the `fibo-fnd-rel-rel:exchanges` relation. Once the service is delivered, users can log any relevant information with the subsequent `CalculationEvent`, such as price, weight, distance, etc. These occurrences will serve as a record to be analysed for quality, efficiency, and compliance with service agreements.
+Following this, the `ServiceDeliveryEvent` occurs when the services are executed. Users can supplement information on any exchange of assets or equipment using the `fibo-fnd-rel-rel:exchanges` relation. Once the service is delivered, users can log any relevant information with the subsequent `Record`, such as weight, distance, etc. These occurrences will serve as a record to be analysed for quality, efficiency, and compliance with service agreements.
 
 It is recommended that the `EventStatus` concept is only used to describe the status of each event occurrence for both a `ServiceDispatchEvent` and `ServiceDeliveryEvent`. A dispatch event may have either pending or completed statuses, whereas a delivery event may be in the pending, in progress, or completed states.
 
@@ -443,9 +449,7 @@ flowchart TD
     DeliveryOccurrence -. cmns-dt:succeeds .-> DispatchOccurrence
     DeliveryEventStatus[[ontoservice:EventStatus]] -. cmns-dsg:describes .-> DeliveryOccurrence
 
-    StageOccurrence -. cmns-col:comprises .-> Calculation[["<h4>fibo-fnd-dt-oc:Calculation</h4><p style='font-size:0.75rem;'>rdfs:comment &quot;string&quot;<br>fibo-fnd-dt-oc:hasEventDate &quot;xsd:dateTime&quot;</p>"]]:::literal
-    CalculationEvent[[fibo-fnd-dt-oc:CalculationEvent]] -. cmns-cls:classifies .-> Calculation
-    Calculation -. cmns-dt:succeeds .-> DeliveryOccurrence
+    Record[[cmns-doc:Record]] -. cmns-doc:refersTo .-> DeliveryOccurrence
 
     StageOccurrence -. fibo-fnd-dt-fd:hasSchedule .-> Schedule[[fibo-fnd-dt-fd:RegularSchedule]]
     Schedule -. fibo-fnd-dt-oc:hasOccurrence .-> DeliveryOccurrence
@@ -455,36 +459,11 @@ flowchart TD
     EventOccurrence -. fibo-fnd-plc-loc:isLocatedAt .-> Location[[fibo-fnd-plc-loc:PhysicalLocation]]
 ```
 
-#### Calculation
-
-Once the service is completed, it is expected that the user will log certain values, which serves as inputs for some form of calculation such as collection weight or distance travelled. The calculation have an associated expression, that may ingest any constant or variable values. Outputs are represented via the `cmns-qtu:hasQuantityValue`. Multiple calculations can be instantiated per delivery for different measures, and will typically be reported in at least one report. For more information on reporting representation, please read the [next section](#23-reporting).
-
-Figure 7: TBox representation of a calculation during the service lifecycle
-
-```mermaid
-flowchart TD
-    %% Styling
-    classDef literal fill:none
-    classDef node overflow-wrap:break-word,text-wrap:pretty
-    linkStyle default overflow-wrap:break-word,text-wrap:pretty;
-
-    %% Contents
-    CalculationEvent[[fibo-fnd-dt-oc:CalculationEvent]] -- cmns-cls:classifies --> Calculation[["<h4>fibo-fnd-dt-oc:Calculation</h4><p style='font-size:0.75rem;'>rdfs:comment &quot;string&quot;<br>fibo-fnd-dt-oc:hasEventDate &quot;xsd:dateTime&quot;</p>"]]:::literal
-
-    Calculation -. cmns-qtu:hasQuantityValue .-> OutputValue[[Output]]
-    Calculation -. cmns-qtu:hasExpression .-> Expression[[cmns-qtu:Expression]]
-    Expression -. cmns-qtu:hasArgument .-> Constant[[cmns-qtu:Constant]]
-    Expression -. cmns-qtu:hasArgument .-> Variable[[cmns-qtu:Variable]]
-    OutputValue --> Input[cmns-qtu:ScalarQuantityValue]
-    Constant --> Input
-    Variable --> Input
-```
-
 ## 2.3 Reporting
 
-In reporting the services delivered as per the service agreement, the `Record` concept can be used to record on the individual service occurrence. These records record one or more values, that may be directly or indirectly computed from the measures logged upon the successful completion of the service. Each occurrence can also have one or more records that records different information about the same occurrence. For instance, there can be two records to record the weight of a delivered good and its calculated price from the weight.
+In reporting the services delivered as per the service agreement, the `Record` concept can be used to record on the individual service occurrence. These records record one or more values, that may be directly or indirectly computed from the measures logged upon the successful completion of the service. Each occurrence can also have one or more records that records different information about the same occurrence. For instance, there can be two records to record the weight of a delivered good and its travelled distance.
 
-Figure 8: TBox representation of a report for a service agreement
+Figure 7: TBox representation of a report for a service agreement
 
 ```mermaid
 flowchart LR
@@ -512,7 +491,7 @@ In supporting the billing process, a customer account must be first set up with 
 
 Each customer account is associated with multiple transaction records, with one record per contract. This record remains open for the duration of the contract and comprises multiple transactions, where each transaction records a final bill. The final price is computed based on several arguments derived from the relevant pricing model, specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges.
 
-Figure 9: TBox representation of a customer account and their billable services
+Figure 8: TBox representation of a customer account and their billable services
 
 ```mermaid
    flowchart TD
@@ -554,7 +533,7 @@ Figure 9: TBox representation of a customer account and their billable services
 
 The billable amount for each service delivery is recorded as a new `IndividualTransaction` instance with a corresponding `CalculatedPrice`, derived from a pricing model and specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges. An invoice is instantiated to reference the target transaction event, which details the discounts and additional charges on top of service charges for each task. Descriptions for each invoice line can be added via the `lineNote` property. Note that the variable fee must use **price per quantity** as a measurement unit. In the example below, price per tonne is used, and these extensions can be made in the `abox.ttl`.
 
-Figure 10: TBox representation of an invoice for each task within a service agreement
+Figure 9: TBox representation of an invoice for each task within a service agreement
 
 ```mermaid
 flowchart TD
@@ -610,7 +589,7 @@ The representation of the pricing model is intended to be highly flexible to acc
 2. **Fixed trip variable weight pricing model**: A fixed delivery charge and a variable fee depending on the weight collected/delivered - Instantiate _ONE_ flat fee argument along with _ONE_ variable fee argument with no bounds
 3. **Variable excess weight pricing model**: A fixed fee up to a weight cap and a variable fee depending on the excess weight above the cap - Instantiate _ONE_ flat fee argument for the fixed fee; _ONE_ variable fee argument of `0` rate from lower and upper bounds of `0` and `weight cap` respectively; _ONE_ variable fee argument with ONLY lower bounds of the `weight cap`
 
-Figure 11: TBox representation of potential pricing models
+Figure 10: TBox representation of potential pricing models
 
 ```mermaid
 flowchart LR
@@ -650,7 +629,7 @@ flowchart LR
 
 When managing delivery operations, it's often necessary to track the time spent on various tasks as well as record details about specific events. Delivery reports within this ontology are designed to facilitate this. They enable you to record the duration of situations, such as employee work shifts or machine run times, using the `cmns-dt:Duration` property. Furthermore, the `cmns-doc:specifies` property can be utilised to add context to these situations, such as the type of work performed or any other relevant details. This allows for a comprehensive recording of delivery activities. The following example is one application of this ontology but users can modify the triples along the same lines for their specific applications.
 
-Figure 12: TBox representation of a delivery report on an employee's work shift
+Figure 11: TBox representation of a delivery report on an employee's work shift
 
 ```mermaid
 flowchart LR
