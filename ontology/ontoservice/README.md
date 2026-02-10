@@ -489,7 +489,7 @@ flowchart LR
 
 In supporting the billing process, a customer account must be first set up with a new `AccountHolder` concept. Each customer account defines an account-specific agreement that stipulates a catalog of approved pricing models. However, the binding payment terms are specified by the individual service-specific agreements.
 
-Each customer account is associated with multiple transaction records, with one record per contract. This record remains open for the duration of the contract and comprises multiple transactions, where each transaction records a final bill. The final price is computed based on several arguments derived from the relevant pricing model, specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges.
+Each customer account holds a financial record that is associated with at least one account invoice. Customers receive an account invoice that consolidates all billed tasks for a specific invoicing period and payment due date. Each billed task has its own task invoice detailing specific costs. Multiple task invoices can be linked to an account invoice via `p2p-o-inv:hasInvoiceReference`. These costs are automatically calculated based on the service's pricing model, usage data, and any applicable discounts or fees.
 
 Figure 8: TBox representation of a customer account and their billable services
 
@@ -518,20 +518,22 @@ Figure 8: TBox representation of a customer account and their billable services
    AccountHolder -. fibo-fnd-rel-rel:holds .-> CustomerAccount
    ServiceProvider -. cmns-org:provides .-> CustomerAccount
    
-   CustomerAccount -. fibo-fnd-arr-doc:hasRecord .-> TransactionRecord[["<h4>fibo-fbc-pas-caa:TransactionRecord</h4><p style='font-size:0.75rem;'>fibo-fbc-pas-caa:hasOpenDate &quot;xsd:dateTime&quot;<br>fibo-fbc-pas-caa:hasCloseDate &quot;xsd:dateTime&quot;</p>"]]:::literal
-   TransactionRecord -. cmns-doc:isAbout .-> ServiceAgreement[[fibo-fnd-pas-pas:ServiceAgreement]]
+   ServiceAgreement[[fibo-fnd-pas-pas:ServiceAgreement]] -. property paths .-> ClosedTask[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]]
    ServiceAgreement -. fibo-fnd-rel-rel:confers .-> PaymentObligation[[fibo-fnd-pas-psch:PaymentObligation]]
    PaymentObligation -. fibo-fnd-rel-rel:mandates .-> PricingModel
 
-   TransactionRecord -. cmns-col:comprises .-> IndividualTransaction[["<h4>fibo-fbc-pas-caa:IndividualTransaction</h4><p style='font-size:0.75rem;'>fibo-fbc-pas-caa:hasPostingDate &quot;xsd:dateTime&quot;<br>fibo-fbc-pas-caa:hasTransactionDate &quot;xsd:dateTime&quot;</p>"]]:::literal
-   IndividualTransaction -. fibo-fnd-acc-cur:hasMonetaryAmount .-> CalculatedPrice
-   CalculatedPrice -. cmns-qtu:hasExpression .-> CalculationExpression[[cmns-qtu:Expression]]
+   CustomerAccount -. fibo-fnd-arr-doc:hasRecord .-> FinancialRecord[[fibo-fnd-arr-doc:FinancialRecord]]
+   FinancialRecord -. cmns-col:comprises .-> Invoice["<h4>p2p-o-doc:E-Invoice</h4><p style='font-size:0.75rem;'>p2p-o-inv:invoicingPeriodStartDate &quot;xsd:date&quot;<br>p2p-o-inv:invoicingPeriodEndDate &quot;xsd:date&quot;<br>p2p-o-inv:paymentDueDate &quot;xsd:date&quot;</p>"]:::literal
+   
+   Invoice -. p2p-o-inv:hasInvoiceReference .-> TaskInvoice[[p2p-o-doc:E-Invoice]]
+   TaskInvoice -. cmns-doc:isAbout .-> ClosedTask
+   ClosedTask -. fibo-fnd-rel-rel:exemplifies .->  ServiceAccrualEvent[[ontoservice:ServiceAccrualEvent]]
 
-   IndividualTransaction -. fibo-fnd-rel-rel:involves .-> ClosedTask
-   ClosedTask -.->  fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence
+   TaskInvoice -. p2p-o-inv:hasInvoiceLine .-> InvoiceLine["<h4>p2p-o-doc-line:InvoiceLine</h4><p style='font-size:0.75rem;'>p2p-o-doc-line:lineNote &quot;xsd:string&quot;</p>"]:::literal
+   InvoiceLine -. p2p-o-doc-line:hasGrosspriceOfItem .-> CalculatedPrice
 ```
 
-The billable amount for each service delivery is recorded as a new `IndividualTransaction` instance with a corresponding `CalculatedPrice`, derived from a pricing model and specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges. An invoice is instantiated to reference the target transaction event, which details the discounts and additional charges on top of service charges for each task. Descriptions for each invoice line can be added via the `lineNote` property. Note that the variable fee must use **price per quantity** as a measurement unit. In the example below, price per tonne is used, and these extensions can be made in the `abox.ttl`.
+The billable amount for each service delivery is recorded as a `CalculatedPrice`, derived from a pricing model and specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges. An `E-Invoice` is instantiated to reference the target `ServiceAccrualEvent`, which details the discounts and additional charges on top of service charges for each task. Descriptions for each invoice line can be added via the `lineNote` property. Note that the variable fee must use **price per quantity** as a measurement unit. In the example below, price per tonne is used, and these extensions can be made in the `abox.ttl`.
 
 Figure 9: TBox representation of an invoice for each task within a service agreement
 
@@ -545,10 +547,7 @@ flowchart TD
     %% Contents
     Agreement[[fibo-fnd-pas-pas:ServiceAgreement]] -. fibo-fnd-rel-rel:confers .-> PaymentObligation[[fibo-fnd-pas-psch:PaymentObligation]]
     PaymentObligation -. fibo-fnd-rel-rel:mandates .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
-
-    DeliveryOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]] -. fibo-fnd-rel-rel:exemplifies .-> ServiceDeliveryEvent[[ontoservice:ServiceDeliveryEvent]]
-    IndividualTransaction[["<h4>fibo-fbc-pas-caa:IndividualTransaction</h4><p style='font-size:0.75rem;'>fibo-fbc-pas-caa:hasPostingDate &quot;xsd:dateTime&quot;<br>fibo-fbc-pas-caa:hasTransactionDate &quot;xsd:dateTime&quot;</p>"]]:::literal -. fibo-fnd-rel-rel:involves .-> DeliveryOccurrence
-    IndividualTransaction -. fibo-fnd-acc-cur:hasMonetaryAmount .-> CalculatedPrice
+    Agreement -. property paths .-> AccrualOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]]
 
     CalculatedPrice[[fibo-fnd-acc-cur:CalculatedPrice]] -. cmns-qtu:hasExpression .-> CalculationExpression[[cmns-qtu:Expression]]
     CalculatedPrice -. cmns-cxtdsg:uses .-> PricingModel[[fibo-fbc-fi-ip:PricingModel]]
@@ -568,7 +567,8 @@ flowchart TD
     CalculationExpression -. cmns-qtu:hasArgument .-> VariableFee
     CalculationExpression -. cmns-qtu:hasArgument .-> MoneyAmount[[fibo-fnd-acc-cur:AmountOfMoney]]
 
-    Invoice[[p2p-o-doc:E-Invoice]]  -. cmns-doc:isAbout .-> IndividualTransaction
+    Invoice[[p2p-o-doc:E-Invoice]]  -. cmns-doc:isAbout .-> AccrualOccurrence
+    AccrualOccurrence -. fibo-fnd-rel-rel:exemplifies .->  ServiceAccrualEvent[[ontoservice:ServiceAccrualEvent]]
     Invoice  -. p2p-o-inv:hasTotalChargesAmount .-> CalculatedPrice
     Invoice  -. p2p-o-inv:hasInvoiceLine .-> AddChargeInvoiceLine
     Invoice  -. p2p-o-inv:hasInvoiceLine .-> DiscountInvoiceLine
