@@ -119,7 +119,7 @@ flowchart LR
 | fibo-fbc-pas-caa | `https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/`           |
 | fibo-fbc-pas-fpas | `https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/`|
 | fibo-fnd-acc-cur  | `https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/`                       |
-| fibo-fnd-arr-doc  | `https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/`                       |
+| fibo-fnd-arr-doc  | `https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/`                          |
 | fibo-fnd-agr-agr  | `https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/`                           |
 | fibo-fnd-agr-ctr  | `https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/`                            |
 | fibo-fnd-arr-lif  | `https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/`                         |
@@ -140,6 +140,7 @@ flowchart LR
 | p2p-o-doc         | `https://purl.org/p2p-o/document#`                                                               |
 | p2p-o-doc-line    | `https://purl.org/p2p-o/documentline#`                                                           |
 | p2p-o-inv         | `https://purl.org/p2p-o/invoice#`                                                                |
+| p2p-o-item        | `https://purl.org/p2p-o/item#`                                                                   |
 | sf                | `http://www.opengis.net/ont/sf#`                                                                 |
 | geo               | `http://opengis.net/ont/geosparql#`                                                              |
 | rdfs              | `http://www.w3.org/2000/01/rdf-schema#`                                                          |
@@ -575,7 +576,7 @@ Figure 8: TBox representation of a customer account and their billable services
    InvoiceLine -. p2p-o-doc-line:hasGrosspriceOfItem .-> CalculatedPrice
 ```
 
-The billable amount for each service delivery is recorded as a `CalculatedPrice`, derived from a pricing model and specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges. An `E-Invoice` is instantiated to reference the target `ServiceAccrualEvent`, which details the discounts and additional charges on top of service charges for each task. Descriptions for each invoice line can be added via the `lineNote` property. Note that the variable fee must use **price per quantity** as a measurement unit. In the example below, price per tonne is used, and these extensions can be made in the `abox.ttl`.
+The billable amount for each service delivery is recorded as a `CalculatedPrice`, derived from a pricing model and specific inputs defined by the individual service (such as usage metrics), and any additional required discounts or charges. An `E-Invoice` is instantiated to reference the target `ServiceAccrualEvent`, which details the discounts and additional charges on top of service charges for each task. Descriptions for each invoice line can be added via the `lineNote` property. However, for additional charges, it is recommended to add them via the item description to separate them from the service charge. Note that the variable fee must use **price per quantity** as a measurement unit. In the example below, price per tonne is used, and these extensions can be made in the `abox.ttl`.
 
 Figure 9: TBox representation of an invoice for each task within a service agreement
 
@@ -618,6 +619,8 @@ flowchart TD
 
     DiscountInvoiceLine -.-> InvoiceLine["<h4>p2p-o-doc-line:InvoiceLine</h4><p style='font-size:0.75rem;'>p2p-o-doc-line:lineNote &quot;xsd:string&quot;</p>"]:::literal
     AddChargeInvoiceLine -.-> InvoiceLine
+    AddChargeInvoiceLine  -. p2p-o-item:hasItem .-> Item[["<h4>p2p-o-item:Item</h4><p style='font-size:0.75rem;'>p2p-o-item:itemDescription &quot;xsd:string&quot;</p>"]]:::literal
+
     DiscountInvoiceLine  -. p2p-o-doc-line:hasPriceDiscountOfItem .-> MoneyAmount
     ServiceChargeInvoiceLine -.-> InvoiceLine
 
