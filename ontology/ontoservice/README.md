@@ -612,7 +612,7 @@ flowchart TD
 
     Invoice[[p2p-o-doc:E-Invoice]]  -. cmns-doc:isAbout .-> AccrualOccurrence
     AccrualOccurrence -. fibo-fnd-rel-rel:exemplifies .->  ServiceAccrualEvent[[ontoservice:ServiceAccrualEvent]]
-    Invoice  -. p2p-o-inv:hasTotalChargesAmount .-> CalculatedPrice
+    Invoice  -. p2p-o-inv:hasTotalAmountWithVAT .-> CalculatedPrice
     Invoice  -. p2p-o-inv:hasInvoiceLine .-> AddChargeInvoiceLine
     Invoice  -. p2p-o-inv:hasInvoiceLine .-> DiscountInvoiceLine
     Invoice  -. p2p-o-inv:hasInvoiceLine .-> ServiceChargeInvoiceLine["<h4>ServiceChargeInvoiceLine</h4><p style='font-size:0.75rem;'>p2p-o-doc-line:lineIdentifier &quot;xsd:string&quot;</p>"]:::literal
