@@ -413,6 +413,48 @@ flowchart LR
     Sunday[[fibo-fnd-dt-fd:Sunday]] -.-> DayOfWeek
 ```
 
+Figure 5b: TBox representation of an ad-hoc schedule
+
+Alternatively, a collection of explicit dates may be specified in the schedule. The schedule will be of class `fibo-fnd-dt-fd:AdHocSchedule`, which is a collection of `fibo-fnd-dt-fd:AdHocScheduleEntry` where each of them contains an explicit date.
+
+```mermaid
+%%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%
+flowchart LR
+    %% Styling
+    classDef literal fill:none
+    classDef node overflow-wrap:break-word,text-wrap:pretty
+    classDef new fill:#f00,overflow-wrap:break-word,text-wrap:pretty,stroke:#fff,stroke-width:2px;
+    linkStyle default overflow-wrap:break-word,text-wrap:pretty;
+
+    %% Contents
+    StageOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleStageOccurrence]] -. cmns-col:comprises .-> EventOccurrence[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]]
+    StageOccurrence -. fibo-fnd-rel-rel:exemplifies .-> ServiceExecutionStage[[ontoservice:ServiceExecutionStage]]
+    EventOccurrence -. fibo-fnd-rel-rel:exemplifies .-> Event[[ontoservice:ServiceDeliveryEvent]]
+    ServiceExecutionStage -. cmns-col:comprises .-> Event
+    StageOccurrence -. cmns-pts:holdsDuring .-> DatePeriod[[cmns-dt:DatePeriod]]
+    DatePeriod -. cmns-dt:hasStartDate .-> StartDate[[Service Start Date]]
+    DatePeriod -. cmns-dt:hasEndDate .-> EndDate[[Service End Date]]
+    StartDate -.-> Date["<h4>cmns-dt:Date</h4><p style='font-size:0.75rem;'>cmns-dt:hasDateValue &quot;xsd:date&quot;</p>"]:::literal
+    EndDate -.-> Date
+
+    StageOccurrence -. fibo-fnd-dt-fd:hasSchedule .-> Schedule[["<h4>fibo-fnd-dt-fd:AdHocSchedule</h4><p style='font-size:0.75rem;'>fibo-fnd-dt-fd:hasCount &quot;xsd:integer&quot;</p>"]]:::new
+    Schedule -. fibo-fnd-dt-oc:hasOccurrence .-> EventOccurrence
+
+    Schedule -. cmns-dt:hasTimePeriod .-> TimePeriod[[cmns-dt:ExplicitTimePeriod]]
+    TimePeriod -. cmns-dt:hasStart .-> StartTime[[Start Time]]
+    TimePeriod -. cmns-dt:hasEndTime .-> EndTime[[End Time]]
+    StartTime -.-> Time["<h4>cmns-dt:TimeOfDay</h4><p style='font-size:0.75rem;'>cmns-dt:hasTimeValue &quot;xsd:time&quot;</p>"]:::literal
+    EndTime -.-> Time
+
+    Schedule -. cmns-dt:hasStartDate .-> StartDate
+    Schedule -. cmns-col:hasMember .-> Entry[[fibo-fnd-dt-fd:AdHocScheduleEntry]]:::new
+    Entry -.-> cmns-dt:hasDate -.-> AdHocDate[[Ad Hoc Date]]:::new
+    AdHocDate -.-> Date
+
+    
+
+```
+
 #### Successful Service Delivery
 
 The typical sequence of events for a successful service delivery is depicted in the figure below. Each event's occurrence can be instantiated with the `ContractLifecycleEventOccurrence` concept, which must be assigned a specific date, time, and location (if required). The process begins with the `OrderReceivedEvent`, which kickstarts the workflow. The next event is the `ServiceDispatchEvent`, where users can assign resources, personnel, and locations to specific orders. Personnel can be assigned using the `fibo-fnd-rel-rel:designates` relation and `fibo-fnd-org-fm:Employee` subclasses, while resources (such as equipment `saref:Device` or facility `ontobim:Facility`) can be assigned using the `fibo-fnd-rel-rel:involves` relation. For example, a driver can be designated for the delivery, and their assigned transport and other details can be tracked as described in [`OntoProfile`](https://www.theworldavatar.com/kg/ontoprofile/). Please do note that while the delivery typically occurs at the service site, some deliveries required an additional destination at a separate facility.
