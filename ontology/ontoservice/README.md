@@ -530,7 +530,7 @@ flowchart LR
 
 ### 2.3.1 Billing
 
-In supporting the billing process, a customer account must be first set up with a new `AccountHolder` concept. Each customer account defines an account-specific agreement that stipulates a catalog of approved pricing models. However, the binding payment terms are specified by the individual service-specific agreements.
+In supporting the billing process, a customer account must be first set up with a new `AccountHolder` concept. Each customer account defines an account-specific agreement that stipulates a catalog of approved pricing models. However, the binding payment terms are specified by the individual service-specific agreements. A balance can also be attached to the account.
 
 Each customer account holds a financial record that is associated with at least one account invoice. Customers receive an account invoice that consolidates all billed tasks for a specific invoicing period and payment due date. Each billed task has its own task invoice detailing specific costs. Multiple task invoices can be linked to an account invoice via `p2p-o-inv:hasInvoiceReference`. These costs are automatically calculated based on the service's pricing model, usage data, and any applicable discounts or fees.
 
@@ -560,6 +560,7 @@ Figure 8: TBox representation of a customer account and their billable services
 
    AccountHolder -. fibo-fnd-rel-rel:holds .-> CustomerAccount
    ServiceProvider -. cmns-org:provides .-> CustomerAccount
+   CustomerAccount -. fibo-fbc-pas-caa:hasBalance .-> Balance[[fibo-fbc-pas-caa:Balance]]
    
    ServiceAgreement[[fibo-fnd-pas-pas:ServiceAgreement]] -. property paths .-> ClosedTask[[fibo-fbc-pas-fpas:ContractLifecycleEventOccurrence]]
    ServiceAgreement -. fibo-fnd-rel-rel:confers .-> PaymentObligation[[fibo-fnd-pas-psch:PaymentObligation]]
