@@ -100,6 +100,7 @@ SlopeExcavation,Class,HumanFactor,IS-A,,,,Human-induced slope modification that 
 VegetationDestruction,Class,HumanFactor,IS-A,,,,"The removal or destruction of vegetation, which can lead to landslides.",http://www.theworldavatar.com/kg/ontolandslide,Vegetation Destruction
 Mining,Class,HumanFactor,IS-A,,,,"The process of extracting minerals from the earth, which can destabilize slopes.",http://www.theworldavatar.com/kg/ontolandslide,Mining
 ReservoirStorage,Class,HumanFactor,IS-A,,,,"The accumulation of water in reservoirs, potentially causing landslides.",http://www.theworldavatar.com/kg/ontolandslide,Reservoir Storage
+http://sweetontology.net/phenHydro/Flood,Class,NaturalFactor,IS-A,,,,"The overflow of water onto land, saturating soil and destabilising slopes, potentially causing landslides.",http://sweetontology.net/phenHydro,Flood
 MeltingIceSnow,Class,NaturalFactor,IS-A,,,,"The melting of ice or snow, which can saturate soil and cause landslides.",http://www.theworldavatar.com/kg/ontolandslide,Melting Ice Snow
 Earthquake,Class,NaturalFactor,IS-A,,,,Seismic activity that can trigger landslides due to ground shaking.,http://www.theworldavatar.com/kg/ontolandslide,Earthquake
 Rainfall,Class,NaturalFactor,IS-A,,,,Precipitation that can saturate soils and increase the likelihood of landslides.,http://www.theworldavatar.com/kg/ontolandslide,Rainfall

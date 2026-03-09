@@ -1,0 +1,2284 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.theworldavatar.com/kg/ontowildfire/"
+     xml:base="http://www.theworldavatar.com/kg/ontowildfire/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontowildfire="http://www.theworldavatar.com/kg/ontowildfire/">
+    <owl:Ontology rdf:about="http://www.theworldavatar.com/kg/ontowildfire/">
+        <dc:date>09 March 2026</dc:date>
+        <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
+        <rdfs:comment>OntoLandslide is an ontology developed to represent landslide hazard</rdfs:comment>
+        <owl:versionInfo>1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/gitCommitHash -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/gitCommitHash"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit">
+        <rdfs:domain rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/"/>
+        <rdfs:label>has unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/actionTaken -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/actionTaken">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Response"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ResponseAction"/>
+        <rdfs:comment>Specifies the actions taken in response to a landslide.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>action Taken</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/affects -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/affects">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Hazard"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontowildfire/EnvironmentalComponent"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontowildfire/InfrastructureComponent"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Population"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>A relationship between a landslide and affected entities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>affects</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/causesDamageOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/causesDamageOf">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Hazard"/>
+        <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
+        <rdfs:comment>This property links a hazard to the quantity representing the damage it causes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/causesEvacuationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/causesEvacuationOf">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Hazard"/>
+        <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
+        <rdfs:comment>This property associates a hazard with the quantity representing the number of evacuations it causes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>causes Evacuation Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/causesLossOfLifeOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/causesLossOfLifeOf">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Hazard"/>
+        <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
+        <rdfs:comment>This property links a hazard to the quantity representing the loss of life it causes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>causes Loss Of Life Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/containsProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/containsProperty">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Dataset"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Property"/>
+        <rdfs:comment>An object property that indicates that a LandslideDataset contains a specific property related to landslide measurements.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>contains Property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/currentAlertOrWarningSign -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/currentAlertOrWarningSign">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideSpot"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/WarningSign"/>
+        <rdfs:comment>Associates a landslide spot with its current warning sign.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>current Warning Sign</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/currentWarning -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/currentWarning">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideArea"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideAlertOrWarning"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>current warning</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/endangersOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/endangersOf">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Hazard"/>
+        <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
+        <rdfs:comment>This property connects a hazard to the quantity representing the entities it endangers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>endangers Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasAffectedArea -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasAffectedArea">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/InfrastructureComponent"/>
+        <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Area"/>
+        <rdfs:comment>A relationship between an affected Infrastructure Component and the corresponding area affected.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has affected area</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasAlertOrWarningHistory -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasAlertOrWarningHistory">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideSpot"/>
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LanslideArea"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideAlertOrWarningHistory"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideWarningHistory"/>
+        <rdfs:comment>A relationship between a Landslide Area and its collection of previous landslide warnings and alerts.</rdfs:comment>
+        <rdfs:comment>Links a landslide spot to its warning history.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Warning History</rdfs:label>
+        <rdfs:label>has historical warning</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasCausalFactor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasCausalFactor">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Landslide"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/CausalFactor"/>
+        <rdfs:comment>Identifies the causal factor responsible for a landslide.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Causal Factor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasFileUrl -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasFileUrl">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ShapeFile"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/FileUrl"/>
+        <rdfs:comment>Points to the URL of the shapefile.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has File Url</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasGeometry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasGeometry">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <rdfs:comment>Indicates the geometric representation of a location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Geometry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasLandslideHistory -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasLandslideHistory">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideHistory"/>
+        <rdfs:comment>Connects a location to its associated landslide history.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Landslide History</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasLikelihood -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasLikelihood">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/RiskLevel"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Likelihood"/>
+        <rdfs:comment>A relationship between a risk level and the underlying likelihood.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has likelihood</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasLocation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasLocation">
+        <rdfs:domain rdf:resource="http://sweetontology.net/phen/Event"/>
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Event"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://sweetontology.net/phen/Event"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideArea"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideForecast"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+        <rdfs:comment>A relationship between a (forecasted) event and its geospatial location.</rdfs:comment>
+        <rdfs:comment>A relationship between an event and a geographic location</rdfs:comment>
+        <rdfs:comment>Links an event to the geographic location where it occurred.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Location</rdfs:label>
+        <rdfs:label>has location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasMeasurement">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Property"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Measurement"/>
+        <rdfs:comment>An object property that connects a property to the corresponding measurement data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasMeasurementInterval -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasMeasurementInterval">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Property"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Interval"/>
+        <rdfs:comment>An object property that associates a property with a specific time interval during which measurements are taken.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Measurement Interval</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasMonetaryValue -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasMonetaryValue">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Impact"/>
+        <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/AmountOfMoney"/>
+        <rdfs:comment>A relationship between an Impact and the quantification of its cumulative effects in monetary terms.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has monetary value</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasPotentialImpact -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasPotentialImpact">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/RiskLevel"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/PotentialImpact"/>
+        <rdfs:comment>A relationship between a risk level and the underlying impact potential.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has potential impact</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasResponse -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasResponse">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Landslide"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Response"/>
+        <rdfs:comment>Associates a landslide event with the response taken.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Response</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasRiskLevel -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasRiskLevel">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideForecast"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/RiskLevel"/>
+        <rdfs:comment>A relationship between a landslide forecast and its anticipated risk.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has risk level</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasSeverity -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasSeverity">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideAlertOrWarning"/>
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/WarningSign"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Severity"/>
+        <rdfs:comment>A relationship between a Landslide Alert/Warning and its severity.</rdfs:comment>
+        <rdfs:comment>Links a warning sign to its severity level.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Severity</rdfs:label>
+        <rdfs:label>has severity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasShapeFile -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasShapeFile">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ShapeFile"/>
+        <rdfs:comment>Refers to the shapefile associated with a specific location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Shape File</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasStage -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasStage">
+        <rdfs:domain rdf:resource="http://sweetontology.net/phen/Event"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Stage"/>
+        <rdfs:comment>This property describes the different phases or stages that a hazard event undergoes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Stage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasTimeInterval -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasTimeInterval">
+        <rdfs:domain rdf:resource="http://sweetontology.net/phen/Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:comment>A relationship between an event and the time interval associated with the duration of the event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has TimeInterval</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasTimeSeries -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasTimeSeries">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideHistory"/>
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideWarningHistory"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/TimeSeries"/>
+        <rdfs:comment>Associates landslide history with a time series of data points.</rdfs:comment>
+        <rdfs:comment>Associates landslide warning history with a time series of warning data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Time Series</rdfs:label>
+        <rdfs:label>has Warning Time Series</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasValue -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasValue">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Measurement"/>
+        <rdfs:range rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has value</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/indicatesQuantityOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/indicatesQuantityOf">
+        <rdfs:domain rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontowildfire/EnvironmentalComponent"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontowildfire/InfrastructureComponent"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Population"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>This property associates a quantity with the environmental component, population, or infrastructure component it indicates.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>indicates Quantity Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/isBasedOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/isBasedOn">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideAlertOrWarning"/>
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideForecastModel"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideForecast"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideDataset"/>
+                    <rdf:Description rdf:about="http://www.theworldavatar.com/kg/ontowildfire/MeteorologicalDataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment>A computational model that predicts potential landslide events based on landslide, meteorological, and geographic data.</rdfs:comment>
+        <rdfs:comment>An object property that specifies that a LandslideDataset is derived from either a LandslideForecastModel or a MeteorologicalDataset.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>is Based On</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/isMeasuredBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/isMeasuredBy">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Property"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Sensor"/>
+        <rdfs:comment>An object property that links a property to the sensor responsible for measuring it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>is Measured By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/isProducedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/isProducedBy">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ShapeFile"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Organization"/>
+        <rdfs:comment>Identifies the organization that produced a shapefile.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>is Produced By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/occurredIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/occurredIn">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Landslide"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+        <rdfs:comment>Links an landslide occurrence to the location where it took place</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/occursOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/occursOn">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Landslide"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Slope/Soil/GeologicalLayer"/>
+        <rdfs:comment>Indicates the slope, soil, or geological layer on which a landslide occurs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>occurs On</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/precededBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/precededBy">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Stage"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Stage"/>
+        <rdfs:comment>This property indicates a temporal relationship where one event or stage occurs before another.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>preceded By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/reportedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/reportedBy">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/WarningSign"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Person"/>
+        <rdfs:comment>Refers to the person who reported a warning sign.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>reported By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/responseBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/responseBy">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Response"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ResponseDepartment"/>
+        <rdfs:comment>Refers to the department responsible for the response.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>response By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/resultsIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/resultsIn">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Hazard"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Impact"/>
+        <rdfs:comment>A relationship between an Event and its effects.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>results in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/triggers -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/triggers">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000710"/>
+        <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontolandslide/Landslide"/>
+        <rdfs:comment>A hazard initiates or contributes to the occurrence of another hazard</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>triggers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/usedLogistics -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/usedLogistics">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Response"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ResponseLogistics"/>
+        <rdfs:comment>Denotes the logistics used during the response to a landslide.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>used Logistics</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/warnsAbout -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/warnsAbout">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideAlertOrWarning"/>
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/WarningSign"/>
+        <rdfs:range rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Landslide"/>
+        <rdfs:comment>A relationship between a Landslide Alert/Warning and the actual landslide event it refers to.</rdfs:comment>
+        <rdfs:comment>Indicates the landslide that the warning sign is about.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>warns About</rdfs:label>
+        <rdfs:label>warns about</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasBeginning -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasBeginning">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/2006/time"/>
+        <rdfs:label>has Beginning</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasEnd -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasEnd">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/2006/time"/>
+        <rdfs:label>has End</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontotimeseries/hasTimeSeries -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontotimeseries/hasTimeSeries">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideAlertOrWarningHistory"/>
+        <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontotimeseries/TimeSeries"/>
+        <rdfs:comment>A relationship between the collection of previous landslide warnings and alerts and their actual time series history.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has time series</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumericalValue">
+        <rdfs:domain rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/"/>
+        <rdfs:label>has numerical value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasLat -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasLat">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment>This property represents the latitude coordinate of a specific landslide location, expressed as a floating-point number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Lat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasLon -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasLon">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment>This property represents the longitude coordinate of a specific landslide location, expressed as a floating-point number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Lon</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/hasVelocity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/hasVelocity">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Landslide"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Represents the speed at which the landslide moves, with the value being a float.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>has Velocity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/lastUpdateOn -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/lastUpdateOn">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ShapeFile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>This property represents the timestamp of the most recent update related to the landslide situation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>last Update On</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/measurementEndtime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/measurementEndtime">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A data property that defines the ending time of a measurement event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>measurement Endtime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/measurementStarttime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.theworldavatar.com/kg/ontowildfire/measurementStarttime">
+        <rdfs:domain rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A data property that defines the starting time of a measurement event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>measurement Starttime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000710 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000710">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Hazard"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/"/>
+        <rdfs:label>Flood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sweetontology.net/phen/Event -->
+
+
+    <owl:Class rdf:about="http://sweetontology.net/phen/Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/hasLocation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/hasTimeInterval"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Interval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://sweetontology.net/phenHydro/Flood -->
+
+
+    <owl:Class rdf:about="http://sweetontology.net/phenHydro/Flood">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/NaturalFactor"/>
+        <rdfs:comment>The overflow of water onto land, saturating soil and destabilising slopes, potentially causing landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://sweetontology.net/phenHydro"/>
+        <rdfs:label>Flood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/AmountOfMoney -->
+
+
+    <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/AmountOfMoney">
+        <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/"/>
+        <rdfs:label>Amount Of Money</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/Area -->
+
+
+    <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/Area"/>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/Measure -->
+
+
+    <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/Measure">
+        <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/"/>
+        <rdfs:label>Measure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity -->
+
+
+    <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity">
+        <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/Unit -->
+
+
+    <owl:Class rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/Unit">
+        <rdfs:isDefinedBy rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/"/>
+        <rdfs:label>Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+        <rdfs:label>Geometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Air -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Air">
+        <rdfs:comment>Hazards can pollute air affecting air quality and leading to health issues in humans and ecosystem.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Air</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign">
+        <rdfs:comment>Indicators that signal the potential for an imminent landslide.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Alert or Warning Sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Animal -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Animal">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LivingBeing"/>
+        <rdfs:comment>Non-human living organisms potentially affected by a hazard</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Animal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/ArealInfrastructure -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/ArealInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/InfrastructureComponent"/>
+        <rdfs:comment>Areal installations and land-uses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Areal infrastructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/BrokenUndergroundUtility -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/BrokenUndergroundUtility">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign"/>
+        <rdfs:comment>A damaged underground utility line caused by or contributing to landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Broken Underground Utility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/BulgeOnGround -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/BulgeOnGround">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign"/>
+        <rdfs:comment>A raised area of land indicating ground movement or subsurface pressure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Bulge On Ground</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/CausalFactor -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/CausalFactor">
+        <rdfs:comment>A factor that contributes to the occurrence of a landslide, either human or natural.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Causal Factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/CommercialInfrastructure -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/CommercialInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ArealInfrastructure"/>
+        <rdfs:comment>Material infrastructure in form of commercial buildings.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>CommercialArea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Community -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Community">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ResponseDepartment"/>
+        <rdfs:comment>A group of people residing in an area potentially affected by landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Community</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/CrackOnBuilding -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/CrackOnBuilding">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign"/>
+        <rdfs:comment>Structural cracks on a building, possibly caused by ground movement or a landslide.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Crack On Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/CrackOnSideWalk -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/CrackOnSideWalk">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign"/>
+        <rdfs:comment>A crack on a sidewalk surface, often a precursor to more severe ground movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Crack On Side Walk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/CrackOnStreet -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/CrackOnStreet">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign"/>
+        <rdfs:comment>A crack forming on a street surface, indicating possible subsurface instability.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Crack On Street</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/CrackOnWall -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/CrackOnWall">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign"/>
+        <rdfs:comment>A visible crack on a wall indicating possible ground movement or instability.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Crack On Wall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Dataset -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Dataset">
+        <rdfs:comment>A structured collection of related data points used for analysis, modeling, or decision-making.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/DebrisAvalanche -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/DebrisAvalanche">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/MixedLithologyLandslide"/>
+        <rdfs:comment>A fast-moving, mixed-material landslide that includes a variety of debris and rock.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Debris Avalanche</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/DebrisFlow -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/DebrisFlow">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/MixedLithologyLandslide"/>
+        <rdfs:comment>A very fast landslide where loose debris flows down a slope with a high water content.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Debris Flow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/DecayingStage -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/DecayingStage">
+        <rdfs:comment>The phase where the hazard starts to weaken, dissipate, or recede, though residual impacts may persist.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Decaying Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Earthflow -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Earthflow">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/SoilLandslide"/>
+        <rdfs:comment>A slow-moving flow of fine-grained materials saturated with water.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Earthflow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Earthquake -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Earthquake">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/NaturalFactor"/>
+        <rdfs:comment>Seismic activity that can trigger landslides due to ground shaking.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Earthquake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Ecosystem -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Ecosystem">
+        <rdfs:comment>Hazards can disrupt ecosystem balance to long-term environmental degradation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Ecosystem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/EmbryonicStage -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/EmbryonicStage">
+        <rdfs:comment>The initial phase of hazard formation, where the necessary conditions for the event begin to develop.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Embryonic Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/EnvironmentalComponent -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/EnvironmentalComponent">
+        <rdfs:comment>Natural components of the environment (e.g. biodiversity, natural habitats, animal species, etc.).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Environmental component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Event -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Event"/>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Expert -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Expert">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Person"/>
+        <rdfs:comment>Professionals with knowledge and expertise in landslide management and prediction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Expert</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/FeatureOfInterest">
+        <rdfs:comment>A geographic or environmental entity, that is being observed or analyzed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Feature Of Interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/FileUrl -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/FileUrl">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ShapeFile"/>
+        <rdfs:comment>A URL link that points to a file containing relevant information or data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>File Url</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/GeologicalFormation -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/GeologicalFormation">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/NaturalFactor"/>
+        <rdfs:comment>The underlying rock and soil structures that influence landslide susceptibility.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Geological Formation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Government -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Government">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ResponseDepartment"/>
+        <rdfs:comment>Represents governmental bodies involved in managing landslide risks and responses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Government</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/GrowthStage -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/GrowthStage">
+        <rdfs:comment>The phase where the hazard starts gaining intensity and spreading.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Growth Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Hazard -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Hazard">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/phen/Event"/>
+        <rdfs:comment>A potentially harmful event or phenomenon that may cause loss of life, injury, property damage, or environmental disruption.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Hazard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/HumanFactor -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/HumanFactor">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/CausalFactor"/>
+        <rdfs:comment>Human activities or actions that can trigger or influence landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Human Factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Impact -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Impact">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/hasMonetaryValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontology-of-units-of-measure.org/resource/om-2/AmountOfMoney"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Consequences of an event taking place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Impact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/InactiveLandslideWarning -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/InactiveLandslideWarning">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Severity"/>
+        <rdfs:comment>A warning issued for a past landslide event that is no longer active.</rdfs:comment>
+        <rdfs:comment>Landslide alert/warning indicating that the landslide warning is no longer active.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Inactive Landslide Warning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/IncreaseInWaterLevel -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/IncreaseInWaterLevel">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign"/>
+        <rdfs:comment>Rising water levels indicating possible landslide-triggering conditions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Increase In Water Level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/IndustrialInfrastructure -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/IndustrialInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ArealInfrastructure"/>
+        <rdfs:comment>Material infrastructure in form of industrial buildings.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>IndustrialArea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/InfrastructureComponent -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/InfrastructureComponent">
+        <rdfs:comment>Manmade basic structures or features needed for the functioning of a system or organization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Infrastructure component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Interval -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Interval">
+        <rdfs:comment>A defined time period over which measurements or observations are aggregated or analyzed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Landslide -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Landslide">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Hazard"/>
+        <rdfs:comment>A mass movement of earth, rock, or debris down a slope, typically caused by gravitational pull.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Landslide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LandslideAlert -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideAlert">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Severity"/>
+        <rdfs:comment>A notification or alert issued to warn of potential landslide occurrences.</rdfs:comment>
+        <rdfs:comment>Landslide alert/warning indicating that landslide is possible (i.e. one should be prepared).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Landslide Alert</rdfs:label>
+        <rdfs:label>Landslide alert</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LandslideAlertOrWarning -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideAlertOrWarning">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/hasSeverity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Severity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/warnsAbout"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Landslide"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A notification issued based on predictive analysis or real-time monitoring indicating potential or imminent landslide risk in a specific area.</rdfs:comment>
+        <rdfs:comment>The landslide alert or warning</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Landslide alert or warning</rdfs:label>
+        <rdfs:label>landslide alert or warning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LandslideAlertOrWarningHistory -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideAlertOrWarningHistory">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.theworldavatar.com/kg/ontotimeseries/hasTimeSeries"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.theworldavatar.com/kg/ontotimeseries/TimeSeries"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A collection of all previously issued landslide warnings and alerts.</rdfs:comment>
+        <rdfs:comment>A historical record of warnings issued for landslides in a given area.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Landslide Warning History</rdfs:label>
+        <rdfs:label>Landslide alert or warning history</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LandslideArea -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideArea">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/hasLocation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Area for which a landslide warning or alert service is provided (i.e. area to which a landslide warning/alert applies).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Landslide area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LandslideDataset -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideDataset">
+        <rdfs:comment>A collection of structured data related to past and predicted landslide events</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Landslide Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LandslideForecast -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideForecast">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/hasLocation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/hasRiskLevel"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/RiskLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A forecast of landslide risk providing the indication of potential landsliding a few days into the future.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Landslide forecast</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LandslideForecastModel -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideForecastModel">
+        <rdfs:comment>A computational model that predicts potential landslide events based on landslide, meteorological, and geographic data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Landslide Forecast Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LandslideHistory -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideHistory">
+        <rdfs:comment>A record of past landslides including relevant data and time series.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Landslide History</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LandslideSpot -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideSpot">
+        <rdfs:comment>A specific location identified as being prone to landslide activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Landslide Spot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LandslideWarning -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideWarning">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Severity"/>
+        <rdfs:comment>A warning issued based on predictive models or observed conditions.</rdfs:comment>
+        <rdfs:comment>Landslide alert/warning indicating that landslide is expected (i.e. immediate action required).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Landslide Warning</rdfs:label>
+        <rdfs:label>Landslide warning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LandslideWarningHistory -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LandslideWarningHistory"/>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LanslideArea -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LanslideArea">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/hasAlertOrWarningHistory"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LandslideAlertOrWarningHistory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LeaningElectricPole -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LeaningElectricPole">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign"/>
+        <rdfs:comment>A tilted electric pole, often a sign of slope instability or landslide activity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Leaning Electric Pole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LeaningTelephonePole -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LeaningTelephonePole">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign"/>
+        <rdfs:comment>A tilted telephone pole caused by ground movement or slope instability.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Leaning Telephone Pole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Likelihood -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Likelihood">
+        <rdfs:comment>The probability of a forecasted landslide event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Likelihood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/LivingBeing -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/LivingBeing">
+        <rdfs:comment>including humans and animals, that may be impacted by earthquakes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Living Being</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Location -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Location">
+        <rdfs:comment>The geographical position where an event or entity is situated.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/MatureStage -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/MatureStage">
+        <rdfs:comment>The peak or most intense phase of the hazard, causing the most damage and destruction.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Mature Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Measurement -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Measurement">
+        <rdfs:comment>A recorded value representing a property of a feature of interest, obtained through observation or sensors.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/MedicalAndRescueLogistics -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/MedicalAndRescueLogistics">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ResponseLogistics"/>
+        <rdfs:comment>Organizing medical and rescue operations for landslide victims.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Medical And Rescue Logistics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/MedicalCentre -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/MedicalCentre">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ResponseDepartment"/>
+        <rdfs:comment>Healthcare facilities that provide aid to individuals affected by landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Medical Centre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/MeltingIceSnow -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/MeltingIceSnow">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/NaturalFactor"/>
+        <rdfs:comment>The melting of ice or snow, which can saturate soil and cause landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Melting Ice Snow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/MeteorologicalDataset -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/MeteorologicalDataset">
+        <rdfs:comment>A dataset containing weather-related data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Meteorological Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Mining -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Mining">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/HumanFactor"/>
+        <rdfs:comment>The process of extracting minerals from the earth, which can destabilize slopes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Mining</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/MixedLithologyLandslide -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/MixedLithologyLandslide">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Landslide"/>
+        <rdfs:comment>A landslide involving a mixture of different types of materials, such as rocks and soil.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Mixed Lithology Landslide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/MobilityAndEquipmentLogistics -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/MobilityAndEquipmentLogistics">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ResponseLogistics"/>
+        <rdfs:comment>Coordination of vehicles and equipment needed for landslide response.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Mobility And Equipment Logistics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/MobilityNetwork -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/MobilityNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/NetworkInfrastructure"/>
+        <rdfs:comment>Network-shaped infrastructure to enable transport of people and goods (e.g. roads, railroads).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Mobility network</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Mudflow -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Mudflow">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/SoilLandslide"/>
+        <rdfs:comment>A type of fast-moving landslide with high water content carrying mud and debris.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Mudflow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/NaturalFactor -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/NaturalFactor">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/CausalFactor"/>
+        <rdfs:comment>Natural occurrences like earthquakes or rainfall that contribute to landslide events.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Natural Factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/NetworkInfrastructure -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/NetworkInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/InfrastructureComponent"/>
+        <rdfs:comment>Network systems, i.e. installations and facilities spreading across land.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Network infrastructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Organization -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Organization">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ShapeFile"/>
+        <rdfs:comment>An entity that produces data, reports, or manages resources related to landslide events.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Person -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Person">
+        <rdfs:comment>Individuals affected by or responding to a landslide event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Population -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Population">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/LivingBeing"/>
+        <rdfs:comment>People who inhabit a territory or state.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Population</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/PotentialImpact -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/PotentialImpact">
+        <rdfs:comment>The potential impacts of a forecasted landslide event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Potential impact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Property -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Property">
+        <rdfs:comment>A measurable characteristic or attribute of an entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/ProvisioningNetwork -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/ProvisioningNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/NetworkInfrastructure"/>
+        <rdfs:comment>Network-shaped infrastructure for provisioning goods (e.g. electricity, gas, water).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Provisioning network</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Rainfall -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Rainfall">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/NaturalFactor"/>
+        <rdfs:comment>Precipitation that can saturate soils and increase the likelihood of landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Rainfall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/ReservoirStorage -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/ReservoirStorage">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/HumanFactor"/>
+        <rdfs:comment>The accumulation of water in reservoirs, potentially causing landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Reservoir Storage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Resident -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Resident">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Person"/>
+        <rdfs:comment>A person living in an area at risk of landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Resident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/ResidentialInfrastructure -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/ResidentialInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ArealInfrastructure"/>
+        <rdfs:comment>Material infrastructure in form of residential buildings.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>ResidentialArea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/ResourceLogistics -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/ResourceLogistics">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ResponseLogistics"/>
+        <rdfs:comment>Allocation and transportation of necessary resources during a landslide event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Resource Logistics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Response -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Response">
+        <rdfs:comment>Actions or measures taken in reaction to a landslide event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Response</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/ResponseAction -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/ResponseAction">
+        <rdfs:comment>Specific measures taken to mitigate or manage a landslide event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Response Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/ResponseDepartment -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/ResponseDepartment">
+        <rdfs:comment>A department or agency responsible for coordinating landslide response actions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Response Department</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/ResponseLogistics -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/ResponseLogistics">
+        <rdfs:comment>Planning and managing resources and actions during a landslide event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Response Logistics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/RiskLevel -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/RiskLevel">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/hasLikelihood"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Likelihood"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/hasPotentialImpact"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/PotentialImpact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A measure of hazard potential defined by expected likelihood and forecasted impact.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Risk level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/RiverScouring -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/RiverScouring">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/NaturalFactor"/>
+        <rdfs:comment>The erosion of riverbanks by flowing water, leading to slope instability.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>River Scouring</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Rockfall -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Rockfall">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/RockyLandslide"/>
+        <rdfs:comment>A fast-moving landslide where rocks fall freely from a cliff or slope.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Rockfall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/RockyLandslide -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/RockyLandslide">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Landslide"/>
+        <rdfs:comment>A type of landslide where rocks dominate the mass movement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Rocky Landslide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Sensor -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Sensor">
+        <rdfs:comment>A device that detects and records environmental data for landslide monitoring.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Settlement -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Settlement">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/ResponseDepartment"/>
+        <rdfs:comment>A populated area that may be affected by landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Settlement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/SevereLandslideWarning -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/SevereLandslideWarning">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Severity"/>
+        <rdfs:comment>A warning indicating an imminent and potentially devastating landslide.</rdfs:comment>
+        <rdfs:comment>Landslide alert/warning indicating that severe landslide is expected (i.e. danger to life).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Severe Landslide Warning</rdfs:label>
+        <rdfs:label>Severe landslide warning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Severity -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Severity">
+        <rdfs:comment>The intensity or magnitude of a landslide event.</rdfs:comment>
+        <rdfs:comment>The potential impact of the landslide associated with a landslide warning/alert.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Severity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/ShapeFile -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/ShapeFile">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Location"/>
+        <rdfs:comment>A digital vector storage format for storing the location, shape, and attributes of geographic features.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Shape File</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/SlopeExcavation -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/SlopeExcavation">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/HumanFactor"/>
+        <rdfs:comment>Human-induced slope modification that can increase landslide risk.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Slope Excavation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Slump-RotationalSlide -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Slump-RotationalSlide">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/SoilLandslide"/>
+        <rdfs:comment>A type of landslide characterized by the downward and outward rotation of slope materials.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Slump - Rotational Slide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/SocialMediaWorker -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/SocialMediaWorker">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Person"/>
+        <rdfs:comment>Individuals who spread information about landslides through social media platforms.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Social Media Worker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Soil -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Soil">
+        <rdfs:comment>Hazards can contaminate soil, reducing soil fertility, harming plant growth, and posing risks to human and animal health through food chains.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Soil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/SoilCreep -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/SoilCreep">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/SoilLandslide"/>
+        <rdfs:comment>A very slow form of soil landslide caused by continuous downhill movement of soil particles.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Soil Creep</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/SoilLandslide -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/SoilLandslide">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/Landslide"/>
+        <rdfs:comment>Any landslide involving the movement of soil as the primary material.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Soil Landslide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Solifluction -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Solifluction">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/SoilLandslide"/>
+        <rdfs:comment>The slow flow of water-saturated soil down a slope, usually in cold climates.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Solifluction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Stage -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Stage">
+        <rdfs:comment>A phase in the progression of a hazard event that represents a specific period in the hazardâ€™s lifecycle, from its initiation to its dissipation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/TapWaterColorChanged -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/TapWaterColorChanged">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/AlertOrWarningSign"/>
+        <rdfs:comment>A sign of water contamination that may signal underground movement or landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Tap Water Color Changed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/TimeSeries -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/TimeSeries">
+        <rdfs:comment>A sequence of data points measured at successive time intervals.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Time Series</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/TranslationalRockSlide -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/TranslationalRockSlide">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/RockyLandslide"/>
+        <rdfs:comment>A type of landslide where rocks move down a slope along a flat plane.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Translational Rock Slide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Vegetation -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Vegetation">
+        <rdfs:comment>Hazards can damage or destroy plant life, reducing biodiversity, and disrupting ecosystem.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Vegetation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/VegetationDestruction -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/VegetationDestruction">
+        <rdfs:subClassOf rdf:resource="http://www.theworldavatar.com/kg/ontowildfire/HumanFactor"/>
+        <rdfs:comment>The removal or destruction of vegetation, which can lead to landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Vegetation Destruction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/WarningSign -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/WarningSign"/>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Water -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Water">
+        <rdfs:comment>Hazards can contaminate water bodies, leading to pollution, reduced water quality, and harm to aquatic life.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Water</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/WaterContent -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/WaterContent">
+        <rdfs:comment>The amount of water present in a material, influencing the type and speed of landslides.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Water Content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.theworldavatar.com/kg/ontowildfire/Slope/Soil/GeologicalLayer -->
+
+
+    <owl:Class rdf:about="http://www.theworldavatar.com/kg/ontowildfire/Slope/Soil/GeologicalLayer">
+        <rdfs:comment>Represents the geological or soil layers where landslides occur.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Slope / Soil / Geological Layer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Instant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
+        <rdfs:isDefinedBy rdf:resource="http://www.theworldavatar.com/kg/ontolandslide"/>
+        <rdfs:label>Interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontolandslide/Landslide -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontolandslide/Landslide"/>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontotimeseries/TimeSeries -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontotimeseries/TimeSeries">
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontotimeseries/"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+
