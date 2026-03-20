@@ -1,0 +1,328 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/ExecutionPoint> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasAddedChemicalInput> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Add> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/ChemicalInput> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasChemicalInput> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/ChemicalSynthesis> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/ChemicalInput> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasChemicalOutput> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/ChemicalTransformation> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/ChemicalOutput> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasCrystallizationTargetTemperature> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Crystallize> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Temperature> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasDryingAgent> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Dry> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/ChemicalInput> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasDryingPressure> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Dry> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Pressure> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasDryingTemperature> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Dry> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Temperature> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasEquipment> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/ChemicalSynthesis> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoLab/LabEquipment> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasEvaporationPressure> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Evaporate> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Pressure> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasEvaporationTemperature> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Evaporate> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Temperature> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasHeatChillDevice> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/HeatChill> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/HeatChillDevice> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasOrder> a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://www.theworldavatar.com/kg/OntoSyn/HeatChill> <https://www.theworldavatar.com/kg/OntoSyn/Transfer> <https://www.theworldavatar.com/kg/OntoSyn/Stir> <https://www.theworldavatar.com/kg/OntoSyn/Evaporate> <https://www.theworldavatar.com/kg/OntoSyn/Add> <https://www.theworldavatar.com/kg/OntoSyn/Crystallize> <https://www.theworldavatar.com/kg/OntoSyn/Dissolve> <https://www.theworldavatar.com/kg/OntoSyn/Separate> <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> <https://www.theworldavatar.com/kg/OntoSyn/Sonicate> <https://www.theworldavatar.com/kg/OntoSyn/Dry> <https://www.theworldavatar.com/kg/OntoSyn/Filter> ) ] ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:integer .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasPurity> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/ChemicalInput> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:string .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasRotaryEvaporator> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Evaporate> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:boolean .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasSeparationSolvent> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Separate> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/ChemicalInput> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasSolventDissolve> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Dissolve> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/ChemicalInput> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasStepDuration> a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://www.theworldavatar.com/kg/OntoSyn/HeatChill> <https://www.theworldavatar.com/kg/OntoSyn/Transfer> <https://www.theworldavatar.com/kg/OntoSyn/Stir> <https://www.theworldavatar.com/kg/OntoSyn/Evaporate> <https://www.theworldavatar.com/kg/OntoSyn/Add> <https://www.theworldavatar.com/kg/OntoSyn/Crystallize> <https://www.theworldavatar.com/kg/OntoSyn/Dissolve> <https://www.theworldavatar.com/kg/OntoSyn/Separate> <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> <https://www.theworldavatar.com/kg/OntoSyn/Sonicate> <https://www.theworldavatar.com/kg/OntoSyn/Dry> <https://www.theworldavatar.com/kg/OntoSyn/Filter> ) ] ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Duration> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasStirringTemperature> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Stir> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Temperature> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasSynthesisStep> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/ChemicalSynthesis> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasTargetPh> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Add> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:double .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasTargetTemperature> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/HeatChill> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Temperature> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasTemperatureRate> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/HeatChill> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/TemperatureRate> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasTransferedAmount> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Transfer> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Volume> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasVacuum> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/HeatChill> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:boolean .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasVessel> a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://www.theworldavatar.com/kg/OntoSyn/HeatChill> <https://www.theworldavatar.com/kg/OntoSyn/Transfer> <https://www.theworldavatar.com/kg/OntoSyn/Stir> <https://www.theworldavatar.com/kg/OntoSyn/Evaporate> <https://www.theworldavatar.com/kg/OntoSyn/Add> <https://www.theworldavatar.com/kg/OntoSyn/Crystallize> <https://www.theworldavatar.com/kg/OntoSyn/Dissolve> <https://www.theworldavatar.com/kg/OntoSyn/Separate> <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> <https://www.theworldavatar.com/kg/OntoSyn/Sonicate> <https://www.theworldavatar.com/kg/OntoSyn/Dry> <https://www.theworldavatar.com/kg/OntoSyn/Filter> ) ] ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/Vessel> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasVesselEnvironment> a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://www.theworldavatar.com/kg/OntoSyn/HeatChill> <https://www.theworldavatar.com/kg/OntoSyn/Transfer> <https://www.theworldavatar.com/kg/OntoSyn/Stir> <https://www.theworldavatar.com/kg/OntoSyn/Evaporate> <https://www.theworldavatar.com/kg/OntoSyn/Add> <https://www.theworldavatar.com/kg/OntoSyn/Crystallize> <https://www.theworldavatar.com/kg/OntoSyn/Dissolve> <https://www.theworldavatar.com/kg/OntoSyn/Separate> <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> <https://www.theworldavatar.com/kg/OntoSyn/Sonicate> <https://www.theworldavatar.com/kg/OntoSyn/Dry> <https://www.theworldavatar.com/kg/OntoSyn/Filter> ) ] ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/VesselEnvironment> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasVesselType> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Vessel> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/VesselType> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasWashingSolvent> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Filter> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/ChemicalInput> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/hasYield> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/ChemicalSynthesis> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/AmountOfSubstanceFraction> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isDescribedBy> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/ChemicalTransformation> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/ChemicalSynthesis> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isEvaporatedToVolume> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Evaporate> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.ontology-of-units-of-measure.org/resource/om-2/Volume> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isLayered> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Add> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:boolean .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isLayeredTransfer> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Transfer> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:boolean .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isRepeated> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Filter> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:integer .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isRepresentedBy> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/ChemicalOutput> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/ontomops/MetalOrganicPolyhedron> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isSealed> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/HeatChill> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:boolean .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isSeparationType> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Separate> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/SeparationType> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isStirred> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Add> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:boolean .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isStirredHeatChill> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/HeatChill> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:boolean .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isSuppliedBy> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/ChemicalInput> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/Supplier> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isTransferedTo> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Transfer> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/Vessel> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isVacuumFiltration> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Filter> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:boolean .
+
+<https://www.theworldavatar.com/kg/OntoSyn/isWait> a owl:DatatypeProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Stir> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range xsd:boolean .
+
+<https://www.theworldavatar.com/kg/OntoSyn/referencesMaterial> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/ChemicalInput> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://www.theworldavatar.com/ontology/ontocape/material/material.owl#Material> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/removesSpecies> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/Evaporate> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <https://www.theworldavatar.com/kg/OntoSyn/ChemicalInput> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/retrievedFrom> a owl:ObjectProperty ;
+    rdfs:domain <https://www.theworldavatar.com/kg/OntoSyn/ChemicalSynthesis> ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:range <http://purl.org/ontology/bibo/Document> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/HeatChillDevice> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoLab/LabEquipment> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/SeparationType> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Supplier> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/VesselEnvironment> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/VesselType> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/ChemicalOutput> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <http://www.theworldavatar.com/ontology/ontospecies/OntoSpecies.owl#Species> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/ChemicalTransformation> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Vessel> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoLab/LabEquipment> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Sonicate> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Crystallize> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Dissolve> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/ChemicalSynthesis> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Separate> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Stir> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Dry> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Filter> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Transfer> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Add> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/Evaporate> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/ChemicalInput> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/HeatChill> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> ;
+    rdfs:subClassOf <https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> .
+
+<https://www.theworldavatar.com/kg/OntoSyn/SynthesisStep> a owl:Class ;
+    rdfs:isDefinedBy <https://www.theworldavatar.com/kg/OntoSyn> .
+
+<https://www.theworldavatar.com/kg/OntoSyn> a owl:Ontology ;
+    dc:date "2026-02-03T18:36:26.483814" ;
+    rdfs:comment "An ontology developed for representing chemical synthesis procedures, specifically for Metal-Organic Polyhedra (MOPs). This is object graph mapper (OGM) version." ;
+    owl:versionInfo "1.1-ogm" .
+
