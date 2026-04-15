@@ -22,6 +22,7 @@ os:ServiceExecutionStage cmns-dt:succeeds os:CreationStage ;
   cmns-col:comprises os:ServiceDispatchEvent ;
   cmns-col:comprises os:ServiceDeliveryEvent ;
   cmns-col:comprises os:ServiceAccrualEvent ;
+  cmns-col:comprises os:ServiceWaiveEvent ;
   cmns-col:comprises os:IncidentReport ;
   cmns-col:comprises os:TerminatedServiceEvent .
 
@@ -53,6 +54,7 @@ os:ServiceAgreementLifecycleEvent owl:oneOf (
   os:ServiceDispatchEvent
   os:ServiceDeliveryEvent
   os:ServiceAccrualEvent
+  os:ServiceWaiveEvent
   os:TerminatedServiceEvent
   os:IncidentReportEvent
   os:ContractCreation
@@ -77,6 +79,10 @@ os:ServiceDeliveryEvent a os:ServiceAgreementLifecycleEvent ;
 os:ServiceAccrualEvent a os:ServiceAgreementLifecycleEvent ;
   rdfs:label "Service Accrual Event";
   rdfs:comment "This event represents a financial transition event within the lifecycle, when the operational details are finalised and additional financial details (PO number, surcharges, materials) are provided.".
+
+os:ServiceWaiveEvent a os:ServiceAgreementLifecycleEvent ;
+  rdfs:label "Service Waive Event";
+  rdfs:comment "This event represents a voided financial transition event within the lifecycle.".
 
 os:TerminatedServiceEvent a os:ServiceAgreementLifecycleEvent ;
   rdfs:label "Terminated Service Event";
