@@ -22,7 +22,7 @@ os:ServiceExecutionStage cmns-dt:succeeds os:CreationStage ;
   cmns-col:comprises os:ServiceDispatchEvent ;
   cmns-col:comprises os:ServiceDeliveryEvent ;
   cmns-col:comprises os:ServiceAccrualEvent ;
-  cmns-col:comprises os:ServiceWaiveEvent ;
+  cmns-col:comprises os:ServiceAccrualExemptionEvent ;
   cmns-col:comprises os:IncidentReport ;
   cmns-col:comprises os:TerminatedServiceEvent .
 
@@ -54,7 +54,7 @@ os:ServiceAgreementLifecycleEvent owl:oneOf (
   os:ServiceDispatchEvent
   os:ServiceDeliveryEvent
   os:ServiceAccrualEvent
-  os:ServiceWaiveEvent
+  os:ServiceAccrualExemptionEvent
   os:TerminatedServiceEvent
   os:IncidentReportEvent
   os:ContractCreation
@@ -80,9 +80,9 @@ os:ServiceAccrualEvent a os:ServiceAgreementLifecycleEvent ;
   rdfs:label "Service Accrual Event";
   rdfs:comment "This event represents a financial transition event within the lifecycle, when the operational details are finalised and additional financial details (PO number, surcharges, materials) are provided.".
 
-os:ServiceWaiveEvent a os:ServiceAgreementLifecycleEvent ;
-  rdfs:label "Service Waive Event";
-  rdfs:comment "This event represents a voided financial transition event within the lifecycle.".
+os:ServiceAccrualExemptionEvent a os:ServiceAgreementLifecycleEvent ;
+  rdfs:label "Service Accrual Exemption Event";
+  rdfs:comment "This event represents a financial transition event within the lifecycle that overrides standard billing logic. The service becomes exempt from revenue recognition and should be suppressed during invoice generation.".
 
 os:TerminatedServiceEvent a os:ServiceAgreementLifecycleEvent ;
   rdfs:label "Terminated Service Event";
