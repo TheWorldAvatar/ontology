@@ -31,11 +31,14 @@ convert-interactive: build
     cd {{ repo_dir }}/target && java -cp jps-base-lib.jar uk.ac.cam.cares.jps.base.converter.TBoxGeneration
 
 convert PATH: build
-    cd {{ repo_dir }}/target && java --add-opens java.base/java.lang=ALL-UNNAMED -cp jps-base-lib.jar uk.ac.cam.cares.jps.base.converter.TBoxGeneration {{ absolute_path(PATH) }}
+    cd {{ repo_dir }}/target && java --add-opens java.base/java.lang=ALL-UNNAMED -cp jps-base-lib.jar uk.ac.cam.cares.jps.base.converter.TBoxGeneration "{{ absolute_path(PATH) }}"
 
 convert-all:
     #!/usr/bin/env bash
     set -uo pipefail
-    find ./ontology/ -mindepth 2 -maxdepth 2 -type f -iname "*.csv" | sort | while IFS= read -r csv_file; do
+    find ./ontology/ -mindepth 2 -maxdepth 2 -type f -iname "*.csv" \
+      | grep -vi 'ABox' \
+      | sort \
+      | while IFS= read -r csv_file; do
         just convert "$csv_file"
     done
