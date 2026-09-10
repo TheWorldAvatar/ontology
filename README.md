@@ -16,7 +16,8 @@ where `M.m.r` follows the semantic versioning pattern in the usual way.
 
 Re-generate a single ontology from CSV with the
 [TBoxGenerator](https://github.com/TheWorldAvatar/baselib/tree/main/src/main/java/uk/ac/cam/cares/jps/base/converter)
-with:
+with the following command. It requires `just`,
+which can be easily [installed](https://just.systems/man/en/packages.html) on most machines.
 
 ```console
 $ just convert ontology/ontoearthquake/ontoearthquake.csv
