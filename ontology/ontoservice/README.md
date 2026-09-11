@@ -274,6 +274,8 @@ flowchart LR
     ServiceExecutionStage -. cmns-col:comprises .-> ServiceDispatchEvent[[ontoservice:ServiceDispatchEvent]]
     ServiceExecutionStage -. cmns-col:comprises .-> ServiceDeliveryEvent[[ontoservice:ServiceDeliveryEvent]]
     ServiceExecutionStage -. cmns-col:comprises .-> ServiceAccrualEvent[[ontoservice:ServiceAccrualEvent]]
+    ServiceExecutionStage -. cmns-col:comprises .-> ServiceAccrualExemptionEvent[[ontoservice:ServiceAccrualExemptionEvent]]
+    ServiceExecutionStage -. cmns-col:comprises .-> ServiceVoidEvent[[ontoservice:ServiceVoidEvent]]
     ServiceExecutionStage -. cmns-col:comprises .-> IncidentReportEvent[[ontoservice:IncidentReportEvent]]
     ServiceExecutionStage -. cmns-col:comprises .-> TerminatedServiceEvent[[ontoservice:TerminatedServiceEvent]]
     ServiceDispatchEvent -. cmns-dt:succeeds .-> OrderReceivedEvent
@@ -283,10 +285,18 @@ flowchart LR
     ServiceAccrualEvent -. cmns-dt:succeeds .-> ServiceDeliveryEvent
     ServiceAccrualEvent -. cmns-dt:succeeds .-> IncidentReportEvent
     ServiceAccrualEvent -. cmns-dt:succeeds .-> TerminatedServiceEvent
+    ServiceAccrualExemptionEvent -. cmns-dt:succeeds .-> ServiceDeliveryEvent
+    ServiceAccrualExemptionEvent -. cmns-dt:succeeds .-> IncidentReportEvent
+    ServiceAccrualExemptionEvent -. cmns-dt:succeeds .-> TerminatedServiceEvent
+    ServiceVoidEvent -. cmns-dt:succeeds .-> IncidentReportEvent
+    ServiceVoidEvent -. cmns-dt:succeeds .-> TerminatedServiceEvent
+    ServiceVoidEvent -. cmns-dt:succeeds .-> ServiceAccrualExemptionEvent
     OrderReceivedEvent --> Event
     ServiceDispatchEvent --> Event
     ServiceDeliveryEvent --> Event
     ServiceAccrualEvent --> Event
+    ServiceAccrualExemptionEvent --> Event
+    ServiceVoidEvent --> Event
     IncidentReportEvent --> Event
     TerminatedServiceEvent --> Event
 

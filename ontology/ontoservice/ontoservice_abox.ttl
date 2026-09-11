@@ -23,7 +23,8 @@ os:ServiceExecutionStage cmns-dt:succeeds os:CreationStage ;
   cmns-col:comprises os:ServiceDeliveryEvent ;
   cmns-col:comprises os:ServiceAccrualEvent ;
   cmns-col:comprises os:ServiceAccrualExemptionEvent ;
-  cmns-col:comprises os:IncidentReport ;
+  cmns-col:comprises os:ServiceVoidEvent ;
+  cmns-col:comprises os:IncidentReportEvent ;
   cmns-col:comprises os:TerminatedServiceEvent .
 
 os:ExpirationStage cmns-dt:succeeds os:ServiceExecutionStage ;
@@ -55,6 +56,7 @@ os:ServiceAgreementLifecycleEvent owl:oneOf (
   os:ServiceDeliveryEvent
   os:ServiceAccrualEvent
   os:ServiceAccrualExemptionEvent
+  os:ServiceVoidEvent
   os:TerminatedServiceEvent
   os:IncidentReportEvent
   os:ContractCreation
@@ -83,6 +85,10 @@ os:ServiceAccrualEvent a os:ServiceAgreementLifecycleEvent ;
 os:ServiceAccrualExemptionEvent a os:ServiceAgreementLifecycleEvent ;
   rdfs:label "Service Accrual Exemption Event";
   rdfs:comment "This event represents a financial transition event within the lifecycle that overrides standard billing logic. The service becomes exempt from revenue recognition and should be suppressed during invoice generation.".
+
+os:ServiceVoidEvent a os:ServiceAgreementLifecycleEvent ;
+  rdfs:label "Service Void Event";
+  rdfs:comment "This event represents the voiding of a service within the service agreement lifecycle.".
 
 os:TerminatedServiceEvent a os:ServiceAgreementLifecycleEvent ;
   rdfs:label "Terminated Service Event";
