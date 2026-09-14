@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontopoi="https://www.theworldavatar.com/kg/ontopoi/">
     <owl:Ontology rdf:about="https://www.theworldavatar.com/kg/ontopoi/">
-        <dc:date>11 November 2024</dc:date>
+        <dc:date>14 September 2026</dc:date>
         <rdfs:comment>OntoPOI is an ontology developed for representing points of interest.</rdfs:comment>
         <owl:versionInfo>1</owl:versionInfo>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
@@ -8571,26 +8571,26 @@
     
 
 
-    <!-- https://www.theworldavatar.com/kg/ontopoi/CookersAndStovesâ€“Non-Electrical -->
+    <!-- https://www.theworldavatar.com/kg/ontopoi/CookersAndStoves–Non-Electrical -->
 
 
-    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontopoi/CookersAndStovesâ€“Non-Electrical">
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontopoi/CookersAndStoves–Non-Electrical">
         <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontopoi/ConsumerProducts"/>
-        <rdfs:comment>Cookers and stoves â€“ non-electrical is a subcategory of consumer products</rdfs:comment>
+        <rdfs:comment>Cookers and stoves – non-electrical is a subcategory of consumer products</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontopoi"/>
-        <rdfs:label>Cookers and stoves â€“ non-electrical</rdfs:label>
+        <rdfs:label>Cookers and stoves – non-electrical</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://www.theworldavatar.com/kg/ontopoi/PaypointÂ®Locations -->
+    <!-- https://www.theworldavatar.com/kg/ontopoi/Paypoint®Locations -->
 
 
-    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontopoi/PaypointÂ®Locations">
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontopoi/Paypoint®Locations">
         <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontopoi/LegalAndFinancial"/>
-        <rdfs:comment>PaypointÂ® locations is a subcategory of legal and financial</rdfs:comment>
+        <rdfs:comment>Paypoint® locations is a subcategory of legal and financial</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontopoi"/>
-        <rdfs:label>PayPointÂ® locations</rdfs:label>
+        <rdfs:label>PayPoint® locations</rdfs:label>
     </owl:Class>
     
 
