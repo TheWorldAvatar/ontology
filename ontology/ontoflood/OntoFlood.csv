@@ -2,7 +2,6 @@ Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
 OntoFlood,TBox,https://www.theworldavatar.com/kg/ontoflood/,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
 OntoFlood,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
 OntoFlood,TBox,"The Flood Risk Monitoring ontology (OntoFlood) is an ontology developed for representing flood events as well as flood warnings, together with the risk and (potential) impacts imposed by those events.",http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
-OntoFlood,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
 http://sweetontology.net/phen/Event,Class,,,,,,,http://sweetontology.net/phen,Event
 http://purl.obolibrary.org/obo/ENVO_01000710,Class,,,,,,,http://purl.obolibrary.org/obo/envo.owl,Flood
 http://purl.obolibrary.org/obo/ENVO_01000710,Class,http://sweetontology.net/phen/Event,IS-A,,,,,https://www.theworldavatar.com/kg/ontoflood/,Flood

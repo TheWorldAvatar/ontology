@@ -2,7 +2,7 @@ Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
 OntoEnergySystem,TBox,http://www.theworldavatar.com/ontology/ontoenergysystem/OntoEnergySystem.owl,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
 OntoEnergySystem,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
 OntoEnergySystem,TBox,OntoEnergySystem is an ontology developed for representing energy systems.,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
-OntoEnergySystem,TBox,http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl,http://www.w3.org/2002/07/owl#imports,,,,,,
+OntoEnergySystem,TBox,https://github.com/TheWorldAvatar/ontology/raw/refs/heads/main/ontology/ontocape/upper_level/system.owl,http://www.w3.org/2002/07/owl#imports,,,,,,
 Asset,Class,,,,,,"A physical item of property, which is of value and available to meet debts, commitments, or legacies. Normally, asset is persisted by a natural person, company or any organisations.",http://www.theworldavatar.com/ontology/ontoenergysystem/OntoEnergySystem.owl,
 http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#System,Class,,,,,,,http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl,
 http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#Property,Class,,,,,,,http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl,

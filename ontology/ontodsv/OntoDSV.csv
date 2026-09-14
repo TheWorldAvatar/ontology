@@ -1,4 +1,7 @@
 Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By
+OntoDSV,TBox,http://www.theworldavatar.com/kb/ontodsv/OntoDSV.owl,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
+OntoDSV,TBox,1.0,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+OntoDSV,TBox,OntoDSV is an ontology used to describe the contents of a DSV file. It should provide sufficient information on how to read the file.,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 dsvFile,Class,,,,,,,http://www.theworldavatar.com/kb/ontodsv/OntoDSV.owl
 column,Class,,,,,,Column of the CSV file,http://www.theworldavatar.com/kb/ontodsv/OntoDSV.owl
 fileName,Class,,,,,,Full path to the CSV file,http://www.theworldavatar.com/kb/ontodsv/OntoDSV.owl

@@ -2,7 +2,6 @@ Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
 OntoAssetManagement,TBox,https://www.theworldavatar.com/kg/ontoassetmanagement/,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
 OntoAssetManagement,TBox,1.1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
 OntoAssetManagement,TBox,OntoAssetManagement is an ontology that is designed to represent asset and its related information (e.g. purchase documents).,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
-OntoAssetManagement,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
 DeliveryOrder,Class,http://xmlns.com/foaf/0.1/Document,IS-A,,,,A legal document that authorizes the transportation of goods from one location to another. ,https://www.theworldavatar.com/kg/ontoassetmanagement/,Delivery order
 PurchaseRequisition,Class,http://xmlns.com/foaf/0.1/Document,IS-A,,,,An official order used to inform department managers or purchasing officers about a decision to make a purchase.,https://www.theworldavatar.com/kg/ontoassetmanagement/,Purchase requisition
 Quotation,Class,http://xmlns.com/foaf/0.1/Document,IS-A,,,,A document that list the bids or prices of an item (Product or service) offered by a business.,https://www.theworldavatar.com/kg/ontoassetmanagement/,Quotation

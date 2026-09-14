@@ -1,6 +1,9 @@
 Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By
+OntoStation,TBox,https://github.com/cambridge-cares/TheWorldAvatar/blob/develop/JPS_Ontology/ontology/ontostation/OntoStation.owl,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
+OntoStation,TBox,1.0,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+OntoStation,TBox,Ontology to describe air quality and weather stations,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 Station,Class,http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#System,IS-A,,,,,https://github.com/cambridge-cares/TheWorldAvatar/blob/develop/JPS_Ontology/ontology/ontostation/OntoStation.owl
 WeatherStation,Class,Station,IS-A,,,,,https://github.com/cambridge-cares/TheWorldAvatar/blob/develop/JPS_Ontology/ontology/ontostation/OntoStation.owl
 AirQualityStation,Class,Station,IS-A,,,,,https://github.com/cambridge-cares/TheWorldAvatar/blob/develop/JPS_Ontology/ontology/ontostation/OntoStation.owl
 http://www.theworldavatar.com/ontology/ontocape/upper_level/system.owl#hasSubsystem,Object Property,,,Station,http://www.theworldavatar.com/ontology/ontocape/chemical_process_system/CPS_realization/process_control_system.owl#MeasuringInstrument,only,,
-hasCoordinates,Data Property,Station,,Station,http://www.bigdata.com/rdf/geospatial/literals/v1#lat-lon,exactly 1,,https://github.com/cambridge-cares/TheWorldAvatar/blob/develop/JPS_Ontology/ontology/ontostation/OntoStation.owl
+hasCoordinates,Data Property,,,Station,http://www.bigdata.com/rdf/geospatial/literals/v1#lat-lon,exactly 1,,https://github.com/cambridge-cares/TheWorldAvatar/blob/develop/JPS_Ontology/ontology/ontostation/OntoStation.owl
