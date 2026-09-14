@@ -9,9 +9,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontoexposure="https://www.theworldavatar.com/kg/ontoexposure/">
     <owl:Ontology rdf:about="https://www.theworldavatar.com/kg/ontoexposure/">
-        <dc:date>09 October 2025</dc:date>
+        <dc:date>27 August 2026</dc:date>
         <rdfs:comment>Ontology used to calculate exposures to the environment</rdfs:comment>
-        <owl:versionInfo>1.2</owl:versionInfo>
+        <owl:versionInfo>1.3</owl:versionInfo>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
     </owl:Ontology>
     
@@ -60,8 +60,19 @@
 
     <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasCalculationMethod">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ExposureResult"/>
-        <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/CalculationMethod"/>
+        <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
         <rdfs:comment>Calculation method used to derive exposure result</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasDatasetFilter -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasDatasetFilter">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
+        <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/DatasetFilter"/>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:ObjectProperty>
     
@@ -91,12 +102,48 @@
     
 
 
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasColumnName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasColumnName">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ColumnBasedCalculation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Column to extract value from</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.theworldavatar.com/kg/ontoexposure/hasDistance -->
 
 
     <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasDistance">
-        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/CalculationMethod"/>
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasFilterColumn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasFilterColumn">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/DatasetFilter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of the column to filter</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasFilterValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasFilterValue">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/DatasetFilter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Value to filter</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:DatatypeProperty>
     
@@ -114,12 +161,36 @@
     
 
 
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasIriColumn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasIriColumn">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ExposureDataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of the column containing the IRI of the feature</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.theworldavatar.com/kg/ontoexposure/hasLowerbound -->
 
 
     <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasLowerbound">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/TrajectoryCount"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasPercentile -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasPercentile">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ExposureResult"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Percentile of the value</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:DatatypeProperty>
     
@@ -160,13 +231,13 @@
     
 
 
-    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasValueColumn -->
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/tzid -->
 
 
-    <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasValueColumn">
-        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/AreaWeightedDataset"/>
+    <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/tzid">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/TimeZone"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Name of the value column associated with a vector element</rdfs:comment>
+        <rdfs:comment>Time zone ID as string</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:DatatypeProperty>
     
@@ -184,6 +255,13 @@
     
 
 
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry"/>
+    
+
+
     <!-- http://www.w3.org/ns/dcat#Dataset -->
 
 
@@ -195,7 +273,7 @@
 
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/Area">
-        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/CalculationMethod"/>
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
         <rdfs:comment>Total intersected area between the buffer of a fixed vector element and the exposure elements (polygons)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
         <rdfs:label>Area</rdfs:label>
@@ -208,7 +286,7 @@
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/AreaWeightedDataset">
         <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ExposureDataset"/>
-        <rdfs:comment>Exposure dataset used for the area weighted calculation, needs to be polygons and each polygon needs to have a value associated with it</rdfs:comment>
+        <rdfs:comment>A raster dataset with an area column specifying the area of a pixel</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:Class>
     
@@ -218,7 +296,7 @@
 
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/AreaWeightedSum">
-        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/CalculationMethod"/>
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
         <rdfs:comment>The sum of the product between the value and area associated with the intersected vector elements</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
         <rdfs:label>Area weighted sum</rdfs:label>
@@ -226,10 +304,58 @@
     
 
 
-    <!-- https://www.theworldavatar.com/kg/ontoexposure/CalculationMethod -->
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/Areal -->
 
 
-    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/CalculationMethod">
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/Areal">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ColumnBasedCalculation"/>
+        <rdfs:comment>Direct assignment of features with values attached</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+        <rdfs:label>Areal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/Average -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/Average">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ColumnBasedCalculation"/>
+        <rdfs:comment>Average of intersected features</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+        <rdfs:label>Average</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/Calculation -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/Calculation">
+        <rdfs:comment>Defines the calculation method used to derive an ExposureResult</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/ClosestDistance -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/ClosestDistance">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
+        <rdfs:comment>Calculates the closest distance between the subject and features in the exposure dataset</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+        <rdfs:label>Closest distance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/ColumnBasedCalculation -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/ColumnBasedCalculation">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
+        <rdfs:comment>A calculation that extracts values from a specified dataset column</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:Class>
     
@@ -239,10 +365,20 @@
 
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/Count">
-        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/CalculationMethod"/>
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
         <rdfs:comment>Number of features within the buffer of a fixed vector element</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
         <rdfs:label>Count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/DatasetFilter -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/DatasetFilter">
+        <rdfs:comment>Instructs agent how to filter a dataset</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:Class>
     
 
@@ -268,11 +404,81 @@
     
 
 
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/RasterArea -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/RasterArea">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
+        <rdfs:comment>Sum of pixel area enclosed by buffer</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+        <rdfs:label>Raster area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/RasterAverage -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/RasterAverage">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
+        <rdfs:comment>Average of pixel values enclosed by buffer</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+        <rdfs:label>Raster average</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/RasterSum -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/RasterSum">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
+        <rdfs:comment>Sum of pixel values enclosed by buffer</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+        <rdfs:label>Raster sum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/Subject -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/Subject">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <rdfs:comment>Defines the subject of exposure for calculations</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/TimeZone -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/TimeZone">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <rdfs:comment>An instance with a representative WKT literal (polygon) and an associated time zone ID</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/TotalLength -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/TotalLength">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
+        <rdfs:comment>Sum of length of lines enclosed by buffer</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+        <rdfs:label>Total length</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://www.theworldavatar.com/kg/ontoexposure/TrajectoryArea -->
 
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/TrajectoryArea">
-        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/CalculationMethod"/>
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
         <rdfs:comment>Total intersected area between the trajectory buffer and exposure elements (polygons)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
         <rdfs:label>Area</rdfs:label>
@@ -284,7 +490,7 @@
 
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/TrajectoryCount">
-        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/CalculationMethod"/>
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
         <rdfs:comment>Number of features within the buffer of the trajectory</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
         <rdfs:label>Count</rdfs:label>
@@ -297,6 +503,18 @@
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/Trip">
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/WeightedAverage -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoexposure/WeightedAverage">
+        <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ColumnBasedCalculation"/>
+        <rdfs:comment>Weighted average of intersected features</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+        <rdfs:label>Weighted average</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
