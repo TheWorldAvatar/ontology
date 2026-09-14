@@ -1,6 +1,6 @@
 Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
 OntoSDG,TBox,http://www.theworldavatar.com/ontology/ontosdg/OntoSDG.owl,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
-OntoSDG,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+OntoSDG,TBox,1.0,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
 OntoSDG,TBox,An ontology developed for representing the United Stations (UN) Sustainable Development Goals (SDGs).,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 OntoSDG,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
 Goal,Class,http://purl.unep.org/sdg/SDGIO_00000000,EQUIVALENT-TO,,,,"An objective specification which describes the endpoint of a development process following the Sustainable Development Agenda for 2030 [SDGIO Ontology, Accessed on 29 October 2020]",http://theworldavatar.com/ontology/ontosdg/OntoSDG.owl,
