@@ -12,7 +12,7 @@
         <dc:date>14 September 2026</dc:date>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
         <rdfs:comment>An ontology developed for representing the United Stations (UN) Sustainable Development Goals (SDGs).</rdfs:comment>
-        <owl:versionInfo>1</owl:versionInfo>
+        <owl:versionInfo>1.0</owl:versionInfo>
     </owl:Ontology>
     
 
