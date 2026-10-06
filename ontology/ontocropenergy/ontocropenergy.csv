@@ -1,6 +1,6 @@
 Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
 OntoCropEnergy,TBox,http://www.theworldavatar.com/ontology/ontocropenergy/OntoCropEnergy.owl,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
-OntoCropEnergy,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+OntoCropEnergy,TBox,1.0,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
 OntoCropEnergy,TBox,An ontology developed for representing crop energy data.,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 OntoCropEnergy,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
 Crop,Class,,,,,,"A crop is a plant or animal product which can be cultivated. Raw harvested material as well as its products can be reffered to as crops. In OntoCropEnergy, exclusively plant crops are considered.",http://www.theworldavatar.com/ontology/ontocropenergy/OntoCropEnergy.owl,

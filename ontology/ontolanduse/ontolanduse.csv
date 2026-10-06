@@ -1,6 +1,6 @@
 Source,Type,Target,Relation,Domain,Range,Quantifier,Comment,Defined By,Label
 OntoLandUse,TBox,http://www.theworldavatar.com/ontology/ontolanduse/OntoLandUse.owl,https://www.w3.org/2007/05/powder-s#hasIRI,,,,,,
-OntoLandUse,TBox,1,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
+OntoLandUse,TBox,1.0,http://www.w3.org/2002/07/owl#versionInfo,,,,,,
 OntoLandUse,TBox,OntoLandUse is an ontology developed for representing different types of land use code used for rural payment services.,http://www.w3.org/2000/01/rdf-schema#comment,,,,,,
 OntoLandUse,TBox,,http://www.w3.org/2002/07/owl#imports,,,,,,
 Land Use Code,Class,,,,,,"Code used by land owners to declare what their land is used for, when applying for a rural payment scheme (like the Basic Payment Scheme (BPS) and Countryside Stewardship (CS))",http://www.theworldavatar.com/ontology/ontolanduse/OntoLandUse.owl,

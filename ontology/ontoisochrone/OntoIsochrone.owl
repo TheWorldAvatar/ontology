@@ -1,19 +1,45 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://www.theworldavatar.com/kg/ontoisochrone/"
      xml:base="https://www.theworldavatar.com/kg/ontoisochrone/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:ontoisochrone="https://www.theworldavatar.com/kg/ontoisochrone/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:ontoisochrone="https://www.theworldavatar.com/kg/ontoisochrone/">
     <owl:Ontology rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/">
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12 June 2024</dc:date>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OntoIsochrone is an ontology for describing isochrones.</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</owl:versionInfo>
-        <gitCommitHash rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
+        <dc:date>14 September 2026</dc:date>
+        <rdfs:comment>OntoIsochrone is an ontology for describing isochrones.</rdfs:comment>
+        <owl:versionInfo>1</owl:versionInfo>
+        <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoisochrone/gitCommitHash -->
+
+
+    <owl:AnnotationProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/gitCommitHash"/>
     
 
 
@@ -54,9 +80,9 @@
     <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/assumesTransportMode">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone"/>
         <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/TransportMode"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between an isochrone and the transport mode that is used for the isochrone calculations.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assumes transport mode</rdfs:label>
+        <rdfs:comment>A relationship between an isochrone and the transport mode that is used for the isochrone calculations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>assumes transport mode</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -67,9 +93,9 @@
     <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/hasFloodDepth">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Flooded"/>
         <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontoflood/FloodDepth"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between flooded road condition and its flood depth</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has flood depth</rdfs:label>
+        <rdfs:comment>A relationship between flooded road condition and its flood depth</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>has flood depth</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -80,9 +106,9 @@
     <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/hasRoadCondition">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone"/>
         <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/RoadCondition"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship that describes the road condition of an isochrone.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has road condition</rdfs:label>
+        <rdfs:comment>A relationship that describes the road condition of an isochrone.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>has road condition</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -93,9 +119,9 @@
     <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/originatesFrom">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone"/>
         <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between an isochrone and the entities where it originates from.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">originates from</rdfs:label>
+        <rdfs:comment>A relationship between an isochrone and the entities where it originates from.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>originates from</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -118,9 +144,9 @@
     <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/hasChildrenPopulation">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between an isochrone and its covered children (age under 5) population number.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has children population</rdfs:label>
+        <rdfs:comment>A relationship between an isochrone and its covered children (age under 5) population number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>has children population</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -131,9 +157,9 @@
     <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/hasElderlyPopulation">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between an isochrone and its covered elderly (age above 60) population number.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has elderly population</rdfs:label>
+        <rdfs:comment>A relationship between an isochrone and its covered elderly (age above 60) population number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>has elderly population</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -144,9 +170,9 @@
     <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/hasMenPopulation">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between an isochrone and its covered men population number.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has men population</rdfs:label>
+        <rdfs:comment>A relationship between an isochrone and its covered men population number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>has men population</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -157,9 +183,9 @@
     <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/hasTimeThreshold">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone"/>
         <rdfs:range rdf:resource="https://www.w3.org/2006/time#minute"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between an isochrone and its time threshold.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has time threshold</rdfs:label>
+        <rdfs:comment>A relationship between an isochrone and its time threshold.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>has time threshold</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -170,9 +196,9 @@
     <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/hasTotalPopulation">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between an isochrone and its covered total population number.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has total population</rdfs:label>
+        <rdfs:comment>A relationship between an isochrone and its covered total population number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>has total population</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -183,9 +209,9 @@
     <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/hasWomenPopulation">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between an isochrone and its covered women population number.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has women population</rdfs:label>
+        <rdfs:comment>A relationship between an isochrone and its covered women population number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>has women population</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -196,9 +222,9 @@
     <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/hasWomenofReproductiveAge">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between an isochrone and its covered women of reproductive age (age 15 - 49) population number.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has women of reproductive age population</rdfs:label>
+        <rdfs:comment>A relationship between an isochrone and its covered women of reproductive age (age 15 - 49) population number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>has women of reproductive age population</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -209,9 +235,9 @@
     <owl:DatatypeProperty rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/hasYouthPopulation">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between an isochrone and its covered youth (age 15 - 24) population number.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has youth population</rdfs:label>
+        <rdfs:comment>A relationship between an isochrone and its covered youth (age 15 - 24) population number.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>has youth population</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -247,9 +273,9 @@
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/Cycle">
         <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/TransportMode"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cycle describes the act of travelling via a bicycle.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cycle</rdfs:label>
+        <rdfs:comment>Cycle describes the act of travelling via a bicycle.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>Cycle</rdfs:label>
     </owl:Class>
     
 
@@ -259,9 +285,9 @@
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/Drive">
         <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/TransportMode"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drive describes the act of travelling via a motorized vehicle.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drive</rdfs:label>
+        <rdfs:comment>Drive describes the act of travelling via a motorized vehicle.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>Drive</rdfs:label>
     </owl:Class>
     
 
@@ -271,9 +297,9 @@
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/Flooded">
         <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/RoadCondition"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Road condition under flooded circumstances.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flooded</rdfs:label>
+        <rdfs:comment>Road condition under flooded circumstances.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>Flooded</rdfs:label>
     </owl:Class>
     
 
@@ -283,9 +309,9 @@
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/Isochrone">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polygon describing the area reachable within a stipulated time threshold. </rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isochrone</rdfs:label>
+        <rdfs:comment>Polygon describing the area reachable within a stipulated time threshold. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>Isochrone</rdfs:label>
     </owl:Class>
     
 
@@ -295,9 +321,9 @@
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/Normal">
         <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/RoadCondition"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Road condition under normal circumstances.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normal</rdfs:label>
+        <rdfs:comment>Road condition under normal circumstances.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>Normal</rdfs:label>
     </owl:Class>
     
 
@@ -306,9 +332,9 @@
 
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/RoadCondition">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Road condition describes the condition of the road. </rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Road Condition</rdfs:label>
+        <rdfs:comment>Road condition describes the condition of the road. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>Road Condition</rdfs:label>
     </owl:Class>
     
 
@@ -317,9 +343,9 @@
 
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/TransportMode">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transport mode refers to the way people are transported.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transport Mode</rdfs:label>
+        <rdfs:comment>Transport mode refers to the way people are transported.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>Transport Mode</rdfs:label>
     </owl:Class>
     
 
@@ -329,14 +355,14 @@
 
     <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoisochrone/Walk">
         <rdfs:subClassOf rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/TransportMode"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walk describes the act of travelling on foot. </rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.theworldavatar.com/kg/ontoisochrone/</rdfs:isDefinedBy>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walk</rdfs:label>
+        <rdfs:comment>Walk describes the act of travelling on foot. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoisochrone/"/>
+        <rdfs:label>Walk</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 5.1.0.2017-03-29T23:31:42Z) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
 
 
