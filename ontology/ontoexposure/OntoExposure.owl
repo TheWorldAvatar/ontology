@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontoexposure="https://www.theworldavatar.com/kg/ontoexposure/">
     <owl:Ontology rdf:about="https://www.theworldavatar.com/kg/ontoexposure/">
-        <dc:date>27 August 2026</dc:date>
+        <dc:date>22 October 2026</dc:date>
         <rdfs:comment>Ontology used to calculate exposures to the environment</rdfs:comment>
         <owl:versionInfo>1.3</owl:versionInfo>
         <gitCommitHash>c0599beca8df55873a1ab061dee64e52c510c6a0</gitCommitHash>
@@ -73,6 +73,31 @@
     <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasDatasetFilter">
         <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Calculation"/>
         <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/DatasetFilter"/>
+        <rdfs:comment>Dataset filter to filter a table</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasExposureDataset -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasExposureDataset">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoderivation/Derivation"/>
+        <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/ExposureDataset"/>
+        <rdfs:comment>Links a derivation to a exposure dataset</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoexposure/hasSubject -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.theworldavatar.com/kg/ontoexposure/hasSubject">
+        <rdfs:domain rdf:resource="https://www.theworldavatar.com/kg/ontoderivation/Derivation"/>
+        <rdfs:range rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/Subject"/>
+        <rdfs:comment>Links a derivation to a exposure subject</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.theworldavatar.com/kg/ontoexposure/"/>
     </owl:ObjectProperty>
     
@@ -266,6 +291,13 @@
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+    
+
+
+    <!-- https://www.theworldavatar.com/kg/ontoderivation/Derivation -->
+
+
+    <owl:Class rdf:about="https://www.theworldavatar.com/kg/ontoderivation/Derivation"/>
     
 
 
